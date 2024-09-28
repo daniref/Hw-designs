@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_tima_ro_puf_func_synth/xsimk -simmode gui -wdb tb_tima_ro_puf_func_synth.wdb -simrunnum 0 -socket 47479
+Design successfully loaded
+Design Loading Memory Usage: 46704 KB (Peak: 46704 KB)
+Design Loading CPU Usage: 90 ms
+Simulation completed
+Simulation Memory Usage: 137116 KB (Peak: 185972 KB)
+Simulation CPU Usage: 120 ms

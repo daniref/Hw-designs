@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Sep 28 18:14:56 2024
+# Process ID: 6835
+# Current directory: /home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.sim/sim_1/synth/timing/xsim
+# Command line: wbtcv -mode batch -source /home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.sim/sim_1/synth/timing/xsim/xsim.dir/tb_tima_ro_puf_time_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.sim/sim_1/synth/timing/xsim/webtalk.log
+# Journal file: /home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.sim/sim_1/synth/timing/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.sim/sim_1/synth/timing/xsim/xsim.dir/tb_tima_ro_puf_time_synth/webtalk/xsim_webtalk.tcl -notrace

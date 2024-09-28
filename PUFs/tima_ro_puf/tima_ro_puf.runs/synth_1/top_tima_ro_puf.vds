@@ -1,0 +1,636 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep 12 16:49:10 2024
+# Process ID: 5541
+# Current directory: /home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.runs/synth_1
+# Command line: vivado -log top_tima_ro_puf.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_tima_ro_puf.tcl
+# Log file: /home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.runs/synth_1/top_tima_ro_puf.vds
+# Journal file: /home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top_tima_ro_puf.tcl -notrace
+Command: synth_design -top top_tima_ro_puf -part xczu3eg-sbva484-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5662
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2593.188 ; gain = 30.902 ; free physical = 123 ; free virtual = 13460
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_tima_ro_puf' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/new/top_tima_ro_puf.vhd:61]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y120 - type: string 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y120 - type: string 
+INFO: [Synth 8-3491] module 'tima_ro_puf' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:8' bound to instance 'RO_PUF' of component 'tima_ro_puf' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/new/top_tima_ro_puf.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'tima_ro_puf' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y120 - type: string 
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'RO_selection' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:6' bound to instance 'RO_BLOCK_1' of component 'RO_selection' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'RO_selection' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:16]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:34]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter INIT bound to: 4'b0111 
+INFO: [Synth 8-113] binding component instance 'NAND_IN' to cell 'LUT2' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:70]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER_0' to cell 'LUT1' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:80]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:98]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:98]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:98]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:98]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:98]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'ROs' (1#1) [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:34]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:35]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RO_selection' (2#1) [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:16]
+	Parameter num_inverters bound to: 7 - type: integer 
+WARNING: [Synth 8-614] signal 'compteur_cycles' is read in the process but is not in the sensitivity list [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:137]
+WARNING: [Synth 8-614] signal 'Timer_size' is read in the process but is not in the sensitivity list [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:137]
+WARNING: [Synth 8-614] signal 'MUX_1_OUT' is read in the process but is not in the sensitivity list [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:192]
+INFO: [Synth 8-256] done synthesizing module 'tima_ro_puf' (3#1) [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'top_tima_ro_puf' (4#1) [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/new/top_tima_ro_puf.vhd:61]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2676.188 ; gain = 113.902 ; free physical = 555 ; free virtual = 14096
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2691.031 ; gain = 128.746 ; free physical = 534 ; free virtual = 14095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2691.031 ; gain = 128.746 ; free physical = 534 ; free virtual = 14095
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.44 . Memory (MB): peak = 2702.938 ; gain = 0.000 ; free physical = 509 ; free virtual = 14085
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/constrs_1/new/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2783.641 ; gain = 0.000 ; free physical = 375 ; free virtual = 13969
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2783.641 ; gain = 0.000 ; free physical = 372 ; free virtual = 13969
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 2783.641 ; gain = 221.355 ; free physical = 382 ; free virtual = 14075
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 2783.641 ; gain = 221.355 ; free physical = 382 ; free virtual = 14076
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 2783.641 ; gain = 221.355 ; free physical = 382 ; free virtual = 14076
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'tima_ro_puf'
+WARNING: [Synth 8-327] inferring latch for variable 'output_ro_reg' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'found_match_reg' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/RO_selection.vhd:48]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             reset_state |                             0001 |                               00
+            enable_state |                             0010 |                               01
+           disable_state |                             0100 |                               10
+             ready_state |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'tima_ro_puf'
+WARNING: [Synth 8-327] inferring latch for variable 'Timer_size_reg' [/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:109]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 2783.641 ; gain = 221.355 ; free physical = 407 ; free virtual = 14077
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   25 Bit        Muxes := 1     
+	   4 Input   25 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+	 255 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2783.641 ; gain = 221.355 ; free physical = 391 ; free virtual = 14077
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:14 . Memory (MB): peak = 3215.359 ; gain = 653.074 ; free physical = 126 ; free virtual = 13535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:14 . Memory (MB): peak = 3216.359 ; gain = 654.074 ; free physical = 123 ; free virtual = 13534
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:22 . Memory (MB): peak = 3235.391 ; gain = 673.105 ; free physical = 154 ; free virtual = 13542
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:25 . Memory (MB): peak = 3241.328 ; gain = 679.043 ; free physical = 198 ; free virtual = 13592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:25 . Memory (MB): peak = 3241.328 ; gain = 679.043 ; free physical = 198 ; free virtual = 13592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 3241.328 ; gain = 679.043 ; free physical = 198 ; free virtual = 13593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 3241.328 ; gain = 679.043 ; free physical = 198 ; free virtual = 13593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 3241.328 ; gain = 679.043 ; free physical = 199 ; free virtual = 13594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 3241.328 ; gain = 679.043 ; free physical = 199 ; free virtual = 13594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY8 |    17|
+|3     |LUT1   |  3590|
+|4     |LUT2   |   518|
+|5     |LUT3   |    15|
+|6     |LUT4   |    34|
+|7     |LUT5   |     2|
+|8     |LUT6   |   143|
+|9     |MUXF7  |    68|
+|10    |MUXF8  |    34|
+|11    |FDCE   |   130|
+|12    |FDRE   |    44|
+|13    |FDSE   |     1|
+|14    |LD     |     9|
+|15    |LDC    |     2|
+|16    |LDP    |     2|
+|17    |IBUF   |    13|
+|18    |OBUF   |    66|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 3241.328 ; gain = 679.043 ; free physical = 199 ; free virtual = 13594
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:18 . Memory (MB): peak = 3241.328 ; gain = 586.434 ; free physical = 237 ; free virtual = 13632
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 3241.336 ; gain = 679.043 ; free physical = 236 ; free virtual = 13633
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3241.336 ; gain = 0.000 ; free physical = 115 ; free virtual = 13630
+INFO: [Netlist 29-17] Analyzing 146 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.078 ; gain = 0.000 ; free physical = 125 ; free virtual = 13546
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 27 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 13 instances
+  LD => LDCE: 9 instances
+  LDC => LDCE: 2 instances
+  LDP => LDPE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+134 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:26 ; elapsed = 00:01:47 . Memory (MB): peak = 3391.078 ; gain = 1074.031 ; free physical = 267 ; free virtual = 13692
+INFO: [Common 17-1381] The checkpoint '/home/puftester/vivado_work/tima_ro_puf/tima_ro_puf.runs/synth_1/top_tima_ro_puf.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_tima_ro_puf_utilization_synth.rpt -pb top_tima_ro_puf_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 12 16:51:17 2024...

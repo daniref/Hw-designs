@@ -1,0 +1,57 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Fri Sep 20 18:48:19 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_drc -file u96v2_4x4_apuf_wrapper_drc_opted.rpt -pb u96v2_4x4_apuf_wrapper_drc_opted.pb -rpx u96v2_4x4_apuf_wrapper_drc_opted.rpx
+| Design       : u96v2_4x4_apuf_wrapper
+| Device       : xczu3eg-sbva484-1-i
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 3
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 3          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[1].EQUAL_PATH_MUX/Q_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_2_1/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[2].EQUAL_PATH_MUX/Q_INST_0 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_3_1/Q_reg
+u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_3_2/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[3].EQUAL_PATH_MUX/Q_INST_0 is driving clock pin of 3 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_4_1/Q_reg,
+u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_4_2/Q_reg
+u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_4_3/Q_reg
+Related violations: <none>
+
+

@@ -1,0 +1,28 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/puftester/tools/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto e21cb333c59c43e29c7e9ef6c190aee7 --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_tima_ro_puf_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_tima_ro_puf xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.glbl
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0111")(0,3)\]
+Compiling architecture lut1_v of entity unisim.LUT1 [\LUT1(init="01")(0,1)\]
+Compiling architecture behavioral of entity xil_defaultlib.ROs [ros_default]
+Compiling architecture behavioral of entity xil_defaultlib.RO_selection [ro_selection_default]
+Compiling architecture behavioral of entity xil_defaultlib.tima_ro_puf [\tima_ro_puf(1,6)\]
+Compiling architecture behavior of entity xil_defaultlib.tb_tima_ro_puf
+Built simulation snapshot tb_tima_ro_puf_time_synth

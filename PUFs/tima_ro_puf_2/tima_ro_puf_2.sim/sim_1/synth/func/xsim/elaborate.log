@@ -1,0 +1,7 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /home/puftester/tools/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto e21cb333c59c43e29c7e9ef6c190aee7 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_tima_ro_puf_func_synth xil_defaultlib.tb_tima_ro_puf -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3146] binding entity 'ro_selection' does not have generic 'num_inverters' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:38]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb_tima_ro_puf in library work failed.

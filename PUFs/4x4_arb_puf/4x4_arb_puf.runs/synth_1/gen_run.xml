@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xczu3eg-sbva484-1-i" LaunchTime="1726833785">
+  <File Type="VDS-TIMINGSUMMARY" Name="APUF_Driver_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="APUF_Driver.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="APUF_Driver_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="APUF_Driver_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="APUF_Driver_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="APUF_Driver.vds"/>
+  <File Type="REPORTS-TCL" Name="APUF_Driver_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="APUF_Driver_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="APUF_Driver.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/APUF_Mutual_Order.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../4x4-apuf/hdl/APUF_Mutual_Order.vhd"/>
+        <Attr Name="ImportTime" Val="1725890160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../4x4-apuf/hdl/Arbiter_Mutual_Order.vhd"/>
+        <Attr Name="ImportTime" Val="1725890160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/Flip_Flop_Symmetrical.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../4x4-apuf/hdl/Flip_Flop_Symmetrical.vhd"/>
+        <Attr Name="ImportTime" Val="1725890160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/Mux_4x1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../4x4-apuf/hdl/Mux_4x1.vhd"/>
+        <Attr Name="ImportTime" Val="1725890160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/Permutation.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../4x4-apuf/hdl/Permutation.vhd"/>
+        <Attr Name="ImportTime" Val="1725890160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/Switch_Block_4x4.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../4x4-apuf/hdl/Switch_Block_4x4.vhd"/>
+        <Attr Name="ImportTime" Val="1725890160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/APUF_Driver.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../4x4-apuf/hdl/APUF_Driver.vhd"/>
+        <Attr Name="ImportTime" Val="1725890160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="APUF_Driver"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/4x4_arb_puf.srcs/constraints.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/constraints.xdc"/>
+        <Attr Name="ImportTime" Val="1726827720"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

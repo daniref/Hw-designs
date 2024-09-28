@@ -1,0 +1,91 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Thu Sep 12 16:53:11 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_control_sets -verbose -file top_tima_ro_puf_control_sets_placed.rpt
+| Design       : top_tima_ro_puf
+| Device       : xczu3eg
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    13 |
+|    Minimum number of control sets                        |    13 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    28 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    13 |
+| >= 0 to < 4        |     7 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            2 |
+| No           | No                    | Yes                    |               1 |            1 |
+| No           | Yes                   | No                     |              33 |            8 |
+| Yes          | No                    | No                     |              13 |            5 |
+| Yes          | No                    | Yes                    |             129 |           18 |
+| Yes          | Yes                   | No                     |               3 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------+----------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|                Clock Signal                |              Enable Signal             |              Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------+----------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|                                            |                                        | RO_PUF/RO_BLOCK_1/found_match             |                1 |              1 |         1.00 |
+|                                            |                                        | RO_PUF/RO_BLOCK_2/found_match             |                1 |              1 |         1.00 |
+|  RO_PUF/RO_BLOCK_1/found_match_reg_i_1_n_0 |                                        | RO_PUF/RO_BLOCK_1/found_match_reg_i_2_n_0 |                1 |              1 |         1.00 |
+|  RO_PUF/RO_BLOCK_2/found_match_reg_i_1_n_0 |                                        | RO_PUF/RO_BLOCK_2/found_match_reg_i_2_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                             |                                        | enable_IBUF_inst/O                        |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                             | RO_PUF/FSM_onehot_state_reg[3]_i_1_n_6 |                                           |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                             | RO_PUF/FSM_onehot_state_reg[3]_i_1_n_6 | RO_PUF/FSM_onehot_state[2]_i_1_n_0        |                1 |              3 |         3.00 |
+|  RO_PUF/Timer_size_reg[23]_i_2_n_0         |                                        |                                           |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG                             | RO_PUF/Enable_Comparison0              |                                           |                5 |             12 |         2.40 |
+|  clk_IBUF_BUFG                             |                                        | RO_PUF/FSM_onehot_state_reg[3]_i_1_n_6    |                4 |             29 |         7.25 |
+|  RO_PUF/RO_BLOCK_1/output_ro_BUFGCE        | RO_PUF/Enable_Counter__0               | RO_PUF/Reset_Counter__0                   |                4 |             32 |         8.00 |
+|  RO_PUF/RO_BLOCK_2/output_ro_BUFGCE        | RO_PUF/Enable_Counter__0               | RO_PUF/Reset_Counter__0                   |                4 |             32 |         8.00 |
+|  clk_IBUF_BUFG                             | RO_PUF/Enable_Comparison__0            | enable_IBUF_inst/O                        |               10 |             65 |         6.50 |
++--------------------------------------------+----------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+
+

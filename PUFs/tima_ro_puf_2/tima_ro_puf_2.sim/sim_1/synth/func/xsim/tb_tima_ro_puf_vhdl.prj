@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"tb_tima_ro_puf_func_synth.vhd" \
+"../../../../../tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd" \
+"../../../../../tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd" \
+"../../../../../tima_ro_puf_2.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd" \
+"../../../../../tima_ro_puf_2.srcs/sim_1/new/tima_ro_puf2_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,32 @@
+vhdl xil_defaultlib  \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_rst_ps8_0_100M_0/sim/u96v2_4x4_apuf_rst_ps8_0_100M_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_bram_ctrl_0_0/sim/u96v2_4x4_apuf_axi_bram_ctrl_0_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_0_0/sim/u96v2_4x4_apuf_axi_uart16550_0_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_1_0/sim/u96v2_4x4_apuf_axi_uart16550_1_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_0_0/sim/u96v2_4x4_apuf_axi_gpio_0_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_1_0/sim/u96v2_4x4_apuf_axi_gpio_1_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_2_0/sim/u96v2_4x4_apuf_axi_gpio_2_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/d813/hdl/vhdl/PWM_w_Int_S00_AXI.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/d813/hdl/vhdl/PWM_w_Int.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_PWM_w_Int_0_0/sim/u96v2_4x4_apuf_PWM_w_Int_0_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_PWM_w_Int_1_0/sim/u96v2_4x4_apuf_PWM_w_Int_1_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_0_0/sim/u96v2_4x4_apuf_proc_sys_reset_0_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_1_0/sim/u96v2_4x4_apuf_proc_sys_reset_1_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_2_0/sim/u96v2_4x4_apuf_proc_sys_reset_2_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_3_0/sim/u96v2_4x4_apuf_proc_sys_reset_3_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_4_0/sim/u96v2_4x4_apuf_proc_sys_reset_4_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_5_0/sim/u96v2_4x4_apuf_proc_sys_reset_5_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_6_0/sim/u96v2_4x4_apuf_proc_sys_reset_6_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/a314/src/APUF_Driver.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/a314/src/APUF_Mutual_Order.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/a314/hdl/Arb_Puf_4x4_v1_0_PUF_AXI.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/a314/src/Arbiter_Mutual_Order.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/a314/src/Flip_Flop_Symmetrical.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/a314/src/Mux_4x1.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/a314/src/Permutation.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/a314/src/Switch_Block_4x4.vhd" \
+"../../../bd/u96v2_4x4_apuf/ipshared/a314/hdl/Arb_Puf_4x4_v1_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_Arb_Puf_4x4_0_0/sim/u96v2_4x4_apuf_Arb_Puf_4x4_0_0.vhd" \
+"../../../bd/u96v2_4x4_apuf/sim/u96v2_4x4_apuf.vhd" \
+
+nosort

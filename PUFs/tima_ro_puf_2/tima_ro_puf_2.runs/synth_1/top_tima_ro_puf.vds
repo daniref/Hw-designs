@@ -1,0 +1,1127 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Sep 28 17:52:02 2024
+# Process ID: 3221
+# Current directory: /home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.runs/synth_1
+# Command line: vivado -log top_tima_ro_puf.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_tima_ro_puf.tcl
+# Log file: /home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.runs/synth_1/top_tima_ro_puf.vds
+# Journal file: /home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top_tima_ro_puf.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs/Tima_Ro_Puf_AXI4L_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs/TIMA_RO_PUF_AXI4L_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/vivado_work/ip_repo/TIMA_RO_PUF/TIMA_RO_PUF_AXI_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/puftester/PhD/repo/Hw-designs/PUFs/ip_repo/TIMA_RO_PUF_AXI_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/puftester/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top top_tima_ro_puf -part xczu3eg-sbva484-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3285
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2299.375 ; gain = 0.000 ; free physical = 140 ; free virtual = 19100
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_tima_ro_puf' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/new/top_tima_ro_puf.vhd:60]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y120 - type: string 
+	Parameter offset_pos bound to: 20 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y120 - type: string 
+	Parameter offset_pos bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'tima_ro_puf' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:8' bound to instance 'RO_PUF' of component 'tima_ro_puf' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/new/top_tima_ro_puf.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'tima_ro_puf' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:34]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y120 - type: string 
+	Parameter offset_pos bound to: 20 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'RO_selection' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:6' bound to instance 'RO_BLOCK_1' of component 'RO_selection' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'RO_selection' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:16]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:34]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter INIT bound to: 4'b0111 
+INFO: [Synth 8-113] binding component instance 'NAND_IN' to cell 'LUT2' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:72]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER_0' to cell 'LUT1' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:82]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:101]
+INFO: [Synth 8-256] done synthesizing module 'ROs' (1#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:34]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:35]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RO_selection' (2#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:16]
+	Parameter num_inverters bound to: 7 - type: integer 
+WARNING: [Synth 8-614] signal 'compteur_cycles' is read in the process but is not in the sensitivity list [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:138]
+WARNING: [Synth 8-614] signal 'Timer_size' is read in the process but is not in the sensitivity list [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:138]
+WARNING: [Synth 8-614] signal 'MUX_1_OUT' is read in the process but is not in the sensitivity list [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:230]
+INFO: [Synth 8-256] done synthesizing module 'tima_ro_puf' (3#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/ro_puf_7inverters_new.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'top_tima_ro_puf' (4#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/new/top_tima_ro_puf.vhd:60]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2299.375 ; gain = 0.000 ; free physical = 752 ; free virtual = 19805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2299.375 ; gain = 0.000 ; free physical = 747 ; free virtual = 19803
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2307.270 ; gain = 7.895 ; free physical = 746 ; free virtual = 19805
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+WARNING: [Synth 8-327] inferring latch for variable 'output_ro_reg' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'found_match_reg' [/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.srcs/sources_1/imports/new/RO_selection.vhd:48]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2307.270 ; gain = 7.895 ; free physical = 567 ; free virtual = 19706
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input  256 Bit        Muxes := 2     
+	   5 Input   28 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+	 255 Input    1 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 140 ; free virtual = 19098
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 140 ; free virtual = 19099
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:47 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 133 ; free virtual = 19083
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:51 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 184 ; free virtual = 19158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:51 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 184 ; free virtual = 19158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:51 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 183 ; free virtual = 19158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:52 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 183 ; free virtual = 19158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:52 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 184 ; free virtual = 19159
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:52 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 184 ; free virtual = 19159
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY8 |    17|
+|3     |LUT1   |  3591|
+|4     |LUT2   |   519|
+|5     |LUT3   |     9|
+|6     |LUT4   |    51|
+|7     |LUT5   |     4|
+|8     |LUT6   |   410|
+|9     |MUXF7  |    68|
+|10    |MUXF8  |    34|
+|11    |FDCE   |    64|
+|12    |FDRE   |   311|
+|13    |LDC    |     2|
+|14    |LDP    |     2|
+|15    |IBUF   |     5|
+|16    |OBUF   |   257|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+----------------+------+
+|      |Instance                             |Module          |Cells |
++------+-------------------------------------+----------------+------+
+|1     |top                                  |                |  5345|
+|2     |  RO_PUF                             |tima_ro_puf     |  5082|
+|3     |    RO_BLOCK_1                       |RO_selection__1 |  2174|
+|4     |      \RING_OSCILLATOR[0].RO_INST    |ROs__511        |     8|
+|5     |      \RING_OSCILLATOR[1].RO_INST    |ROs__510        |     8|
+|6     |      \RING_OSCILLATOR[2].RO_INST    |ROs__509        |     8|
+|7     |      \RING_OSCILLATOR[3].RO_INST    |ROs__508        |     8|
+|8     |      \RING_OSCILLATOR[4].RO_INST    |ROs__507        |     8|
+|9     |      \RING_OSCILLATOR[5].RO_INST    |ROs__506        |     8|
+|10    |      \RING_OSCILLATOR[6].RO_INST    |ROs__505        |     8|
+|11    |      \RING_OSCILLATOR[7].RO_INST    |ROs__504        |     8|
+|12    |      \RING_OSCILLATOR[8].RO_INST    |ROs__503        |     8|
+|13    |      \RING_OSCILLATOR[9].RO_INST    |ROs__502        |     8|
+|14    |      \RING_OSCILLATOR[10].RO_INST   |ROs__501        |     8|
+|15    |      \RING_OSCILLATOR[11].RO_INST   |ROs__500        |     8|
+|16    |      \RING_OSCILLATOR[12].RO_INST   |ROs__499        |     8|
+|17    |      \RING_OSCILLATOR[13].RO_INST   |ROs__498        |     8|
+|18    |      \RING_OSCILLATOR[14].RO_INST   |ROs__497        |     8|
+|19    |      \RING_OSCILLATOR[15].RO_INST   |ROs__496        |     8|
+|20    |      \RING_OSCILLATOR[16].RO_INST   |ROs__495        |     8|
+|21    |      \RING_OSCILLATOR[17].RO_INST   |ROs__494        |     8|
+|22    |      \RING_OSCILLATOR[18].RO_INST   |ROs__493        |     8|
+|23    |      \RING_OSCILLATOR[19].RO_INST   |ROs__492        |     8|
+|24    |      \RING_OSCILLATOR[20].RO_INST   |ROs__491        |     8|
+|25    |      \RING_OSCILLATOR[21].RO_INST   |ROs__490        |     8|
+|26    |      \RING_OSCILLATOR[22].RO_INST   |ROs__489        |     8|
+|27    |      \RING_OSCILLATOR[23].RO_INST   |ROs__488        |     8|
+|28    |      \RING_OSCILLATOR[24].RO_INST   |ROs__487        |     8|
+|29    |      \RING_OSCILLATOR[25].RO_INST   |ROs__486        |     8|
+|30    |      \RING_OSCILLATOR[26].RO_INST   |ROs__485        |     8|
+|31    |      \RING_OSCILLATOR[27].RO_INST   |ROs__484        |     8|
+|32    |      \RING_OSCILLATOR[28].RO_INST   |ROs__483        |     8|
+|33    |      \RING_OSCILLATOR[29].RO_INST   |ROs__482        |     8|
+|34    |      \RING_OSCILLATOR[30].RO_INST   |ROs__481        |     8|
+|35    |      \RING_OSCILLATOR[31].RO_INST   |ROs__480        |     8|
+|36    |      \RING_OSCILLATOR[32].RO_INST   |ROs__479        |     8|
+|37    |      \RING_OSCILLATOR[33].RO_INST   |ROs__478        |     8|
+|38    |      \RING_OSCILLATOR[34].RO_INST   |ROs__477        |     8|
+|39    |      \RING_OSCILLATOR[35].RO_INST   |ROs__476        |     8|
+|40    |      \RING_OSCILLATOR[36].RO_INST   |ROs__475        |     8|
+|41    |      \RING_OSCILLATOR[37].RO_INST   |ROs__474        |     8|
+|42    |      \RING_OSCILLATOR[38].RO_INST   |ROs__473        |     8|
+|43    |      \RING_OSCILLATOR[39].RO_INST   |ROs__472        |     8|
+|44    |      \RING_OSCILLATOR[40].RO_INST   |ROs__471        |     8|
+|45    |      \RING_OSCILLATOR[41].RO_INST   |ROs__470        |     8|
+|46    |      \RING_OSCILLATOR[42].RO_INST   |ROs__469        |     8|
+|47    |      \RING_OSCILLATOR[43].RO_INST   |ROs__468        |     8|
+|48    |      \RING_OSCILLATOR[44].RO_INST   |ROs__467        |     8|
+|49    |      \RING_OSCILLATOR[45].RO_INST   |ROs__466        |     8|
+|50    |      \RING_OSCILLATOR[46].RO_INST   |ROs__465        |     8|
+|51    |      \RING_OSCILLATOR[47].RO_INST   |ROs__464        |     8|
+|52    |      \RING_OSCILLATOR[48].RO_INST   |ROs__463        |     8|
+|53    |      \RING_OSCILLATOR[49].RO_INST   |ROs__462        |     8|
+|54    |      \RING_OSCILLATOR[50].RO_INST   |ROs__461        |     8|
+|55    |      \RING_OSCILLATOR[51].RO_INST   |ROs__460        |     8|
+|56    |      \RING_OSCILLATOR[52].RO_INST   |ROs__459        |     8|
+|57    |      \RING_OSCILLATOR[53].RO_INST   |ROs__458        |     8|
+|58    |      \RING_OSCILLATOR[54].RO_INST   |ROs__457        |     8|
+|59    |      \RING_OSCILLATOR[55].RO_INST   |ROs__456        |     8|
+|60    |      \RING_OSCILLATOR[56].RO_INST   |ROs__455        |     8|
+|61    |      \RING_OSCILLATOR[57].RO_INST   |ROs__454        |     8|
+|62    |      \RING_OSCILLATOR[58].RO_INST   |ROs__453        |     8|
+|63    |      \RING_OSCILLATOR[59].RO_INST   |ROs__452        |     8|
+|64    |      \RING_OSCILLATOR[60].RO_INST   |ROs__451        |     8|
+|65    |      \RING_OSCILLATOR[61].RO_INST   |ROs__450        |     8|
+|66    |      \RING_OSCILLATOR[62].RO_INST   |ROs__449        |     8|
+|67    |      \RING_OSCILLATOR[63].RO_INST   |ROs__448        |     8|
+|68    |      \RING_OSCILLATOR[64].RO_INST   |ROs__447        |     8|
+|69    |      \RING_OSCILLATOR[65].RO_INST   |ROs__446        |     8|
+|70    |      \RING_OSCILLATOR[66].RO_INST   |ROs__445        |     8|
+|71    |      \RING_OSCILLATOR[67].RO_INST   |ROs__444        |     8|
+|72    |      \RING_OSCILLATOR[68].RO_INST   |ROs__443        |     8|
+|73    |      \RING_OSCILLATOR[69].RO_INST   |ROs__442        |     8|
+|74    |      \RING_OSCILLATOR[70].RO_INST   |ROs__441        |     8|
+|75    |      \RING_OSCILLATOR[71].RO_INST   |ROs__440        |     8|
+|76    |      \RING_OSCILLATOR[72].RO_INST   |ROs__439        |     8|
+|77    |      \RING_OSCILLATOR[73].RO_INST   |ROs__438        |     8|
+|78    |      \RING_OSCILLATOR[74].RO_INST   |ROs__437        |     8|
+|79    |      \RING_OSCILLATOR[75].RO_INST   |ROs__436        |     8|
+|80    |      \RING_OSCILLATOR[76].RO_INST   |ROs__435        |     8|
+|81    |      \RING_OSCILLATOR[77].RO_INST   |ROs__434        |     8|
+|82    |      \RING_OSCILLATOR[78].RO_INST   |ROs__433        |     8|
+|83    |      \RING_OSCILLATOR[79].RO_INST   |ROs__432        |     8|
+|84    |      \RING_OSCILLATOR[80].RO_INST   |ROs__431        |     8|
+|85    |      \RING_OSCILLATOR[81].RO_INST   |ROs__430        |     8|
+|86    |      \RING_OSCILLATOR[82].RO_INST   |ROs__429        |     8|
+|87    |      \RING_OSCILLATOR[83].RO_INST   |ROs__428        |     8|
+|88    |      \RING_OSCILLATOR[84].RO_INST   |ROs__427        |     8|
+|89    |      \RING_OSCILLATOR[85].RO_INST   |ROs__426        |     8|
+|90    |      \RING_OSCILLATOR[86].RO_INST   |ROs__425        |     8|
+|91    |      \RING_OSCILLATOR[87].RO_INST   |ROs__424        |     8|
+|92    |      \RING_OSCILLATOR[88].RO_INST   |ROs__423        |     8|
+|93    |      \RING_OSCILLATOR[89].RO_INST   |ROs__422        |     8|
+|94    |      \RING_OSCILLATOR[90].RO_INST   |ROs__421        |     8|
+|95    |      \RING_OSCILLATOR[91].RO_INST   |ROs__420        |     8|
+|96    |      \RING_OSCILLATOR[92].RO_INST   |ROs__419        |     8|
+|97    |      \RING_OSCILLATOR[93].RO_INST   |ROs__418        |     8|
+|98    |      \RING_OSCILLATOR[94].RO_INST   |ROs__417        |     8|
+|99    |      \RING_OSCILLATOR[95].RO_INST   |ROs__416        |     8|
+|100   |      \RING_OSCILLATOR[96].RO_INST   |ROs__415        |     8|
+|101   |      \RING_OSCILLATOR[97].RO_INST   |ROs__414        |     8|
+|102   |      \RING_OSCILLATOR[98].RO_INST   |ROs__413        |     8|
+|103   |      \RING_OSCILLATOR[99].RO_INST   |ROs__412        |     8|
+|104   |      \RING_OSCILLATOR[100].RO_INST  |ROs__411        |     8|
+|105   |      \RING_OSCILLATOR[101].RO_INST  |ROs__410        |     8|
+|106   |      \RING_OSCILLATOR[102].RO_INST  |ROs__409        |     8|
+|107   |      \RING_OSCILLATOR[103].RO_INST  |ROs__408        |     8|
+|108   |      \RING_OSCILLATOR[104].RO_INST  |ROs__407        |     8|
+|109   |      \RING_OSCILLATOR[105].RO_INST  |ROs__406        |     8|
+|110   |      \RING_OSCILLATOR[106].RO_INST  |ROs__405        |     8|
+|111   |      \RING_OSCILLATOR[107].RO_INST  |ROs__404        |     8|
+|112   |      \RING_OSCILLATOR[108].RO_INST  |ROs__403        |     8|
+|113   |      \RING_OSCILLATOR[109].RO_INST  |ROs__402        |     8|
+|114   |      \RING_OSCILLATOR[110].RO_INST  |ROs__401        |     8|
+|115   |      \RING_OSCILLATOR[111].RO_INST  |ROs__400        |     8|
+|116   |      \RING_OSCILLATOR[112].RO_INST  |ROs__399        |     8|
+|117   |      \RING_OSCILLATOR[113].RO_INST  |ROs__398        |     8|
+|118   |      \RING_OSCILLATOR[114].RO_INST  |ROs__397        |     8|
+|119   |      \RING_OSCILLATOR[115].RO_INST  |ROs__396        |     8|
+|120   |      \RING_OSCILLATOR[116].RO_INST  |ROs__395        |     8|
+|121   |      \RING_OSCILLATOR[117].RO_INST  |ROs__394        |     8|
+|122   |      \RING_OSCILLATOR[118].RO_INST  |ROs__393        |     8|
+|123   |      \RING_OSCILLATOR[119].RO_INST  |ROs__392        |     8|
+|124   |      \RING_OSCILLATOR[120].RO_INST  |ROs__391        |     8|
+|125   |      \RING_OSCILLATOR[121].RO_INST  |ROs__390        |     8|
+|126   |      \RING_OSCILLATOR[122].RO_INST  |ROs__389        |     8|
+|127   |      \RING_OSCILLATOR[123].RO_INST  |ROs__388        |     8|
+|128   |      \RING_OSCILLATOR[124].RO_INST  |ROs__387        |     8|
+|129   |      \RING_OSCILLATOR[125].RO_INST  |ROs__386        |     8|
+|130   |      \RING_OSCILLATOR[126].RO_INST  |ROs__385        |     8|
+|131   |      \RING_OSCILLATOR[127].RO_INST  |ROs__384        |     8|
+|132   |      \RING_OSCILLATOR[128].RO_INST  |ROs__383        |     8|
+|133   |      \RING_OSCILLATOR[129].RO_INST  |ROs__382        |     8|
+|134   |      \RING_OSCILLATOR[130].RO_INST  |ROs__381        |     8|
+|135   |      \RING_OSCILLATOR[131].RO_INST  |ROs__380        |     8|
+|136   |      \RING_OSCILLATOR[132].RO_INST  |ROs__379        |     8|
+|137   |      \RING_OSCILLATOR[133].RO_INST  |ROs__378        |     8|
+|138   |      \RING_OSCILLATOR[134].RO_INST  |ROs__377        |     8|
+|139   |      \RING_OSCILLATOR[135].RO_INST  |ROs__376        |     8|
+|140   |      \RING_OSCILLATOR[136].RO_INST  |ROs__375        |     8|
+|141   |      \RING_OSCILLATOR[137].RO_INST  |ROs__374        |     8|
+|142   |      \RING_OSCILLATOR[138].RO_INST  |ROs__373        |     8|
+|143   |      \RING_OSCILLATOR[139].RO_INST  |ROs__372        |     8|
+|144   |      \RING_OSCILLATOR[140].RO_INST  |ROs__371        |     8|
+|145   |      \RING_OSCILLATOR[141].RO_INST  |ROs__370        |     8|
+|146   |      \RING_OSCILLATOR[142].RO_INST  |ROs__369        |     8|
+|147   |      \RING_OSCILLATOR[143].RO_INST  |ROs__368        |     8|
+|148   |      \RING_OSCILLATOR[144].RO_INST  |ROs__367        |     8|
+|149   |      \RING_OSCILLATOR[145].RO_INST  |ROs__366        |     8|
+|150   |      \RING_OSCILLATOR[146].RO_INST  |ROs__365        |     8|
+|151   |      \RING_OSCILLATOR[147].RO_INST  |ROs__364        |     8|
+|152   |      \RING_OSCILLATOR[148].RO_INST  |ROs__363        |     8|
+|153   |      \RING_OSCILLATOR[149].RO_INST  |ROs__362        |     8|
+|154   |      \RING_OSCILLATOR[150].RO_INST  |ROs__361        |     8|
+|155   |      \RING_OSCILLATOR[151].RO_INST  |ROs__360        |     8|
+|156   |      \RING_OSCILLATOR[152].RO_INST  |ROs__359        |     8|
+|157   |      \RING_OSCILLATOR[153].RO_INST  |ROs__358        |     8|
+|158   |      \RING_OSCILLATOR[154].RO_INST  |ROs__357        |     8|
+|159   |      \RING_OSCILLATOR[155].RO_INST  |ROs__356        |     8|
+|160   |      \RING_OSCILLATOR[156].RO_INST  |ROs__355        |     8|
+|161   |      \RING_OSCILLATOR[157].RO_INST  |ROs__354        |     8|
+|162   |      \RING_OSCILLATOR[158].RO_INST  |ROs__353        |     8|
+|163   |      \RING_OSCILLATOR[159].RO_INST  |ROs__352        |     8|
+|164   |      \RING_OSCILLATOR[160].RO_INST  |ROs__351        |     8|
+|165   |      \RING_OSCILLATOR[161].RO_INST  |ROs__350        |     8|
+|166   |      \RING_OSCILLATOR[162].RO_INST  |ROs__349        |     8|
+|167   |      \RING_OSCILLATOR[163].RO_INST  |ROs__348        |     8|
+|168   |      \RING_OSCILLATOR[164].RO_INST  |ROs__347        |     8|
+|169   |      \RING_OSCILLATOR[165].RO_INST  |ROs__346        |     8|
+|170   |      \RING_OSCILLATOR[166].RO_INST  |ROs__345        |     8|
+|171   |      \RING_OSCILLATOR[167].RO_INST  |ROs__344        |     8|
+|172   |      \RING_OSCILLATOR[168].RO_INST  |ROs__343        |     8|
+|173   |      \RING_OSCILLATOR[169].RO_INST  |ROs__342        |     8|
+|174   |      \RING_OSCILLATOR[170].RO_INST  |ROs__341        |     8|
+|175   |      \RING_OSCILLATOR[171].RO_INST  |ROs__340        |     8|
+|176   |      \RING_OSCILLATOR[172].RO_INST  |ROs__339        |     8|
+|177   |      \RING_OSCILLATOR[173].RO_INST  |ROs__338        |     8|
+|178   |      \RING_OSCILLATOR[174].RO_INST  |ROs__337        |     8|
+|179   |      \RING_OSCILLATOR[175].RO_INST  |ROs__336        |     8|
+|180   |      \RING_OSCILLATOR[176].RO_INST  |ROs__335        |     8|
+|181   |      \RING_OSCILLATOR[177].RO_INST  |ROs__334        |     8|
+|182   |      \RING_OSCILLATOR[178].RO_INST  |ROs__333        |     8|
+|183   |      \RING_OSCILLATOR[179].RO_INST  |ROs__332        |     8|
+|184   |      \RING_OSCILLATOR[180].RO_INST  |ROs__331        |     8|
+|185   |      \RING_OSCILLATOR[181].RO_INST  |ROs__330        |     8|
+|186   |      \RING_OSCILLATOR[182].RO_INST  |ROs__329        |     8|
+|187   |      \RING_OSCILLATOR[183].RO_INST  |ROs__328        |     8|
+|188   |      \RING_OSCILLATOR[184].RO_INST  |ROs__327        |     8|
+|189   |      \RING_OSCILLATOR[185].RO_INST  |ROs__326        |     8|
+|190   |      \RING_OSCILLATOR[186].RO_INST  |ROs__325        |     8|
+|191   |      \RING_OSCILLATOR[187].RO_INST  |ROs__324        |     8|
+|192   |      \RING_OSCILLATOR[188].RO_INST  |ROs__323        |     8|
+|193   |      \RING_OSCILLATOR[189].RO_INST  |ROs__322        |     8|
+|194   |      \RING_OSCILLATOR[190].RO_INST  |ROs__321        |     8|
+|195   |      \RING_OSCILLATOR[191].RO_INST  |ROs__320        |     8|
+|196   |      \RING_OSCILLATOR[192].RO_INST  |ROs__319        |     8|
+|197   |      \RING_OSCILLATOR[193].RO_INST  |ROs__318        |     8|
+|198   |      \RING_OSCILLATOR[194].RO_INST  |ROs__317        |     8|
+|199   |      \RING_OSCILLATOR[195].RO_INST  |ROs__316        |     8|
+|200   |      \RING_OSCILLATOR[196].RO_INST  |ROs__315        |     8|
+|201   |      \RING_OSCILLATOR[197].RO_INST  |ROs__314        |     8|
+|202   |      \RING_OSCILLATOR[198].RO_INST  |ROs__313        |     8|
+|203   |      \RING_OSCILLATOR[199].RO_INST  |ROs__312        |     8|
+|204   |      \RING_OSCILLATOR[200].RO_INST  |ROs__311        |     8|
+|205   |      \RING_OSCILLATOR[201].RO_INST  |ROs__310        |     8|
+|206   |      \RING_OSCILLATOR[202].RO_INST  |ROs__309        |     8|
+|207   |      \RING_OSCILLATOR[203].RO_INST  |ROs__308        |     8|
+|208   |      \RING_OSCILLATOR[204].RO_INST  |ROs__307        |     8|
+|209   |      \RING_OSCILLATOR[205].RO_INST  |ROs__306        |     8|
+|210   |      \RING_OSCILLATOR[206].RO_INST  |ROs__305        |     8|
+|211   |      \RING_OSCILLATOR[207].RO_INST  |ROs__304        |     8|
+|212   |      \RING_OSCILLATOR[208].RO_INST  |ROs__303        |     8|
+|213   |      \RING_OSCILLATOR[209].RO_INST  |ROs__302        |     8|
+|214   |      \RING_OSCILLATOR[210].RO_INST  |ROs__301        |     8|
+|215   |      \RING_OSCILLATOR[211].RO_INST  |ROs__300        |     8|
+|216   |      \RING_OSCILLATOR[212].RO_INST  |ROs__299        |     8|
+|217   |      \RING_OSCILLATOR[213].RO_INST  |ROs__298        |     8|
+|218   |      \RING_OSCILLATOR[214].RO_INST  |ROs__297        |     8|
+|219   |      \RING_OSCILLATOR[215].RO_INST  |ROs__296        |     8|
+|220   |      \RING_OSCILLATOR[216].RO_INST  |ROs__295        |     8|
+|221   |      \RING_OSCILLATOR[217].RO_INST  |ROs__294        |     8|
+|222   |      \RING_OSCILLATOR[218].RO_INST  |ROs__293        |     8|
+|223   |      \RING_OSCILLATOR[219].RO_INST  |ROs__292        |     8|
+|224   |      \RING_OSCILLATOR[220].RO_INST  |ROs__291        |     8|
+|225   |      \RING_OSCILLATOR[221].RO_INST  |ROs__290        |     8|
+|226   |      \RING_OSCILLATOR[222].RO_INST  |ROs__289        |     8|
+|227   |      \RING_OSCILLATOR[223].RO_INST  |ROs__288        |     8|
+|228   |      \RING_OSCILLATOR[224].RO_INST  |ROs__287        |     8|
+|229   |      \RING_OSCILLATOR[225].RO_INST  |ROs__286        |     8|
+|230   |      \RING_OSCILLATOR[226].RO_INST  |ROs__285        |     8|
+|231   |      \RING_OSCILLATOR[227].RO_INST  |ROs__284        |     8|
+|232   |      \RING_OSCILLATOR[228].RO_INST  |ROs__283        |     8|
+|233   |      \RING_OSCILLATOR[229].RO_INST  |ROs__282        |     8|
+|234   |      \RING_OSCILLATOR[230].RO_INST  |ROs__281        |     8|
+|235   |      \RING_OSCILLATOR[231].RO_INST  |ROs__280        |     8|
+|236   |      \RING_OSCILLATOR[232].RO_INST  |ROs__279        |     8|
+|237   |      \RING_OSCILLATOR[233].RO_INST  |ROs__278        |     8|
+|238   |      \RING_OSCILLATOR[234].RO_INST  |ROs__277        |     8|
+|239   |      \RING_OSCILLATOR[235].RO_INST  |ROs__276        |     8|
+|240   |      \RING_OSCILLATOR[236].RO_INST  |ROs__275        |     8|
+|241   |      \RING_OSCILLATOR[237].RO_INST  |ROs__274        |     8|
+|242   |      \RING_OSCILLATOR[238].RO_INST  |ROs__273        |     8|
+|243   |      \RING_OSCILLATOR[239].RO_INST  |ROs__272        |     8|
+|244   |      \RING_OSCILLATOR[240].RO_INST  |ROs__271        |     8|
+|245   |      \RING_OSCILLATOR[241].RO_INST  |ROs__270        |     8|
+|246   |      \RING_OSCILLATOR[242].RO_INST  |ROs__269        |     8|
+|247   |      \RING_OSCILLATOR[243].RO_INST  |ROs__268        |     8|
+|248   |      \RING_OSCILLATOR[244].RO_INST  |ROs__267        |     8|
+|249   |      \RING_OSCILLATOR[245].RO_INST  |ROs__266        |     8|
+|250   |      \RING_OSCILLATOR[246].RO_INST  |ROs__265        |     8|
+|251   |      \RING_OSCILLATOR[247].RO_INST  |ROs__264        |     8|
+|252   |      \RING_OSCILLATOR[248].RO_INST  |ROs__263        |     8|
+|253   |      \RING_OSCILLATOR[249].RO_INST  |ROs__262        |     8|
+|254   |      \RING_OSCILLATOR[250].RO_INST  |ROs__261        |     8|
+|255   |      \RING_OSCILLATOR[251].RO_INST  |ROs__260        |     8|
+|256   |      \RING_OSCILLATOR[252].RO_INST  |ROs__259        |     8|
+|257   |      \RING_OSCILLATOR[253].RO_INST  |ROs__258        |     8|
+|258   |      \RING_OSCILLATOR[254].RO_INST  |ROs__257        |     8|
+|259   |      \RING_OSCILLATOR[255].RO_INST  |ROs__256        |     8|
+|260   |    RO_BLOCK_2                       |RO_selection    |  2174|
+|261   |      \RING_OSCILLATOR[0].RO_INST    |ROs__1          |     8|
+|262   |      \RING_OSCILLATOR[1].RO_INST    |ROs__2          |     8|
+|263   |      \RING_OSCILLATOR[2].RO_INST    |ROs__3          |     8|
+|264   |      \RING_OSCILLATOR[3].RO_INST    |ROs__4          |     8|
+|265   |      \RING_OSCILLATOR[4].RO_INST    |ROs__5          |     8|
+|266   |      \RING_OSCILLATOR[5].RO_INST    |ROs__6          |     8|
+|267   |      \RING_OSCILLATOR[6].RO_INST    |ROs__7          |     8|
+|268   |      \RING_OSCILLATOR[7].RO_INST    |ROs__8          |     8|
+|269   |      \RING_OSCILLATOR[8].RO_INST    |ROs__9          |     8|
+|270   |      \RING_OSCILLATOR[9].RO_INST    |ROs__10         |     8|
+|271   |      \RING_OSCILLATOR[10].RO_INST   |ROs__11         |     8|
+|272   |      \RING_OSCILLATOR[11].RO_INST   |ROs__12         |     8|
+|273   |      \RING_OSCILLATOR[12].RO_INST   |ROs__13         |     8|
+|274   |      \RING_OSCILLATOR[13].RO_INST   |ROs__14         |     8|
+|275   |      \RING_OSCILLATOR[14].RO_INST   |ROs__15         |     8|
+|276   |      \RING_OSCILLATOR[15].RO_INST   |ROs__16         |     8|
+|277   |      \RING_OSCILLATOR[16].RO_INST   |ROs__17         |     8|
+|278   |      \RING_OSCILLATOR[17].RO_INST   |ROs__18         |     8|
+|279   |      \RING_OSCILLATOR[18].RO_INST   |ROs__19         |     8|
+|280   |      \RING_OSCILLATOR[19].RO_INST   |ROs__20         |     8|
+|281   |      \RING_OSCILLATOR[20].RO_INST   |ROs__21         |     8|
+|282   |      \RING_OSCILLATOR[21].RO_INST   |ROs__22         |     8|
+|283   |      \RING_OSCILLATOR[22].RO_INST   |ROs__23         |     8|
+|284   |      \RING_OSCILLATOR[23].RO_INST   |ROs__24         |     8|
+|285   |      \RING_OSCILLATOR[24].RO_INST   |ROs__25         |     8|
+|286   |      \RING_OSCILLATOR[25].RO_INST   |ROs__26         |     8|
+|287   |      \RING_OSCILLATOR[26].RO_INST   |ROs__27         |     8|
+|288   |      \RING_OSCILLATOR[27].RO_INST   |ROs__28         |     8|
+|289   |      \RING_OSCILLATOR[28].RO_INST   |ROs__29         |     8|
+|290   |      \RING_OSCILLATOR[29].RO_INST   |ROs__30         |     8|
+|291   |      \RING_OSCILLATOR[30].RO_INST   |ROs__31         |     8|
+|292   |      \RING_OSCILLATOR[31].RO_INST   |ROs__32         |     8|
+|293   |      \RING_OSCILLATOR[32].RO_INST   |ROs__33         |     8|
+|294   |      \RING_OSCILLATOR[33].RO_INST   |ROs__34         |     8|
+|295   |      \RING_OSCILLATOR[34].RO_INST   |ROs__35         |     8|
+|296   |      \RING_OSCILLATOR[35].RO_INST   |ROs__36         |     8|
+|297   |      \RING_OSCILLATOR[36].RO_INST   |ROs__37         |     8|
+|298   |      \RING_OSCILLATOR[37].RO_INST   |ROs__38         |     8|
+|299   |      \RING_OSCILLATOR[38].RO_INST   |ROs__39         |     8|
+|300   |      \RING_OSCILLATOR[39].RO_INST   |ROs__40         |     8|
+|301   |      \RING_OSCILLATOR[40].RO_INST   |ROs__41         |     8|
+|302   |      \RING_OSCILLATOR[41].RO_INST   |ROs__42         |     8|
+|303   |      \RING_OSCILLATOR[42].RO_INST   |ROs__43         |     8|
+|304   |      \RING_OSCILLATOR[43].RO_INST   |ROs__44         |     8|
+|305   |      \RING_OSCILLATOR[44].RO_INST   |ROs__45         |     8|
+|306   |      \RING_OSCILLATOR[45].RO_INST   |ROs__46         |     8|
+|307   |      \RING_OSCILLATOR[46].RO_INST   |ROs__47         |     8|
+|308   |      \RING_OSCILLATOR[47].RO_INST   |ROs__48         |     8|
+|309   |      \RING_OSCILLATOR[48].RO_INST   |ROs__49         |     8|
+|310   |      \RING_OSCILLATOR[49].RO_INST   |ROs__50         |     8|
+|311   |      \RING_OSCILLATOR[50].RO_INST   |ROs__51         |     8|
+|312   |      \RING_OSCILLATOR[51].RO_INST   |ROs__52         |     8|
+|313   |      \RING_OSCILLATOR[52].RO_INST   |ROs__53         |     8|
+|314   |      \RING_OSCILLATOR[53].RO_INST   |ROs__54         |     8|
+|315   |      \RING_OSCILLATOR[54].RO_INST   |ROs__55         |     8|
+|316   |      \RING_OSCILLATOR[55].RO_INST   |ROs__56         |     8|
+|317   |      \RING_OSCILLATOR[56].RO_INST   |ROs__57         |     8|
+|318   |      \RING_OSCILLATOR[57].RO_INST   |ROs__58         |     8|
+|319   |      \RING_OSCILLATOR[58].RO_INST   |ROs__59         |     8|
+|320   |      \RING_OSCILLATOR[59].RO_INST   |ROs__60         |     8|
+|321   |      \RING_OSCILLATOR[60].RO_INST   |ROs__61         |     8|
+|322   |      \RING_OSCILLATOR[61].RO_INST   |ROs__62         |     8|
+|323   |      \RING_OSCILLATOR[62].RO_INST   |ROs__63         |     8|
+|324   |      \RING_OSCILLATOR[63].RO_INST   |ROs__64         |     8|
+|325   |      \RING_OSCILLATOR[64].RO_INST   |ROs__65         |     8|
+|326   |      \RING_OSCILLATOR[65].RO_INST   |ROs__66         |     8|
+|327   |      \RING_OSCILLATOR[66].RO_INST   |ROs__67         |     8|
+|328   |      \RING_OSCILLATOR[67].RO_INST   |ROs__68         |     8|
+|329   |      \RING_OSCILLATOR[68].RO_INST   |ROs__69         |     8|
+|330   |      \RING_OSCILLATOR[69].RO_INST   |ROs__70         |     8|
+|331   |      \RING_OSCILLATOR[70].RO_INST   |ROs__71         |     8|
+|332   |      \RING_OSCILLATOR[71].RO_INST   |ROs__72         |     8|
+|333   |      \RING_OSCILLATOR[72].RO_INST   |ROs__73         |     8|
+|334   |      \RING_OSCILLATOR[73].RO_INST   |ROs__74         |     8|
+|335   |      \RING_OSCILLATOR[74].RO_INST   |ROs__75         |     8|
+|336   |      \RING_OSCILLATOR[75].RO_INST   |ROs__76         |     8|
+|337   |      \RING_OSCILLATOR[76].RO_INST   |ROs__77         |     8|
+|338   |      \RING_OSCILLATOR[77].RO_INST   |ROs__78         |     8|
+|339   |      \RING_OSCILLATOR[78].RO_INST   |ROs__79         |     8|
+|340   |      \RING_OSCILLATOR[79].RO_INST   |ROs__80         |     8|
+|341   |      \RING_OSCILLATOR[80].RO_INST   |ROs__81         |     8|
+|342   |      \RING_OSCILLATOR[81].RO_INST   |ROs__82         |     8|
+|343   |      \RING_OSCILLATOR[82].RO_INST   |ROs__83         |     8|
+|344   |      \RING_OSCILLATOR[83].RO_INST   |ROs__84         |     8|
+|345   |      \RING_OSCILLATOR[84].RO_INST   |ROs__85         |     8|
+|346   |      \RING_OSCILLATOR[85].RO_INST   |ROs__86         |     8|
+|347   |      \RING_OSCILLATOR[86].RO_INST   |ROs__87         |     8|
+|348   |      \RING_OSCILLATOR[87].RO_INST   |ROs__88         |     8|
+|349   |      \RING_OSCILLATOR[88].RO_INST   |ROs__89         |     8|
+|350   |      \RING_OSCILLATOR[89].RO_INST   |ROs__90         |     8|
+|351   |      \RING_OSCILLATOR[90].RO_INST   |ROs__91         |     8|
+|352   |      \RING_OSCILLATOR[91].RO_INST   |ROs__92         |     8|
+|353   |      \RING_OSCILLATOR[92].RO_INST   |ROs__93         |     8|
+|354   |      \RING_OSCILLATOR[93].RO_INST   |ROs__94         |     8|
+|355   |      \RING_OSCILLATOR[94].RO_INST   |ROs__95         |     8|
+|356   |      \RING_OSCILLATOR[95].RO_INST   |ROs__96         |     8|
+|357   |      \RING_OSCILLATOR[96].RO_INST   |ROs__97         |     8|
+|358   |      \RING_OSCILLATOR[97].RO_INST   |ROs__98         |     8|
+|359   |      \RING_OSCILLATOR[98].RO_INST   |ROs__99         |     8|
+|360   |      \RING_OSCILLATOR[99].RO_INST   |ROs__100        |     8|
+|361   |      \RING_OSCILLATOR[100].RO_INST  |ROs__101        |     8|
+|362   |      \RING_OSCILLATOR[101].RO_INST  |ROs__102        |     8|
+|363   |      \RING_OSCILLATOR[102].RO_INST  |ROs__103        |     8|
+|364   |      \RING_OSCILLATOR[103].RO_INST  |ROs__104        |     8|
+|365   |      \RING_OSCILLATOR[104].RO_INST  |ROs__105        |     8|
+|366   |      \RING_OSCILLATOR[105].RO_INST  |ROs__106        |     8|
+|367   |      \RING_OSCILLATOR[106].RO_INST  |ROs__107        |     8|
+|368   |      \RING_OSCILLATOR[107].RO_INST  |ROs__108        |     8|
+|369   |      \RING_OSCILLATOR[108].RO_INST  |ROs__109        |     8|
+|370   |      \RING_OSCILLATOR[109].RO_INST  |ROs__110        |     8|
+|371   |      \RING_OSCILLATOR[110].RO_INST  |ROs__111        |     8|
+|372   |      \RING_OSCILLATOR[111].RO_INST  |ROs__112        |     8|
+|373   |      \RING_OSCILLATOR[112].RO_INST  |ROs__113        |     8|
+|374   |      \RING_OSCILLATOR[113].RO_INST  |ROs__114        |     8|
+|375   |      \RING_OSCILLATOR[114].RO_INST  |ROs__115        |     8|
+|376   |      \RING_OSCILLATOR[115].RO_INST  |ROs__116        |     8|
+|377   |      \RING_OSCILLATOR[116].RO_INST  |ROs__117        |     8|
+|378   |      \RING_OSCILLATOR[117].RO_INST  |ROs__118        |     8|
+|379   |      \RING_OSCILLATOR[118].RO_INST  |ROs__119        |     8|
+|380   |      \RING_OSCILLATOR[119].RO_INST  |ROs__120        |     8|
+|381   |      \RING_OSCILLATOR[120].RO_INST  |ROs__121        |     8|
+|382   |      \RING_OSCILLATOR[121].RO_INST  |ROs__122        |     8|
+|383   |      \RING_OSCILLATOR[122].RO_INST  |ROs__123        |     8|
+|384   |      \RING_OSCILLATOR[123].RO_INST  |ROs__124        |     8|
+|385   |      \RING_OSCILLATOR[124].RO_INST  |ROs__125        |     8|
+|386   |      \RING_OSCILLATOR[125].RO_INST  |ROs__126        |     8|
+|387   |      \RING_OSCILLATOR[126].RO_INST  |ROs__127        |     8|
+|388   |      \RING_OSCILLATOR[127].RO_INST  |ROs__128        |     8|
+|389   |      \RING_OSCILLATOR[128].RO_INST  |ROs__129        |     8|
+|390   |      \RING_OSCILLATOR[129].RO_INST  |ROs__130        |     8|
+|391   |      \RING_OSCILLATOR[130].RO_INST  |ROs__131        |     8|
+|392   |      \RING_OSCILLATOR[131].RO_INST  |ROs__132        |     8|
+|393   |      \RING_OSCILLATOR[132].RO_INST  |ROs__133        |     8|
+|394   |      \RING_OSCILLATOR[133].RO_INST  |ROs__134        |     8|
+|395   |      \RING_OSCILLATOR[134].RO_INST  |ROs__135        |     8|
+|396   |      \RING_OSCILLATOR[135].RO_INST  |ROs__136        |     8|
+|397   |      \RING_OSCILLATOR[136].RO_INST  |ROs__137        |     8|
+|398   |      \RING_OSCILLATOR[137].RO_INST  |ROs__138        |     8|
+|399   |      \RING_OSCILLATOR[138].RO_INST  |ROs__139        |     8|
+|400   |      \RING_OSCILLATOR[139].RO_INST  |ROs__140        |     8|
+|401   |      \RING_OSCILLATOR[140].RO_INST  |ROs__141        |     8|
+|402   |      \RING_OSCILLATOR[141].RO_INST  |ROs__142        |     8|
+|403   |      \RING_OSCILLATOR[142].RO_INST  |ROs__143        |     8|
+|404   |      \RING_OSCILLATOR[143].RO_INST  |ROs__144        |     8|
+|405   |      \RING_OSCILLATOR[144].RO_INST  |ROs__145        |     8|
+|406   |      \RING_OSCILLATOR[145].RO_INST  |ROs__146        |     8|
+|407   |      \RING_OSCILLATOR[146].RO_INST  |ROs__147        |     8|
+|408   |      \RING_OSCILLATOR[147].RO_INST  |ROs__148        |     8|
+|409   |      \RING_OSCILLATOR[148].RO_INST  |ROs__149        |     8|
+|410   |      \RING_OSCILLATOR[149].RO_INST  |ROs__150        |     8|
+|411   |      \RING_OSCILLATOR[150].RO_INST  |ROs__151        |     8|
+|412   |      \RING_OSCILLATOR[151].RO_INST  |ROs__152        |     8|
+|413   |      \RING_OSCILLATOR[152].RO_INST  |ROs__153        |     8|
+|414   |      \RING_OSCILLATOR[153].RO_INST  |ROs__154        |     8|
+|415   |      \RING_OSCILLATOR[154].RO_INST  |ROs__155        |     8|
+|416   |      \RING_OSCILLATOR[155].RO_INST  |ROs__156        |     8|
+|417   |      \RING_OSCILLATOR[156].RO_INST  |ROs__157        |     8|
+|418   |      \RING_OSCILLATOR[157].RO_INST  |ROs__158        |     8|
+|419   |      \RING_OSCILLATOR[158].RO_INST  |ROs__159        |     8|
+|420   |      \RING_OSCILLATOR[159].RO_INST  |ROs__160        |     8|
+|421   |      \RING_OSCILLATOR[160].RO_INST  |ROs__161        |     8|
+|422   |      \RING_OSCILLATOR[161].RO_INST  |ROs__162        |     8|
+|423   |      \RING_OSCILLATOR[162].RO_INST  |ROs__163        |     8|
+|424   |      \RING_OSCILLATOR[163].RO_INST  |ROs__164        |     8|
+|425   |      \RING_OSCILLATOR[164].RO_INST  |ROs__165        |     8|
+|426   |      \RING_OSCILLATOR[165].RO_INST  |ROs__166        |     8|
+|427   |      \RING_OSCILLATOR[166].RO_INST  |ROs__167        |     8|
+|428   |      \RING_OSCILLATOR[167].RO_INST  |ROs__168        |     8|
+|429   |      \RING_OSCILLATOR[168].RO_INST  |ROs__169        |     8|
+|430   |      \RING_OSCILLATOR[169].RO_INST  |ROs__170        |     8|
+|431   |      \RING_OSCILLATOR[170].RO_INST  |ROs__171        |     8|
+|432   |      \RING_OSCILLATOR[171].RO_INST  |ROs__172        |     8|
+|433   |      \RING_OSCILLATOR[172].RO_INST  |ROs__173        |     8|
+|434   |      \RING_OSCILLATOR[173].RO_INST  |ROs__174        |     8|
+|435   |      \RING_OSCILLATOR[174].RO_INST  |ROs__175        |     8|
+|436   |      \RING_OSCILLATOR[175].RO_INST  |ROs__176        |     8|
+|437   |      \RING_OSCILLATOR[176].RO_INST  |ROs__177        |     8|
+|438   |      \RING_OSCILLATOR[177].RO_INST  |ROs__178        |     8|
+|439   |      \RING_OSCILLATOR[178].RO_INST  |ROs__179        |     8|
+|440   |      \RING_OSCILLATOR[179].RO_INST  |ROs__180        |     8|
+|441   |      \RING_OSCILLATOR[180].RO_INST  |ROs__181        |     8|
+|442   |      \RING_OSCILLATOR[181].RO_INST  |ROs__182        |     8|
+|443   |      \RING_OSCILLATOR[182].RO_INST  |ROs__183        |     8|
+|444   |      \RING_OSCILLATOR[183].RO_INST  |ROs__184        |     8|
+|445   |      \RING_OSCILLATOR[184].RO_INST  |ROs__185        |     8|
+|446   |      \RING_OSCILLATOR[185].RO_INST  |ROs__186        |     8|
+|447   |      \RING_OSCILLATOR[186].RO_INST  |ROs__187        |     8|
+|448   |      \RING_OSCILLATOR[187].RO_INST  |ROs__188        |     8|
+|449   |      \RING_OSCILLATOR[188].RO_INST  |ROs__189        |     8|
+|450   |      \RING_OSCILLATOR[189].RO_INST  |ROs__190        |     8|
+|451   |      \RING_OSCILLATOR[190].RO_INST  |ROs__191        |     8|
+|452   |      \RING_OSCILLATOR[191].RO_INST  |ROs__192        |     8|
+|453   |      \RING_OSCILLATOR[192].RO_INST  |ROs__193        |     8|
+|454   |      \RING_OSCILLATOR[193].RO_INST  |ROs__194        |     8|
+|455   |      \RING_OSCILLATOR[194].RO_INST  |ROs__195        |     8|
+|456   |      \RING_OSCILLATOR[195].RO_INST  |ROs__196        |     8|
+|457   |      \RING_OSCILLATOR[196].RO_INST  |ROs__197        |     8|
+|458   |      \RING_OSCILLATOR[197].RO_INST  |ROs__198        |     8|
+|459   |      \RING_OSCILLATOR[198].RO_INST  |ROs__199        |     8|
+|460   |      \RING_OSCILLATOR[199].RO_INST  |ROs__200        |     8|
+|461   |      \RING_OSCILLATOR[200].RO_INST  |ROs__201        |     8|
+|462   |      \RING_OSCILLATOR[201].RO_INST  |ROs__202        |     8|
+|463   |      \RING_OSCILLATOR[202].RO_INST  |ROs__203        |     8|
+|464   |      \RING_OSCILLATOR[203].RO_INST  |ROs__204        |     8|
+|465   |      \RING_OSCILLATOR[204].RO_INST  |ROs__205        |     8|
+|466   |      \RING_OSCILLATOR[205].RO_INST  |ROs__206        |     8|
+|467   |      \RING_OSCILLATOR[206].RO_INST  |ROs__207        |     8|
+|468   |      \RING_OSCILLATOR[207].RO_INST  |ROs__208        |     8|
+|469   |      \RING_OSCILLATOR[208].RO_INST  |ROs__209        |     8|
+|470   |      \RING_OSCILLATOR[209].RO_INST  |ROs__210        |     8|
+|471   |      \RING_OSCILLATOR[210].RO_INST  |ROs__211        |     8|
+|472   |      \RING_OSCILLATOR[211].RO_INST  |ROs__212        |     8|
+|473   |      \RING_OSCILLATOR[212].RO_INST  |ROs__213        |     8|
+|474   |      \RING_OSCILLATOR[213].RO_INST  |ROs__214        |     8|
+|475   |      \RING_OSCILLATOR[214].RO_INST  |ROs__215        |     8|
+|476   |      \RING_OSCILLATOR[215].RO_INST  |ROs__216        |     8|
+|477   |      \RING_OSCILLATOR[216].RO_INST  |ROs__217        |     8|
+|478   |      \RING_OSCILLATOR[217].RO_INST  |ROs__218        |     8|
+|479   |      \RING_OSCILLATOR[218].RO_INST  |ROs__219        |     8|
+|480   |      \RING_OSCILLATOR[219].RO_INST  |ROs__220        |     8|
+|481   |      \RING_OSCILLATOR[220].RO_INST  |ROs__221        |     8|
+|482   |      \RING_OSCILLATOR[221].RO_INST  |ROs__222        |     8|
+|483   |      \RING_OSCILLATOR[222].RO_INST  |ROs__223        |     8|
+|484   |      \RING_OSCILLATOR[223].RO_INST  |ROs__224        |     8|
+|485   |      \RING_OSCILLATOR[224].RO_INST  |ROs__225        |     8|
+|486   |      \RING_OSCILLATOR[225].RO_INST  |ROs__226        |     8|
+|487   |      \RING_OSCILLATOR[226].RO_INST  |ROs__227        |     8|
+|488   |      \RING_OSCILLATOR[227].RO_INST  |ROs__228        |     8|
+|489   |      \RING_OSCILLATOR[228].RO_INST  |ROs__229        |     8|
+|490   |      \RING_OSCILLATOR[229].RO_INST  |ROs__230        |     8|
+|491   |      \RING_OSCILLATOR[230].RO_INST  |ROs__231        |     8|
+|492   |      \RING_OSCILLATOR[231].RO_INST  |ROs__232        |     8|
+|493   |      \RING_OSCILLATOR[232].RO_INST  |ROs__233        |     8|
+|494   |      \RING_OSCILLATOR[233].RO_INST  |ROs__234        |     8|
+|495   |      \RING_OSCILLATOR[234].RO_INST  |ROs__235        |     8|
+|496   |      \RING_OSCILLATOR[235].RO_INST  |ROs__236        |     8|
+|497   |      \RING_OSCILLATOR[236].RO_INST  |ROs__237        |     8|
+|498   |      \RING_OSCILLATOR[237].RO_INST  |ROs__238        |     8|
+|499   |      \RING_OSCILLATOR[238].RO_INST  |ROs__239        |     8|
+|500   |      \RING_OSCILLATOR[239].RO_INST  |ROs__240        |     8|
+|501   |      \RING_OSCILLATOR[240].RO_INST  |ROs__241        |     8|
+|502   |      \RING_OSCILLATOR[241].RO_INST  |ROs__242        |     8|
+|503   |      \RING_OSCILLATOR[242].RO_INST  |ROs__243        |     8|
+|504   |      \RING_OSCILLATOR[243].RO_INST  |ROs__244        |     8|
+|505   |      \RING_OSCILLATOR[244].RO_INST  |ROs__245        |     8|
+|506   |      \RING_OSCILLATOR[245].RO_INST  |ROs__246        |     8|
+|507   |      \RING_OSCILLATOR[246].RO_INST  |ROs__247        |     8|
+|508   |      \RING_OSCILLATOR[247].RO_INST  |ROs__248        |     8|
+|509   |      \RING_OSCILLATOR[248].RO_INST  |ROs__249        |     8|
+|510   |      \RING_OSCILLATOR[249].RO_INST  |ROs__250        |     8|
+|511   |      \RING_OSCILLATOR[250].RO_INST  |ROs__251        |     8|
+|512   |      \RING_OSCILLATOR[251].RO_INST  |ROs__252        |     8|
+|513   |      \RING_OSCILLATOR[252].RO_INST  |ROs__253        |     8|
+|514   |      \RING_OSCILLATOR[253].RO_INST  |ROs__254        |     8|
+|515   |      \RING_OSCILLATOR[254].RO_INST  |ROs__255        |     8|
+|516   |      \RING_OSCILLATOR[255].RO_INST  |ROs             |     8|
++------+-------------------------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:52 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 184 ; free virtual = 19159
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:52 . Memory (MB): peak = 2773.668 ; gain = 474.293 ; free physical = 184 ; free virtual = 19160
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:52 . Memory (MB): peak = 2773.676 ; gain = 474.293 ; free physical = 183 ; free virtual = 19161
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2773.676 ; gain = 0.000 ; free physical = 217 ; free virtual = 19238
+INFO: [Netlist 29-17] Analyzing 129 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2829.492 ; gain = 0.000 ; free physical = 122 ; free virtual = 19118
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 5 instances
+  LDC => LDCE: 2 instances
+  LDP => LDPE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+134 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 2829.492 ; gain = 530.227 ; free physical = 270 ; free virtual = 19264
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/PUFs/tima_ro_puf_2/tima_ro_puf_2.runs/synth_1/top_tima_ro_puf.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_tima_ro_puf_utilization_synth.rpt -pb top_tima_ro_puf_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 28 17:53:29 2024...

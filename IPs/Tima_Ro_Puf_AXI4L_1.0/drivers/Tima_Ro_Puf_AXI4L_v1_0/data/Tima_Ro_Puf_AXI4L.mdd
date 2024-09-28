@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER Tima_Ro_Puf_AXI4L
+	OPTION supported_peripherals = (Tima_Ro_Puf_AXI4L);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = Tima_Ro_Puf_AXI4L;
+END DRIVER

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 23 10:23:36 2024
+# Process ID: 21007
+# Current directory: /home/puftester/PhD/repo/Hw-designs/PUFs/myArbPuf/myArbPuf.runs/impl_1
+# Command line: vivado -log topArbPUF_m.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source topArbPUF_m.tcl -notrace
+# Log file: /home/puftester/PhD/repo/Hw-designs/PUFs/myArbPuf/myArbPuf.runs/impl_1/topArbPUF_m.vdi
+# Journal file: /home/puftester/PhD/repo/Hw-designs/PUFs/myArbPuf/myArbPuf.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source topArbPUF_m.tcl -notrace

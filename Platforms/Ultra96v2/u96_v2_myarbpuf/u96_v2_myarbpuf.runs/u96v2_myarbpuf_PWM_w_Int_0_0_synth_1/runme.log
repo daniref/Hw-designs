@@ -1,0 +1,242 @@
+
+*** Running vivado
+    with args -log u96v2_myarbpuf_PWM_w_Int_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source u96v2_myarbpuf_PWM_w_Int_0_0.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source u96v2_myarbpuf_PWM_w_Int_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/hdl/ip/PWM_w_Int'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/puftester/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top u96v2_myarbpuf_PWM_w_Int_0_0 -part xczu3eg-sbva484-1-i -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 32460
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 2601.059 ; gain = 30.902 ; free physical = 115 ; free virtual = 10673
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'u96v2_myarbpuf_PWM_w_Int_0_0' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ip/u96v2_myarbpuf_PWM_w_Int_0_0/synth/u96v2_myarbpuf_PWM_w_Int_0_0.vhd:86]
+	Parameter PWM_PERIOD bound to: 20 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'PWM_w_Int' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int.vhd:5' bound to instance 'U0' of component 'PWM_w_Int' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ip/u96v2_myarbpuf_PWM_w_Int_0_0/synth/u96v2_myarbpuf_PWM_w_Int_0_0.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'PWM_w_Int' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int.vhd:52]
+	Parameter PWM_PERIOD bound to: 20 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'PWM_w_Int_S00_AXI' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int_S00_AXI.vhd:5' bound to instance 'PWM_w_Int_S00_AXI_inst' of component 'PWM_w_Int_S00_AXI' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'PWM_w_Int_S00_AXI' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int_S00_AXI.vhd:86]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int_S00_AXI.vhd:218]
+INFO: [Synth 8-226] default block is never used [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int_S00_AXI.vhd:348]
+INFO: [Synth 8-256] done synthesizing module 'PWM_w_Int_S00_AXI' (1#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int_S00_AXI.vhd:86]
+	Parameter period bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'PWM_Controller_Int' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/verilog/PWM_Controller_Int.v:25' bound to instance 'PWM_Controller_Int_Inst' of component 'PWM_Controller_Int' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int.vhd:139]
+INFO: [Synth 8-6157] synthesizing module 'PWM_Controller_Int' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/verilog/PWM_Controller_Int.v:25]
+	Parameter period bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'PWM_Controller_Int' (2#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/verilog/PWM_Controller_Int.v:25]
+INFO: [Synth 8-256] done synthesizing module 'PWM_w_Int' (3#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/d813/hdl/vhdl/PWM_w_Int.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'u96v2_myarbpuf_PWM_w_Int_0_0' (4#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ip/u96v2_myarbpuf_PWM_w_Int_0_0/synth/u96v2_myarbpuf_PWM_w_Int_0_0.vhd:86]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 2646.965 ; gain = 76.809 ; free physical = 1016 ; free virtual = 11401
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 2665.809 ; gain = 95.652 ; free physical = 845 ; free virtual = 11373
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 2665.809 ; gain = 95.652 ; free physical = 844 ; free virtual = 11373
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.809 ; gain = 0.000 ; free physical = 824 ; free virtual = 11365
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2769.699 ; gain = 0.000 ; free physical = 555 ; free virtual = 11215
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2793.512 ; gain = 23.812 ; free physical = 546 ; free virtual = 11213
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 2793.512 ; gain = 223.355 ; free physical = 169 ; free virtual = 11253
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 2793.512 ; gain = 223.355 ; free physical = 169 ; free virtual = 11253
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 2793.512 ; gain = 223.355 ; free physical = 168 ; free virtual = 11253
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 2793.512 ; gain = 223.355 ; free physical = 120 ; free virtual = 11236
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   4 Input   32 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2793.512 ; gain = 223.355 ; free physical = 123 ; free virtual = 11265
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:32 . Memory (MB): peak = 3205.855 ; gain = 635.699 ; free physical = 441 ; free virtual = 11763
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:33 . Memory (MB): peak = 3205.855 ; gain = 635.699 ; free physical = 436 ; free virtual = 11762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:33 . Memory (MB): peak = 3224.887 ; gain = 654.730 ; free physical = 427 ; free virtual = 11757
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:39 . Memory (MB): peak = 3231.824 ; gain = 661.668 ; free physical = 128 ; free virtual = 11593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:39 . Memory (MB): peak = 3231.824 ; gain = 661.668 ; free physical = 128 ; free virtual = 11593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:39 . Memory (MB): peak = 3231.824 ; gain = 661.668 ; free physical = 128 ; free virtual = 11593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:39 . Memory (MB): peak = 3231.824 ; gain = 661.668 ; free physical = 128 ; free virtual = 11593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:39 . Memory (MB): peak = 3231.824 ; gain = 661.668 ; free physical = 126 ; free virtual = 11592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:39 . Memory (MB): peak = 3231.824 ; gain = 661.668 ; free physical = 126 ; free virtual = 11592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     5|
+|2     |LUT1   |     2|
+|3     |LUT2   |    16|
+|4     |LUT3   |     4|
+|5     |LUT4   |    40|
+|6     |LUT6   |    37|
+|7     |FDRE   |   189|
+|8     |FDSE   |     2|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:39 . Memory (MB): peak = 3231.824 ; gain = 661.668 ; free physical = 126 ; free virtual = 11591
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:33 . Memory (MB): peak = 3231.824 ; gain = 533.965 ; free physical = 155 ; free virtual = 11613
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:40 . Memory (MB): peak = 3231.832 ; gain = 661.668 ; free physical = 153 ; free virtual = 11613
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3246.762 ; gain = 0.000 ; free physical = 210 ; free virtual = 11663
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3252.699 ; gain = 0.000 ; free physical = 120 ; free virtual = 11550
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:20 ; elapsed = 00:02:08 . Memory (MB): peak = 3252.699 ; gain = 921.781 ; free physical = 240 ; free virtual = 11675
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/u96v2_myarbpuf_PWM_w_Int_0_0_synth_1/u96v2_myarbpuf_PWM_w_Int_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP u96v2_myarbpuf_PWM_w_Int_0_0, cache-ID = 74eecf66e5dad1bd
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/u96v2_myarbpuf_PWM_w_Int_0_0_synth_1/u96v2_myarbpuf_PWM_w_Int_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file u96v2_myarbpuf_PWM_w_Int_0_0_utilization_synth.rpt -pb u96v2_myarbpuf_PWM_w_Int_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 23 11:20:21 2024...

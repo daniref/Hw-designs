@@ -37,8 +37,9 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../vivado_work/ip_repo"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../hdl/ip/PWM_w_Int"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../IPs"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -96,26 +97,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_gpio_2_0/u96v2_sbc_base_axi_gpio_2_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_axi_gpio_2_0"/>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_bram_ctrl_0_0/u96v2_sbc_base_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_axi_bram_ctrl_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_PWM_w_Int_1_0/u96v2_sbc_base_PWM_w_Int_1_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_PWM_w_Int_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_PWM_w_Int_0_0/u96v2_sbc_base_PWM_w_Int_0_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_PWM_w_Int_0_0"/>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_0_0/u96v2_sbc_base_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_zynq_ultra_ps_e_0_0/u96v2_sbc_base_zynq_ultra_ps_e_0_0.xci">
           <Proxy FileSetName="u96v2_sbc_base_zynq_ultra_ps_e_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_gpio_1_0/u96v2_sbc_base_axi_gpio_1_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_axi_gpio_1_0"/>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_xbar_0/u96v2_sbc_base_xbar_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_4_0/u96v2_sbc_base_proc_sys_reset_4_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_4_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_gpio_0_0/u96v2_sbc_base_axi_gpio_0_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_axi_gpio_0_0"/>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_blk_mem_gen_0_0/u96v2_sbc_base_blk_mem_gen_0_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_blk_mem_gen_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_uart16550_0_0/u96v2_sbc_base_axi_uart16550_0_0.xci">
           <Proxy FileSetName="u96v2_sbc_base_axi_uart16550_0_0"/>
@@ -123,11 +118,29 @@
         <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_uart16550_1_0/u96v2_sbc_base_axi_uart16550_1_0.xci">
           <Proxy FileSetName="u96v2_sbc_base_axi_uart16550_1_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_gpio_0_0/u96v2_sbc_base_axi_gpio_0_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_gpio_1_0/u96v2_sbc_base_axi_gpio_1_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_gpio_2_0/u96v2_sbc_base_axi_gpio_2_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_axi_gpio_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_PWM_w_Int_0_0/u96v2_sbc_base_PWM_w_Int_0_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_PWM_w_Int_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_PWM_w_Int_1_0/u96v2_sbc_base_PWM_w_Int_1_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_PWM_w_Int_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_clk_wiz_0_0/u96v2_sbc_base_clk_wiz_0_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_0_1/u96v2_sbc_base_proc_sys_reset_0_1.xci">
           <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_6_0/u96v2_sbc_base_proc_sys_reset_6_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_6_0"/>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_1_0/u96v2_sbc_base_proc_sys_reset_1_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_2_0/u96v2_sbc_base_proc_sys_reset_2_0.xci">
           <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_2_0"/>
@@ -135,26 +148,14 @@
         <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_3_0/u96v2_sbc_base_proc_sys_reset_3_0.xci">
           <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_3_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_1_0/u96v2_sbc_base_proc_sys_reset_1_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_1_0"/>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_4_0/u96v2_sbc_base_proc_sys_reset_4_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_4_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_5_0/u96v2_sbc_base_proc_sys_reset_5_0.xci">
           <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_5_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_clk_wiz_0_0/u96v2_sbc_base_clk_wiz_0_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_blk_mem_gen_0_0/u96v2_sbc_base_blk_mem_gen_0_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_blk_mem_gen_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_bram_ctrl_0_0/u96v2_sbc_base_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_0_0/u96v2_sbc_base_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_xbar_0/u96v2_sbc_base_xbar_0.xci">
-          <Proxy FileSetName="u96v2_sbc_base_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_proc_sys_reset_6_0/u96v2_sbc_base_proc_sys_reset_6_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_proc_sys_reset_6_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/u96v2_sbc_base_wrapper.vhd">

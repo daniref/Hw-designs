@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 20 15:47:05 2024
+# Process ID: 30891
+# Current directory: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/u96v2_4x4_apuf_PWM_w_Int_1_0_synth_1
+# Command line: vivado -log u96v2_4x4_apuf_PWM_w_Int_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source u96v2_4x4_apuf_PWM_w_Int_1_0.tcl
+# Log file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/u96v2_4x4_apuf_PWM_w_Int_1_0_synth_1/u96v2_4x4_apuf_PWM_w_Int_1_0.vds
+# Journal file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/u96v2_4x4_apuf_PWM_w_Int_1_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source u96v2_4x4_apuf_PWM_w_Int_1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/hdl/ip/PWM_w_Int'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/puftester/tools/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP u96v2_4x4_apuf_PWM_w_Int_1_0, cache-ID = 74eecf66e5dad1bd.
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 20 15:47:19 2024...

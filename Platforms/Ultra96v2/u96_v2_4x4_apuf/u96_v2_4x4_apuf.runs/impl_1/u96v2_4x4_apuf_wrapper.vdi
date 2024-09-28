@@ -1,0 +1,879 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 20 18:44:04 2024
+# Process ID: 14085
+# Current directory: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1
+# Command line: vivado -log u96v2_4x4_apuf_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source u96v2_4x4_apuf_wrapper.tcl -notrace
+# Log file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1/u96v2_4x4_apuf_wrapper.vdi
+# Journal file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source u96v2_4x4_apuf_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2312.109 ; gain = 2.016 ; free physical = 643 ; free virtual = 15976
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/hdl/ip/PWM_w_Int'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/puftester/tools/Xilinx/Vivado/2020.2/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2312.109 ; gain = 0.000 ; free physical = 483 ; free virtual = 15947
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2312.109 ; gain = 0.000 ; free physical = 340 ; free virtual = 15926
+Command: link_design -top u96v2_4x4_apuf_wrapper -part xczu3eg-sbva484-1-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_Arb_Puf_4x4_0_0/u96v2_4x4_apuf_Arb_Puf_4x4_0_0.dcp' for cell 'u96v2_4x4_apuf_i/Arb_Puf_4x4_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_PWM_w_Int_0_0/u96v2_4x4_apuf_PWM_w_Int_0_0.dcp' for cell 'u96v2_4x4_apuf_i/PWM_w_Int_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_PWM_w_Int_1_0/u96v2_4x4_apuf_PWM_w_Int_1_0.dcp' for cell 'u96v2_4x4_apuf_i/PWM_w_Int_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_bram_ctrl_0_0/u96v2_4x4_apuf_axi_bram_ctrl_0_0.dcp' for cell 'u96v2_4x4_apuf_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_bram_ctrl_0_bram_0/u96v2_4x4_apuf_axi_bram_ctrl_0_bram_0.dcp' for cell 'u96v2_4x4_apuf_i/axi_bram_ctrl_0_bram'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_0_0/u96v2_4x4_apuf_axi_gpio_0_0.dcp' for cell 'u96v2_4x4_apuf_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_1_0/u96v2_4x4_apuf_axi_gpio_1_0.dcp' for cell 'u96v2_4x4_apuf_i/axi_gpio_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_2_0/u96v2_4x4_apuf_axi_gpio_2_0.dcp' for cell 'u96v2_4x4_apuf_i/axi_gpio_2'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_0_0/u96v2_4x4_apuf_axi_uart16550_0_0.dcp' for cell 'u96v2_4x4_apuf_i/axi_uart16550_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_1_0/u96v2_4x4_apuf_axi_uart16550_1_0.dcp' for cell 'u96v2_4x4_apuf_i/axi_uart16550_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_clk_wiz_0_0/u96v2_4x4_apuf_clk_wiz_0_0.dcp' for cell 'u96v2_4x4_apuf_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_0_0/u96v2_4x4_apuf_proc_sys_reset_0_0.dcp' for cell 'u96v2_4x4_apuf_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_1_0/u96v2_4x4_apuf_proc_sys_reset_1_0.dcp' for cell 'u96v2_4x4_apuf_i/proc_sys_reset_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_2_0/u96v2_4x4_apuf_proc_sys_reset_2_0.dcp' for cell 'u96v2_4x4_apuf_i/proc_sys_reset_2'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_3_0/u96v2_4x4_apuf_proc_sys_reset_3_0.dcp' for cell 'u96v2_4x4_apuf_i/proc_sys_reset_3'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_4_0/u96v2_4x4_apuf_proc_sys_reset_4_0.dcp' for cell 'u96v2_4x4_apuf_i/proc_sys_reset_4'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_5_0/u96v2_4x4_apuf_proc_sys_reset_5_0.dcp' for cell 'u96v2_4x4_apuf_i/proc_sys_reset_5'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_6_0/u96v2_4x4_apuf_proc_sys_reset_6_0.dcp' for cell 'u96v2_4x4_apuf_i/proc_sys_reset_6'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_rst_ps8_0_100M_0/u96v2_4x4_apuf_rst_ps8_0_100M_0.dcp' for cell 'u96v2_4x4_apuf_i/rst_ps8_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_zynq_ultra_ps_e_0_0/u96v2_4x4_apuf_zynq_ultra_ps_e_0_0.dcp' for cell 'u96v2_4x4_apuf_i/zynq_ultra_ps_e_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_xbar_0/u96v2_4x4_apuf_xbar_0.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_0/u96v2_4x4_apuf_auto_ds_0.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m01_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_pc_0/u96v2_4x4_apuf_auto_pc_0.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m01_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_1/u96v2_4x4_apuf_auto_ds_1.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m02_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_pc_1/u96v2_4x4_apuf_auto_pc_1.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m02_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_2/u96v2_4x4_apuf_auto_ds_2.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m03_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_pc_2/u96v2_4x4_apuf_auto_pc_2.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m03_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_3/u96v2_4x4_apuf_auto_ds_3.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m04_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_pc_3/u96v2_4x4_apuf_auto_pc_3.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m04_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_4/u96v2_4x4_apuf_auto_ds_4.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m05_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_pc_4/u96v2_4x4_apuf_auto_pc_4.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m05_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_5/u96v2_4x4_apuf_auto_ds_5.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m06_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_pc_5/u96v2_4x4_apuf_auto_pc_5.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m06_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_6/u96v2_4x4_apuf_auto_ds_6.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m07_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_pc_6/u96v2_4x4_apuf_auto_pc_6.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m07_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_7/u96v2_4x4_apuf_auto_ds_7.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m08_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_pc_7/u96v2_4x4_apuf_auto_pc_7.dcp' for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m08_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.76 ; elapsed = 00:00:00.77 . Memory (MB): peak = 2604.453 ; gain = 0.000 ; free physical = 353 ; free virtual = 15559
+INFO: [Netlist 29-17] Analyzing 146 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u96v2_4x4_apuf_i/clk_wiz_0/inst/clkin1_ibuf 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u96v2_4x4_apuf_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_clk_wiz_0_0/u96v2_4x4_apuf_clk_wiz_0_0.xdc] for cell 'u96v2_4x4_apuf_i/clk_wiz_0/inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3081.332 ; gain = 14.844 ; free physical = 200 ; free virtual = 14923
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_clk_wiz_0_0/u96v2_4x4_apuf_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_clk_wiz_0_0/u96v2_4x4_apuf_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3417.410 ; gain = 336.078 ; free physical = 128 ; free virtual = 14558
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_clk_wiz_0_0/u96v2_4x4_apuf_clk_wiz_0_0.xdc] for cell 'u96v2_4x4_apuf_i/clk_wiz_0/inst'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_6_0/u96v2_4x4_apuf_proc_sys_reset_6_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_6/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_6_0/u96v2_4x4_apuf_proc_sys_reset_6_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_6/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_6_0/u96v2_4x4_apuf_proc_sys_reset_6_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_6/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_6_0/u96v2_4x4_apuf_proc_sys_reset_6_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_6/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_5_0/u96v2_4x4_apuf_proc_sys_reset_5_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_5/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_5_0/u96v2_4x4_apuf_proc_sys_reset_5_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_5/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_5_0/u96v2_4x4_apuf_proc_sys_reset_5_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_5/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_5_0/u96v2_4x4_apuf_proc_sys_reset_5_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_5/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_4_0/u96v2_4x4_apuf_proc_sys_reset_4_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_4/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_4_0/u96v2_4x4_apuf_proc_sys_reset_4_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_4/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_4_0/u96v2_4x4_apuf_proc_sys_reset_4_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_4/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_4_0/u96v2_4x4_apuf_proc_sys_reset_4_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_4/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_3_0/u96v2_4x4_apuf_proc_sys_reset_3_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_3/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_3_0/u96v2_4x4_apuf_proc_sys_reset_3_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_3/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_3_0/u96v2_4x4_apuf_proc_sys_reset_3_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_3/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_3_0/u96v2_4x4_apuf_proc_sys_reset_3_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_3/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_2_0/u96v2_4x4_apuf_proc_sys_reset_2_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_2/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_2_0/u96v2_4x4_apuf_proc_sys_reset_2_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_2/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_2_0/u96v2_4x4_apuf_proc_sys_reset_2_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_2/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_2_0/u96v2_4x4_apuf_proc_sys_reset_2_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_2/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_1_0/u96v2_4x4_apuf_proc_sys_reset_1_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_1_0/u96v2_4x4_apuf_proc_sys_reset_1_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_1/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_1_0/u96v2_4x4_apuf_proc_sys_reset_1_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_1_0/u96v2_4x4_apuf_proc_sys_reset_1_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_1/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_0_0/u96v2_4x4_apuf_proc_sys_reset_0_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_0_0/u96v2_4x4_apuf_proc_sys_reset_0_0.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_0_0/u96v2_4x4_apuf_proc_sys_reset_0_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_proc_sys_reset_0_0/u96v2_4x4_apuf_proc_sys_reset_0_0_board.xdc] for cell 'u96v2_4x4_apuf_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_zynq_ultra_ps_e_0_0/u96v2_4x4_apuf_zynq_ultra_ps_e_0_0.xdc] for cell 'u96v2_4x4_apuf_i/zynq_ultra_ps_e_0/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_zynq_ultra_ps_e_0_0/u96v2_4x4_apuf_zynq_ultra_ps_e_0_0.xdc] for cell 'u96v2_4x4_apuf_i/zynq_ultra_ps_e_0/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_clk_wiz_0_0/u96v2_4x4_apuf_clk_wiz_0_0_board.xdc] for cell 'u96v2_4x4_apuf_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_clk_wiz_0_0/u96v2_4x4_apuf_clk_wiz_0_0_board.xdc] for cell 'u96v2_4x4_apuf_i/clk_wiz_0/inst'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_2_0/u96v2_4x4_apuf_axi_gpio_2_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_2/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_2_0/u96v2_4x4_apuf_axi_gpio_2_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_2/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_2_0/u96v2_4x4_apuf_axi_gpio_2_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_2/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_2_0/u96v2_4x4_apuf_axi_gpio_2_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_2/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_1_0/u96v2_4x4_apuf_axi_gpio_1_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_1/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_1_0/u96v2_4x4_apuf_axi_gpio_1_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_1/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_1_0/u96v2_4x4_apuf_axi_gpio_1_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_1/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_1_0/u96v2_4x4_apuf_axi_gpio_1_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_1/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_0_0/u96v2_4x4_apuf_axi_gpio_0_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_0_0/u96v2_4x4_apuf_axi_gpio_0_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_0/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_0_0/u96v2_4x4_apuf_axi_gpio_0_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_gpio_0_0/u96v2_4x4_apuf_axi_gpio_0_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_gpio_0/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_1_0/u96v2_4x4_apuf_axi_uart16550_1_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_uart16550_1/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_1_0/u96v2_4x4_apuf_axi_uart16550_1_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_uart16550_1/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_1_0/u96v2_4x4_apuf_axi_uart16550_1_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_uart16550_1/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_1_0/u96v2_4x4_apuf_axi_uart16550_1_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_uart16550_1/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_0_0/u96v2_4x4_apuf_axi_uart16550_0_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_uart16550_0/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_0_0/u96v2_4x4_apuf_axi_uart16550_0_0.xdc] for cell 'u96v2_4x4_apuf_i/axi_uart16550_0/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_0_0/u96v2_4x4_apuf_axi_uart16550_0_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_uart16550_0/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_axi_uart16550_0_0/u96v2_4x4_apuf_axi_uart16550_0_0_board.xdc] for cell 'u96v2_4x4_apuf_i/axi_uart16550_0/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_rst_ps8_0_100M_0/u96v2_4x4_apuf_rst_ps8_0_100M_0.xdc] for cell 'u96v2_4x4_apuf_i/rst_ps8_0_100M/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_rst_ps8_0_100M_0/u96v2_4x4_apuf_rst_ps8_0_100M_0.xdc] for cell 'u96v2_4x4_apuf_i/rst_ps8_0_100M/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_rst_ps8_0_100M_0/u96v2_4x4_apuf_rst_ps8_0_100M_0_board.xdc] for cell 'u96v2_4x4_apuf_i/rst_ps8_0_100M/U0'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_rst_ps8_0_100M_0/u96v2_4x4_apuf_rst_ps8_0_100M_0_board.xdc] for cell 'u96v2_4x4_apuf_i/rst_ps8_0_100M/U0'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.srcs/constrs_1/imports/4x4_arb_puf.srcs/constraints.xdc]
+CRITICAL WARNING: [Common 17-163] Missing value for option 'objects', please type 'set_property -help' for usage info. [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.srcs/constrs_1/imports/4x4_arb_puf.srcs/constraints.xdc:2]
+CRITICAL WARNING: [Common 17-163] Missing value for option 'objects', please type 'set_property -help' for usage info. [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.srcs/constrs_1/imports/4x4_arb_puf.srcs/constraints.xdc:3]
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.srcs/constrs_1/imports/4x4_arb_puf.srcs/constraints.xdc]
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_0/u96v2_4x4_apuf_auto_ds_0_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_0/u96v2_4x4_apuf_auto_ds_0_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_1/u96v2_4x4_apuf_auto_ds_1_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_1/u96v2_4x4_apuf_auto_ds_1_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_2/u96v2_4x4_apuf_auto_ds_2_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_2/u96v2_4x4_apuf_auto_ds_2_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_3/u96v2_4x4_apuf_auto_ds_3_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_3/u96v2_4x4_apuf_auto_ds_3_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_4/u96v2_4x4_apuf_auto_ds_4_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_4/u96v2_4x4_apuf_auto_ds_4_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_5/u96v2_4x4_apuf_auto_ds_5_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_5/u96v2_4x4_apuf_auto_ds_5_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_6/u96v2_4x4_apuf_auto_ds_6_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_6/u96v2_4x4_apuf_auto_ds_6_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst'
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_7/u96v2_4x4_apuf_auto_ds_7_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.gen/sources_1/bd/u96v2_4x4_apuf/ip/u96v2_4x4_apuf_auto_ds_7/u96v2_4x4_apuf_auto_ds_7_clocks.xdc] for cell 'u96v2_4x4_apuf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst'
+INFO: [Project 1-1715] 1 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u96v2_4x4_apuf_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u96v2_4x4_apuf_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u96v2_4x4_apuf_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u96v2_4x4_apuf_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3433.449 ; gain = 0.000 ; free physical = 214 ; free virtual = 14634
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 61 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 5 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 56 instances
+
+55 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:46 . Memory (MB): peak = 3433.449 ; gain = 1121.340 ; free physical = 213 ; free virtual = 14635
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3449.426 ; gain = 15.977 ; free physical = 186 ; free virtual = 14622
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 89f43e28
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3455.426 ; gain = 6.000 ; free physical = 147 ; free virtual = 14597
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 51 inverter(s) to 4463 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 19ae94332
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3622.238 ; gain = 0.000 ; free physical = 118 ; free virtual = 14524
+INFO: [Opt 31-389] Phase Retarget created 321 cells and removed 718 cells
+INFO: [Opt 31-1021] In phase Retarget, 196 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 103be81ba
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 3622.238 ; gain = 0.000 ; free physical = 149 ; free virtual = 14536
+INFO: [Opt 31-389] Phase Constant propagation created 305 cells and removed 2755 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 192 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1881b3c26
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 3622.238 ; gain = 0.000 ; free physical = 124 ; free virtual = 14530
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 5635 cells
+INFO: [Opt 31-1021] In phase Sweep, 769 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 4 BUFG optimization | Checksum: 1881b3c26
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 3622.238 ; gain = 0.000 ; free physical = 118 ; free virtual = 14530
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1881b3c26
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 3622.238 ; gain = 0.000 ; free physical = 118 ; free virtual = 14530
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1881b3c26
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 3622.238 ; gain = 0.000 ; free physical = 122 ; free virtual = 14528
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 264 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             321  |             718  |                                            196  |
+|  Constant propagation         |             305  |            2755  |                                            192  |
+|  Sweep                        |               0  |            5635  |                                            769  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                            264  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3622.238 ; gain = 0.000 ; free physical = 123 ; free virtual = 14529
+Ending Logic Optimization Task | Checksum: 17aeae04a
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 3622.238 ; gain = 0.000 ; free physical = 123 ; free virtual = 14528
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 4 BRAM(s) out of a total of 4 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 4 newly gated: 0 Total Ports: 8
+Ending PowerOpt Patch Enables Task | Checksum: 967b7aa9
+
+Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.30 . Memory (MB): peak = 3800.055 ; gain = 0.000 ; free physical = 195 ; free virtual = 14473
+Ending Power Optimization Task | Checksum: 967b7aa9
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3800.055 ; gain = 177.816 ; free physical = 221 ; free virtual = 14506
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 10bd0d70b
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3800.055 ; gain = 0.000 ; free physical = 122 ; free virtual = 14520
+Ending Final Cleanup Task | Checksum: 10bd0d70b
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 3800.055 ; gain = 0.000 ; free physical = 122 ; free virtual = 14522
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3800.055 ; gain = 0.000 ; free physical = 120 ; free virtual = 14522
+Ending Netlist Obfuscation Task | Checksum: 10bd0d70b
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3800.055 ; gain = 0.000 ; free physical = 120 ; free virtual = 14522
+INFO: [Common 17-83] Releasing license: Implementation
+83 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:43 . Memory (MB): peak = 3800.055 ; gain = 366.605 ; free physical = 115 ; free virtual = 14522
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3800.055 ; gain = 0.000 ; free physical = 120 ; free virtual = 14517
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1/u96v2_4x4_apuf_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 3800.055 ; gain = 0.000 ; free physical = 151 ; free virtual = 14467
+INFO: [runtcl-4] Executing : report_drc -file u96v2_4x4_apuf_wrapper_drc_opted.rpt -pb u96v2_4x4_apuf_wrapper_drc_opted.pb -rpx u96v2_4x4_apuf_wrapper_drc_opted.rpx
+Command: report_drc -file u96v2_4x4_apuf_wrapper_drc_opted.rpt -pb u96v2_4x4_apuf_wrapper_drc_opted.pb -rpx u96v2_4x4_apuf_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1/u96v2_4x4_apuf_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:54 ; elapsed = 00:00:50 . Memory (MB): peak = 4478.238 ; gain = 678.184 ; free physical = 140 ; free virtual = 14197
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+WARNING: [Vivado_Tcl 4-1400] -ultrathreads option currently only supported on multi-SLR devices. Continuing placement in regular mode.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 162 ; free virtual = 14223
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 3e7c375b
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 161 ; free virtual = 14223
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 160 ; free virtual = 14224
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-568] A LUT 'u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[1].EQUAL_PATH_MUX/Q_INST_0' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_2_1/Q_reg {FDRE}
+WARNING: [Place 30-568] A LUT 'u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[2].EQUAL_PATH_MUX/Q_INST_0' is driving clock pin of 2 registers. This could lead to large hold time violations. First few involved registers are:
+	u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_3_2/Q_reg {FDRE}
+	u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_3_1/Q_reg {FDRE}
+WARNING: [Place 30-568] A LUT 'u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[3].EQUAL_PATH_MUX/Q_INST_0' is driving clock pin of 3 registers. This could lead to large hold time violations. First few involved registers are:
+	u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_4_2/Q_reg {FDRE}
+	u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_4_3/Q_reg {FDRE}
+	u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_4_1/Q_reg {FDRE}
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e9cb8dc6
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 415 ; free virtual = 14538
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1be70b30c
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 268 ; free virtual = 14460
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1be70b30c
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 268 ; free virtual = 14460
+Phase 1 Placer Initialization | Checksum: 1be70b30c
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 265 ; free virtual = 14458
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 19db5cd44
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:36 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 168 ; free virtual = 14279
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 1e8a448db
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:37 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 152 ; free virtual = 14278
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 1e8a448db
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:37 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 139 ; free virtual = 14268
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 13f693357
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:38 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 134 ; free virtual = 14269
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 13f693357
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:38 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 134 ; free virtual = 14269
+Phase 2.1.1 Partition Driven Placement | Checksum: 13f693357
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:39 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 139 ; free virtual = 14275
+Phase 2.1 Floorplanning | Checksum: 117101657
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:39 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 139 ; free virtual = 14275
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 117101657
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:39 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 139 ; free virtual = 14275
+
+Phase 2.3 Global Placement Core
+
+Phase 2.3.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 776 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 318 nets or cells. Created 0 new cell, deleted 318 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1030] Pass 1. Identified 3 candidate driver sets for equivalent driver rewiring.
+INFO: [Physopt 32-661] Optimized 3 nets.  Re-placed 47 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 3 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 47 existing cells
+Netlist sorting complete. Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.59 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 118 ; free virtual = 14286
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 118 ; free virtual = 14280
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            318  |                   318  |           0  |           1  |  00:00:02  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                     3  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            318  |                   321  |           0  |           4  |  00:00:04  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.3.1 Physical Synthesis In Placer | Checksum: 1da634d56
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:24 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 136 ; free virtual = 14174
+Phase 2.3 Global Placement Core | Checksum: 1e9e65150
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:38 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 157 ; free virtual = 14062
+Phase 2 Global Placement | Checksum: 1e9e65150
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:38 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 163 ; free virtual = 14071
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1cebfc72d
+
+Time (s): cpu = 00:02:19 ; elapsed = 00:01:41 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 124 ; free virtual = 14085
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1fc345319
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:45 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 295 ; free virtual = 14401
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 1e3fce304
+
+Time (s): cpu = 00:02:30 ; elapsed = 00:01:50 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 343 ; free virtual = 14501
+
+Phase 3.3.2 Flow Legalize Slice Clusters
+Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 2bdb7774c
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:50 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 339 ; free virtual = 14496
+
+Phase 3.3.3 Slice Area Swap
+Phase 3.3.3 Slice Area Swap | Checksum: 25c4bd126
+
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:57 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 182 ; free virtual = 14356
+Phase 3.3 Small Shape DP | Checksum: 1f3a5602c
+
+Time (s): cpu = 00:02:57 ; elapsed = 00:02:09 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 169 ; free virtual = 14182
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 1b5ee7c75
+
+Time (s): cpu = 00:03:01 ; elapsed = 00:02:12 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 154 ; free virtual = 14168
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 21151e720
+
+Time (s): cpu = 00:03:01 ; elapsed = 00:02:13 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 153 ; free virtual = 14168
+Phase 3 Detail Placement | Checksum: 21151e720
+
+Time (s): cpu = 00:03:01 ; elapsed = 00:02:13 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 153 ; free virtual = 14168
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1dc4ebf99
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=4.949 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 2430e1413
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 310 ; free virtual = 14332
+INFO: [Place 46-35] Processed net u96v2_4x4_apuf_i/rst_ps8_0_100M/U0/peripheral_aresetn[0], inserted BUFG to drive 2710 loads.
+INFO: [Place 46-45] Replicated bufg driver u96v2_4x4_apuf_i/rst_ps8_0_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 1, Replicated BUFG Driver: 1, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1c52ed63d
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 226 ; free virtual = 14264
+Phase 4.1.1.1 BUFG Insertion | Checksum: 16063d73c
+
+Time (s): cpu = 00:03:31 ; elapsed = 00:02:34 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 229 ; free virtual = 14267
+INFO: [Place 30-746] Post Placement Timing Summary WNS=4.949. For the most accurate timing information please run report_timing.
+
+Time (s): cpu = 00:03:31 ; elapsed = 00:02:34 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 229 ; free virtual = 14267
+Phase 4.1 Post Commit Optimization | Checksum: ed422a42
+
+Time (s): cpu = 00:03:31 ; elapsed = 00:02:34 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 229 ; free virtual = 14268
+Netlist sorting complete. Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.40 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 217 ; free virtual = 14256
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1156a0afc
+
+Time (s): cpu = 00:03:34 ; elapsed = 00:02:37 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 227 ; free virtual = 14260
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                4x4|
+|___________|___________________|___________________|___________________|
+|       West|                2x2|                1x1|                4x4|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1156a0afc
+
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:38 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 228 ; free virtual = 14261
+Phase 4.3 Placer Reporting | Checksum: 1156a0afc
+
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:38 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 212 ; free virtual = 14252
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 208 ; free virtual = 14251
+
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:38 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 208 ; free virtual = 14251
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 105b6fbaa
+
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:38 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 207 ; free virtual = 14251
+Ending Placer Task | Checksum: f2e6d613
+
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:38 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 193 ; free virtual = 14250
+INFO: [Common 17-83] Releasing license: Implementation
+123 Infos, 6 Warnings, 2 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:03:45 ; elapsed = 00:02:45 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 238 ; free virtual = 14299
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 136 ; free virtual = 14241
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1/u96v2_4x4_apuf_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 160 ; free virtual = 14024
+INFO: [runtcl-4] Executing : report_io -file u96v2_4x4_apuf_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.66 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 138 ; free virtual = 14015
+INFO: [runtcl-4] Executing : report_utilization -file u96v2_4x4_apuf_wrapper_utilization_placed.rpt -pb u96v2_4x4_apuf_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file u96v2_4x4_apuf_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.34 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 142 ; free virtual = 14020
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+133 Infos, 6 Warnings, 2 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 117 ; free virtual = 13961
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 397 ; free virtual = 14218
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1/u96v2_4x4_apuf_wrapper_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 505 ; free virtual = 14286
+Command: route_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: e45e278 ConstDB: 0 ShapeSum: bc7912e1 RouteDB: 2827e0ba
+
+Phase 1 Build RT Design
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.72 ; elapsed = 00:00:00.78 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 362 ; free virtual = 14217
+Phase 1 Build RT Design | Checksum: 866ce45e
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:09 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 384 ; free virtual = 14245
+Post Restoration Checksum: NetGraph: 68274add NumContArr: fb18c7da Constraints: 9afc445c Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 1fe3c5713
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 359 ; free virtual = 14225
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 1fe3c5713
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 359 ; free virtual = 14225
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 1cf5135cc
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:11 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 341 ; free virtual = 14212
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 2cfd7d30c
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:15 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 334 ; free virtual = 14206
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.019  | TNS=0.000  | WHS=-0.073 | THS=-24.494|
+
+Phase 2 Router Initialization | Checksum: 2ba476a60
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:20 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 304 ; free virtual = 14184
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00762856 %
+  Global Horizontal Routing Utilization  = 0.000164171 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 21656
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 15778
+  Number of Partially Routed Nets     = 5878
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 2ba476a60
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:21 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 304 ; free virtual = 14184
+Phase 3 Initial Routing | Checksum: 236418790
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:26 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 300 ; free virtual = 14176
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 4390
+ Number of Nodes with overlaps = 349
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.079  | TNS=0.000  | WHS=-0.021 | THS=-0.023 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 2aec7ae3d
+
+Time (s): cpu = 00:02:00 ; elapsed = 00:00:49 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 300 ; free virtual = 14196
+
+Phase 4.2 Additional Iteration for Hold
+Phase 4.2 Additional Iteration for Hold | Checksum: 1f753e250
+
+Time (s): cpu = 00:02:00 ; elapsed = 00:00:49 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 300 ; free virtual = 14196
+Phase 4 Rip-up And Reroute | Checksum: 1f753e250
+
+Time (s): cpu = 00:02:00 ; elapsed = 00:00:49 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 300 ; free virtual = 14196
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 22f8061fd
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:00:53 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 306 ; free virtual = 14199
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.079  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+
+Phase 5.1 Delay CleanUp | Checksum: 22f8061fd
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:00:53 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 306 ; free virtual = 14199
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 22f8061fd
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:00:53 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 306 ; free virtual = 14199
+Phase 5 Delay and Skew Optimization | Checksum: 22f8061fd
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:00:53 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 306 ; free virtual = 14199
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 204e985d9
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:00:56 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 306 ; free virtual = 14200
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.079  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 2aabb89f9
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:00:56 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 306 ; free virtual = 14200
+Phase 6 Post Hold Fix | Checksum: 2aabb89f9
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:00:56 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 306 ; free virtual = 14200
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 3.30011 %
+  Global Horizontal Routing Utilization  = 3.9122 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 2b358b888
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:00:56 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 305 ; free virtual = 14199
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 2b358b888
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:00:56 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 305 ; free virtual = 14199
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 2b358b888
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:58 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 304 ; free virtual = 14198
+
+Phase 10 Route finalize
+Phase 10 Route finalize | Checksum: 2b358b888
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:58 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 305 ; free virtual = 14200
+
+Phase 11 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=4.093  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+
+Phase 11 Post Router Timing | Checksum: 251d48406
+
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:04 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 297 ; free virtual = 14193
+INFO: [Route 35-61] The design met the timing requirement.
+INFO: [Route 72-16] Aggressive Explore Summary
++------+-------+-------+-------+-------+--------+--------------+-------------------+
+| Pass |  WNS  |  TNS  |  WHS  |  THS  | Status | Elapsed Time | Solution Selected |
++------+-------+-------+-------+-------+--------+--------------+-------------------+
+|  1   | 4.079 | 0.000 | 0.011 | 0.000 |  Pass  |   00:00:48   |         x         |
++------+-------+-------+-------+-------+--------+--------------+-------------------+
+|  2   |   -   |   -   |   -   |   -   |  Fail  |   00:00:00   |                   |
++------+-------+-------+-------+-------+--------+--------------+-------------------+
+
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:02:37 ; elapsed = 00:01:04 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 417 ; free virtual = 14314
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+150 Infos, 6 Warnings, 2 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:02:49 ; elapsed = 00:01:09 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 416 ; free virtual = 14315
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 350 ; free virtual = 14292
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1/u96v2_4x4_apuf_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 391 ; free virtual = 14313
+INFO: [runtcl-4] Executing : report_drc -file u96v2_4x4_apuf_wrapper_drc_routed.rpt -pb u96v2_4x4_apuf_wrapper_drc_routed.pb -rpx u96v2_4x4_apuf_wrapper_drc_routed.rpx
+Command: report_drc -file u96v2_4x4_apuf_wrapper_drc_routed.rpt -pb u96v2_4x4_apuf_wrapper_drc_routed.pb -rpx u96v2_4x4_apuf_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1/u96v2_4x4_apuf_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 351 ; free virtual = 14291
+INFO: [runtcl-4] Executing : report_methodology -file u96v2_4x4_apuf_wrapper_methodology_drc_routed.rpt -pb u96v2_4x4_apuf_wrapper_methodology_drc_routed.pb -rpx u96v2_4x4_apuf_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file u96v2_4x4_apuf_wrapper_methodology_drc_routed.rpt -pb u96v2_4x4_apuf_wrapper_methodology_drc_routed.pb -rpx u96v2_4x4_apuf_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4x4_apuf/u96_v2_4x4_apuf.runs/impl_1/u96v2_4x4_apuf_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:21 ; elapsed = 00:00:07 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 435 ; free virtual = 14384
+INFO: [runtcl-4] Executing : report_power -file u96v2_4x4_apuf_wrapper_power_routed.rpt -pb u96v2_4x4_apuf_wrapper_power_summary_routed.pb -rpx u96v2_4x4_apuf_wrapper_power_routed.rpx
+Command: report_power -file u96v2_4x4_apuf_wrapper_power_routed.rpt -pb u96v2_4x4_apuf_wrapper_power_summary_routed.pb -rpx u96v2_4x4_apuf_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+163 Infos, 6 Warnings, 2 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 139 ; free virtual = 14122
+INFO: [runtcl-4] Executing : report_route_status -file u96v2_4x4_apuf_wrapper_route_status.rpt -pb u96v2_4x4_apuf_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file u96v2_4x4_apuf_wrapper_timing_summary_routed.rpt -pb u96v2_4x4_apuf_wrapper_timing_summary_routed.pb -rpx u96v2_4x4_apuf_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file u96v2_4x4_apuf_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file u96v2_4x4_apuf_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file u96v2_4x4_apuf_wrapper_bus_skew_routed.rpt -pb u96v2_4x4_apuf_wrapper_bus_skew_routed.pb -rpx u96v2_4x4_apuf_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Command: write_bitstream -force u96v2_4x4_apuf_wrapper.bit -bin_file
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC PDRC-153] Gated clock check: Net u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[1].EQUAL_PATH_MUX/Q is a gated clock net sourced by a combinational pin u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[1].EQUAL_PATH_MUX/Q_INST_0/O, cell u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[1].EQUAL_PATH_MUX/Q_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[2].EQUAL_PATH_MUX/Q is a gated clock net sourced by a combinational pin u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[2].EQUAL_PATH_MUX/Q_INST_0/O, cell u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[2].EQUAL_PATH_MUX/Q_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[3].EQUAL_PATH_MUX/Q is a gated clock net sourced by a combinational pin u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[3].EQUAL_PATH_MUX/Q_INST_0/O, cell u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[3].EQUAL_PATH_MUX/Q_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[1].EQUAL_PATH_MUX/Q_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_2_1/Q_reg
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[2].EQUAL_PATH_MUX/Q_INST_0 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_3_1/Q_reg, and u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_3_2/Q_reg
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/SWITCH_BLOCKS[5].SWITCH_BLOCK/EQUAL_PATHS[3].EQUAL_PATH_MUX/Q_INST_0 is driving clock pin of 3 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_4_1/Q_reg, u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_4_2/Q_reg, and u96v2_4x4_apuf_i/Arb_Puf_4x4_0/U0/Arb_Puf_4x4_v1_0_PUF_AXI_inst/ARBITER_PUF_4x4/APUF_TEST_UNIT/APUF_ARBITER/FF_4_3/Q_reg
+WARNING: [DRC RTSTAT-10] No routable loads: 264 net(s) have no routable loads. The problem bus(es) and/or net(s) are u96v2_4x4_apuf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, u96v2_4x4_apuf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i... and (the first 15 of 168 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 7 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./u96v2_4x4_apuf_wrapper.bit...
+Writing bitstream ./u96v2_4x4_apuf_wrapper.bin...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:52 ; elapsed = 00:00:49 . Memory (MB): peak = 4478.238 ; gain = 0.000 ; free physical = 215 ; free virtual = 14139
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 20 18:54:23 2024...

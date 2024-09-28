@@ -1,0 +1,277 @@
+
+*** Running vivado
+    with args -log APUF_Driver.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source APUF_Driver.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source APUF_Driver.tcl -notrace
+Command: synth_design -top APUF_Driver -part xczu3eg-sbva484-1-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13662
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2593.246 ; gain = 30.902 ; free physical = 123 ; free virtual = 17378
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'APUF_Driver' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Driver.vhd:42]
+	Parameter stage_n bound to: 5 - type: integer 
+	Parameter stage_n bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'APUF_Mutual_Order' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Mutual_Order.vhd:24' bound to instance 'APUF_TEST_UNIT' of component 'APUF_Mutual_Order' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Driver.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'APUF_Mutual_Order' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Mutual_Order.vhd:33]
+	Parameter stage_n bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'Switch_Block_4x4' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:24' bound to instance 'FIRST_SWITCH_BLOCK' of component 'Switch_Block_4x4' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Mutual_Order.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'Switch_Block_4x4' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:35]
+INFO: [Synth 8-3491] module 'Permutation' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Permutation.vhd:24' bound to instance 'PERMUTATION_COMPONENT' of component 'Permutation' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'Permutation' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Permutation.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'Permutation' (1#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Permutation.vhd:30]
+INFO: [Synth 8-3491] module 'Mux_4x1' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Mux_4x1.vhd:24' bound to instance 'EQUAL_PATH_MUX' of component 'Mux_4x1' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'Mux_4x1' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Mux_4x1.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Mux_4x1' (2#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Mux_4x1.vhd:34]
+INFO: [Synth 8-3491] module 'Mux_4x1' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Mux_4x1.vhd:24' bound to instance 'EQUAL_PATH_MUX' of component 'Mux_4x1' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:63]
+INFO: [Synth 8-3491] module 'Mux_4x1' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Mux_4x1.vhd:24' bound to instance 'EQUAL_PATH_MUX' of component 'Mux_4x1' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:63]
+INFO: [Synth 8-3491] module 'Mux_4x1' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Mux_4x1.vhd:24' bound to instance 'EQUAL_PATH_MUX' of component 'Mux_4x1' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'Switch_Block_4x4' (3#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:35]
+INFO: [Synth 8-3491] module 'Switch_Block_4x4' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:24' bound to instance 'SWITCH_BLOCK' of component 'Switch_Block_4x4' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Mutual_Order.vhd:61]
+INFO: [Synth 8-3491] module 'Switch_Block_4x4' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:24' bound to instance 'SWITCH_BLOCK' of component 'Switch_Block_4x4' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Mutual_Order.vhd:61]
+INFO: [Synth 8-3491] module 'Switch_Block_4x4' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:24' bound to instance 'SWITCH_BLOCK' of component 'Switch_Block_4x4' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Mutual_Order.vhd:61]
+INFO: [Synth 8-3491] module 'Switch_Block_4x4' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Switch_Block_4x4.vhd:24' bound to instance 'SWITCH_BLOCK' of component 'Switch_Block_4x4' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Mutual_Order.vhd:61]
+INFO: [Synth 8-3491] module 'Arbiter_Mutual_Order' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd:24' bound to instance 'APUF_ARBITER' of component 'Arbiter_Mutual_Order' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Mutual_Order.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'Arbiter_Mutual_Order' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd:33]
+INFO: [Synth 8-3491] module 'Flip_Flop_Symmetrical' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Flip_Flop_Symmetrical.vhd:24' bound to instance 'FF_2_1' of component 'Flip_Flop_Symmetrical' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'Flip_Flop_Symmetrical' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Flip_Flop_Symmetrical.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'Flip_Flop_Symmetrical' (4#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Flip_Flop_Symmetrical.vhd:30]
+INFO: [Synth 8-3491] module 'Flip_Flop_Symmetrical' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Flip_Flop_Symmetrical.vhd:24' bound to instance 'FF_3_2' of component 'Flip_Flop_Symmetrical' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd:47]
+INFO: [Synth 8-3491] module 'Flip_Flop_Symmetrical' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Flip_Flop_Symmetrical.vhd:24' bound to instance 'FF_4_3' of component 'Flip_Flop_Symmetrical' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd:49]
+INFO: [Synth 8-3491] module 'Flip_Flop_Symmetrical' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Flip_Flop_Symmetrical.vhd:24' bound to instance 'FF_3_1' of component 'Flip_Flop_Symmetrical' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd:51]
+INFO: [Synth 8-3491] module 'Flip_Flop_Symmetrical' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Flip_Flop_Symmetrical.vhd:24' bound to instance 'FF_4_2' of component 'Flip_Flop_Symmetrical' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd:53]
+INFO: [Synth 8-3491] module 'Flip_Flop_Symmetrical' declared at '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Flip_Flop_Symmetrical.vhd:24' bound to instance 'FF_4_1' of component 'Flip_Flop_Symmetrical' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'Arbiter_Mutual_Order' (5#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Arbiter_Mutual_Order.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'APUF_Mutual_Order' (6#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Mutual_Order.vhd:33]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Driver.vhd:110]
+INFO: [Synth 8-256] done synthesizing module 'APUF_Driver' (7#1) [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/APUF_Driver.vhd:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2635.184 ; gain = 72.840 ; free physical = 695 ; free virtual = 18121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2653.027 ; gain = 90.684 ; free physical = 679 ; free virtual = 18114
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2653.027 ; gain = 90.684 ; free physical = 679 ; free virtual = 18114
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2653.027 ; gain = 0.000 ; free physical = 669 ; free virtual = 18110
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/constrs_1/imports/4x4_arb_puf.srcs/constraints.xdc]
+Finished Parsing XDC File [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/constrs_1/imports/4x4_arb_puf.srcs/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/constrs_1/imports/4x4_arb_puf.srcs/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/APUF_Driver_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/APUF_Driver_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2788.762 ; gain = 0.000 ; free physical = 542 ; free virtual = 18050
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2788.762 ; gain = 0.000 ; free physical = 540 ; free virtual = 18049
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2788.762 ; gain = 226.418 ; free physical = 523 ; free virtual = 18093
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2788.762 ; gain = 226.418 ; free physical = 523 ; free virtual = 18093
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2788.762 ; gain = 226.418 ; free physical = 523 ; free virtual = 18093
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'APUF_Driver'
+WARNING: [Synth 8-327] inferring latch for variable 'Q_reg' [/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.srcs/sources_1/imports/hdl/Mux_4x1.vhd:36]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 reset_s |                             0001 |                               00
+         set_challenge_s |                             0010 |                               01
+              pulse_up_s |                             0100 |                               10
+            pulse_down_s |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'APUF_Driver'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2788.762 ; gain = 226.418 ; free physical = 516 ; free virtual = 18086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               25 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input    1 Bit        Muxes := 22    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2788.762 ; gain = 226.418 ; free physical = 494 ; free virtual = 18077
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+-------------+---------------+----------------+
+|Module Name | RTL Object  | Depth x Width | Implemented As | 
++------------+-------------+---------------+----------------+
+|Permutation | Permutation | 32x8          | LUT            | 
++------------+-------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:48 . Memory (MB): peak = 3198.012 ; gain = 635.668 ; free physical = 145 ; free virtual = 17534
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:48 . Memory (MB): peak = 3198.012 ; gain = 635.668 ; free physical = 142 ; free virtual = 17534
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:49 . Memory (MB): peak = 3217.043 ; gain = 654.699 ; free physical = 128 ; free virtual = 17535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3222.980 ; gain = 660.637 ; free physical = 124 ; free virtual = 17504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3222.980 ; gain = 660.637 ; free physical = 124 ; free virtual = 17504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3222.980 ; gain = 660.637 ; free physical = 123 ; free virtual = 17503
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3222.980 ; gain = 660.637 ; free physical = 123 ; free virtual = 17504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3222.980 ; gain = 660.637 ; free physical = 117 ; free virtual = 17502
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3222.980 ; gain = 660.637 ; free physical = 117 ; free virtual = 17502
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |LUT2 |     1|
+|4     |LUT3 |    10|
+|5     |LUT4 |    10|
+|6     |LUT5 |    21|
+|7     |LUT6 |    20|
+|8     |FDCE |     3|
+|9     |FDPE |     1|
+|10    |FDRE |    37|
+|11    |IBUF |    27|
+|12    |OBUF |     7|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3222.980 ; gain = 660.637 ; free physical = 117 ; free virtual = 17502
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 3222.980 ; gain = 524.902 ; free physical = 151 ; free virtual = 17539
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3222.988 ; gain = 660.637 ; free physical = 148 ; free virtual = 17540
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3237.918 ; gain = 0.000 ; free physical = 122 ; free virtual = 17533
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3244.855 ; gain = 0.000 ; free physical = 148 ; free virtual = 17574
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 28 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 27 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+50 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:08 . Memory (MB): peak = 3244.855 ; gain = 930.750 ; free physical = 286 ; free virtual = 17714
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/PUFs/4x4_arb_puf/4x4_arb_puf.runs/synth_1/APUF_Driver.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file APUF_Driver_utilization_synth.rpt -pb APUF_Driver_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 20 14:04:29 2024...

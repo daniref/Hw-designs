@@ -1,0 +1,329 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 23 11:50:06 2024
+# Process ID: 7673
+# Current directory: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/u96v2_myarbpuf_My_First_Arb_Puf_0_0_synth_1
+# Command line: vivado -log u96v2_myarbpuf_My_First_Arb_Puf_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source u96v2_myarbpuf_My_First_Arb_Puf_0_0.tcl
+# Log file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/u96v2_myarbpuf_My_First_Arb_Puf_0_0_synth_1/u96v2_myarbpuf_My_First_Arb_Puf_0_0.vds
+# Journal file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/u96v2_myarbpuf_My_First_Arb_Puf_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source u96v2_myarbpuf_My_First_Arb_Puf_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/hdl/ip/PWM_w_Int'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/puftester/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top u96v2_myarbpuf_My_First_Arb_Puf_0_0 -part xczu3eg-sbva484-1-i -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7785
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2601.152 ; gain = 30.902 ; free physical = 124 ; free virtual = 14327
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'u96v2_myarbpuf_My_First_Arb_Puf_0_0' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ip/u96v2_myarbpuf_My_First_Arb_Puf_0_0/synth/u96v2_myarbpuf_My_First_Arb_Puf_0_0.vhd:82]
+	Parameter C_PUF_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_PUF_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'My_First_Arb_Puf_v1_0' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/hdl/My_First_Arb_Puf_v1_0.vhd:5' bound to instance 'U0' of component 'My_First_Arb_Puf_v1_0' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ip/u96v2_myarbpuf_My_First_Arb_Puf_0_0/synth/u96v2_myarbpuf_My_First_Arb_Puf_0_0.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'My_First_Arb_Puf_v1_0' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/hdl/My_First_Arb_Puf_v1_0.vhd:49]
+	Parameter C_PUF_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_PUF_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'My_First_Arb_Puf_v1_0_PUF_AXI' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/hdl/My_First_Arb_Puf_v1_0_PUF_AXI.vhd:5' bound to instance 'My_First_Arb_Puf_v1_0_PUF_AXI_inst' of component 'My_First_Arb_Puf_v1_0_PUF_AXI' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/hdl/My_First_Arb_Puf_v1_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'My_First_Arb_Puf_v1_0_PUF_AXI' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/hdl/My_First_Arb_Puf_v1_0_PUF_AXI.vhd:86]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/hdl/My_First_Arb_Puf_v1_0_PUF_AXI.vhd:350]
+	Parameter chal_size bound to: 32 - type: integer 
+	Parameter resp_size bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'topArbPUF_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/topArbPUF_m.vhd:34' bound to instance 'MY_ARB_PUF' of component 'topArbPUF_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/hdl/My_First_Arb_Puf_v1_0_PUF_AXI.vhd:384]
+INFO: [Synth 8-638] synthesizing module 'topArbPUF_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/topArbPUF_m.vhd:56]
+	Parameter chal_size bound to: 32 - type: integer 
+	Parameter resp_size bound to: 8 - type: integer 
+	Parameter chal_size bound to: 32 - type: integer 
+	Parameter resp_size bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'myArbiterPUF_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:34' bound to instance 'ARBITER_PUF' of component 'myArbiterPUF_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/topArbPUF_m.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'myArbiterPUF_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:53]
+	Parameter chal_size bound to: 32 - type: integer 
+	Parameter resp_size bound to: 8 - type: integer 
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'single_response_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:27' bound to instance 'RESP_INST' of component 'single_response_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'single_response_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:43]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:55]
+	Parameter INIT bound to: 8'b11100100 
+INFO: [Synth 8-3491] module 'LUT3' declared at '/home/puftester/tools/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39209' bound to instance 'MUX2_1_UP' of component 'LUT3' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:65]
+INFO: [Synth 8-6157] synthesizing module 'LUT3' [/home/puftester/tools/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39209]
+	Parameter INIT bound to: 8'b11100100 
+INFO: [Synth 8-6155] done synthesizing module 'LUT3' (1#1) [/home/puftester/tools/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39209]
+	Parameter INIT bound to: 8'b11100100 
+INFO: [Synth 8-3491] module 'LUT3' declared at '/home/puftester/tools/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39209' bound to instance 'MUX2_1_LOW' of component 'LUT3' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'switch_block_lut6_m' (2#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:55]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'switch_block_lut6_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/switch_block_lut6_m.vhd:37' bound to instance 'SW_BLK_INST' of component 'switch_block_lut6_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:90]
+INFO: [Synth 8-3491] module 'Flip_Flop_Symmetrical' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/Flip_Flop_Symmetrical.vhd:24' bound to instance 'ARBITER' of component 'Flip_Flop_Symmetrical' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'Flip_Flop_Symmetrical' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/Flip_Flop_Symmetrical.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'Flip_Flop_Symmetrical' (3#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/Flip_Flop_Symmetrical.vhd:30]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'START_UP' to cell 'LUT1' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:108]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'START_LOW' to cell 'LUT1' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'single_response_m' (4#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:43]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'single_response_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:27' bound to instance 'RESP_INST' of component 'single_response_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:71]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'single_response_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:27' bound to instance 'RESP_INST' of component 'single_response_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:71]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'single_response_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:27' bound to instance 'RESP_INST' of component 'single_response_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:71]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'single_response_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:27' bound to instance 'RESP_INST' of component 'single_response_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:71]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'single_response_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:27' bound to instance 'RESP_INST' of component 'single_response_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:71]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'single_response_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:27' bound to instance 'RESP_INST' of component 'single_response_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:71]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'single_response_m' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/single_response_m.vhd:27' bound to instance 'RESP_INST' of component 'single_response_m' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'myArbiterPUF_m' (5#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/myArbiterPUF_m.vhd:53]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/topArbPUF_m.vhd:133]
+INFO: [Synth 8-256] done synthesizing module 'topArbPUF_m' (6#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/src/topArbPUF_m.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'My_First_Arb_Puf_v1_0_PUF_AXI' (7#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/hdl/My_First_Arb_Puf_v1_0_PUF_AXI.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'My_First_Arb_Puf_v1_0' (8#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ipshared/f046/hdl/My_First_Arb_Puf_v1_0.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'u96v2_myarbpuf_My_First_Arb_Puf_0_0' (9#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.gen/sources_1/bd/u96v2_myarbpuf/ip/u96v2_myarbpuf_My_First_Arb_Puf_0_0/synth/u96v2_myarbpuf_My_First_Arb_Puf_0_0.vhd:82]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2647.059 ; gain = 76.809 ; free physical = 906 ; free virtual = 15110
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2663.902 ; gain = 93.652 ; free physical = 899 ; free virtual = 15105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2663.902 ; gain = 93.652 ; free physical = 899 ; free virtual = 15105
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2674.809 ; gain = 0.000 ; free physical = 890 ; free virtual = 15097
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2778.824 ; gain = 0.000 ; free physical = 787 ; free virtual = 15065
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2802.637 ; gain = 23.812 ; free physical = 786 ; free virtual = 15065
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 2802.637 ; gain = 232.387 ; free physical = 835 ; free virtual = 15105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 2802.637 ; gain = 232.387 ; free physical = 835 ; free virtual = 15105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 2802.637 ; gain = 232.387 ; free physical = 835 ; free virtual = 15106
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'topArbPUF_m'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 reset_s |                             0001 |                               00
+         set_challenge_s |                             0010 |                               01
+              pulse_up_s |                             0100 |                               10
+            pulse_down_s |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'topArbPUF_m'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 2802.637 ; gain = 232.387 ; free physical = 820 ; free virtual = 15101
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2802.637 ; gain = 232.387 ; free physical = 789 ; free virtual = 15084
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 3208.949 ; gain = 638.699 ; free physical = 175 ; free virtual = 14514
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 3208.949 ; gain = 638.699 ; free physical = 175 ; free virtual = 14514
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 3227.980 ; gain = 657.730 ; free physical = 186 ; free virtual = 14521
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 3233.918 ; gain = 663.668 ; free physical = 189 ; free virtual = 14519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 3233.918 ; gain = 663.668 ; free physical = 189 ; free virtual = 14519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 3233.918 ; gain = 663.668 ; free physical = 189 ; free virtual = 14519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 3233.918 ; gain = 663.668 ; free physical = 189 ; free virtual = 14519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 3233.918 ; gain = 663.668 ; free physical = 189 ; free virtual = 14519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 3233.918 ; gain = 663.668 ; free physical = 189 ; free virtual = 14519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |    18|
+|2     |LUT2 |     2|
+|3     |LUT3 |   513|
+|4     |LUT4 |    36|
+|5     |LUT5 |     8|
+|6     |LUT6 |     3|
+|7     |FDCE |     3|
+|8     |FDPE |     1|
+|9     |FDRE |   151|
+|10    |FDSE |     3|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 3233.918 ; gain = 663.668 ; free physical = 189 ; free virtual = 14520
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 3233.918 ; gain = 524.934 ; free physical = 229 ; free virtual = 14560
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 3233.926 ; gain = 663.668 ; free physical = 229 ; free virtual = 14560
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3233.926 ; gain = 0.000 ; free physical = 230 ; free virtual = 14557
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3257.699 ; gain = 0.000 ; free physical = 253 ; free virtual = 14591
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+87 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 3257.699 ; gain = 934.688 ; free physical = 393 ; free virtual = 14731
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/u96v2_myarbpuf_My_First_Arb_Puf_0_0_synth_1/u96v2_myarbpuf_My_First_Arb_Puf_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP u96v2_myarbpuf_My_First_Arb_Puf_0_0, cache-ID = 1c987e9320b55900
+INFO: [Coretcl 2-1174] Renamed 276 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/u96v2_myarbpuf_My_First_Arb_Puf_0_0_synth_1/u96v2_myarbpuf_My_First_Arb_Puf_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file u96v2_myarbpuf_My_First_Arb_Puf_0_0_utilization_synth.rpt -pb u96v2_myarbpuf_My_First_Arb_Puf_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 23 11:51:41 2024...

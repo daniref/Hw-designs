@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Sep 18 17:14:10 2024
+# Process ID: 27988
+# Current directory: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_tima_ropuf/u96_v2_tima_ropuf.runs/tima_ro_puf_clk_wiz_0_0_synth_1
+# Command line: vivado -log tima_ro_puf_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tima_ro_puf_clk_wiz_0_0.tcl
+# Log file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_tima_ropuf/u96_v2_tima_ropuf.runs/tima_ro_puf_clk_wiz_0_0_synth_1/tima_ro_puf_clk_wiz_0_0.vds
+# Journal file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_tima_ropuf/u96_v2_tima_ropuf.runs/tima_ro_puf_clk_wiz_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source tima_ro_puf_clk_wiz_0_0.tcl -notrace

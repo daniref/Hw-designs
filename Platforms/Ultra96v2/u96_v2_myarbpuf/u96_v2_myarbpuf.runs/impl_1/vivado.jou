@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 23 12:10:09 2024
+# Process ID: 11865
+# Current directory: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/impl_1
+# Command line: vivado -log u96v2_myarbpuf_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source u96v2_myarbpuf_wrapper.tcl -notrace
+# Log file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/impl_1/u96v2_myarbpuf_wrapper.vdi
+# Journal file: /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_myarbpuf/u96_v2_myarbpuf.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source u96v2_myarbpuf_wrapper.tcl -notrace
