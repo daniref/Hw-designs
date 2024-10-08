@@ -1,6 +1,27 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Fri Oct  4 18:49:22 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'tima_ro_puf_Tima_Ro_Puf_AXI4L_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of tima_ro_puf_Tima_Ro_Puf_AXI4L_0_0 (user.org:user:Tima_Ro_Puf_AXI4L:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 | Date         : Thu Sep 19 11:07:15 2024
 | Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip

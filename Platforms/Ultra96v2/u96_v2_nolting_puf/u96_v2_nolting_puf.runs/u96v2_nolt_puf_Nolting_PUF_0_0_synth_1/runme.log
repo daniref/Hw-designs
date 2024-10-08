@@ -1,0 +1,381 @@
+
+*** Running vivado
+    with args -log u96v2_nolt_puf_Nolting_PUF_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source u96v2_nolt_puf_Nolting_PUF_0_0.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source u96v2_nolt_puf_Nolting_PUF_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/hdl/ip/PWM_w_Int'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/puftester/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top u96v2_nolt_puf_Nolting_PUF_0_0 -part xczu3eg-sbva484-1-i -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15874
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2602.125 ; gain = 30.902 ; free physical = 123 ; free virtual = 18118
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'u96v2_nolt_puf_Nolting_PUF_0_0' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ip/u96v2_nolt_puf_Nolting_PUF_0_0/synth/u96v2_nolt_puf_Nolting_PUF_0_0.vhd:82]
+	Parameter C_PUF_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_PUF_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter resp_size bound to: 96 - type: integer 
+INFO: [Synth 8-3491] module 'Nolting_PUF_v1_0' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/hdl/Nolting_PUF_v1_0.vhd:5' bound to instance 'U0' of component 'Nolting_PUF_v1_0' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ip/u96v2_nolt_puf_Nolting_PUF_0_0/synth/u96v2_nolt_puf_Nolting_PUF_0_0.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'Nolting_PUF_v1_0' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/hdl/Nolting_PUF_v1_0.vhd:50]
+	Parameter resp_size bound to: 96 - type: integer 
+	Parameter C_PUF_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_PUF_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter resp_size bound to: 96 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'Nolting_PUF_v1_0_PUF_AXI' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/hdl/Nolting_PUF_v1_0_PUF_AXI.vhd:5' bound to instance 'Nolting_PUF_v1_0_PUF_AXI_inst' of component 'Nolting_PUF_v1_0_PUF_AXI' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/hdl/Nolting_PUF_v1_0.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'Nolting_PUF_v1_0_PUF_AXI' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/hdl/Nolting_PUF_v1_0_PUF_AXI.vhd:86]
+	Parameter resp_size bound to: 96 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter resp_size bound to: 96 - type: integer 
+INFO: [Synth 8-3491] module 'top_puf' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/top_puf.vhd:25' bound to instance 'PUF_INST' of component 'top_puf' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/hdl/Nolting_PUF_v1_0_PUF_AXI.vhd:386]
+INFO: [Synth 8-638] synthesizing module 'top_puf' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/top_puf.vhd:40]
+	Parameter resp_size bound to: 96 - type: integer 
+	Parameter ID_SIZE bound to: 96 - type: integer 
+INFO: [Synth 8-3491] module 'fpga_puf' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:51' bound to instance 'PUF' of component 'fpga_puf' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/top_puf.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'fpga_puf' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:64]
+	Parameter ID_SIZE bound to: 96 - type: integer 
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'fpga_puf_cell' (1#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:203]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:136]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'fpga_puf' (2#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:64]
+WARNING: [Synth 8-614] signal 'internal_ready' is read in the process but is not in the sensitivity list [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/top_puf.vhd:80]
+WARNING: [Synth 8-614] signal 'response_sig' is read in the process but is not in the sensitivity list [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/top_puf.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'top_puf' (3#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/top_puf.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Nolting_PUF_v1_0_PUF_AXI' (4#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/hdl/Nolting_PUF_v1_0_PUF_AXI.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'Nolting_PUF_v1_0' (5#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/hdl/Nolting_PUF_v1_0.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'u96v2_nolt_puf_Nolting_PUF_0_0' (6#1) [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ip/u96v2_nolt_puf_Nolting_PUF_0_0/synth/u96v2_nolt_puf_Nolting_PUF_0_0.vhd:82]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2648.031 ; gain = 76.809 ; free physical = 914 ; free virtual = 18906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2666.875 ; gain = 95.652 ; free physical = 909 ; free virtual = 18902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2666.875 ; gain = 95.652 ; free physical = 909 ; free virtual = 18902
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2666.875 ; gain = 0.000 ; free physical = 901 ; free virtual = 18894
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2776.766 ; gain = 0.000 ; free physical = 820 ; free virtual = 18873
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2800.578 ; gain = 23.812 ; free physical = 817 ; free virtual = 18873
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2800.578 ; gain = 229.355 ; free physical = 880 ; free virtual = 18907
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2800.578 ; gain = 229.355 ; free physical = 879 ; free virtual = 18907
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2800.578 ; gain = 229.355 ; free physical = 879 ; free virtual = 18906
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'arbiter_reg[state]' in module 'fpga_puf'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top_puf'
+WARNING: [Synth 8-327] inferring latch for variable 'osc_reg' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/fpga_puf.vhd:214]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                              001 |                               00
+                   s_run |                              010 |                               01
+                s_sample |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'arbiter_reg[state]' using encoding 'one-hot' in module 'fpga_puf'
+WARNING: [Synth 8-327] inferring latch for variable 'ready_reg' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/top_puf.vhd:86]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 reset_s |                               00 |                               00
+              pulse_up_s |                               01 |                               01
+            pulse_down_s |                               10 |                               10
+                 ready_s |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'top_puf'
+WARNING: [Synth 8-327] inferring latch for variable 'response_reg' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/top_puf.vhd:87]
+WARNING: [Synth 8-327] inferring latch for variable 'trig_sig_reg' [/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.gen/sources_1/bd/u96v2_nolt_puf/ipshared/68c6/src/top_puf.vhd:75]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2800.578 ; gain = 229.355 ; free physical = 869 ; free virtual = 18900
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               97 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 102   
++---Muxes : 
+	   4 Input   96 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 2800.578 ; gain = 229.355 ; free physical = 772 ; free virtual = 18893
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:50 . Memory (MB): peak = 3206.859 ; gain = 635.637 ; free physical = 404 ; free virtual = 18483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:50 . Memory (MB): peak = 3206.859 ; gain = 635.637 ; free physical = 403 ; free virtual = 18482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:50 . Memory (MB): peak = 3226.898 ; gain = 655.676 ; free physical = 401 ; free virtual = 18480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 3232.836 ; gain = 661.613 ; free physical = 406 ; free virtual = 18477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 3232.836 ; gain = 661.613 ; free physical = 406 ; free virtual = 18477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 3232.836 ; gain = 661.613 ; free physical = 406 ; free virtual = 18477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 3232.836 ; gain = 661.613 ; free physical = 406 ; free virtual = 18477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 3232.836 ; gain = 661.613 ; free physical = 406 ; free virtual = 18477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 3232.836 ; gain = 661.613 ; free physical = 406 ; free virtual = 18477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |    99|
+|2     |LUT2 |   100|
+|3     |LUT3 |     2|
+|4     |LUT4 |     7|
+|5     |LUT5 |     9|
+|6     |LUT6 |    66|
+|7     |FDCE |     2|
+|8     |FDRE |   299|
+|9     |FDSE |     5|
+|10    |LD   |    98|
+|11    |LDC  |    96|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 3232.836 ; gain = 661.613 ; free physical = 406 ; free virtual = 18477
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:49 . Memory (MB): peak = 3232.836 ; gain = 527.910 ; free physical = 442 ; free virtual = 18513
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 3232.844 ; gain = 661.613 ; free physical = 442 ; free virtual = 18514
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3246.773 ; gain = 0.000 ; free physical = 531 ; free virtual = 18603
+INFO: [Netlist 29-17] Analyzing 194 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3255.680 ; gain = 0.000 ; free physical = 476 ; free virtual = 18548
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 194 instances were transformed.
+  LD => LDCE: 98 instances
+  LDC => LDCE: 96 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+136 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:10 . Memory (MB): peak = 3255.680 ; gain = 931.695 ; free physical = 622 ; free virtual = 18695
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.runs/u96v2_nolt_puf_Nolting_PUF_0_0_synth_1/u96v2_nolt_puf_Nolting_PUF_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP u96v2_nolt_puf_Nolting_PUF_0_0, cache-ID = 787a7083ca07dae2
+INFO: [Coretcl 2-1174] Renamed 100 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_nolting_puf/u96_v2_nolting_puf.runs/u96v2_nolt_puf_Nolting_PUF_0_0_synth_1/u96v2_nolt_puf_Nolting_PUF_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file u96v2_nolt_puf_Nolting_PUF_0_0_utilization_synth.rpt -pb u96v2_nolt_puf_Nolting_PUF_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 14:12:18 2024...

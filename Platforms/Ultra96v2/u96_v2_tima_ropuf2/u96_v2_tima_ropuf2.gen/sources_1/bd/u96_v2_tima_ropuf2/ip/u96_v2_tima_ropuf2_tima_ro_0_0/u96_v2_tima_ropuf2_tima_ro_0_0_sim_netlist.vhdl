@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Sat Sep 28 19:16:06 2024
+-- Date        : Fri Oct  4 13:56:59 2024
 -- Host        : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_tima_ropuf2/u96_v2_tima_ropuf2.gen/sources_1/bd/u96_v2_tima_ropuf2/ip/u96_v2_tima_ropuf2_tima_ro_0_0/u96_v2_tima_ropuf2_tima_ro_0_0_sim_netlist.vhdl
@@ -85915,12 +85915,14 @@ end u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf;
 
 architecture STRUCTURE of u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf is
   signal Enable_Comparison : STD_LOGIC;
+  attribute DONT_TOUCH_boolean : boolean;
+  attribute DONT_TOUCH_boolean of Enable_Comparison : signal is std.standard.true;
   signal Enable_Comparison_i_1_n_0 : STD_LOGIC;
-  signal Enable_Comparison_reg_rep_n_0 : STD_LOGIC;
-  signal Enable_Comparison_rep_i_1_n_0 : STD_LOGIC;
   signal Enable_Counter : STD_LOGIC;
+  attribute DONT_TOUCH_boolean of Enable_Counter : signal is std.standard.true;
   signal Enable_Counter_i_1_n_0 : STD_LOGIC;
   signal Enable_RO_sel : STD_LOGIC;
+  attribute DONT_TOUCH_boolean of Enable_RO_sel : signal is std.standard.true;
   signal Enable_RO_sel_i_1_n_0 : STD_LOGIC;
   signal \MUX_1_Counter[0]_i_2_n_0\ : STD_LOGIC;
   signal MUX_1_Counter_reg : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -86062,7 +86064,9 @@ architecture STRUCTURE of u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf is
   signal \MUX_2_Counter_reg[8]_i_1_n_9\ : STD_LOGIC;
   signal MUX_2_OUT : STD_LOGIC;
   signal Reset_Comparison : STD_LOGIC;
+  attribute DONT_TOUCH_boolean of Reset_Comparison : signal is std.standard.true;
   signal Reset_Counter : STD_LOGIC;
+  attribute DONT_TOUCH_boolean of Reset_Counter : signal is std.standard.true;
   signal Reset_Counter_i_1_n_0 : STD_LOGIC;
   signal clear : STD_LOGIC;
   signal \compteur_cycles[0]_i_2_n_0\ : STD_LOGIC;
@@ -86124,20 +86128,21 @@ architecture STRUCTURE of u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf is
   signal \compteur_cycles_reg[8]_i_1_n_7\ : STD_LOGIC;
   signal \compteur_cycles_reg[8]_i_1_n_8\ : STD_LOGIC;
   signal \compteur_cycles_reg[8]_i_1_n_9\ : STD_LOGIC;
-  signal \internal_challenge[0]_i_1_n_0\ : STD_LOGIC;
-  signal \internal_challenge[2]_i_1_n_0\ : STD_LOGIC;
+  signal internal_challenge : STD_LOGIC_VECTOR ( 7 downto 0 );
+  attribute DONT_TOUCH_boolean of internal_challenge : signal is std.standard.true;
+  signal \internal_challenge[3]_i_2_n_0\ : STD_LOGIC;
   signal \internal_challenge[6]_i_2_n_0\ : STD_LOGIC;
-  signal \internal_challenge[7]_i_1_n_0\ : STD_LOGIC;
-  signal \internal_challenge[7]_i_4_n_0\ : STD_LOGIC;
-  signal internal_challenge_reg : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal neqOp : STD_LOGIC;
+  signal \internal_challenge[6]_i_3_n_0\ : STD_LOGIC;
+  signal \internal_challenge[7]_i_2_n_0\ : STD_LOGIC;
+  signal \internal_challenge[7]_i_3_n_0\ : STD_LOGIC;
   signal output_ro : STD_LOGIC;
-  signal p_1_in : STD_LOGIC;
-  signal plusOp : STD_LOGIC_VECTOR ( 7 downto 1 );
+  signal p_1_in : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal p_2_in : STD_LOGIC_VECTOR ( 255 downto 0 );
   signal ready_i_10_n_0 : STD_LOGIC;
   signal ready_i_11_n_0 : STD_LOGIC;
   signal ready_i_12_n_0 : STD_LOGIC;
-  signal ready_i_3_n_0 : STD_LOGIC;
+  signal ready_i_13_n_0 : STD_LOGIC;
+  signal ready_i_2_n_0 : STD_LOGIC;
   signal ready_i_4_n_0 : STD_LOGIC;
   signal ready_i_5_n_0 : STD_LOGIC;
   signal ready_i_6_n_0 : STD_LOGIC;
@@ -86145,212 +86150,42 @@ architecture STRUCTURE of u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf is
   signal ready_i_8_n_0 : STD_LOGIC;
   signal ready_i_9_n_0 : STD_LOGIC;
   signal ready_reg_i_1_n_7 : STD_LOGIC;
-  signal ready_reg_i_2_n_0 : STD_LOGIC;
-  signal ready_reg_i_2_n_1 : STD_LOGIC;
-  signal ready_reg_i_2_n_2 : STD_LOGIC;
-  signal ready_reg_i_2_n_3 : STD_LOGIC;
-  signal ready_reg_i_2_n_4 : STD_LOGIC;
-  signal ready_reg_i_2_n_5 : STD_LOGIC;
-  signal ready_reg_i_2_n_6 : STD_LOGIC;
-  signal ready_reg_i_2_n_7 : STD_LOGIC;
+  signal ready_reg_i_3_n_0 : STD_LOGIC;
+  signal ready_reg_i_3_n_1 : STD_LOGIC;
+  signal ready_reg_i_3_n_2 : STD_LOGIC;
+  signal ready_reg_i_3_n_3 : STD_LOGIC;
+  signal ready_reg_i_3_n_4 : STD_LOGIC;
+  signal ready_reg_i_3_n_5 : STD_LOGIC;
+  signal ready_reg_i_3_n_6 : STD_LOGIC;
+  signal ready_reg_i_3_n_7 : STD_LOGIC;
   signal \^response\ : STD_LOGIC_VECTOR ( 255 downto 0 );
+  attribute RTL_KEEP : string;
+  attribute RTL_KEEP of \^response\ : signal is "true";
   signal response1 : STD_LOGIC;
-  signal \response[0]_i_1_n_0\ : STD_LOGIC;
-  signal \response[100]_i_1_n_0\ : STD_LOGIC;
-  signal \response[101]_i_1_n_0\ : STD_LOGIC;
-  signal \response[102]_i_1_n_0\ : STD_LOGIC;
-  signal \response[103]_i_1_n_0\ : STD_LOGIC;
-  signal \response[104]_i_1_n_0\ : STD_LOGIC;
-  signal \response[105]_i_1_n_0\ : STD_LOGIC;
-  signal \response[106]_i_1_n_0\ : STD_LOGIC;
-  signal \response[107]_i_1_n_0\ : STD_LOGIC;
-  signal \response[108]_i_1_n_0\ : STD_LOGIC;
-  signal \response[109]_i_1_n_0\ : STD_LOGIC;
-  signal \response[10]_i_1_n_0\ : STD_LOGIC;
-  signal \response[110]_i_1_n_0\ : STD_LOGIC;
-  signal \response[111]_i_1_n_0\ : STD_LOGIC;
   signal \response[111]_i_2_n_0\ : STD_LOGIC;
-  signal \response[112]_i_1_n_0\ : STD_LOGIC;
-  signal \response[113]_i_1_n_0\ : STD_LOGIC;
-  signal \response[114]_i_1_n_0\ : STD_LOGIC;
-  signal \response[115]_i_1_n_0\ : STD_LOGIC;
-  signal \response[116]_i_1_n_0\ : STD_LOGIC;
-  signal \response[117]_i_1_n_0\ : STD_LOGIC;
-  signal \response[118]_i_1_n_0\ : STD_LOGIC;
-  signal \response[119]_i_1_n_0\ : STD_LOGIC;
-  signal \response[11]_i_1_n_0\ : STD_LOGIC;
-  signal \response[120]_i_1_n_0\ : STD_LOGIC;
-  signal \response[121]_i_1_n_0\ : STD_LOGIC;
-  signal \response[122]_i_1_n_0\ : STD_LOGIC;
-  signal \response[123]_i_1_n_0\ : STD_LOGIC;
-  signal \response[124]_i_1_n_0\ : STD_LOGIC;
-  signal \response[125]_i_1_n_0\ : STD_LOGIC;
-  signal \response[126]_i_1_n_0\ : STD_LOGIC;
-  signal \response[127]_i_1_n_0\ : STD_LOGIC;
   signal \response[127]_i_2_n_0\ : STD_LOGIC;
-  signal \response[128]_i_1_n_0\ : STD_LOGIC;
-  signal \response[129]_i_1_n_0\ : STD_LOGIC;
-  signal \response[12]_i_1_n_0\ : STD_LOGIC;
-  signal \response[130]_i_1_n_0\ : STD_LOGIC;
-  signal \response[131]_i_1_n_0\ : STD_LOGIC;
-  signal \response[132]_i_1_n_0\ : STD_LOGIC;
-  signal \response[133]_i_1_n_0\ : STD_LOGIC;
-  signal \response[134]_i_1_n_0\ : STD_LOGIC;
-  signal \response[135]_i_1_n_0\ : STD_LOGIC;
-  signal \response[136]_i_1_n_0\ : STD_LOGIC;
-  signal \response[137]_i_1_n_0\ : STD_LOGIC;
-  signal \response[138]_i_1_n_0\ : STD_LOGIC;
-  signal \response[139]_i_1_n_0\ : STD_LOGIC;
-  signal \response[13]_i_1_n_0\ : STD_LOGIC;
-  signal \response[140]_i_1_n_0\ : STD_LOGIC;
-  signal \response[141]_i_1_n_0\ : STD_LOGIC;
-  signal \response[142]_i_1_n_0\ : STD_LOGIC;
-  signal \response[143]_i_1_n_0\ : STD_LOGIC;
   signal \response[143]_i_2_n_0\ : STD_LOGIC;
-  signal \response[144]_i_1_n_0\ : STD_LOGIC;
-  signal \response[145]_i_1_n_0\ : STD_LOGIC;
-  signal \response[146]_i_1_n_0\ : STD_LOGIC;
-  signal \response[147]_i_1_n_0\ : STD_LOGIC;
-  signal \response[148]_i_1_n_0\ : STD_LOGIC;
-  signal \response[149]_i_1_n_0\ : STD_LOGIC;
-  signal \response[14]_i_1_n_0\ : STD_LOGIC;
-  signal \response[150]_i_1_n_0\ : STD_LOGIC;
-  signal \response[151]_i_1_n_0\ : STD_LOGIC;
-  signal \response[152]_i_1_n_0\ : STD_LOGIC;
-  signal \response[153]_i_1_n_0\ : STD_LOGIC;
-  signal \response[154]_i_1_n_0\ : STD_LOGIC;
-  signal \response[155]_i_1_n_0\ : STD_LOGIC;
-  signal \response[156]_i_1_n_0\ : STD_LOGIC;
-  signal \response[157]_i_1_n_0\ : STD_LOGIC;
-  signal \response[158]_i_1_n_0\ : STD_LOGIC;
-  signal \response[159]_i_1_n_0\ : STD_LOGIC;
   signal \response[159]_i_2_n_0\ : STD_LOGIC;
-  signal \response[15]_i_1_n_0\ : STD_LOGIC;
   signal \response[15]_i_2_n_0\ : STD_LOGIC;
-  signal \response[160]_i_1_n_0\ : STD_LOGIC;
-  signal \response[161]_i_1_n_0\ : STD_LOGIC;
-  signal \response[162]_i_1_n_0\ : STD_LOGIC;
-  signal \response[163]_i_1_n_0\ : STD_LOGIC;
-  signal \response[164]_i_1_n_0\ : STD_LOGIC;
-  signal \response[165]_i_1_n_0\ : STD_LOGIC;
-  signal \response[166]_i_1_n_0\ : STD_LOGIC;
-  signal \response[167]_i_1_n_0\ : STD_LOGIC;
-  signal \response[168]_i_1_n_0\ : STD_LOGIC;
-  signal \response[169]_i_1_n_0\ : STD_LOGIC;
-  signal \response[16]_i_1_n_0\ : STD_LOGIC;
-  signal \response[170]_i_1_n_0\ : STD_LOGIC;
-  signal \response[171]_i_1_n_0\ : STD_LOGIC;
-  signal \response[172]_i_1_n_0\ : STD_LOGIC;
-  signal \response[173]_i_1_n_0\ : STD_LOGIC;
-  signal \response[174]_i_1_n_0\ : STD_LOGIC;
-  signal \response[175]_i_1_n_0\ : STD_LOGIC;
   signal \response[175]_i_2_n_0\ : STD_LOGIC;
-  signal \response[176]_i_1_n_0\ : STD_LOGIC;
-  signal \response[177]_i_1_n_0\ : STD_LOGIC;
-  signal \response[178]_i_1_n_0\ : STD_LOGIC;
-  signal \response[179]_i_1_n_0\ : STD_LOGIC;
-  signal \response[17]_i_1_n_0\ : STD_LOGIC;
-  signal \response[180]_i_1_n_0\ : STD_LOGIC;
-  signal \response[181]_i_1_n_0\ : STD_LOGIC;
-  signal \response[182]_i_1_n_0\ : STD_LOGIC;
-  signal \response[183]_i_1_n_0\ : STD_LOGIC;
-  signal \response[184]_i_1_n_0\ : STD_LOGIC;
-  signal \response[185]_i_1_n_0\ : STD_LOGIC;
-  signal \response[186]_i_1_n_0\ : STD_LOGIC;
-  signal \response[187]_i_1_n_0\ : STD_LOGIC;
-  signal \response[188]_i_1_n_0\ : STD_LOGIC;
-  signal \response[189]_i_1_n_0\ : STD_LOGIC;
-  signal \response[18]_i_1_n_0\ : STD_LOGIC;
-  signal \response[190]_i_1_n_0\ : STD_LOGIC;
-  signal \response[191]_i_1_n_0\ : STD_LOGIC;
   signal \response[191]_i_2_n_0\ : STD_LOGIC;
-  signal \response[192]_i_1_n_0\ : STD_LOGIC;
-  signal \response[193]_i_1_n_0\ : STD_LOGIC;
-  signal \response[194]_i_1_n_0\ : STD_LOGIC;
-  signal \response[195]_i_1_n_0\ : STD_LOGIC;
-  signal \response[196]_i_1_n_0\ : STD_LOGIC;
-  signal \response[197]_i_1_n_0\ : STD_LOGIC;
-  signal \response[198]_i_1_n_0\ : STD_LOGIC;
-  signal \response[199]_i_1_n_0\ : STD_LOGIC;
-  signal \response[19]_i_1_n_0\ : STD_LOGIC;
-  signal \response[1]_i_1_n_0\ : STD_LOGIC;
-  signal \response[200]_i_1_n_0\ : STD_LOGIC;
-  signal \response[201]_i_1_n_0\ : STD_LOGIC;
-  signal \response[202]_i_1_n_0\ : STD_LOGIC;
-  signal \response[203]_i_1_n_0\ : STD_LOGIC;
-  signal \response[204]_i_1_n_0\ : STD_LOGIC;
-  signal \response[205]_i_1_n_0\ : STD_LOGIC;
-  signal \response[206]_i_1_n_0\ : STD_LOGIC;
-  signal \response[207]_i_1_n_0\ : STD_LOGIC;
   signal \response[207]_i_2_n_0\ : STD_LOGIC;
-  signal \response[208]_i_1_n_0\ : STD_LOGIC;
-  signal \response[209]_i_1_n_0\ : STD_LOGIC;
-  signal \response[20]_i_1_n_0\ : STD_LOGIC;
-  signal \response[210]_i_1_n_0\ : STD_LOGIC;
-  signal \response[211]_i_1_n_0\ : STD_LOGIC;
-  signal \response[212]_i_1_n_0\ : STD_LOGIC;
-  signal \response[213]_i_1_n_0\ : STD_LOGIC;
-  signal \response[214]_i_1_n_0\ : STD_LOGIC;
-  signal \response[215]_i_1_n_0\ : STD_LOGIC;
-  signal \response[216]_i_1_n_0\ : STD_LOGIC;
-  signal \response[217]_i_1_n_0\ : STD_LOGIC;
-  signal \response[218]_i_1_n_0\ : STD_LOGIC;
-  signal \response[219]_i_1_n_0\ : STD_LOGIC;
-  signal \response[21]_i_1_n_0\ : STD_LOGIC;
-  signal \response[220]_i_1_n_0\ : STD_LOGIC;
-  signal \response[221]_i_1_n_0\ : STD_LOGIC;
-  signal \response[222]_i_1_n_0\ : STD_LOGIC;
-  signal \response[223]_i_1_n_0\ : STD_LOGIC;
   signal \response[223]_i_2_n_0\ : STD_LOGIC;
-  signal \response[224]_i_1_n_0\ : STD_LOGIC;
-  signal \response[225]_i_1_n_0\ : STD_LOGIC;
-  signal \response[226]_i_1_n_0\ : STD_LOGIC;
-  signal \response[227]_i_1_n_0\ : STD_LOGIC;
-  signal \response[228]_i_1_n_0\ : STD_LOGIC;
-  signal \response[229]_i_1_n_0\ : STD_LOGIC;
-  signal \response[22]_i_1_n_0\ : STD_LOGIC;
-  signal \response[230]_i_1_n_0\ : STD_LOGIC;
-  signal \response[231]_i_1_n_0\ : STD_LOGIC;
-  signal \response[232]_i_1_n_0\ : STD_LOGIC;
-  signal \response[233]_i_1_n_0\ : STD_LOGIC;
-  signal \response[234]_i_1_n_0\ : STD_LOGIC;
-  signal \response[235]_i_1_n_0\ : STD_LOGIC;
-  signal \response[236]_i_1_n_0\ : STD_LOGIC;
-  signal \response[237]_i_1_n_0\ : STD_LOGIC;
-  signal \response[238]_i_1_n_0\ : STD_LOGIC;
-  signal \response[239]_i_1_n_0\ : STD_LOGIC;
   signal \response[239]_i_2_n_0\ : STD_LOGIC;
-  signal \response[23]_i_1_n_0\ : STD_LOGIC;
-  signal \response[240]_i_1_n_0\ : STD_LOGIC;
   signal \response[240]_i_2_n_0\ : STD_LOGIC;
-  signal \response[241]_i_1_n_0\ : STD_LOGIC;
   signal \response[241]_i_2_n_0\ : STD_LOGIC;
-  signal \response[242]_i_1_n_0\ : STD_LOGIC;
   signal \response[242]_i_2_n_0\ : STD_LOGIC;
-  signal \response[243]_i_1_n_0\ : STD_LOGIC;
   signal \response[243]_i_2_n_0\ : STD_LOGIC;
-  signal \response[244]_i_1_n_0\ : STD_LOGIC;
   signal \response[244]_i_2_n_0\ : STD_LOGIC;
-  signal \response[245]_i_1_n_0\ : STD_LOGIC;
   signal \response[245]_i_2_n_0\ : STD_LOGIC;
-  signal \response[246]_i_1_n_0\ : STD_LOGIC;
   signal \response[246]_i_2_n_0\ : STD_LOGIC;
-  signal \response[247]_i_1_n_0\ : STD_LOGIC;
   signal \response[247]_i_2_n_0\ : STD_LOGIC;
-  signal \response[248]_i_1_n_0\ : STD_LOGIC;
   signal \response[248]_i_2_n_0\ : STD_LOGIC;
-  signal \response[249]_i_1_n_0\ : STD_LOGIC;
   signal \response[249]_i_2_n_0\ : STD_LOGIC;
-  signal \response[24]_i_1_n_0\ : STD_LOGIC;
-  signal \response[250]_i_1_n_0\ : STD_LOGIC;
   signal \response[250]_i_2_n_0\ : STD_LOGIC;
-  signal \response[251]_i_1_n_0\ : STD_LOGIC;
   signal \response[251]_i_2_n_0\ : STD_LOGIC;
-  signal \response[252]_i_1_n_0\ : STD_LOGIC;
   signal \response[252]_i_2_n_0\ : STD_LOGIC;
-  signal \response[253]_i_1_n_0\ : STD_LOGIC;
   signal \response[253]_i_2_n_0\ : STD_LOGIC;
-  signal \response[254]_i_1_n_0\ : STD_LOGIC;
   signal \response[254]_i_2_n_0\ : STD_LOGIC;
   signal \response[255]_i_10_n_0\ : STD_LOGIC;
   signal \response[255]_i_11_n_0\ : STD_LOGIC;
@@ -86372,7 +86207,6 @@ architecture STRUCTURE of u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf is
   signal \response[255]_i_27_n_0\ : STD_LOGIC;
   signal \response[255]_i_28_n_0\ : STD_LOGIC;
   signal \response[255]_i_29_n_0\ : STD_LOGIC;
-  signal \response[255]_i_2_n_0\ : STD_LOGIC;
   signal \response[255]_i_30_n_0\ : STD_LOGIC;
   signal \response[255]_i_31_n_0\ : STD_LOGIC;
   signal \response[255]_i_32_n_0\ : STD_LOGIC;
@@ -86380,142 +86214,59 @@ architecture STRUCTURE of u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf is
   signal \response[255]_i_34_n_0\ : STD_LOGIC;
   signal \response[255]_i_35_n_0\ : STD_LOGIC;
   signal \response[255]_i_36_n_0\ : STD_LOGIC;
-  signal \response[255]_i_37_n_0\ : STD_LOGIC;
-  signal \response[255]_i_38_n_0\ : STD_LOGIC;
-  signal \response[255]_i_39_n_0\ : STD_LOGIC;
-  signal \response[255]_i_4_n_0\ : STD_LOGIC;
   signal \response[255]_i_5_n_0\ : STD_LOGIC;
+  signal \response[255]_i_6_n_0\ : STD_LOGIC;
+  signal \response[255]_i_7_n_0\ : STD_LOGIC;
   signal \response[255]_i_8_n_0\ : STD_LOGIC;
   signal \response[255]_i_9_n_0\ : STD_LOGIC;
-  signal \response[25]_i_1_n_0\ : STD_LOGIC;
-  signal \response[26]_i_1_n_0\ : STD_LOGIC;
-  signal \response[27]_i_1_n_0\ : STD_LOGIC;
-  signal \response[28]_i_1_n_0\ : STD_LOGIC;
-  signal \response[29]_i_1_n_0\ : STD_LOGIC;
-  signal \response[2]_i_1_n_0\ : STD_LOGIC;
-  signal \response[30]_i_1_n_0\ : STD_LOGIC;
-  signal \response[31]_i_1_n_0\ : STD_LOGIC;
   signal \response[31]_i_2_n_0\ : STD_LOGIC;
-  signal \response[32]_i_1_n_0\ : STD_LOGIC;
-  signal \response[33]_i_1_n_0\ : STD_LOGIC;
-  signal \response[34]_i_1_n_0\ : STD_LOGIC;
-  signal \response[35]_i_1_n_0\ : STD_LOGIC;
-  signal \response[36]_i_1_n_0\ : STD_LOGIC;
-  signal \response[37]_i_1_n_0\ : STD_LOGIC;
-  signal \response[38]_i_1_n_0\ : STD_LOGIC;
-  signal \response[39]_i_1_n_0\ : STD_LOGIC;
-  signal \response[3]_i_1_n_0\ : STD_LOGIC;
-  signal \response[40]_i_1_n_0\ : STD_LOGIC;
-  signal \response[41]_i_1_n_0\ : STD_LOGIC;
-  signal \response[42]_i_1_n_0\ : STD_LOGIC;
-  signal \response[43]_i_1_n_0\ : STD_LOGIC;
-  signal \response[44]_i_1_n_0\ : STD_LOGIC;
-  signal \response[45]_i_1_n_0\ : STD_LOGIC;
-  signal \response[46]_i_1_n_0\ : STD_LOGIC;
-  signal \response[47]_i_1_n_0\ : STD_LOGIC;
   signal \response[47]_i_2_n_0\ : STD_LOGIC;
-  signal \response[48]_i_1_n_0\ : STD_LOGIC;
-  signal \response[49]_i_1_n_0\ : STD_LOGIC;
-  signal \response[4]_i_1_n_0\ : STD_LOGIC;
-  signal \response[50]_i_1_n_0\ : STD_LOGIC;
-  signal \response[51]_i_1_n_0\ : STD_LOGIC;
-  signal \response[52]_i_1_n_0\ : STD_LOGIC;
-  signal \response[53]_i_1_n_0\ : STD_LOGIC;
-  signal \response[54]_i_1_n_0\ : STD_LOGIC;
-  signal \response[55]_i_1_n_0\ : STD_LOGIC;
-  signal \response[56]_i_1_n_0\ : STD_LOGIC;
-  signal \response[57]_i_1_n_0\ : STD_LOGIC;
-  signal \response[58]_i_1_n_0\ : STD_LOGIC;
-  signal \response[59]_i_1_n_0\ : STD_LOGIC;
-  signal \response[5]_i_1_n_0\ : STD_LOGIC;
-  signal \response[60]_i_1_n_0\ : STD_LOGIC;
-  signal \response[61]_i_1_n_0\ : STD_LOGIC;
-  signal \response[62]_i_1_n_0\ : STD_LOGIC;
-  signal \response[63]_i_1_n_0\ : STD_LOGIC;
   signal \response[63]_i_2_n_0\ : STD_LOGIC;
-  signal \response[64]_i_1_n_0\ : STD_LOGIC;
-  signal \response[65]_i_1_n_0\ : STD_LOGIC;
-  signal \response[66]_i_1_n_0\ : STD_LOGIC;
-  signal \response[67]_i_1_n_0\ : STD_LOGIC;
-  signal \response[68]_i_1_n_0\ : STD_LOGIC;
-  signal \response[69]_i_1_n_0\ : STD_LOGIC;
-  signal \response[6]_i_1_n_0\ : STD_LOGIC;
-  signal \response[70]_i_1_n_0\ : STD_LOGIC;
-  signal \response[71]_i_1_n_0\ : STD_LOGIC;
-  signal \response[72]_i_1_n_0\ : STD_LOGIC;
-  signal \response[73]_i_1_n_0\ : STD_LOGIC;
-  signal \response[74]_i_1_n_0\ : STD_LOGIC;
-  signal \response[75]_i_1_n_0\ : STD_LOGIC;
-  signal \response[76]_i_1_n_0\ : STD_LOGIC;
-  signal \response[77]_i_1_n_0\ : STD_LOGIC;
-  signal \response[78]_i_1_n_0\ : STD_LOGIC;
-  signal \response[79]_i_1_n_0\ : STD_LOGIC;
   signal \response[79]_i_2_n_0\ : STD_LOGIC;
-  signal \response[7]_i_1_n_0\ : STD_LOGIC;
-  signal \response[80]_i_1_n_0\ : STD_LOGIC;
-  signal \response[81]_i_1_n_0\ : STD_LOGIC;
-  signal \response[82]_i_1_n_0\ : STD_LOGIC;
-  signal \response[83]_i_1_n_0\ : STD_LOGIC;
-  signal \response[84]_i_1_n_0\ : STD_LOGIC;
-  signal \response[85]_i_1_n_0\ : STD_LOGIC;
-  signal \response[86]_i_1_n_0\ : STD_LOGIC;
-  signal \response[87]_i_1_n_0\ : STD_LOGIC;
-  signal \response[88]_i_1_n_0\ : STD_LOGIC;
-  signal \response[89]_i_1_n_0\ : STD_LOGIC;
-  signal \response[8]_i_1_n_0\ : STD_LOGIC;
-  signal \response[90]_i_1_n_0\ : STD_LOGIC;
-  signal \response[91]_i_1_n_0\ : STD_LOGIC;
-  signal \response[92]_i_1_n_0\ : STD_LOGIC;
-  signal \response[93]_i_1_n_0\ : STD_LOGIC;
-  signal \response[94]_i_1_n_0\ : STD_LOGIC;
-  signal \response[95]_i_1_n_0\ : STD_LOGIC;
   signal \response[95]_i_2_n_0\ : STD_LOGIC;
-  signal \response[96]_i_1_n_0\ : STD_LOGIC;
-  signal \response[97]_i_1_n_0\ : STD_LOGIC;
-  signal \response[98]_i_1_n_0\ : STD_LOGIC;
-  signal \response[99]_i_1_n_0\ : STD_LOGIC;
-  signal \response[9]_i_1_n_0\ : STD_LOGIC;
-  signal \response_reg[255]_i_3_n_15\ : STD_LOGIC;
-  signal \response_reg[255]_i_6_n_1\ : STD_LOGIC;
-  signal \response_reg[255]_i_6_n_2\ : STD_LOGIC;
-  signal \response_reg[255]_i_6_n_3\ : STD_LOGIC;
-  signal \response_reg[255]_i_6_n_4\ : STD_LOGIC;
-  signal \response_reg[255]_i_6_n_5\ : STD_LOGIC;
-  signal \response_reg[255]_i_6_n_6\ : STD_LOGIC;
-  signal \response_reg[255]_i_6_n_7\ : STD_LOGIC;
-  signal \response_reg[255]_i_7_n_0\ : STD_LOGIC;
-  signal \response_reg[255]_i_7_n_1\ : STD_LOGIC;
-  signal \response_reg[255]_i_7_n_2\ : STD_LOGIC;
-  signal \response_reg[255]_i_7_n_3\ : STD_LOGIC;
-  signal \response_reg[255]_i_7_n_4\ : STD_LOGIC;
-  signal \response_reg[255]_i_7_n_5\ : STD_LOGIC;
-  signal \response_reg[255]_i_7_n_6\ : STD_LOGIC;
-  signal \response_reg[255]_i_7_n_7\ : STD_LOGIC;
-  signal sel : STD_LOGIC;
-  signal state : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal \state[0]_i_1_n_0\ : STD_LOGIC;
-  signal \state[1]_i_1_n_0\ : STD_LOGIC;
-  signal \state[2]_i_3_n_0\ : STD_LOGIC;
-  signal \state[2]_i_4_n_0\ : STD_LOGIC;
-  signal \state_reg_n_0_[0]\ : STD_LOGIC;
-  signal \state_reg_n_0_[1]\ : STD_LOGIC;
+  signal \response_reg[255]_i_2_n_15\ : STD_LOGIC;
+  signal \response_reg[255]_i_3_n_1\ : STD_LOGIC;
+  signal \response_reg[255]_i_3_n_2\ : STD_LOGIC;
+  signal \response_reg[255]_i_3_n_3\ : STD_LOGIC;
+  signal \response_reg[255]_i_3_n_4\ : STD_LOGIC;
+  signal \response_reg[255]_i_3_n_5\ : STD_LOGIC;
+  signal \response_reg[255]_i_3_n_6\ : STD_LOGIC;
+  signal \response_reg[255]_i_3_n_7\ : STD_LOGIC;
+  signal \response_reg[255]_i_4_n_0\ : STD_LOGIC;
+  signal \response_reg[255]_i_4_n_1\ : STD_LOGIC;
+  signal \response_reg[255]_i_4_n_2\ : STD_LOGIC;
+  signal \response_reg[255]_i_4_n_3\ : STD_LOGIC;
+  signal \response_reg[255]_i_4_n_4\ : STD_LOGIC;
+  signal \response_reg[255]_i_4_n_5\ : STD_LOGIC;
+  signal \response_reg[255]_i_4_n_6\ : STD_LOGIC;
+  signal \response_reg[255]_i_4_n_7\ : STD_LOGIC;
+  signal state : STD_LOGIC_VECTOR ( 2 downto 0 );
+  attribute DONT_TOUCH_boolean of state : signal is std.standard.true;
+  attribute RTL_KEEP of state : signal is "true";
+  signal \state[0]_i_2_n_0\ : STD_LOGIC;
+  signal \state__0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \NLW_MUX_1_Counter_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 to 7 );
   signal \NLW_MUX_2_Counter_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 to 7 );
   signal \NLW_compteur_cycles_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 4 );
   signal \NLW_compteur_cycles_reg[24]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 5 );
   signal NLW_ready_reg_i_1_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 2 );
   signal NLW_ready_reg_i_1_O_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_ready_reg_i_2_O_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_response_reg[255]_i_3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_response_reg[255]_i_3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
-  signal \NLW_response_reg[255]_i_6_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_response_reg[255]_i_7_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of Enable_Comparison_i_1 : label is "soft_lutpair19";
-  attribute ORIG_CELL_NAME : string;
-  attribute ORIG_CELL_NAME of Enable_Comparison_reg : label is "Enable_Comparison_reg";
-  attribute ORIG_CELL_NAME of Enable_Comparison_reg_rep : label is "Enable_Comparison_reg";
-  attribute SOFT_HLUTNM of Enable_Counter_i_1 : label is "soft_lutpair21";
+  signal NLW_ready_reg_i_3_O_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_response_reg[255]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_response_reg[255]_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
+  signal \NLW_response_reg[255]_i_3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_response_reg[255]_i_4_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  attribute DONT_TOUCH_boolean of Enable_Comparison_reg : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of Enable_Comparison_reg : label is "yes";
+  attribute equivalent_register_removal : string;
+  attribute equivalent_register_removal of Enable_Comparison_reg : label is "no";
+  attribute DONT_TOUCH_boolean of Enable_Counter_reg : label is std.standard.true;
+  attribute KEEP of Enable_Counter_reg : label is "yes";
+  attribute equivalent_register_removal of Enable_Counter_reg : label is "no";
+  attribute DONT_TOUCH_boolean of Enable_RO_sel_reg : label is std.standard.true;
+  attribute KEEP of Enable_RO_sel_reg : label is "yes";
+  attribute equivalent_register_removal of Enable_RO_sel_reg : label is "no";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \MUX_1_Counter_reg[0]_i_1\ : label is 16;
   attribute ADDER_THRESHOLD of \MUX_1_Counter_reg[16]_i_1\ : label is 16;
@@ -86525,7 +86276,6 @@ architecture STRUCTURE of u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf is
   attribute ADDER_THRESHOLD of \MUX_2_Counter_reg[16]_i_1\ : label is 16;
   attribute ADDER_THRESHOLD of \MUX_2_Counter_reg[24]_i_1\ : label is 16;
   attribute ADDER_THRESHOLD of \MUX_2_Counter_reg[8]_i_1\ : label is 16;
-  attribute DONT_TOUCH_boolean : boolean;
   attribute DONT_TOUCH_boolean of RO_BLOCK_1 : label is std.standard.true;
   attribute HU_SET : string;
   attribute HU_SET of RO_BLOCK_1 : label is "X0Y120";
@@ -86536,64 +86286,569 @@ architecture STRUCTURE of u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf is
   attribute HU_SET of RO_BLOCK_2 : label is "X0Y120";
   attribute RLOC of RO_BLOCK_2 : label is "X0Y20";
   attribute num_inverters of RO_BLOCK_2 : label is 7;
-  attribute SOFT_HLUTNM of Reset_Counter_i_1 : label is "soft_lutpair19";
+  attribute DONT_TOUCH_boolean of Reset_Counter_reg : label is std.standard.true;
+  attribute KEEP of Reset_Counter_reg : label is "yes";
+  attribute equivalent_register_removal of Reset_Counter_reg : label is "no";
   attribute ADDER_THRESHOLD of \compteur_cycles_reg[0]_i_1\ : label is 16;
   attribute ADDER_THRESHOLD of \compteur_cycles_reg[16]_i_1\ : label is 16;
   attribute ADDER_THRESHOLD of \compteur_cycles_reg[24]_i_1\ : label is 16;
   attribute ADDER_THRESHOLD of \compteur_cycles_reg[8]_i_1\ : label is 16;
-  attribute SOFT_HLUTNM of \internal_challenge[0]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \internal_challenge[1]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \internal_challenge[2]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \internal_challenge[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \internal_challenge[4]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \internal_challenge[6]_i_2\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \internal_challenge[7]_i_3\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \response[111]_i_2\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \response[127]_i_2\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \response[143]_i_2\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \response[159]_i_2\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \response[15]_i_2\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \response[175]_i_2\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \response[191]_i_2\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \response[207]_i_2\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \response[223]_i_2\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \response[239]_i_2\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \response[240]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \response[241]_i_2\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \response[242]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \response[243]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \response[244]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \response[245]_i_2\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \response[246]_i_2\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \response[247]_i_2\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \response[248]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \response[249]_i_2\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \response[250]_i_2\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \response[251]_i_2\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \response[252]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \response[253]_i_2\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \response[254]_i_2\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \response[255]_i_4\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \response[255]_i_5\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \response[31]_i_2\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \response[47]_i_2\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \response[63]_i_2\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \response[79]_i_2\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \response[95]_i_2\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \state[0]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \state[1]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \state[2]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \state[2]_i_3\ : label is "soft_lutpair18";
+  attribute DONT_TOUCH_boolean of \internal_challenge_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \internal_challenge_reg[0]\ : label is "yes";
+  attribute equivalent_register_removal of \internal_challenge_reg[0]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \internal_challenge_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \internal_challenge_reg[1]\ : label is "yes";
+  attribute equivalent_register_removal of \internal_challenge_reg[1]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \internal_challenge_reg[2]\ : label is std.standard.true;
+  attribute KEEP of \internal_challenge_reg[2]\ : label is "yes";
+  attribute equivalent_register_removal of \internal_challenge_reg[2]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \internal_challenge_reg[3]\ : label is std.standard.true;
+  attribute KEEP of \internal_challenge_reg[3]\ : label is "yes";
+  attribute equivalent_register_removal of \internal_challenge_reg[3]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \internal_challenge_reg[4]\ : label is std.standard.true;
+  attribute KEEP of \internal_challenge_reg[4]\ : label is "yes";
+  attribute equivalent_register_removal of \internal_challenge_reg[4]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \internal_challenge_reg[5]\ : label is std.standard.true;
+  attribute KEEP of \internal_challenge_reg[5]\ : label is "yes";
+  attribute equivalent_register_removal of \internal_challenge_reg[5]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \internal_challenge_reg[6]\ : label is std.standard.true;
+  attribute KEEP of \internal_challenge_reg[6]\ : label is "yes";
+  attribute equivalent_register_removal of \internal_challenge_reg[6]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \internal_challenge_reg[7]\ : label is std.standard.true;
+  attribute KEEP of \internal_challenge_reg[7]\ : label is "yes";
+  attribute equivalent_register_removal of \internal_challenge_reg[7]\ : label is "no";
+  attribute KEEP of \response_reg[0]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[0]\ : label is "no";
+  attribute KEEP of \response_reg[100]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[100]\ : label is "no";
+  attribute KEEP of \response_reg[101]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[101]\ : label is "no";
+  attribute KEEP of \response_reg[102]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[102]\ : label is "no";
+  attribute KEEP of \response_reg[103]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[103]\ : label is "no";
+  attribute KEEP of \response_reg[104]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[104]\ : label is "no";
+  attribute KEEP of \response_reg[105]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[105]\ : label is "no";
+  attribute KEEP of \response_reg[106]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[106]\ : label is "no";
+  attribute KEEP of \response_reg[107]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[107]\ : label is "no";
+  attribute KEEP of \response_reg[108]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[108]\ : label is "no";
+  attribute KEEP of \response_reg[109]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[109]\ : label is "no";
+  attribute KEEP of \response_reg[10]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[10]\ : label is "no";
+  attribute KEEP of \response_reg[110]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[110]\ : label is "no";
+  attribute KEEP of \response_reg[111]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[111]\ : label is "no";
+  attribute KEEP of \response_reg[112]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[112]\ : label is "no";
+  attribute KEEP of \response_reg[113]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[113]\ : label is "no";
+  attribute KEEP of \response_reg[114]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[114]\ : label is "no";
+  attribute KEEP of \response_reg[115]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[115]\ : label is "no";
+  attribute KEEP of \response_reg[116]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[116]\ : label is "no";
+  attribute KEEP of \response_reg[117]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[117]\ : label is "no";
+  attribute KEEP of \response_reg[118]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[118]\ : label is "no";
+  attribute KEEP of \response_reg[119]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[119]\ : label is "no";
+  attribute KEEP of \response_reg[11]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[11]\ : label is "no";
+  attribute KEEP of \response_reg[120]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[120]\ : label is "no";
+  attribute KEEP of \response_reg[121]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[121]\ : label is "no";
+  attribute KEEP of \response_reg[122]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[122]\ : label is "no";
+  attribute KEEP of \response_reg[123]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[123]\ : label is "no";
+  attribute KEEP of \response_reg[124]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[124]\ : label is "no";
+  attribute KEEP of \response_reg[125]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[125]\ : label is "no";
+  attribute KEEP of \response_reg[126]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[126]\ : label is "no";
+  attribute KEEP of \response_reg[127]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[127]\ : label is "no";
+  attribute KEEP of \response_reg[128]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[128]\ : label is "no";
+  attribute KEEP of \response_reg[129]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[129]\ : label is "no";
+  attribute KEEP of \response_reg[12]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[12]\ : label is "no";
+  attribute KEEP of \response_reg[130]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[130]\ : label is "no";
+  attribute KEEP of \response_reg[131]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[131]\ : label is "no";
+  attribute KEEP of \response_reg[132]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[132]\ : label is "no";
+  attribute KEEP of \response_reg[133]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[133]\ : label is "no";
+  attribute KEEP of \response_reg[134]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[134]\ : label is "no";
+  attribute KEEP of \response_reg[135]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[135]\ : label is "no";
+  attribute KEEP of \response_reg[136]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[136]\ : label is "no";
+  attribute KEEP of \response_reg[137]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[137]\ : label is "no";
+  attribute KEEP of \response_reg[138]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[138]\ : label is "no";
+  attribute KEEP of \response_reg[139]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[139]\ : label is "no";
+  attribute KEEP of \response_reg[13]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[13]\ : label is "no";
+  attribute KEEP of \response_reg[140]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[140]\ : label is "no";
+  attribute KEEP of \response_reg[141]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[141]\ : label is "no";
+  attribute KEEP of \response_reg[142]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[142]\ : label is "no";
+  attribute KEEP of \response_reg[143]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[143]\ : label is "no";
+  attribute KEEP of \response_reg[144]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[144]\ : label is "no";
+  attribute KEEP of \response_reg[145]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[145]\ : label is "no";
+  attribute KEEP of \response_reg[146]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[146]\ : label is "no";
+  attribute KEEP of \response_reg[147]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[147]\ : label is "no";
+  attribute KEEP of \response_reg[148]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[148]\ : label is "no";
+  attribute KEEP of \response_reg[149]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[149]\ : label is "no";
+  attribute KEEP of \response_reg[14]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[14]\ : label is "no";
+  attribute KEEP of \response_reg[150]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[150]\ : label is "no";
+  attribute KEEP of \response_reg[151]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[151]\ : label is "no";
+  attribute KEEP of \response_reg[152]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[152]\ : label is "no";
+  attribute KEEP of \response_reg[153]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[153]\ : label is "no";
+  attribute KEEP of \response_reg[154]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[154]\ : label is "no";
+  attribute KEEP of \response_reg[155]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[155]\ : label is "no";
+  attribute KEEP of \response_reg[156]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[156]\ : label is "no";
+  attribute KEEP of \response_reg[157]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[157]\ : label is "no";
+  attribute KEEP of \response_reg[158]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[158]\ : label is "no";
+  attribute KEEP of \response_reg[159]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[159]\ : label is "no";
+  attribute KEEP of \response_reg[15]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[15]\ : label is "no";
+  attribute KEEP of \response_reg[160]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[160]\ : label is "no";
+  attribute KEEP of \response_reg[161]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[161]\ : label is "no";
+  attribute KEEP of \response_reg[162]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[162]\ : label is "no";
+  attribute KEEP of \response_reg[163]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[163]\ : label is "no";
+  attribute KEEP of \response_reg[164]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[164]\ : label is "no";
+  attribute KEEP of \response_reg[165]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[165]\ : label is "no";
+  attribute KEEP of \response_reg[166]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[166]\ : label is "no";
+  attribute KEEP of \response_reg[167]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[167]\ : label is "no";
+  attribute KEEP of \response_reg[168]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[168]\ : label is "no";
+  attribute KEEP of \response_reg[169]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[169]\ : label is "no";
+  attribute KEEP of \response_reg[16]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[16]\ : label is "no";
+  attribute KEEP of \response_reg[170]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[170]\ : label is "no";
+  attribute KEEP of \response_reg[171]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[171]\ : label is "no";
+  attribute KEEP of \response_reg[172]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[172]\ : label is "no";
+  attribute KEEP of \response_reg[173]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[173]\ : label is "no";
+  attribute KEEP of \response_reg[174]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[174]\ : label is "no";
+  attribute KEEP of \response_reg[175]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[175]\ : label is "no";
+  attribute KEEP of \response_reg[176]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[176]\ : label is "no";
+  attribute KEEP of \response_reg[177]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[177]\ : label is "no";
+  attribute KEEP of \response_reg[178]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[178]\ : label is "no";
+  attribute KEEP of \response_reg[179]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[179]\ : label is "no";
+  attribute KEEP of \response_reg[17]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[17]\ : label is "no";
+  attribute KEEP of \response_reg[180]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[180]\ : label is "no";
+  attribute KEEP of \response_reg[181]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[181]\ : label is "no";
+  attribute KEEP of \response_reg[182]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[182]\ : label is "no";
+  attribute KEEP of \response_reg[183]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[183]\ : label is "no";
+  attribute KEEP of \response_reg[184]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[184]\ : label is "no";
+  attribute KEEP of \response_reg[185]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[185]\ : label is "no";
+  attribute KEEP of \response_reg[186]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[186]\ : label is "no";
+  attribute KEEP of \response_reg[187]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[187]\ : label is "no";
+  attribute KEEP of \response_reg[188]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[188]\ : label is "no";
+  attribute KEEP of \response_reg[189]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[189]\ : label is "no";
+  attribute KEEP of \response_reg[18]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[18]\ : label is "no";
+  attribute KEEP of \response_reg[190]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[190]\ : label is "no";
+  attribute KEEP of \response_reg[191]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[191]\ : label is "no";
+  attribute KEEP of \response_reg[192]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[192]\ : label is "no";
+  attribute KEEP of \response_reg[193]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[193]\ : label is "no";
+  attribute KEEP of \response_reg[194]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[194]\ : label is "no";
+  attribute KEEP of \response_reg[195]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[195]\ : label is "no";
+  attribute KEEP of \response_reg[196]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[196]\ : label is "no";
+  attribute KEEP of \response_reg[197]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[197]\ : label is "no";
+  attribute KEEP of \response_reg[198]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[198]\ : label is "no";
+  attribute KEEP of \response_reg[199]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[199]\ : label is "no";
+  attribute KEEP of \response_reg[19]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[19]\ : label is "no";
+  attribute KEEP of \response_reg[1]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[1]\ : label is "no";
+  attribute KEEP of \response_reg[200]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[200]\ : label is "no";
+  attribute KEEP of \response_reg[201]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[201]\ : label is "no";
+  attribute KEEP of \response_reg[202]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[202]\ : label is "no";
+  attribute KEEP of \response_reg[203]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[203]\ : label is "no";
+  attribute KEEP of \response_reg[204]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[204]\ : label is "no";
+  attribute KEEP of \response_reg[205]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[205]\ : label is "no";
+  attribute KEEP of \response_reg[206]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[206]\ : label is "no";
+  attribute KEEP of \response_reg[207]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[207]\ : label is "no";
+  attribute KEEP of \response_reg[208]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[208]\ : label is "no";
+  attribute KEEP of \response_reg[209]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[209]\ : label is "no";
+  attribute KEEP of \response_reg[20]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[20]\ : label is "no";
+  attribute KEEP of \response_reg[210]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[210]\ : label is "no";
+  attribute KEEP of \response_reg[211]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[211]\ : label is "no";
+  attribute KEEP of \response_reg[212]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[212]\ : label is "no";
+  attribute KEEP of \response_reg[213]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[213]\ : label is "no";
+  attribute KEEP of \response_reg[214]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[214]\ : label is "no";
+  attribute KEEP of \response_reg[215]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[215]\ : label is "no";
+  attribute KEEP of \response_reg[216]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[216]\ : label is "no";
+  attribute KEEP of \response_reg[217]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[217]\ : label is "no";
+  attribute KEEP of \response_reg[218]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[218]\ : label is "no";
+  attribute KEEP of \response_reg[219]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[219]\ : label is "no";
+  attribute KEEP of \response_reg[21]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[21]\ : label is "no";
+  attribute KEEP of \response_reg[220]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[220]\ : label is "no";
+  attribute KEEP of \response_reg[221]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[221]\ : label is "no";
+  attribute KEEP of \response_reg[222]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[222]\ : label is "no";
+  attribute KEEP of \response_reg[223]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[223]\ : label is "no";
+  attribute KEEP of \response_reg[224]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[224]\ : label is "no";
+  attribute KEEP of \response_reg[225]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[225]\ : label is "no";
+  attribute KEEP of \response_reg[226]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[226]\ : label is "no";
+  attribute KEEP of \response_reg[227]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[227]\ : label is "no";
+  attribute KEEP of \response_reg[228]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[228]\ : label is "no";
+  attribute KEEP of \response_reg[229]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[229]\ : label is "no";
+  attribute KEEP of \response_reg[22]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[22]\ : label is "no";
+  attribute KEEP of \response_reg[230]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[230]\ : label is "no";
+  attribute KEEP of \response_reg[231]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[231]\ : label is "no";
+  attribute KEEP of \response_reg[232]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[232]\ : label is "no";
+  attribute KEEP of \response_reg[233]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[233]\ : label is "no";
+  attribute KEEP of \response_reg[234]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[234]\ : label is "no";
+  attribute KEEP of \response_reg[235]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[235]\ : label is "no";
+  attribute KEEP of \response_reg[236]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[236]\ : label is "no";
+  attribute KEEP of \response_reg[237]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[237]\ : label is "no";
+  attribute KEEP of \response_reg[238]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[238]\ : label is "no";
+  attribute KEEP of \response_reg[239]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[239]\ : label is "no";
+  attribute KEEP of \response_reg[23]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[23]\ : label is "no";
+  attribute KEEP of \response_reg[240]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[240]\ : label is "no";
+  attribute KEEP of \response_reg[241]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[241]\ : label is "no";
+  attribute KEEP of \response_reg[242]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[242]\ : label is "no";
+  attribute KEEP of \response_reg[243]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[243]\ : label is "no";
+  attribute KEEP of \response_reg[244]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[244]\ : label is "no";
+  attribute KEEP of \response_reg[245]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[245]\ : label is "no";
+  attribute KEEP of \response_reg[246]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[246]\ : label is "no";
+  attribute KEEP of \response_reg[247]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[247]\ : label is "no";
+  attribute KEEP of \response_reg[248]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[248]\ : label is "no";
+  attribute KEEP of \response_reg[249]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[249]\ : label is "no";
+  attribute KEEP of \response_reg[24]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[24]\ : label is "no";
+  attribute KEEP of \response_reg[250]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[250]\ : label is "no";
+  attribute KEEP of \response_reg[251]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[251]\ : label is "no";
+  attribute KEEP of \response_reg[252]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[252]\ : label is "no";
+  attribute KEEP of \response_reg[253]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[253]\ : label is "no";
+  attribute KEEP of \response_reg[254]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[254]\ : label is "no";
+  attribute KEEP of \response_reg[255]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[255]\ : label is "no";
+  attribute KEEP of \response_reg[25]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[25]\ : label is "no";
+  attribute KEEP of \response_reg[26]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[26]\ : label is "no";
+  attribute KEEP of \response_reg[27]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[27]\ : label is "no";
+  attribute KEEP of \response_reg[28]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[28]\ : label is "no";
+  attribute KEEP of \response_reg[29]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[29]\ : label is "no";
+  attribute KEEP of \response_reg[2]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[2]\ : label is "no";
+  attribute KEEP of \response_reg[30]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[30]\ : label is "no";
+  attribute KEEP of \response_reg[31]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[31]\ : label is "no";
+  attribute KEEP of \response_reg[32]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[32]\ : label is "no";
+  attribute KEEP of \response_reg[33]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[33]\ : label is "no";
+  attribute KEEP of \response_reg[34]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[34]\ : label is "no";
+  attribute KEEP of \response_reg[35]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[35]\ : label is "no";
+  attribute KEEP of \response_reg[36]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[36]\ : label is "no";
+  attribute KEEP of \response_reg[37]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[37]\ : label is "no";
+  attribute KEEP of \response_reg[38]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[38]\ : label is "no";
+  attribute KEEP of \response_reg[39]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[39]\ : label is "no";
+  attribute KEEP of \response_reg[3]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[3]\ : label is "no";
+  attribute KEEP of \response_reg[40]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[40]\ : label is "no";
+  attribute KEEP of \response_reg[41]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[41]\ : label is "no";
+  attribute KEEP of \response_reg[42]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[42]\ : label is "no";
+  attribute KEEP of \response_reg[43]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[43]\ : label is "no";
+  attribute KEEP of \response_reg[44]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[44]\ : label is "no";
+  attribute KEEP of \response_reg[45]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[45]\ : label is "no";
+  attribute KEEP of \response_reg[46]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[46]\ : label is "no";
+  attribute KEEP of \response_reg[47]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[47]\ : label is "no";
+  attribute KEEP of \response_reg[48]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[48]\ : label is "no";
+  attribute KEEP of \response_reg[49]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[49]\ : label is "no";
+  attribute KEEP of \response_reg[4]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[4]\ : label is "no";
+  attribute KEEP of \response_reg[50]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[50]\ : label is "no";
+  attribute KEEP of \response_reg[51]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[51]\ : label is "no";
+  attribute KEEP of \response_reg[52]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[52]\ : label is "no";
+  attribute KEEP of \response_reg[53]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[53]\ : label is "no";
+  attribute KEEP of \response_reg[54]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[54]\ : label is "no";
+  attribute KEEP of \response_reg[55]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[55]\ : label is "no";
+  attribute KEEP of \response_reg[56]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[56]\ : label is "no";
+  attribute KEEP of \response_reg[57]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[57]\ : label is "no";
+  attribute KEEP of \response_reg[58]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[58]\ : label is "no";
+  attribute KEEP of \response_reg[59]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[59]\ : label is "no";
+  attribute KEEP of \response_reg[5]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[5]\ : label is "no";
+  attribute KEEP of \response_reg[60]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[60]\ : label is "no";
+  attribute KEEP of \response_reg[61]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[61]\ : label is "no";
+  attribute KEEP of \response_reg[62]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[62]\ : label is "no";
+  attribute KEEP of \response_reg[63]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[63]\ : label is "no";
+  attribute KEEP of \response_reg[64]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[64]\ : label is "no";
+  attribute KEEP of \response_reg[65]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[65]\ : label is "no";
+  attribute KEEP of \response_reg[66]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[66]\ : label is "no";
+  attribute KEEP of \response_reg[67]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[67]\ : label is "no";
+  attribute KEEP of \response_reg[68]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[68]\ : label is "no";
+  attribute KEEP of \response_reg[69]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[69]\ : label is "no";
+  attribute KEEP of \response_reg[6]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[6]\ : label is "no";
+  attribute KEEP of \response_reg[70]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[70]\ : label is "no";
+  attribute KEEP of \response_reg[71]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[71]\ : label is "no";
+  attribute KEEP of \response_reg[72]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[72]\ : label is "no";
+  attribute KEEP of \response_reg[73]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[73]\ : label is "no";
+  attribute KEEP of \response_reg[74]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[74]\ : label is "no";
+  attribute KEEP of \response_reg[75]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[75]\ : label is "no";
+  attribute KEEP of \response_reg[76]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[76]\ : label is "no";
+  attribute KEEP of \response_reg[77]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[77]\ : label is "no";
+  attribute KEEP of \response_reg[78]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[78]\ : label is "no";
+  attribute KEEP of \response_reg[79]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[79]\ : label is "no";
+  attribute KEEP of \response_reg[7]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[7]\ : label is "no";
+  attribute KEEP of \response_reg[80]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[80]\ : label is "no";
+  attribute KEEP of \response_reg[81]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[81]\ : label is "no";
+  attribute KEEP of \response_reg[82]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[82]\ : label is "no";
+  attribute KEEP of \response_reg[83]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[83]\ : label is "no";
+  attribute KEEP of \response_reg[84]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[84]\ : label is "no";
+  attribute KEEP of \response_reg[85]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[85]\ : label is "no";
+  attribute KEEP of \response_reg[86]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[86]\ : label is "no";
+  attribute KEEP of \response_reg[87]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[87]\ : label is "no";
+  attribute KEEP of \response_reg[88]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[88]\ : label is "no";
+  attribute KEEP of \response_reg[89]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[89]\ : label is "no";
+  attribute KEEP of \response_reg[8]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[8]\ : label is "no";
+  attribute KEEP of \response_reg[90]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[90]\ : label is "no";
+  attribute KEEP of \response_reg[91]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[91]\ : label is "no";
+  attribute KEEP of \response_reg[92]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[92]\ : label is "no";
+  attribute KEEP of \response_reg[93]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[93]\ : label is "no";
+  attribute KEEP of \response_reg[94]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[94]\ : label is "no";
+  attribute KEEP of \response_reg[95]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[95]\ : label is "no";
+  attribute KEEP of \response_reg[96]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[96]\ : label is "no";
+  attribute KEEP of \response_reg[97]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[97]\ : label is "no";
+  attribute KEEP of \response_reg[98]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[98]\ : label is "no";
+  attribute KEEP of \response_reg[99]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[99]\ : label is "no";
+  attribute KEEP of \response_reg[9]\ : label is "yes";
+  attribute equivalent_register_removal of \response_reg[9]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \state_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \state_reg[0]\ : label is "yes";
+  attribute equivalent_register_removal of \state_reg[0]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \state_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \state_reg[1]\ : label is "yes";
+  attribute equivalent_register_removal of \state_reg[1]\ : label is "no";
+  attribute DONT_TOUCH_boolean of \state_reg[2]\ : label is std.standard.true;
+  attribute KEEP of \state_reg[2]\ : label is "yes";
+  attribute equivalent_register_removal of \state_reg[2]\ : label is "no";
+  attribute keep of response : signal is "true";
 begin
   response(255 downto 0) <= \^response\(255 downto 0);
 Enable_Comparison_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"EA"
+      INIT => X"04"
     )
         port map (
-      I0 => p_1_in,
-      I1 => \state_reg_n_0_[0]\,
-      I2 => \state_reg_n_0_[1]\,
+      I0 => state(0),
+      I1 => state(2),
+      I2 => state(1),
       O => Enable_Comparison_i_1_n_0
     );
 Enable_Comparison_reg: unisim.vcomponents.FDRE
@@ -86607,34 +86862,14 @@ Enable_Comparison_reg: unisim.vcomponents.FDRE
       Q => Enable_Comparison,
       R => '0'
     );
-Enable_Comparison_reg_rep: unisim.vcomponents.FDRE
+Enable_Counter_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => '0'
+      INIT => X"04"
     )
         port map (
-      C => clk,
-      CE => clear,
-      D => Enable_Comparison_rep_i_1_n_0,
-      Q => Enable_Comparison_reg_rep_n_0,
-      R => '0'
-    );
-Enable_Comparison_rep_i_1: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"EA"
-    )
-        port map (
-      I0 => p_1_in,
-      I1 => \state_reg_n_0_[0]\,
-      I2 => \state_reg_n_0_[1]\,
-      O => Enable_Comparison_rep_i_1_n_0
-    );
-Enable_Counter_i_1: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => \state_reg_n_0_[0]\,
-      I1 => \state_reg_n_0_[1]\,
+      I0 => state(2),
+      I1 => state(1),
+      I2 => state(0),
       O => Enable_Counter_i_1_n_0
     );
 Enable_Counter_reg: unisim.vcomponents.FDRE
@@ -86650,11 +86885,11 @@ Enable_Counter_reg: unisim.vcomponents.FDRE
     );
 Enable_RO_sel_i_1: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"6"
+      INIT => X"2"
     )
         port map (
-      I0 => \state_reg_n_0_[1]\,
-      I1 => \state_reg_n_0_[0]\,
+      I0 => state(1),
+      I1 => state(2),
       O => Enable_RO_sel_i_1_n_0
     );
 Enable_RO_sel_reg: unisim.vcomponents.FDRE
@@ -87128,7 +87363,7 @@ Enable_RO_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => clear,
-      D => internal_challenge_reg(0),
+      D => internal_challenge(0),
       Q => \MUX_1_challenge_reg_n_0_[0]\,
       R => '0'
     );
@@ -87139,7 +87374,7 @@ Enable_RO_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => clear,
-      D => internal_challenge_reg(1),
+      D => internal_challenge(1),
       Q => \MUX_1_challenge_reg_n_0_[1]\,
       R => '0'
     );
@@ -87150,7 +87385,7 @@ Enable_RO_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => clear,
-      D => internal_challenge_reg(2),
+      D => internal_challenge(2),
       Q => \MUX_1_challenge_reg_n_0_[2]\,
       R => '0'
     );
@@ -87161,7 +87396,7 @@ Enable_RO_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => clear,
-      D => internal_challenge_reg(3),
+      D => internal_challenge(3),
       Q => \MUX_1_challenge_reg_n_0_[3]\,
       R => '0'
     );
@@ -87172,7 +87407,7 @@ Enable_RO_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => clear,
-      D => internal_challenge_reg(4),
+      D => internal_challenge(4),
       Q => \MUX_1_challenge_reg_n_0_[4]\,
       R => '0'
     );
@@ -87183,7 +87418,7 @@ Enable_RO_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => clear,
-      D => internal_challenge_reg(5),
+      D => internal_challenge(5),
       Q => \MUX_1_challenge_reg_n_0_[5]\,
       R => '0'
     );
@@ -87194,7 +87429,7 @@ Enable_RO_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => clear,
-      D => internal_challenge_reg(6),
+      D => internal_challenge(6),
       Q => \MUX_1_challenge_reg_n_0_[6]\,
       R => '0'
     );
@@ -87205,7 +87440,7 @@ Enable_RO_sel_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => clear,
-      D => internal_challenge_reg(7),
+      D => internal_challenge(7),
       Q => \MUX_1_challenge_reg_n_0_[7]\,
       R => '0'
     );
@@ -87688,14 +87923,21 @@ RO_BLOCK_2: entity work.u96_v2_tima_ropuf2_tima_ro_0_0_RO_selection
       en_ro_selector => Enable_RO_sel,
       output_ro => MUX_2_OUT
     );
-Reset_Counter_i_1: unisim.vcomponents.LUT3
+Reset_Comparison_inferred_i_1: unisim.vcomponents.LUT1
     generic map(
-      INIT => X"01"
+      INIT => X"1"
     )
         port map (
-      I0 => p_1_in,
-      I1 => \state_reg_n_0_[0]\,
-      I2 => \state_reg_n_0_[1]\,
+      I0 => enable,
+      O => Reset_Comparison
+    );
+Reset_Counter_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => state(1),
+      I1 => state(2),
       O => Reset_Counter_i_1_n_0
     );
 Reset_Counter_reg: unisim.vcomponents.FDRE
@@ -88125,136 +88367,155 @@ Reset_Counter_reg: unisim.vcomponents.FDRE
       Q => compteur_cycles_reg(9),
       R => clear
     );
-\internal_challenge[0]_i_1\: unisim.vcomponents.LUT1
+\internal_challenge[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1"
+      INIT => X"BE40"
     )
         port map (
-      I0 => internal_challenge_reg(0),
-      O => \internal_challenge[0]_i_1_n_0\
+      I0 => state(0),
+      I1 => state(2),
+      I2 => state(1),
+      I3 => internal_challenge(0),
+      O => p_1_in(0)
     );
-\internal_challenge[1]_i_1\: unisim.vcomponents.LUT2
+\internal_challenge[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"6"
+      INIT => X"BE40FE00"
     )
         port map (
-      I0 => internal_challenge_reg(0),
-      I1 => internal_challenge_reg(1),
-      O => plusOp(1)
+      I0 => state(0),
+      I1 => state(2),
+      I2 => state(1),
+      I3 => internal_challenge(1),
+      I4 => internal_challenge(0),
+      O => p_1_in(1)
     );
-\internal_challenge[2]_i_1\: unisim.vcomponents.LUT3
+\internal_challenge[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"78"
+      INIT => X"BEFEFEFE40000000"
     )
         port map (
-      I0 => internal_challenge_reg(1),
-      I1 => internal_challenge_reg(0),
-      I2 => internal_challenge_reg(2),
-      O => \internal_challenge[2]_i_1_n_0\
+      I0 => state(0),
+      I1 => state(2),
+      I2 => state(1),
+      I3 => internal_challenge(0),
+      I4 => internal_challenge(1),
+      I5 => internal_challenge(2),
+      O => p_1_in(2)
     );
-\internal_challenge[3]_i_1\: unisim.vcomponents.LUT4
+\internal_challenge[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7F80"
+      INIT => X"BEFEFEFE40000000"
     )
         port map (
-      I0 => internal_challenge_reg(0),
-      I1 => internal_challenge_reg(1),
-      I2 => internal_challenge_reg(2),
-      I3 => internal_challenge_reg(3),
-      O => plusOp(3)
+      I0 => state(0),
+      I1 => state(2),
+      I2 => state(1),
+      I3 => internal_challenge(2),
+      I4 => \internal_challenge[3]_i_2_n_0\,
+      I5 => internal_challenge(3),
+      O => p_1_in(3)
     );
-\internal_challenge[4]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(1),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(3),
-      I4 => internal_challenge_reg(4),
-      O => plusOp(4)
-    );
-\internal_challenge[5]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFF80000000"
-    )
-        port map (
-      I0 => internal_challenge_reg(3),
-      I1 => internal_challenge_reg(0),
-      I2 => internal_challenge_reg(1),
-      I3 => internal_challenge_reg(2),
-      I4 => internal_challenge_reg(4),
-      I5 => internal_challenge_reg(5),
-      O => plusOp(5)
-    );
-\internal_challenge[6]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFF80000000"
-    )
-        port map (
-      I0 => internal_challenge_reg(4),
-      I1 => internal_challenge_reg(2),
-      I2 => \internal_challenge[6]_i_2_n_0\,
-      I3 => internal_challenge_reg(3),
-      I4 => internal_challenge_reg(5),
-      I5 => internal_challenge_reg(6),
-      O => plusOp(6)
-    );
-\internal_challenge[6]_i_2\: unisim.vcomponents.LUT2
+\internal_challenge[3]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
-      I0 => internal_challenge_reg(1),
-      I1 => internal_challenge_reg(0),
-      O => \internal_challenge[6]_i_2_n_0\
+      I0 => internal_challenge(0),
+      I1 => internal_challenge(1),
+      O => \internal_challenge[3]_i_2_n_0\
     );
-\internal_challenge[7]_i_1\: unisim.vcomponents.LUT5
+\internal_challenge[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00008000"
+      INIT => X"FF7C0080"
     )
         port map (
-      I0 => \state_reg_n_0_[1]\,
-      I1 => enable,
-      I2 => \state_reg_n_0_[0]\,
-      I3 => clear,
-      I4 => neqOp,
-      O => \internal_challenge[7]_i_1_n_0\
+      I0 => \internal_challenge[6]_i_3_n_0\,
+      I1 => state(1),
+      I2 => state(2),
+      I3 => state(0),
+      I4 => internal_challenge(4),
+      O => p_1_in(4)
     );
-\internal_challenge[7]_i_2\: unisim.vcomponents.LUT4
+\internal_challenge[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F6FE0800FEFE0000"
+    )
+        port map (
+      I0 => state(2),
+      I1 => state(1),
+      I2 => state(0),
+      I3 => \internal_challenge[6]_i_3_n_0\,
+      I4 => internal_challenge(5),
+      I5 => internal_challenge(4),
+      O => p_1_in(5)
+    );
+\internal_challenge[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAA9AAAAA00"
+    )
+        port map (
+      I0 => internal_challenge(6),
+      I1 => \internal_challenge[6]_i_2_n_0\,
+      I2 => \internal_challenge[6]_i_3_n_0\,
+      I3 => state(1),
+      I4 => state(2),
+      I5 => state(0),
+      O => p_1_in(6)
+    );
+\internal_challenge[6]_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => internal_challenge(4),
+      I1 => internal_challenge(5),
+      O => \internal_challenge[6]_i_2_n_0\
+    );
+\internal_challenge[6]_i_3\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"8000"
     )
         port map (
-      I0 => clear,
-      I1 => \state_reg_n_0_[0]\,
-      I2 => enable,
-      I3 => \state_reg_n_0_[1]\,
-      O => sel
+      I0 => internal_challenge(1),
+      I1 => internal_challenge(0),
+      I2 => internal_challenge(3),
+      I3 => internal_challenge(2),
+      O => \internal_challenge[6]_i_3_n_0\
+    );
+\internal_challenge[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000078F0F0F0"
+    )
+        port map (
+      I0 => \internal_challenge[7]_i_2_n_0\,
+      I1 => internal_challenge(6),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(4),
+      I4 => internal_challenge(5),
+      I5 => \internal_challenge[7]_i_3_n_0\,
+      O => p_1_in(7)
+    );
+\internal_challenge[7]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0082"
+    )
+        port map (
+      I0 => \internal_challenge[6]_i_3_n_0\,
+      I1 => state(1),
+      I2 => state(2),
+      I3 => state(0),
+      O => \internal_challenge[7]_i_2_n_0\
     );
 \internal_challenge[7]_i_3\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"78"
+      INIT => X"01"
     )
         port map (
-      I0 => \internal_challenge[7]_i_4_n_0\,
-      I1 => internal_challenge_reg(6),
-      I2 => internal_challenge_reg(7),
-      O => plusOp(7)
-    );
-\internal_challenge[7]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8000000000000000"
-    )
-        port map (
-      I0 => internal_challenge_reg(5),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
-      I4 => internal_challenge_reg(2),
-      I5 => internal_challenge_reg(4),
-      O => \internal_challenge[7]_i_4_n_0\
+      I0 => state(2),
+      I1 => state(1),
+      I2 => state(0),
+      O => \internal_challenge[7]_i_3_n_0\
     );
 \internal_challenge_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -88262,10 +88523,10 @@ Reset_Counter_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk,
-      CE => sel,
-      D => \internal_challenge[0]_i_1_n_0\,
-      Q => internal_challenge_reg(0),
-      R => \internal_challenge[7]_i_1_n_0\
+      CE => clear,
+      D => p_1_in(0),
+      Q => internal_challenge(0),
+      R => '0'
     );
 \internal_challenge_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -88273,10 +88534,10 @@ Reset_Counter_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk,
-      CE => sel,
-      D => plusOp(1),
-      Q => internal_challenge_reg(1),
-      R => \internal_challenge[7]_i_1_n_0\
+      CE => clear,
+      D => p_1_in(1),
+      Q => internal_challenge(1),
+      R => '0'
     );
 \internal_challenge_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -88284,10 +88545,10 @@ Reset_Counter_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk,
-      CE => sel,
-      D => \internal_challenge[2]_i_1_n_0\,
-      Q => internal_challenge_reg(2),
-      R => \internal_challenge[7]_i_1_n_0\
+      CE => clear,
+      D => p_1_in(2),
+      Q => internal_challenge(2),
+      R => '0'
     );
 \internal_challenge_reg[3]\: unisim.vcomponents.FDRE
     generic map(
@@ -88295,10 +88556,10 @@ Reset_Counter_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk,
-      CE => sel,
-      D => plusOp(3),
-      Q => internal_challenge_reg(3),
-      R => \internal_challenge[7]_i_1_n_0\
+      CE => clear,
+      D => p_1_in(3),
+      Q => internal_challenge(3),
+      R => '0'
     );
 \internal_challenge_reg[4]\: unisim.vcomponents.FDRE
     generic map(
@@ -88306,10 +88567,10 @@ Reset_Counter_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk,
-      CE => sel,
-      D => plusOp(4),
-      Q => internal_challenge_reg(4),
-      R => \internal_challenge[7]_i_1_n_0\
+      CE => clear,
+      D => p_1_in(4),
+      Q => internal_challenge(4),
+      R => '0'
     );
 \internal_challenge_reg[5]\: unisim.vcomponents.FDRE
     generic map(
@@ -88317,10 +88578,10 @@ Reset_Counter_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk,
-      CE => sel,
-      D => plusOp(5),
-      Q => internal_challenge_reg(5),
-      R => \internal_challenge[7]_i_1_n_0\
+      CE => clear,
+      D => p_1_in(5),
+      Q => internal_challenge(5),
+      R => '0'
     );
 \internal_challenge_reg[6]\: unisim.vcomponents.FDRE
     generic map(
@@ -88328,10 +88589,10 @@ Reset_Counter_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk,
-      CE => sel,
-      D => plusOp(6),
-      Q => internal_challenge_reg(6),
-      R => \internal_challenge[7]_i_1_n_0\
+      CE => clear,
+      D => p_1_in(6),
+      Q => internal_challenge(6),
+      R => '0'
     );
 \internal_challenge_reg[7]\: unisim.vcomponents.FDRE
     generic map(
@@ -88339,122 +88600,12 @@ Reset_Counter_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk,
-      CE => sel,
-      D => plusOp(7),
-      Q => internal_challenge_reg(7),
-      R => \internal_challenge[7]_i_1_n_0\
+      CE => clear,
+      D => p_1_in(7),
+      Q => internal_challenge(7),
+      R => '0'
     );
 ready_i_10: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000001451410800"
-    )
-        port map (
-      I0 => compteur_cycles_reg(6),
-      I1 => counter_config(1),
-      I2 => counter_config(2),
-      I3 => counter_config(0),
-      I4 => compteur_cycles_reg(8),
-      I5 => compteur_cycles_reg(7),
-      O => ready_i_10_n_0
-    );
-ready_i_11: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000E1100E"
-    )
-        port map (
-      I0 => counter_config(1),
-      I1 => counter_config(0),
-      I2 => counter_config(2),
-      I3 => compteur_cycles_reg(5),
-      I4 => compteur_cycles_reg(4),
-      I5 => compteur_cycles_reg(3),
-      O => ready_i_11_n_0
-    );
-ready_i_12: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
-    )
-        port map (
-      I0 => compteur_cycles_reg(2),
-      I1 => compteur_cycles_reg(1),
-      I2 => compteur_cycles_reg(0),
-      O => ready_i_12_n_0
-    );
-ready_i_3: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => compteur_cycles_reg(27),
-      I1 => compteur_cycles_reg(28),
-      O => ready_i_3_n_0
-    );
-ready_i_4: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000020011111011"
-    )
-        port map (
-      I0 => compteur_cycles_reg(24),
-      I1 => compteur_cycles_reg(25),
-      I2 => counter_config(1),
-      I3 => counter_config(0),
-      I4 => counter_config(2),
-      I5 => compteur_cycles_reg(26),
-      O => ready_i_4_n_0
-    );
-ready_i_5: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0020000001005445"
-    )
-        port map (
-      I0 => compteur_cycles_reg(21),
-      I1 => counter_config(2),
-      I2 => counter_config(0),
-      I3 => counter_config(1),
-      I4 => compteur_cycles_reg(23),
-      I5 => compteur_cycles_reg(22),
-      O => ready_i_5_n_0
-    );
-ready_i_6: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0100200000204445"
-    )
-        port map (
-      I0 => compteur_cycles_reg(18),
-      I1 => counter_config(2),
-      I2 => counter_config(0),
-      I3 => counter_config(1),
-      I4 => compteur_cycles_reg(20),
-      I5 => compteur_cycles_reg(19),
-      O => ready_i_6_n_0
-    );
-ready_i_7: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1000002800004641"
-    )
-        port map (
-      I0 => compteur_cycles_reg(15),
-      I1 => counter_config(2),
-      I2 => counter_config(0),
-      I3 => counter_config(1),
-      I4 => compteur_cycles_reg(17),
-      I5 => compteur_cycles_reg(16),
-      O => ready_i_7_n_0
-    );
-ready_i_8: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0044104110020004"
-    )
-        port map (
-      I0 => compteur_cycles_reg(12),
-      I1 => counter_config(2),
-      I2 => counter_config(0),
-      I3 => compteur_cycles_reg(14),
-      I4 => counter_config(1),
-      I5 => compteur_cycles_reg(13),
-      O => ready_i_8_n_0
-    );
-ready_i_9: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0A000A0A00090000"
     )
@@ -88465,19 +88616,140 @@ ready_i_9: unisim.vcomponents.LUT6
       I3 => counter_config(2),
       I4 => counter_config(0),
       I5 => compteur_cycles_reg(10),
+      O => ready_i_10_n_0
+    );
+ready_i_11: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000001451410800"
+    )
+        port map (
+      I0 => compteur_cycles_reg(6),
+      I1 => counter_config(1),
+      I2 => counter_config(2),
+      I3 => counter_config(0),
+      I4 => compteur_cycles_reg(8),
+      I5 => compteur_cycles_reg(7),
+      O => ready_i_11_n_0
+    );
+ready_i_12: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000E1100E"
+    )
+        port map (
+      I0 => counter_config(1),
+      I1 => counter_config(0),
+      I2 => counter_config(2),
+      I3 => compteur_cycles_reg(5),
+      I4 => compteur_cycles_reg(4),
+      I5 => compteur_cycles_reg(3),
+      O => ready_i_12_n_0
+    );
+ready_i_13: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => compteur_cycles_reg(2),
+      I1 => compteur_cycles_reg(1),
+      I2 => compteur_cycles_reg(0),
+      O => ready_i_13_n_0
+    );
+ready_i_2: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => state(2),
+      I1 => enable,
+      I2 => state(0),
+      I3 => state(1),
+      O => ready_i_2_n_0
+    );
+ready_i_4: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => compteur_cycles_reg(27),
+      I1 => compteur_cycles_reg(28),
+      O => ready_i_4_n_0
+    );
+ready_i_5: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000020011111011"
+    )
+        port map (
+      I0 => compteur_cycles_reg(24),
+      I1 => compteur_cycles_reg(25),
+      I2 => counter_config(1),
+      I3 => counter_config(0),
+      I4 => counter_config(2),
+      I5 => compteur_cycles_reg(26),
+      O => ready_i_5_n_0
+    );
+ready_i_6: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0020000001005445"
+    )
+        port map (
+      I0 => compteur_cycles_reg(21),
+      I1 => counter_config(2),
+      I2 => counter_config(0),
+      I3 => counter_config(1),
+      I4 => compteur_cycles_reg(23),
+      I5 => compteur_cycles_reg(22),
+      O => ready_i_6_n_0
+    );
+ready_i_7: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0100200000204445"
+    )
+        port map (
+      I0 => compteur_cycles_reg(18),
+      I1 => counter_config(2),
+      I2 => counter_config(0),
+      I3 => counter_config(1),
+      I4 => compteur_cycles_reg(20),
+      I5 => compteur_cycles_reg(19),
+      O => ready_i_7_n_0
+    );
+ready_i_8: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"1000002800004641"
+    )
+        port map (
+      I0 => compteur_cycles_reg(15),
+      I1 => counter_config(2),
+      I2 => counter_config(0),
+      I3 => counter_config(1),
+      I4 => compteur_cycles_reg(17),
+      I5 => compteur_cycles_reg(16),
+      O => ready_i_8_n_0
+    );
+ready_i_9: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0044104110020004"
+    )
+        port map (
+      I0 => compteur_cycles_reg(12),
+      I1 => counter_config(2),
+      I2 => counter_config(0),
+      I3 => compteur_cycles_reg(14),
+      I4 => counter_config(1),
+      I5 => compteur_cycles_reg(13),
       O => ready_i_9_n_0
     );
 ready_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => clear,
-      D => p_1_in,
+      D => ready_i_2_n_0,
       Q => ready,
       R => '0'
     );
 ready_reg_i_1: unisim.vcomponents.CARRY8
      port map (
-      CI => ready_reg_i_2_n_0,
+      CI => ready_reg_i_3_n_0,
       CI_TOP => '0',
       CO(7 downto 2) => NLW_ready_reg_i_1_CO_UNCONNECTED(7 downto 2),
       CO(1) => clear,
@@ -88485,2443 +88757,2274 @@ ready_reg_i_1: unisim.vcomponents.CARRY8
       DI(7 downto 0) => B"00000000",
       O(7 downto 0) => NLW_ready_reg_i_1_O_UNCONNECTED(7 downto 0),
       S(7 downto 2) => B"000000",
-      S(1) => ready_i_3_n_0,
-      S(0) => ready_i_4_n_0
+      S(1) => ready_i_4_n_0,
+      S(0) => ready_i_5_n_0
     );
-ready_reg_i_2: unisim.vcomponents.CARRY8
+ready_reg_i_3: unisim.vcomponents.CARRY8
      port map (
       CI => '1',
       CI_TOP => '0',
-      CO(7) => ready_reg_i_2_n_0,
-      CO(6) => ready_reg_i_2_n_1,
-      CO(5) => ready_reg_i_2_n_2,
-      CO(4) => ready_reg_i_2_n_3,
-      CO(3) => ready_reg_i_2_n_4,
-      CO(2) => ready_reg_i_2_n_5,
-      CO(1) => ready_reg_i_2_n_6,
-      CO(0) => ready_reg_i_2_n_7,
+      CO(7) => ready_reg_i_3_n_0,
+      CO(6) => ready_reg_i_3_n_1,
+      CO(5) => ready_reg_i_3_n_2,
+      CO(4) => ready_reg_i_3_n_3,
+      CO(3) => ready_reg_i_3_n_4,
+      CO(2) => ready_reg_i_3_n_5,
+      CO(1) => ready_reg_i_3_n_6,
+      CO(0) => ready_reg_i_3_n_7,
       DI(7 downto 0) => B"00000000",
-      O(7 downto 0) => NLW_ready_reg_i_2_O_UNCONNECTED(7 downto 0),
-      S(7) => ready_i_5_n_0,
-      S(6) => ready_i_6_n_0,
-      S(5) => ready_i_7_n_0,
-      S(4) => ready_i_8_n_0,
-      S(3) => ready_i_9_n_0,
-      S(2) => ready_i_10_n_0,
-      S(1) => ready_i_11_n_0,
-      S(0) => ready_i_12_n_0
+      O(7 downto 0) => NLW_ready_reg_i_3_O_UNCONNECTED(7 downto 0),
+      S(7) => ready_i_6_n_0,
+      S(6) => ready_i_7_n_0,
+      S(5) => ready_i_8_n_0,
+      S(4) => ready_i_9_n_0,
+      S(3) => ready_i_10_n_0,
+      S(2) => ready_i_11_n_0,
+      S(1) => ready_i_12_n_0,
+      S(0) => ready_i_13_n_0
     );
-\response[0]_i_1\: unisim.vcomponents.LUT5
+\response[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(0),
-      O => \response[0]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(0),
+      O => p_2_in(0)
     );
-\response[100]_i_1\: unisim.vcomponents.LUT5
+\response[100]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(100),
-      O => \response[100]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(100),
+      O => p_2_in(100)
     );
-\response[101]_i_1\: unisim.vcomponents.LUT5
+\response[101]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(101),
-      O => \response[101]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(101),
+      O => p_2_in(101)
     );
-\response[102]_i_1\: unisim.vcomponents.LUT5
+\response[102]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(102),
-      O => \response[102]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(102),
+      O => p_2_in(102)
     );
-\response[103]_i_1\: unisim.vcomponents.LUT5
+\response[103]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(103),
-      O => \response[103]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(103),
+      O => p_2_in(103)
     );
-\response[104]_i_1\: unisim.vcomponents.LUT5
+\response[104]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(104),
-      O => \response[104]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(104),
+      O => p_2_in(104)
     );
-\response[105]_i_1\: unisim.vcomponents.LUT5
+\response[105]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(105),
-      O => \response[105]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(105),
+      O => p_2_in(105)
     );
-\response[106]_i_1\: unisim.vcomponents.LUT5
+\response[106]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(106),
-      O => \response[106]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(106),
+      O => p_2_in(106)
     );
-\response[107]_i_1\: unisim.vcomponents.LUT5
+\response[107]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(107),
-      O => \response[107]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(107),
+      O => p_2_in(107)
     );
-\response[108]_i_1\: unisim.vcomponents.LUT5
+\response[108]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(108),
-      O => \response[108]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(108),
+      O => p_2_in(108)
     );
-\response[109]_i_1\: unisim.vcomponents.LUT5
+\response[109]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(109),
-      O => \response[109]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(109),
+      O => p_2_in(109)
     );
-\response[10]_i_1\: unisim.vcomponents.LUT5
+\response[10]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(10),
-      O => \response[10]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(10),
+      O => p_2_in(10)
     );
-\response[110]_i_1\: unisim.vcomponents.LUT5
+\response[110]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(110),
-      O => \response[110]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(110),
+      O => p_2_in(110)
     );
-\response[111]_i_1\: unisim.vcomponents.LUT5
+\response[111]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(111),
-      O => \response[111]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(111),
+      O => p_2_in(111)
     );
 \response[111]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FBFF"
+      INIT => X"FFDF"
     )
         port map (
-      I0 => internal_challenge_reg(7),
-      I1 => internal_challenge_reg(6),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(6),
+      I3 => internal_challenge(7),
       O => \response[111]_i_2_n_0\
     );
-\response[112]_i_1\: unisim.vcomponents.LUT5
+\response[112]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(112),
-      O => \response[112]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(112),
+      O => p_2_in(112)
     );
-\response[113]_i_1\: unisim.vcomponents.LUT5
+\response[113]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(113),
-      O => \response[113]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(113),
+      O => p_2_in(113)
     );
-\response[114]_i_1\: unisim.vcomponents.LUT5
+\response[114]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(114),
-      O => \response[114]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(114),
+      O => p_2_in(114)
     );
-\response[115]_i_1\: unisim.vcomponents.LUT5
+\response[115]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(115),
-      O => \response[115]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(115),
+      O => p_2_in(115)
     );
-\response[116]_i_1\: unisim.vcomponents.LUT5
+\response[116]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(116),
-      O => \response[116]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(116),
+      O => p_2_in(116)
     );
-\response[117]_i_1\: unisim.vcomponents.LUT5
+\response[117]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(117),
-      O => \response[117]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(117),
+      O => p_2_in(117)
     );
-\response[118]_i_1\: unisim.vcomponents.LUT5
+\response[118]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(118),
-      O => \response[118]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(118),
+      O => p_2_in(118)
     );
-\response[119]_i_1\: unisim.vcomponents.LUT5
+\response[119]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(119),
-      O => \response[119]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(119),
+      O => p_2_in(119)
     );
-\response[11]_i_1\: unisim.vcomponents.LUT5
+\response[11]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(11),
-      O => \response[11]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(11),
+      O => p_2_in(11)
     );
-\response[120]_i_1\: unisim.vcomponents.LUT5
+\response[120]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(120),
-      O => \response[120]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(120),
+      O => p_2_in(120)
     );
-\response[121]_i_1\: unisim.vcomponents.LUT5
+\response[121]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(121),
-      O => \response[121]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(121),
+      O => p_2_in(121)
     );
-\response[122]_i_1\: unisim.vcomponents.LUT5
+\response[122]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(122),
-      O => \response[122]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(122),
+      O => p_2_in(122)
     );
-\response[123]_i_1\: unisim.vcomponents.LUT5
+\response[123]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(123),
-      O => \response[123]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(123),
+      O => p_2_in(123)
     );
-\response[124]_i_1\: unisim.vcomponents.LUT5
+\response[124]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(124),
-      O => \response[124]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(124),
+      O => p_2_in(124)
     );
-\response[125]_i_1\: unisim.vcomponents.LUT5
+\response[125]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(125),
-      O => \response[125]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(125),
+      O => p_2_in(125)
     );
-\response[126]_i_1\: unisim.vcomponents.LUT5
+\response[126]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(126),
-      O => \response[126]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(126),
+      O => p_2_in(126)
     );
-\response[127]_i_1\: unisim.vcomponents.LUT5
+\response[127]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[127]_i_2_n_0\,
-      I4 => \^response\(127),
-      O => \response[127]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[127]_i_2_n_0\,
+      I3 => \^response\(127),
+      O => p_2_in(127)
     );
 \response[127]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BFFF"
+      INIT => X"FF7F"
     )
         port map (
-      I0 => internal_challenge_reg(7),
-      I1 => internal_challenge_reg(6),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(6),
+      I3 => internal_challenge(7),
       O => \response[127]_i_2_n_0\
     );
-\response[128]_i_1\: unisim.vcomponents.LUT5
+\response[128]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(128),
-      O => \response[128]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(128),
+      O => p_2_in(128)
     );
-\response[129]_i_1\: unisim.vcomponents.LUT5
+\response[129]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(129),
-      O => \response[129]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(129),
+      O => p_2_in(129)
     );
-\response[12]_i_1\: unisim.vcomponents.LUT5
+\response[12]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(12),
-      O => \response[12]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(12),
+      O => p_2_in(12)
     );
-\response[130]_i_1\: unisim.vcomponents.LUT5
+\response[130]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(130),
-      O => \response[130]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(130),
+      O => p_2_in(130)
     );
-\response[131]_i_1\: unisim.vcomponents.LUT5
+\response[131]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(131),
-      O => \response[131]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(131),
+      O => p_2_in(131)
     );
-\response[132]_i_1\: unisim.vcomponents.LUT5
+\response[132]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(132),
-      O => \response[132]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(132),
+      O => p_2_in(132)
     );
-\response[133]_i_1\: unisim.vcomponents.LUT5
+\response[133]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(133),
-      O => \response[133]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(133),
+      O => p_2_in(133)
     );
-\response[134]_i_1\: unisim.vcomponents.LUT5
+\response[134]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(134),
-      O => \response[134]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(134),
+      O => p_2_in(134)
     );
-\response[135]_i_1\: unisim.vcomponents.LUT5
+\response[135]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(135),
-      O => \response[135]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(135),
+      O => p_2_in(135)
     );
-\response[136]_i_1\: unisim.vcomponents.LUT5
+\response[136]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(136),
-      O => \response[136]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(136),
+      O => p_2_in(136)
     );
-\response[137]_i_1\: unisim.vcomponents.LUT5
+\response[137]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(137),
-      O => \response[137]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(137),
+      O => p_2_in(137)
     );
-\response[138]_i_1\: unisim.vcomponents.LUT5
+\response[138]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(138),
-      O => \response[138]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(138),
+      O => p_2_in(138)
     );
-\response[139]_i_1\: unisim.vcomponents.LUT5
+\response[139]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(139),
-      O => \response[139]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(139),
+      O => p_2_in(139)
     );
-\response[13]_i_1\: unisim.vcomponents.LUT5
+\response[13]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(13),
-      O => \response[13]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(13),
+      O => p_2_in(13)
     );
-\response[140]_i_1\: unisim.vcomponents.LUT5
+\response[140]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(140),
-      O => \response[140]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(140),
+      O => p_2_in(140)
     );
-\response[141]_i_1\: unisim.vcomponents.LUT5
+\response[141]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(141),
-      O => \response[141]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(141),
+      O => p_2_in(141)
     );
-\response[142]_i_1\: unisim.vcomponents.LUT5
+\response[142]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(142),
-      O => \response[142]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(142),
+      O => p_2_in(142)
     );
-\response[143]_i_1\: unisim.vcomponents.LUT5
+\response[143]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[143]_i_2_n_0\,
-      I4 => \^response\(143),
-      O => \response[143]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[143]_i_2_n_0\,
+      I3 => \^response\(143),
+      O => p_2_in(143)
     );
 \response[143]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB"
+      INIT => X"FFEF"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(6),
       O => \response[143]_i_2_n_0\
     );
-\response[144]_i_1\: unisim.vcomponents.LUT5
+\response[144]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(144),
-      O => \response[144]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(144),
+      O => p_2_in(144)
     );
-\response[145]_i_1\: unisim.vcomponents.LUT5
+\response[145]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(145),
-      O => \response[145]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(145),
+      O => p_2_in(145)
     );
-\response[146]_i_1\: unisim.vcomponents.LUT5
+\response[146]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(146),
-      O => \response[146]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(146),
+      O => p_2_in(146)
     );
-\response[147]_i_1\: unisim.vcomponents.LUT5
+\response[147]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(147),
-      O => \response[147]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(147),
+      O => p_2_in(147)
     );
-\response[148]_i_1\: unisim.vcomponents.LUT5
+\response[148]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(148),
-      O => \response[148]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(148),
+      O => p_2_in(148)
     );
-\response[149]_i_1\: unisim.vcomponents.LUT5
+\response[149]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(149),
-      O => \response[149]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(149),
+      O => p_2_in(149)
     );
-\response[14]_i_1\: unisim.vcomponents.LUT5
+\response[14]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(14),
-      O => \response[14]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(14),
+      O => p_2_in(14)
     );
-\response[150]_i_1\: unisim.vcomponents.LUT5
+\response[150]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(150),
-      O => \response[150]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(150),
+      O => p_2_in(150)
     );
-\response[151]_i_1\: unisim.vcomponents.LUT5
+\response[151]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(151),
-      O => \response[151]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(151),
+      O => p_2_in(151)
     );
-\response[152]_i_1\: unisim.vcomponents.LUT5
+\response[152]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(152),
-      O => \response[152]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(152),
+      O => p_2_in(152)
     );
-\response[153]_i_1\: unisim.vcomponents.LUT5
+\response[153]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(153),
-      O => \response[153]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(153),
+      O => p_2_in(153)
     );
-\response[154]_i_1\: unisim.vcomponents.LUT5
+\response[154]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(154),
-      O => \response[154]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(154),
+      O => p_2_in(154)
     );
-\response[155]_i_1\: unisim.vcomponents.LUT5
+\response[155]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(155),
-      O => \response[155]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(155),
+      O => p_2_in(155)
     );
-\response[156]_i_1\: unisim.vcomponents.LUT5
+\response[156]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(156),
-      O => \response[156]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(156),
+      O => p_2_in(156)
     );
-\response[157]_i_1\: unisim.vcomponents.LUT5
+\response[157]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(157),
-      O => \response[157]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(157),
+      O => p_2_in(157)
     );
-\response[158]_i_1\: unisim.vcomponents.LUT5
+\response[158]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(158),
-      O => \response[158]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(158),
+      O => p_2_in(158)
     );
-\response[159]_i_1\: unisim.vcomponents.LUT5
+\response[159]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[159]_i_2_n_0\,
-      I4 => \^response\(159),
-      O => \response[159]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[159]_i_2_n_0\,
+      I3 => \^response\(159),
+      O => p_2_in(159)
     );
 \response[159]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FBFF"
+      INIT => X"FFDF"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(5),
-      I3 => internal_challenge_reg(4),
+      I0 => internal_challenge(4),
+      I1 => internal_challenge(5),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(6),
       O => \response[159]_i_2_n_0\
     );
-\response[15]_i_1\: unisim.vcomponents.LUT5
+\response[15]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(15),
-      O => \response[15]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(15),
+      O => p_2_in(15)
     );
 \response[15]_i_2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(6),
       O => \response[15]_i_2_n_0\
     );
-\response[160]_i_1\: unisim.vcomponents.LUT5
+\response[160]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(160),
-      O => \response[160]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(160),
+      O => p_2_in(160)
     );
-\response[161]_i_1\: unisim.vcomponents.LUT5
+\response[161]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(161),
-      O => \response[161]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(161),
+      O => p_2_in(161)
     );
-\response[162]_i_1\: unisim.vcomponents.LUT5
+\response[162]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(162),
-      O => \response[162]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(162),
+      O => p_2_in(162)
     );
-\response[163]_i_1\: unisim.vcomponents.LUT5
+\response[163]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(163),
-      O => \response[163]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(163),
+      O => p_2_in(163)
     );
-\response[164]_i_1\: unisim.vcomponents.LUT5
+\response[164]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(164),
-      O => \response[164]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(164),
+      O => p_2_in(164)
     );
-\response[165]_i_1\: unisim.vcomponents.LUT5
+\response[165]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(165),
-      O => \response[165]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(165),
+      O => p_2_in(165)
     );
-\response[166]_i_1\: unisim.vcomponents.LUT5
+\response[166]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(166),
-      O => \response[166]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(166),
+      O => p_2_in(166)
     );
-\response[167]_i_1\: unisim.vcomponents.LUT5
+\response[167]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(167),
-      O => \response[167]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(167),
+      O => p_2_in(167)
     );
-\response[168]_i_1\: unisim.vcomponents.LUT5
+\response[168]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(168),
-      O => \response[168]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(168),
+      O => p_2_in(168)
     );
-\response[169]_i_1\: unisim.vcomponents.LUT5
+\response[169]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(169),
-      O => \response[169]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(169),
+      O => p_2_in(169)
     );
-\response[16]_i_1\: unisim.vcomponents.LUT5
+\response[16]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(16),
-      O => \response[16]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(16),
+      O => p_2_in(16)
     );
-\response[170]_i_1\: unisim.vcomponents.LUT5
+\response[170]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(170),
-      O => \response[170]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(170),
+      O => p_2_in(170)
     );
-\response[171]_i_1\: unisim.vcomponents.LUT5
+\response[171]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(171),
-      O => \response[171]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(171),
+      O => p_2_in(171)
     );
-\response[172]_i_1\: unisim.vcomponents.LUT5
+\response[172]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(172),
-      O => \response[172]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(172),
+      O => p_2_in(172)
     );
-\response[173]_i_1\: unisim.vcomponents.LUT5
+\response[173]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(173),
-      O => \response[173]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(173),
+      O => p_2_in(173)
     );
-\response[174]_i_1\: unisim.vcomponents.LUT5
+\response[174]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(174),
-      O => \response[174]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(174),
+      O => p_2_in(174)
     );
-\response[175]_i_1\: unisim.vcomponents.LUT5
+\response[175]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[175]_i_2_n_0\,
-      I4 => \^response\(175),
-      O => \response[175]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[175]_i_2_n_0\,
+      I3 => \^response\(175),
+      O => p_2_in(175)
     );
 \response[175]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FBFF"
+      INIT => X"FFDF"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(6),
       O => \response[175]_i_2_n_0\
     );
-\response[176]_i_1\: unisim.vcomponents.LUT5
+\response[176]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(176),
-      O => \response[176]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(176),
+      O => p_2_in(176)
     );
-\response[177]_i_1\: unisim.vcomponents.LUT5
+\response[177]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(177),
-      O => \response[177]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(177),
+      O => p_2_in(177)
     );
-\response[178]_i_1\: unisim.vcomponents.LUT5
+\response[178]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(178),
-      O => \response[178]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(178),
+      O => p_2_in(178)
     );
-\response[179]_i_1\: unisim.vcomponents.LUT5
+\response[179]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(179),
-      O => \response[179]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(179),
+      O => p_2_in(179)
     );
-\response[17]_i_1\: unisim.vcomponents.LUT5
+\response[17]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(17),
-      O => \response[17]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(17),
+      O => p_2_in(17)
     );
-\response[180]_i_1\: unisim.vcomponents.LUT5
+\response[180]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(180),
-      O => \response[180]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(180),
+      O => p_2_in(180)
     );
-\response[181]_i_1\: unisim.vcomponents.LUT5
+\response[181]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(181),
-      O => \response[181]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(181),
+      O => p_2_in(181)
     );
-\response[182]_i_1\: unisim.vcomponents.LUT5
+\response[182]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(182),
-      O => \response[182]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(182),
+      O => p_2_in(182)
     );
-\response[183]_i_1\: unisim.vcomponents.LUT5
+\response[183]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(183),
-      O => \response[183]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(183),
+      O => p_2_in(183)
     );
-\response[184]_i_1\: unisim.vcomponents.LUT5
+\response[184]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(184),
-      O => \response[184]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(184),
+      O => p_2_in(184)
     );
-\response[185]_i_1\: unisim.vcomponents.LUT5
+\response[185]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(185),
-      O => \response[185]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(185),
+      O => p_2_in(185)
     );
-\response[186]_i_1\: unisim.vcomponents.LUT5
+\response[186]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(186),
-      O => \response[186]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(186),
+      O => p_2_in(186)
     );
-\response[187]_i_1\: unisim.vcomponents.LUT5
+\response[187]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(187),
-      O => \response[187]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(187),
+      O => p_2_in(187)
     );
-\response[188]_i_1\: unisim.vcomponents.LUT5
+\response[188]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(188),
-      O => \response[188]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(188),
+      O => p_2_in(188)
     );
-\response[189]_i_1\: unisim.vcomponents.LUT5
+\response[189]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(189),
-      O => \response[189]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(189),
+      O => p_2_in(189)
     );
-\response[18]_i_1\: unisim.vcomponents.LUT5
+\response[18]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(18),
-      O => \response[18]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(18),
+      O => p_2_in(18)
     );
-\response[190]_i_1\: unisim.vcomponents.LUT5
+\response[190]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(190),
-      O => \response[190]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(190),
+      O => p_2_in(190)
     );
-\response[191]_i_1\: unisim.vcomponents.LUT5
+\response[191]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[191]_i_2_n_0\,
-      I4 => \^response\(191),
-      O => \response[191]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[191]_i_2_n_0\,
+      I3 => \^response\(191),
+      O => p_2_in(191)
     );
 \response[191]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BFFF"
+      INIT => X"FF7F"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(6),
       O => \response[191]_i_2_n_0\
     );
-\response[192]_i_1\: unisim.vcomponents.LUT5
+\response[192]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(192),
-      O => \response[192]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(192),
+      O => p_2_in(192)
     );
-\response[193]_i_1\: unisim.vcomponents.LUT5
+\response[193]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(193),
-      O => \response[193]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(193),
+      O => p_2_in(193)
     );
-\response[194]_i_1\: unisim.vcomponents.LUT5
+\response[194]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(194),
-      O => \response[194]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(194),
+      O => p_2_in(194)
     );
-\response[195]_i_1\: unisim.vcomponents.LUT5
+\response[195]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(195),
-      O => \response[195]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(195),
+      O => p_2_in(195)
     );
-\response[196]_i_1\: unisim.vcomponents.LUT5
+\response[196]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(196),
-      O => \response[196]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(196),
+      O => p_2_in(196)
     );
-\response[197]_i_1\: unisim.vcomponents.LUT5
+\response[197]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(197),
-      O => \response[197]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(197),
+      O => p_2_in(197)
     );
-\response[198]_i_1\: unisim.vcomponents.LUT5
+\response[198]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(198),
-      O => \response[198]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(198),
+      O => p_2_in(198)
     );
-\response[199]_i_1\: unisim.vcomponents.LUT5
+\response[199]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(199),
-      O => \response[199]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(199),
+      O => p_2_in(199)
     );
-\response[19]_i_1\: unisim.vcomponents.LUT5
+\response[19]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(19),
-      O => \response[19]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(19),
+      O => p_2_in(19)
     );
-\response[1]_i_1\: unisim.vcomponents.LUT5
+\response[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(1),
-      O => \response[1]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(1),
+      O => p_2_in(1)
     );
-\response[200]_i_1\: unisim.vcomponents.LUT5
+\response[200]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(200),
-      O => \response[200]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(200),
+      O => p_2_in(200)
     );
-\response[201]_i_1\: unisim.vcomponents.LUT5
+\response[201]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(201),
-      O => \response[201]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(201),
+      O => p_2_in(201)
     );
-\response[202]_i_1\: unisim.vcomponents.LUT5
+\response[202]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(202),
-      O => \response[202]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(202),
+      O => p_2_in(202)
     );
-\response[203]_i_1\: unisim.vcomponents.LUT5
+\response[203]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(203),
-      O => \response[203]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(203),
+      O => p_2_in(203)
     );
-\response[204]_i_1\: unisim.vcomponents.LUT5
+\response[204]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(204),
-      O => \response[204]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(204),
+      O => p_2_in(204)
     );
-\response[205]_i_1\: unisim.vcomponents.LUT5
+\response[205]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(205),
-      O => \response[205]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(205),
+      O => p_2_in(205)
     );
-\response[206]_i_1\: unisim.vcomponents.LUT5
+\response[206]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(206),
-      O => \response[206]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(206),
+      O => p_2_in(206)
     );
-\response[207]_i_1\: unisim.vcomponents.LUT5
+\response[207]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[207]_i_2_n_0\,
-      I4 => \^response\(207),
-      O => \response[207]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[207]_i_2_n_0\,
+      I3 => \^response\(207),
+      O => p_2_in(207)
     );
 \response[207]_i_2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFF7"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(7),
+      I1 => internal_challenge(6),
+      I2 => internal_challenge(5),
+      I3 => internal_challenge(4),
       O => \response[207]_i_2_n_0\
     );
-\response[208]_i_1\: unisim.vcomponents.LUT5
+\response[208]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(208),
-      O => \response[208]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(208),
+      O => p_2_in(208)
     );
-\response[209]_i_1\: unisim.vcomponents.LUT5
+\response[209]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(209),
-      O => \response[209]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(209),
+      O => p_2_in(209)
     );
-\response[20]_i_1\: unisim.vcomponents.LUT5
+\response[20]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(20),
-      O => \response[20]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(20),
+      O => p_2_in(20)
     );
-\response[210]_i_1\: unisim.vcomponents.LUT5
+\response[210]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(210),
-      O => \response[210]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(210),
+      O => p_2_in(210)
     );
-\response[211]_i_1\: unisim.vcomponents.LUT5
+\response[211]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(211),
-      O => \response[211]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(211),
+      O => p_2_in(211)
     );
-\response[212]_i_1\: unisim.vcomponents.LUT5
+\response[212]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(212),
-      O => \response[212]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(212),
+      O => p_2_in(212)
     );
-\response[213]_i_1\: unisim.vcomponents.LUT5
+\response[213]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(213),
-      O => \response[213]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(213),
+      O => p_2_in(213)
     );
-\response[214]_i_1\: unisim.vcomponents.LUT5
+\response[214]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(214),
-      O => \response[214]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(214),
+      O => p_2_in(214)
     );
-\response[215]_i_1\: unisim.vcomponents.LUT5
+\response[215]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(215),
-      O => \response[215]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(215),
+      O => p_2_in(215)
     );
-\response[216]_i_1\: unisim.vcomponents.LUT5
+\response[216]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(216),
-      O => \response[216]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(216),
+      O => p_2_in(216)
     );
-\response[217]_i_1\: unisim.vcomponents.LUT5
+\response[217]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(217),
-      O => \response[217]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(217),
+      O => p_2_in(217)
     );
-\response[218]_i_1\: unisim.vcomponents.LUT5
+\response[218]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(218),
-      O => \response[218]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(218),
+      O => p_2_in(218)
     );
-\response[219]_i_1\: unisim.vcomponents.LUT5
+\response[219]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(219),
-      O => \response[219]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(219),
+      O => p_2_in(219)
     );
-\response[21]_i_1\: unisim.vcomponents.LUT5
+\response[21]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(21),
-      O => \response[21]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(21),
+      O => p_2_in(21)
     );
-\response[220]_i_1\: unisim.vcomponents.LUT5
+\response[220]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(220),
-      O => \response[220]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(220),
+      O => p_2_in(220)
     );
-\response[221]_i_1\: unisim.vcomponents.LUT5
+\response[221]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(221),
-      O => \response[221]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(221),
+      O => p_2_in(221)
     );
-\response[222]_i_1\: unisim.vcomponents.LUT5
+\response[222]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(222),
-      O => \response[222]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(222),
+      O => p_2_in(222)
     );
-\response[223]_i_1\: unisim.vcomponents.LUT5
+\response[223]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[223]_i_2_n_0\,
-      I4 => \^response\(223),
-      O => \response[223]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[223]_i_2_n_0\,
+      I3 => \^response\(223),
+      O => p_2_in(223)
     );
 \response[223]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"F7FF"
+      INIT => X"FF7F"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(5),
-      I3 => internal_challenge_reg(4),
+      I0 => internal_challenge(7),
+      I1 => internal_challenge(6),
+      I2 => internal_challenge(4),
+      I3 => internal_challenge(5),
       O => \response[223]_i_2_n_0\
     );
-\response[224]_i_1\: unisim.vcomponents.LUT5
+\response[224]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(224),
-      O => \response[224]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(224),
+      O => p_2_in(224)
     );
-\response[225]_i_1\: unisim.vcomponents.LUT5
+\response[225]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(225),
-      O => \response[225]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(225),
+      O => p_2_in(225)
     );
-\response[226]_i_1\: unisim.vcomponents.LUT5
+\response[226]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(226),
-      O => \response[226]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(226),
+      O => p_2_in(226)
     );
-\response[227]_i_1\: unisim.vcomponents.LUT5
+\response[227]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(227),
-      O => \response[227]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(227),
+      O => p_2_in(227)
     );
-\response[228]_i_1\: unisim.vcomponents.LUT5
+\response[228]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(228),
-      O => \response[228]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(228),
+      O => p_2_in(228)
     );
-\response[229]_i_1\: unisim.vcomponents.LUT5
+\response[229]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(229),
-      O => \response[229]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(229),
+      O => p_2_in(229)
     );
-\response[22]_i_1\: unisim.vcomponents.LUT5
+\response[22]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(22),
-      O => \response[22]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(22),
+      O => p_2_in(22)
     );
-\response[230]_i_1\: unisim.vcomponents.LUT5
+\response[230]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(230),
-      O => \response[230]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(230),
+      O => p_2_in(230)
     );
-\response[231]_i_1\: unisim.vcomponents.LUT5
+\response[231]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(231),
-      O => \response[231]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(231),
+      O => p_2_in(231)
     );
-\response[232]_i_1\: unisim.vcomponents.LUT5
+\response[232]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(232),
-      O => \response[232]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(232),
+      O => p_2_in(232)
     );
-\response[233]_i_1\: unisim.vcomponents.LUT5
+\response[233]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(233),
-      O => \response[233]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(233),
+      O => p_2_in(233)
     );
-\response[234]_i_1\: unisim.vcomponents.LUT5
+\response[234]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(234),
-      O => \response[234]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(234),
+      O => p_2_in(234)
     );
-\response[235]_i_1\: unisim.vcomponents.LUT5
+\response[235]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(235),
-      O => \response[235]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(235),
+      O => p_2_in(235)
     );
-\response[236]_i_1\: unisim.vcomponents.LUT5
+\response[236]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(236),
-      O => \response[236]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(236),
+      O => p_2_in(236)
     );
-\response[237]_i_1\: unisim.vcomponents.LUT5
+\response[237]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(237),
-      O => \response[237]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(237),
+      O => p_2_in(237)
     );
-\response[238]_i_1\: unisim.vcomponents.LUT5
+\response[238]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(238),
-      O => \response[238]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(238),
+      O => p_2_in(238)
     );
-\response[239]_i_1\: unisim.vcomponents.LUT5
+\response[239]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[239]_i_2_n_0\,
-      I4 => \^response\(239),
-      O => \response[239]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[239]_i_2_n_0\,
+      I3 => \^response\(239),
+      O => p_2_in(239)
     );
 \response[239]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"F7FF"
+      INIT => X"FF7F"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(7),
+      I1 => internal_challenge(6),
+      I2 => internal_challenge(5),
+      I3 => internal_challenge(4),
       O => \response[239]_i_2_n_0\
     );
-\response[23]_i_1\: unisim.vcomponents.LUT5
+\response[23]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(23),
-      O => \response[23]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(23),
+      O => p_2_in(23)
     );
-\response[240]_i_1\: unisim.vcomponents.LUT5
+\response[240]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(240),
-      O => \response[240]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(240),
+      O => p_2_in(240)
     );
 \response[240]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"0001"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(1),
+      I1 => internal_challenge(0),
+      I2 => internal_challenge(3),
+      I3 => internal_challenge(2),
       O => \response[240]_i_2_n_0\
     );
-\response[241]_i_1\: unisim.vcomponents.LUT5
+\response[241]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(241),
-      O => \response[241]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(241),
+      O => p_2_in(241)
     );
 \response[241]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FEFF"
+      INIT => X"0002"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(1),
-      I3 => internal_challenge_reg(0),
+      I0 => internal_challenge(0),
+      I1 => internal_challenge(1),
+      I2 => internal_challenge(3),
+      I3 => internal_challenge(2),
       O => \response[241]_i_2_n_0\
     );
-\response[242]_i_1\: unisim.vcomponents.LUT5
+\response[242]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(242),
-      O => \response[242]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(242),
+      O => p_2_in(242)
     );
 \response[242]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FEFF"
+      INIT => X"0002"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(1),
+      I1 => internal_challenge(0),
+      I2 => internal_challenge(3),
+      I3 => internal_challenge(2),
       O => \response[242]_i_2_n_0\
     );
-\response[243]_i_1\: unisim.vcomponents.LUT5
+\response[243]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(243),
-      O => \response[243]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(243),
+      O => p_2_in(243)
     );
 \response[243]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"EFFF"
+      INIT => X"0008"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(1),
+      I1 => internal_challenge(0),
+      I2 => internal_challenge(3),
+      I3 => internal_challenge(2),
       O => \response[243]_i_2_n_0\
     );
-\response[244]_i_1\: unisim.vcomponents.LUT5
+\response[244]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(244),
-      O => \response[244]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(244),
+      O => p_2_in(244)
     );
 \response[244]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB"
+      INIT => X"0002"
     )
         port map (
-      I0 => internal_challenge_reg(3),
-      I1 => internal_challenge_reg(2),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(2),
+      I1 => internal_challenge(3),
+      I2 => internal_challenge(1),
+      I3 => internal_challenge(0),
       O => \response[244]_i_2_n_0\
     );
-\response[245]_i_1\: unisim.vcomponents.LUT5
+\response[245]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(245),
-      O => \response[245]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(245),
+      O => p_2_in(245)
     );
 \response[245]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FBFF"
+      INIT => X"0020"
     )
         port map (
-      I0 => internal_challenge_reg(3),
-      I1 => internal_challenge_reg(2),
-      I2 => internal_challenge_reg(1),
-      I3 => internal_challenge_reg(0),
+      I0 => internal_challenge(2),
+      I1 => internal_challenge(3),
+      I2 => internal_challenge(0),
+      I3 => internal_challenge(1),
       O => \response[245]_i_2_n_0\
     );
-\response[246]_i_1\: unisim.vcomponents.LUT5
+\response[246]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(246),
-      O => \response[246]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(246),
+      O => p_2_in(246)
     );
 \response[246]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FBFF"
+      INIT => X"0020"
     )
         port map (
-      I0 => internal_challenge_reg(3),
-      I1 => internal_challenge_reg(2),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(2),
+      I1 => internal_challenge(3),
+      I2 => internal_challenge(1),
+      I3 => internal_challenge(0),
       O => \response[246]_i_2_n_0\
     );
-\response[247]_i_1\: unisim.vcomponents.LUT5
+\response[247]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(247),
-      O => \response[247]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(247),
+      O => p_2_in(247)
     );
 \response[247]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BFFF"
+      INIT => X"0080"
     )
         port map (
-      I0 => internal_challenge_reg(3),
-      I1 => internal_challenge_reg(2),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(1),
+      I1 => internal_challenge(0),
+      I2 => internal_challenge(2),
+      I3 => internal_challenge(3),
       O => \response[247]_i_2_n_0\
     );
-\response[248]_i_1\: unisim.vcomponents.LUT5
+\response[248]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(248),
-      O => \response[248]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(248),
+      O => p_2_in(248)
     );
 \response[248]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB"
+      INIT => X"0002"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(3),
+      I1 => internal_challenge(2),
+      I2 => internal_challenge(1),
+      I3 => internal_challenge(0),
       O => \response[248]_i_2_n_0\
     );
-\response[249]_i_1\: unisim.vcomponents.LUT5
+\response[249]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(249),
-      O => \response[249]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(249),
+      O => p_2_in(249)
     );
 \response[249]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FBFF"
+      INIT => X"0020"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(1),
-      I3 => internal_challenge_reg(0),
+      I0 => internal_challenge(3),
+      I1 => internal_challenge(2),
+      I2 => internal_challenge(0),
+      I3 => internal_challenge(1),
       O => \response[249]_i_2_n_0\
     );
-\response[24]_i_1\: unisim.vcomponents.LUT5
+\response[24]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(24),
-      O => \response[24]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(24),
+      O => p_2_in(24)
     );
-\response[250]_i_1\: unisim.vcomponents.LUT5
+\response[250]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(250),
-      O => \response[250]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(250),
+      O => p_2_in(250)
     );
 \response[250]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FBFF"
+      INIT => X"0020"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(3),
+      I1 => internal_challenge(2),
+      I2 => internal_challenge(1),
+      I3 => internal_challenge(0),
       O => \response[250]_i_2_n_0\
     );
-\response[251]_i_1\: unisim.vcomponents.LUT5
+\response[251]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(251),
-      O => \response[251]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(251),
+      O => p_2_in(251)
     );
 \response[251]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BFFF"
+      INIT => X"0080"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(1),
+      I1 => internal_challenge(0),
+      I2 => internal_challenge(3),
+      I3 => internal_challenge(2),
       O => \response[251]_i_2_n_0\
     );
-\response[252]_i_1\: unisim.vcomponents.LUT5
+\response[252]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(252),
-      O => \response[252]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(252),
+      O => p_2_in(252)
     );
 \response[252]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFF7"
+      INIT => X"0008"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(3),
+      I1 => internal_challenge(2),
+      I2 => internal_challenge(1),
+      I3 => internal_challenge(0),
       O => \response[252]_i_2_n_0\
     );
-\response[253]_i_1\: unisim.vcomponents.LUT5
+\response[253]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(253),
-      O => \response[253]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(253),
+      O => p_2_in(253)
     );
 \response[253]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"F7FF"
+      INIT => X"0080"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(1),
-      I3 => internal_challenge_reg(0),
+      I0 => internal_challenge(3),
+      I1 => internal_challenge(2),
+      I2 => internal_challenge(0),
+      I3 => internal_challenge(1),
       O => \response[253]_i_2_n_0\
     );
-\response[254]_i_1\: unisim.vcomponents.LUT5
+\response[254]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(254),
-      O => \response[254]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(254),
+      O => p_2_in(254)
     );
 \response[254]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"F7FF"
+      INIT => X"0080"
     )
         port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
+      I0 => internal_challenge(3),
+      I1 => internal_challenge(2),
+      I2 => internal_challenge(1),
+      I3 => internal_challenge(0),
       O => \response[254]_i_2_n_0\
     );
-\response[255]_i_1\: unisim.vcomponents.LUT1
+\response[255]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1"
+      INIT => X"FB08"
     )
         port map (
-      I0 => enable,
-      O => Reset_Comparison
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \state[0]_i_2_n_0\,
+      I3 => \^response\(255),
+      O => p_2_in(255)
     );
 \response[255]_i_10\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(26),
-      I1 => MUX_1_Counter_reg(26),
-      I2 => MUX_1_Counter_reg(27),
-      I3 => MUX_2_Counter_reg(27),
+      I0 => MUX_2_Counter_reg(21),
+      I1 => MUX_1_Counter_reg(21),
+      I2 => MUX_2_Counter_reg(20),
+      I3 => MUX_1_Counter_reg(20),
       O => \response[255]_i_10_n_0\
     );
 \response[255]_i_11\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(24),
-      I1 => MUX_1_Counter_reg(24),
-      I2 => MUX_1_Counter_reg(25),
-      I3 => MUX_2_Counter_reg(25),
+      I0 => MUX_2_Counter_reg(19),
+      I1 => MUX_1_Counter_reg(19),
+      I2 => MUX_2_Counter_reg(18),
+      I3 => MUX_1_Counter_reg(18),
       O => \response[255]_i_11_n_0\
     );
 \response[255]_i_12\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(22),
-      I1 => MUX_1_Counter_reg(22),
-      I2 => MUX_1_Counter_reg(23),
-      I3 => MUX_2_Counter_reg(23),
+      I0 => MUX_2_Counter_reg(17),
+      I1 => MUX_1_Counter_reg(17),
+      I2 => MUX_2_Counter_reg(16),
+      I3 => MUX_1_Counter_reg(16),
       O => \response[255]_i_12_n_0\
     );
 \response[255]_i_13\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(20),
-      I1 => MUX_1_Counter_reg(20),
-      I2 => MUX_1_Counter_reg(21),
-      I3 => MUX_2_Counter_reg(21),
+      I0 => MUX_1_Counter_reg(31),
+      I1 => MUX_2_Counter_reg(31),
+      I2 => MUX_1_Counter_reg(30),
+      I3 => MUX_2_Counter_reg(30),
       O => \response[255]_i_13_n_0\
     );
 \response[255]_i_14\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(18),
-      I1 => MUX_1_Counter_reg(18),
-      I2 => MUX_1_Counter_reg(19),
-      I3 => MUX_2_Counter_reg(19),
+      I0 => MUX_1_Counter_reg(29),
+      I1 => MUX_2_Counter_reg(29),
+      I2 => MUX_1_Counter_reg(28),
+      I3 => MUX_2_Counter_reg(28),
       O => \response[255]_i_14_n_0\
     );
 \response[255]_i_15\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(16),
-      I1 => MUX_1_Counter_reg(16),
-      I2 => MUX_1_Counter_reg(17),
-      I3 => MUX_2_Counter_reg(17),
+      I0 => MUX_1_Counter_reg(27),
+      I1 => MUX_2_Counter_reg(27),
+      I2 => MUX_1_Counter_reg(26),
+      I3 => MUX_2_Counter_reg(26),
       O => \response[255]_i_15_n_0\
     );
 \response[255]_i_16\: unisim.vcomponents.LUT4
@@ -90929,10 +91032,10 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(30),
-      I1 => MUX_1_Counter_reg(30),
-      I2 => MUX_2_Counter_reg(31),
-      I3 => MUX_1_Counter_reg(31),
+      I0 => MUX_1_Counter_reg(25),
+      I1 => MUX_2_Counter_reg(25),
+      I2 => MUX_1_Counter_reg(24),
+      I3 => MUX_2_Counter_reg(24),
       O => \response[255]_i_16_n_0\
     );
 \response[255]_i_17\: unisim.vcomponents.LUT4
@@ -90940,10 +91043,10 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(28),
-      I1 => MUX_1_Counter_reg(28),
-      I2 => MUX_2_Counter_reg(29),
-      I3 => MUX_1_Counter_reg(29),
+      I0 => MUX_1_Counter_reg(23),
+      I1 => MUX_2_Counter_reg(23),
+      I2 => MUX_1_Counter_reg(22),
+      I3 => MUX_2_Counter_reg(22),
       O => \response[255]_i_17_n_0\
     );
 \response[255]_i_18\: unisim.vcomponents.LUT4
@@ -90951,10 +91054,10 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(26),
-      I1 => MUX_1_Counter_reg(26),
-      I2 => MUX_2_Counter_reg(27),
-      I3 => MUX_1_Counter_reg(27),
+      I0 => MUX_1_Counter_reg(21),
+      I1 => MUX_2_Counter_reg(21),
+      I2 => MUX_1_Counter_reg(20),
+      I3 => MUX_2_Counter_reg(20),
       O => \response[255]_i_18_n_0\
     );
 \response[255]_i_19\: unisim.vcomponents.LUT4
@@ -90962,154 +91065,142 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(24),
-      I1 => MUX_1_Counter_reg(24),
-      I2 => MUX_2_Counter_reg(25),
-      I3 => MUX_1_Counter_reg(25),
+      I0 => MUX_1_Counter_reg(19),
+      I1 => MUX_2_Counter_reg(19),
+      I2 => MUX_1_Counter_reg(18),
+      I3 => MUX_2_Counter_reg(18),
       O => \response[255]_i_19_n_0\
-    );
-\response[255]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFB0008"
-    )
-        port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[255]_i_5_n_0\,
-      I4 => \^response\(255),
-      O => \response[255]_i_2_n_0\
     );
 \response[255]_i_20\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(22),
-      I1 => MUX_1_Counter_reg(22),
-      I2 => MUX_2_Counter_reg(23),
-      I3 => MUX_1_Counter_reg(23),
+      I0 => MUX_1_Counter_reg(17),
+      I1 => MUX_2_Counter_reg(17),
+      I2 => MUX_1_Counter_reg(16),
+      I3 => MUX_2_Counter_reg(16),
       O => \response[255]_i_20_n_0\
     );
 \response[255]_i_21\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9009"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(20),
-      I1 => MUX_1_Counter_reg(20),
-      I2 => MUX_2_Counter_reg(21),
-      I3 => MUX_1_Counter_reg(21),
+      I0 => MUX_2_Counter_reg(15),
+      I1 => MUX_1_Counter_reg(15),
+      I2 => MUX_2_Counter_reg(14),
+      I3 => MUX_1_Counter_reg(14),
       O => \response[255]_i_21_n_0\
     );
 \response[255]_i_22\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9009"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(18),
-      I1 => MUX_1_Counter_reg(18),
-      I2 => MUX_2_Counter_reg(19),
-      I3 => MUX_1_Counter_reg(19),
+      I0 => MUX_2_Counter_reg(13),
+      I1 => MUX_1_Counter_reg(13),
+      I2 => MUX_2_Counter_reg(12),
+      I3 => MUX_1_Counter_reg(12),
       O => \response[255]_i_22_n_0\
     );
 \response[255]_i_23\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"9009"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(16),
-      I1 => MUX_1_Counter_reg(16),
-      I2 => MUX_2_Counter_reg(17),
-      I3 => MUX_1_Counter_reg(17),
+      I0 => MUX_2_Counter_reg(11),
+      I1 => MUX_1_Counter_reg(11),
+      I2 => MUX_2_Counter_reg(10),
+      I3 => MUX_1_Counter_reg(10),
       O => \response[255]_i_23_n_0\
     );
 \response[255]_i_24\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(14),
-      I1 => MUX_1_Counter_reg(14),
-      I2 => MUX_1_Counter_reg(15),
-      I3 => MUX_2_Counter_reg(15),
+      I0 => MUX_2_Counter_reg(9),
+      I1 => MUX_1_Counter_reg(9),
+      I2 => MUX_2_Counter_reg(8),
+      I3 => MUX_1_Counter_reg(8),
       O => \response[255]_i_24_n_0\
     );
 \response[255]_i_25\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(12),
-      I1 => MUX_1_Counter_reg(12),
-      I2 => MUX_1_Counter_reg(13),
-      I3 => MUX_2_Counter_reg(13),
+      I0 => MUX_2_Counter_reg(7),
+      I1 => MUX_1_Counter_reg(7),
+      I2 => MUX_2_Counter_reg(6),
+      I3 => MUX_1_Counter_reg(6),
       O => \response[255]_i_25_n_0\
     );
 \response[255]_i_26\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(10),
-      I1 => MUX_1_Counter_reg(10),
-      I2 => MUX_1_Counter_reg(11),
-      I3 => MUX_2_Counter_reg(11),
+      I0 => MUX_2_Counter_reg(5),
+      I1 => MUX_1_Counter_reg(5),
+      I2 => MUX_2_Counter_reg(4),
+      I3 => MUX_1_Counter_reg(4),
       O => \response[255]_i_26_n_0\
     );
 \response[255]_i_27\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(8),
-      I1 => MUX_1_Counter_reg(8),
-      I2 => MUX_1_Counter_reg(9),
-      I3 => MUX_2_Counter_reg(9),
+      I0 => MUX_2_Counter_reg(3),
+      I1 => MUX_1_Counter_reg(3),
+      I2 => MUX_2_Counter_reg(2),
+      I3 => MUX_1_Counter_reg(2),
       O => \response[255]_i_27_n_0\
     );
 \response[255]_i_28\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(6),
-      I1 => MUX_1_Counter_reg(6),
-      I2 => MUX_1_Counter_reg(7),
-      I3 => MUX_2_Counter_reg(7),
+      I0 => MUX_2_Counter_reg(1),
+      I1 => MUX_1_Counter_reg(1),
+      I2 => MUX_2_Counter_reg(0),
+      I3 => MUX_1_Counter_reg(0),
       O => \response[255]_i_28_n_0\
     );
 \response[255]_i_29\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(4),
-      I1 => MUX_1_Counter_reg(4),
-      I2 => MUX_1_Counter_reg(5),
-      I3 => MUX_2_Counter_reg(5),
+      I0 => MUX_1_Counter_reg(15),
+      I1 => MUX_2_Counter_reg(15),
+      I2 => MUX_1_Counter_reg(14),
+      I3 => MUX_2_Counter_reg(14),
       O => \response[255]_i_29_n_0\
     );
 \response[255]_i_30\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(2),
-      I1 => MUX_1_Counter_reg(2),
-      I2 => MUX_1_Counter_reg(3),
-      I3 => MUX_2_Counter_reg(3),
+      I0 => MUX_1_Counter_reg(13),
+      I1 => MUX_2_Counter_reg(13),
+      I2 => MUX_1_Counter_reg(12),
+      I3 => MUX_2_Counter_reg(12),
       O => \response[255]_i_30_n_0\
     );
 \response[255]_i_31\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(0),
-      I1 => MUX_1_Counter_reg(0),
-      I2 => MUX_1_Counter_reg(1),
-      I3 => MUX_2_Counter_reg(1),
+      I0 => MUX_1_Counter_reg(11),
+      I1 => MUX_2_Counter_reg(11),
+      I2 => MUX_1_Counter_reg(10),
+      I3 => MUX_2_Counter_reg(10),
       O => \response[255]_i_31_n_0\
     );
 \response[255]_i_32\: unisim.vcomponents.LUT4
@@ -91117,10 +91208,10 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(14),
-      I1 => MUX_1_Counter_reg(14),
-      I2 => MUX_2_Counter_reg(15),
-      I3 => MUX_1_Counter_reg(15),
+      I0 => MUX_1_Counter_reg(9),
+      I1 => MUX_2_Counter_reg(9),
+      I2 => MUX_1_Counter_reg(8),
+      I3 => MUX_2_Counter_reg(8),
       O => \response[255]_i_32_n_0\
     );
 \response[255]_i_33\: unisim.vcomponents.LUT4
@@ -91128,10 +91219,10 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(12),
-      I1 => MUX_1_Counter_reg(12),
-      I2 => MUX_2_Counter_reg(13),
-      I3 => MUX_1_Counter_reg(13),
+      I0 => MUX_1_Counter_reg(7),
+      I1 => MUX_2_Counter_reg(7),
+      I2 => MUX_1_Counter_reg(6),
+      I3 => MUX_2_Counter_reg(6),
       O => \response[255]_i_33_n_0\
     );
 \response[255]_i_34\: unisim.vcomponents.LUT4
@@ -91139,10 +91230,10 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(10),
-      I1 => MUX_1_Counter_reg(10),
-      I2 => MUX_2_Counter_reg(11),
-      I3 => MUX_1_Counter_reg(11),
+      I0 => MUX_1_Counter_reg(5),
+      I1 => MUX_2_Counter_reg(5),
+      I2 => MUX_1_Counter_reg(4),
+      I3 => MUX_2_Counter_reg(4),
       O => \response[255]_i_34_n_0\
     );
 \response[255]_i_35\: unisim.vcomponents.LUT4
@@ -91150,10 +91241,10 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(8),
-      I1 => MUX_1_Counter_reg(8),
-      I2 => MUX_2_Counter_reg(9),
-      I3 => MUX_1_Counter_reg(9),
+      I0 => MUX_1_Counter_reg(3),
+      I1 => MUX_2_Counter_reg(3),
+      I2 => MUX_1_Counter_reg(2),
+      I3 => MUX_2_Counter_reg(2),
       O => \response[255]_i_35_n_0\
     );
 \response[255]_i_36\: unisim.vcomponents.LUT4
@@ -91161,3321 +91252,3198 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
       INIT => X"9009"
     )
         port map (
-      I0 => MUX_2_Counter_reg(6),
-      I1 => MUX_1_Counter_reg(6),
-      I2 => MUX_2_Counter_reg(7),
-      I3 => MUX_1_Counter_reg(7),
+      I0 => MUX_1_Counter_reg(1),
+      I1 => MUX_2_Counter_reg(1),
+      I2 => MUX_1_Counter_reg(0),
+      I3 => MUX_2_Counter_reg(0),
       O => \response[255]_i_36_n_0\
-    );
-\response[255]_i_37\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"9009"
-    )
-        port map (
-      I0 => MUX_2_Counter_reg(4),
-      I1 => MUX_1_Counter_reg(4),
-      I2 => MUX_2_Counter_reg(5),
-      I3 => MUX_1_Counter_reg(5),
-      O => \response[255]_i_37_n_0\
-    );
-\response[255]_i_38\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"9009"
-    )
-        port map (
-      I0 => MUX_2_Counter_reg(2),
-      I1 => MUX_1_Counter_reg(2),
-      I2 => MUX_2_Counter_reg(3),
-      I3 => MUX_1_Counter_reg(3),
-      O => \response[255]_i_38_n_0\
-    );
-\response[255]_i_39\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"9009"
-    )
-        port map (
-      I0 => MUX_2_Counter_reg(0),
-      I1 => MUX_1_Counter_reg(0),
-      I2 => MUX_2_Counter_reg(1),
-      I3 => MUX_1_Counter_reg(1),
-      O => \response[255]_i_39_n_0\
-    );
-\response[255]_i_4\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
-      O => \response[255]_i_4_n_0\
     );
 \response[255]_i_5\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"7FFF"
+      INIT => X"22B2"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => MUX_2_Counter_reg(31),
+      I1 => MUX_1_Counter_reg(31),
+      I2 => MUX_2_Counter_reg(30),
+      I3 => MUX_1_Counter_reg(30),
       O => \response[255]_i_5_n_0\
+    );
+\response[255]_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"22B2"
+    )
+        port map (
+      I0 => MUX_2_Counter_reg(29),
+      I1 => MUX_1_Counter_reg(29),
+      I2 => MUX_2_Counter_reg(28),
+      I3 => MUX_1_Counter_reg(28),
+      O => \response[255]_i_6_n_0\
+    );
+\response[255]_i_7\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"22B2"
+    )
+        port map (
+      I0 => MUX_2_Counter_reg(27),
+      I1 => MUX_1_Counter_reg(27),
+      I2 => MUX_2_Counter_reg(26),
+      I3 => MUX_1_Counter_reg(26),
+      O => \response[255]_i_7_n_0\
     );
 \response[255]_i_8\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(30),
-      I1 => MUX_1_Counter_reg(30),
-      I2 => MUX_1_Counter_reg(31),
-      I3 => MUX_2_Counter_reg(31),
+      I0 => MUX_2_Counter_reg(25),
+      I1 => MUX_1_Counter_reg(25),
+      I2 => MUX_2_Counter_reg(24),
+      I3 => MUX_1_Counter_reg(24),
       O => \response[255]_i_8_n_0\
     );
 \response[255]_i_9\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"22B2"
     )
         port map (
-      I0 => MUX_2_Counter_reg(28),
-      I1 => MUX_1_Counter_reg(28),
-      I2 => MUX_1_Counter_reg(29),
-      I3 => MUX_2_Counter_reg(29),
+      I0 => MUX_2_Counter_reg(23),
+      I1 => MUX_1_Counter_reg(23),
+      I2 => MUX_2_Counter_reg(22),
+      I3 => MUX_1_Counter_reg(22),
       O => \response[255]_i_9_n_0\
     );
-\response[25]_i_1\: unisim.vcomponents.LUT5
+\response[25]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(25),
-      O => \response[25]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(25),
+      O => p_2_in(25)
     );
-\response[26]_i_1\: unisim.vcomponents.LUT5
+\response[26]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(26),
-      O => \response[26]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(26),
+      O => p_2_in(26)
     );
-\response[27]_i_1\: unisim.vcomponents.LUT5
+\response[27]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(27),
-      O => \response[27]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(27),
+      O => p_2_in(27)
     );
-\response[28]_i_1\: unisim.vcomponents.LUT5
+\response[28]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(28),
-      O => \response[28]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(28),
+      O => p_2_in(28)
     );
-\response[29]_i_1\: unisim.vcomponents.LUT5
+\response[29]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(29),
-      O => \response[29]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(29),
+      O => p_2_in(29)
     );
-\response[2]_i_1\: unisim.vcomponents.LUT5
+\response[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(2),
-      O => \response[2]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(2),
+      O => p_2_in(2)
     );
-\response[30]_i_1\: unisim.vcomponents.LUT5
+\response[30]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(30),
-      O => \response[30]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(30),
+      O => p_2_in(30)
     );
-\response[31]_i_1\: unisim.vcomponents.LUT5
+\response[31]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[31]_i_2_n_0\,
-      I4 => \^response\(31),
-      O => \response[31]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[31]_i_2_n_0\,
+      I3 => \^response\(31),
+      O => p_2_in(31)
     );
 \response[31]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FEFF"
+      INIT => X"FFFD"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(5),
-      I3 => internal_challenge_reg(4),
+      I0 => internal_challenge(4),
+      I1 => internal_challenge(5),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(6),
       O => \response[31]_i_2_n_0\
     );
-\response[32]_i_1\: unisim.vcomponents.LUT5
+\response[32]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(32),
-      O => \response[32]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(32),
+      O => p_2_in(32)
     );
-\response[33]_i_1\: unisim.vcomponents.LUT5
+\response[33]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(33),
-      O => \response[33]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(33),
+      O => p_2_in(33)
     );
-\response[34]_i_1\: unisim.vcomponents.LUT5
+\response[34]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(34),
-      O => \response[34]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(34),
+      O => p_2_in(34)
     );
-\response[35]_i_1\: unisim.vcomponents.LUT5
+\response[35]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(35),
-      O => \response[35]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(35),
+      O => p_2_in(35)
     );
-\response[36]_i_1\: unisim.vcomponents.LUT5
+\response[36]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(36),
-      O => \response[36]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(36),
+      O => p_2_in(36)
     );
-\response[37]_i_1\: unisim.vcomponents.LUT5
+\response[37]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(37),
-      O => \response[37]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(37),
+      O => p_2_in(37)
     );
-\response[38]_i_1\: unisim.vcomponents.LUT5
+\response[38]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(38),
-      O => \response[38]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(38),
+      O => p_2_in(38)
     );
-\response[39]_i_1\: unisim.vcomponents.LUT5
+\response[39]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(39),
-      O => \response[39]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(39),
+      O => p_2_in(39)
     );
-\response[3]_i_1\: unisim.vcomponents.LUT5
+\response[3]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(3),
-      O => \response[3]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(3),
+      O => p_2_in(3)
     );
-\response[40]_i_1\: unisim.vcomponents.LUT5
+\response[40]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(40),
-      O => \response[40]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(40),
+      O => p_2_in(40)
     );
-\response[41]_i_1\: unisim.vcomponents.LUT5
+\response[41]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(41),
-      O => \response[41]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(41),
+      O => p_2_in(41)
     );
-\response[42]_i_1\: unisim.vcomponents.LUT5
+\response[42]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(42),
-      O => \response[42]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(42),
+      O => p_2_in(42)
     );
-\response[43]_i_1\: unisim.vcomponents.LUT5
+\response[43]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(43),
-      O => \response[43]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(43),
+      O => p_2_in(43)
     );
-\response[44]_i_1\: unisim.vcomponents.LUT5
+\response[44]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(44),
-      O => \response[44]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(44),
+      O => p_2_in(44)
     );
-\response[45]_i_1\: unisim.vcomponents.LUT5
+\response[45]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(45),
-      O => \response[45]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(45),
+      O => p_2_in(45)
     );
-\response[46]_i_1\: unisim.vcomponents.LUT5
+\response[46]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(46),
-      O => \response[46]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(46),
+      O => p_2_in(46)
     );
-\response[47]_i_1\: unisim.vcomponents.LUT5
+\response[47]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[47]_i_2_n_0\,
-      I4 => \^response\(47),
-      O => \response[47]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[47]_i_2_n_0\,
+      I3 => \^response\(47),
+      O => p_2_in(47)
     );
 \response[47]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FEFF"
+      INIT => X"FFFD"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(6),
       O => \response[47]_i_2_n_0\
     );
-\response[48]_i_1\: unisim.vcomponents.LUT5
+\response[48]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(48),
-      O => \response[48]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(48),
+      O => p_2_in(48)
     );
-\response[49]_i_1\: unisim.vcomponents.LUT5
+\response[49]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(49),
-      O => \response[49]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(49),
+      O => p_2_in(49)
     );
-\response[4]_i_1\: unisim.vcomponents.LUT5
+\response[4]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(4),
-      O => \response[4]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(4),
+      O => p_2_in(4)
     );
-\response[50]_i_1\: unisim.vcomponents.LUT5
+\response[50]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(50),
-      O => \response[50]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(50),
+      O => p_2_in(50)
     );
-\response[51]_i_1\: unisim.vcomponents.LUT5
+\response[51]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(51),
-      O => \response[51]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(51),
+      O => p_2_in(51)
     );
-\response[52]_i_1\: unisim.vcomponents.LUT5
+\response[52]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(52),
-      O => \response[52]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(52),
+      O => p_2_in(52)
     );
-\response[53]_i_1\: unisim.vcomponents.LUT5
+\response[53]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(53),
-      O => \response[53]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(53),
+      O => p_2_in(53)
     );
-\response[54]_i_1\: unisim.vcomponents.LUT5
+\response[54]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(54),
-      O => \response[54]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(54),
+      O => p_2_in(54)
     );
-\response[55]_i_1\: unisim.vcomponents.LUT5
+\response[55]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(55),
-      O => \response[55]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(55),
+      O => p_2_in(55)
     );
-\response[56]_i_1\: unisim.vcomponents.LUT5
+\response[56]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(56),
-      O => \response[56]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(56),
+      O => p_2_in(56)
     );
-\response[57]_i_1\: unisim.vcomponents.LUT5
+\response[57]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(57),
-      O => \response[57]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(57),
+      O => p_2_in(57)
     );
-\response[58]_i_1\: unisim.vcomponents.LUT5
+\response[58]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(58),
-      O => \response[58]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(58),
+      O => p_2_in(58)
     );
-\response[59]_i_1\: unisim.vcomponents.LUT5
+\response[59]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(59),
-      O => \response[59]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(59),
+      O => p_2_in(59)
     );
-\response[5]_i_1\: unisim.vcomponents.LUT5
+\response[5]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(5),
-      O => \response[5]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(5),
+      O => p_2_in(5)
     );
-\response[60]_i_1\: unisim.vcomponents.LUT5
+\response[60]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(60),
-      O => \response[60]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(60),
+      O => p_2_in(60)
     );
-\response[61]_i_1\: unisim.vcomponents.LUT5
+\response[61]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(61),
-      O => \response[61]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(61),
+      O => p_2_in(61)
     );
-\response[62]_i_1\: unisim.vcomponents.LUT5
+\response[62]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(62),
-      O => \response[62]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(62),
+      O => p_2_in(62)
     );
-\response[63]_i_1\: unisim.vcomponents.LUT5
+\response[63]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[63]_i_2_n_0\,
-      I4 => \^response\(63),
-      O => \response[63]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[63]_i_2_n_0\,
+      I3 => \^response\(63),
+      O => p_2_in(63)
     );
 \response[63]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"EFFF"
+      INIT => X"FFF7"
     )
         port map (
-      I0 => internal_challenge_reg(6),
-      I1 => internal_challenge_reg(7),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(6),
       O => \response[63]_i_2_n_0\
     );
-\response[64]_i_1\: unisim.vcomponents.LUT5
+\response[64]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(64),
-      O => \response[64]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(64),
+      O => p_2_in(64)
     );
-\response[65]_i_1\: unisim.vcomponents.LUT5
+\response[65]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(65),
-      O => \response[65]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(65),
+      O => p_2_in(65)
     );
-\response[66]_i_1\: unisim.vcomponents.LUT5
+\response[66]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(66),
-      O => \response[66]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(66),
+      O => p_2_in(66)
     );
-\response[67]_i_1\: unisim.vcomponents.LUT5
+\response[67]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(67),
-      O => \response[67]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(67),
+      O => p_2_in(67)
     );
-\response[68]_i_1\: unisim.vcomponents.LUT5
+\response[68]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(68),
-      O => \response[68]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(68),
+      O => p_2_in(68)
     );
-\response[69]_i_1\: unisim.vcomponents.LUT5
+\response[69]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(69),
-      O => \response[69]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(69),
+      O => p_2_in(69)
     );
-\response[6]_i_1\: unisim.vcomponents.LUT5
+\response[6]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(6),
-      O => \response[6]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(6),
+      O => p_2_in(6)
     );
-\response[70]_i_1\: unisim.vcomponents.LUT5
+\response[70]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(70),
-      O => \response[70]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(70),
+      O => p_2_in(70)
     );
-\response[71]_i_1\: unisim.vcomponents.LUT5
+\response[71]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(71),
-      O => \response[71]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(71),
+      O => p_2_in(71)
     );
-\response[72]_i_1\: unisim.vcomponents.LUT5
+\response[72]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(72),
-      O => \response[72]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(72),
+      O => p_2_in(72)
     );
-\response[73]_i_1\: unisim.vcomponents.LUT5
+\response[73]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(73),
-      O => \response[73]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(73),
+      O => p_2_in(73)
     );
-\response[74]_i_1\: unisim.vcomponents.LUT5
+\response[74]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(74),
-      O => \response[74]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(74),
+      O => p_2_in(74)
     );
-\response[75]_i_1\: unisim.vcomponents.LUT5
+\response[75]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(75),
-      O => \response[75]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(75),
+      O => p_2_in(75)
     );
-\response[76]_i_1\: unisim.vcomponents.LUT5
+\response[76]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(76),
-      O => \response[76]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(76),
+      O => p_2_in(76)
     );
-\response[77]_i_1\: unisim.vcomponents.LUT5
+\response[77]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(77),
-      O => \response[77]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(77),
+      O => p_2_in(77)
     );
-\response[78]_i_1\: unisim.vcomponents.LUT5
+\response[78]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(78),
-      O => \response[78]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(78),
+      O => p_2_in(78)
     );
-\response[79]_i_1\: unisim.vcomponents.LUT5
+\response[79]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[79]_i_2_n_0\,
-      I4 => \^response\(79),
-      O => \response[79]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[79]_i_2_n_0\,
+      I3 => \^response\(79),
+      O => p_2_in(79)
     );
 \response[79]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB"
+      INIT => X"FFEF"
     )
         port map (
-      I0 => internal_challenge_reg(7),
-      I1 => internal_challenge_reg(6),
-      I2 => internal_challenge_reg(4),
-      I3 => internal_challenge_reg(5),
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(6),
+      I3 => internal_challenge(7),
       O => \response[79]_i_2_n_0\
     );
-\response[7]_i_1\: unisim.vcomponents.LUT5
+\response[7]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(7),
-      O => \response[7]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(7),
+      O => p_2_in(7)
     );
-\response[80]_i_1\: unisim.vcomponents.LUT5
+\response[80]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(80),
-      O => \response[80]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(80),
+      O => p_2_in(80)
     );
-\response[81]_i_1\: unisim.vcomponents.LUT5
+\response[81]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(81),
-      O => \response[81]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(81),
+      O => p_2_in(81)
     );
-\response[82]_i_1\: unisim.vcomponents.LUT5
+\response[82]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(82),
-      O => \response[82]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(82),
+      O => p_2_in(82)
     );
-\response[83]_i_1\: unisim.vcomponents.LUT5
+\response[83]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(83),
-      O => \response[83]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(83),
+      O => p_2_in(83)
     );
-\response[84]_i_1\: unisim.vcomponents.LUT5
+\response[84]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[244]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(84),
-      O => \response[84]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[244]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(84),
+      O => p_2_in(84)
     );
-\response[85]_i_1\: unisim.vcomponents.LUT5
+\response[85]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[245]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(85),
-      O => \response[85]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[245]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(85),
+      O => p_2_in(85)
     );
-\response[86]_i_1\: unisim.vcomponents.LUT5
+\response[86]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[246]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(86),
-      O => \response[86]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[246]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(86),
+      O => p_2_in(86)
     );
-\response[87]_i_1\: unisim.vcomponents.LUT5
+\response[87]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[247]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(87),
-      O => \response[87]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[247]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(87),
+      O => p_2_in(87)
     );
-\response[88]_i_1\: unisim.vcomponents.LUT5
+\response[88]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(88),
-      O => \response[88]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(88),
+      O => p_2_in(88)
     );
-\response[89]_i_1\: unisim.vcomponents.LUT5
+\response[89]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(89),
-      O => \response[89]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(89),
+      O => p_2_in(89)
     );
-\response[8]_i_1\: unisim.vcomponents.LUT5
+\response[8]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[248]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(8),
-      O => \response[8]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[248]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(8),
+      O => p_2_in(8)
     );
-\response[90]_i_1\: unisim.vcomponents.LUT5
+\response[90]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[250]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(90),
-      O => \response[90]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[250]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(90),
+      O => p_2_in(90)
     );
-\response[91]_i_1\: unisim.vcomponents.LUT5
+\response[91]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[251]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(91),
-      O => \response[91]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[251]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(91),
+      O => p_2_in(91)
     );
-\response[92]_i_1\: unisim.vcomponents.LUT5
+\response[92]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[252]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(92),
-      O => \response[92]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[252]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(92),
+      O => p_2_in(92)
     );
-\response[93]_i_1\: unisim.vcomponents.LUT5
+\response[93]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[253]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(93),
-      O => \response[93]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[253]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(93),
+      O => p_2_in(93)
     );
-\response[94]_i_1\: unisim.vcomponents.LUT5
+\response[94]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[254]_i_2_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(94),
-      O => \response[94]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[254]_i_2_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(94),
+      O => p_2_in(94)
     );
-\response[95]_i_1\: unisim.vcomponents.LUT5
+\response[95]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison_reg_rep_n_0,
-      I2 => \response[255]_i_4_n_0\,
-      I3 => \response[95]_i_2_n_0\,
-      I4 => \^response\(95),
-      O => \response[95]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \internal_challenge[6]_i_3_n_0\,
+      I2 => \response[95]_i_2_n_0\,
+      I3 => \^response\(95),
+      O => p_2_in(95)
     );
 \response[95]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FBFF"
+      INIT => X"FFDF"
     )
         port map (
-      I0 => internal_challenge_reg(7),
-      I1 => internal_challenge_reg(6),
-      I2 => internal_challenge_reg(5),
-      I3 => internal_challenge_reg(4),
+      I0 => internal_challenge(4),
+      I1 => internal_challenge(5),
+      I2 => internal_challenge(6),
+      I3 => internal_challenge(7),
       O => \response[95]_i_2_n_0\
     );
-\response[96]_i_1\: unisim.vcomponents.LUT5
+\response[96]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[240]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(96),
-      O => \response[96]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[240]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(96),
+      O => p_2_in(96)
     );
-\response[97]_i_1\: unisim.vcomponents.LUT5
+\response[97]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[241]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(97),
-      O => \response[97]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[241]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(97),
+      O => p_2_in(97)
     );
-\response[98]_i_1\: unisim.vcomponents.LUT5
+\response[98]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[242]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(98),
-      O => \response[98]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[242]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(98),
+      O => p_2_in(98)
     );
-\response[99]_i_1\: unisim.vcomponents.LUT5
+\response[99]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[243]_i_2_n_0\,
-      I3 => \response[111]_i_2_n_0\,
-      I4 => \^response\(99),
-      O => \response[99]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[243]_i_2_n_0\,
+      I2 => \response[111]_i_2_n_0\,
+      I3 => \^response\(99),
+      O => p_2_in(99)
     );
-\response[9]_i_1\: unisim.vcomponents.LUT5
+\response[9]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFB0008"
+      INIT => X"FB08"
     )
         port map (
-      I0 => \response_reg[255]_i_3_n_15\,
-      I1 => Enable_Comparison,
-      I2 => \response[249]_i_2_n_0\,
-      I3 => \response[15]_i_2_n_0\,
-      I4 => \^response\(9),
-      O => \response[9]_i_1_n_0\
+      I0 => \response_reg[255]_i_2_n_15\,
+      I1 => \response[249]_i_2_n_0\,
+      I2 => \response[15]_i_2_n_0\,
+      I3 => \^response\(9),
+      O => p_2_in(9)
     );
 \response_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[0]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(0),
       Q => \^response\(0),
       R => Reset_Comparison
     );
 \response_reg[100]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[100]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(100),
       Q => \^response\(100),
       R => Reset_Comparison
     );
 \response_reg[101]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[101]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(101),
       Q => \^response\(101),
       R => Reset_Comparison
     );
 \response_reg[102]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[102]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(102),
       Q => \^response\(102),
       R => Reset_Comparison
     );
 \response_reg[103]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[103]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(103),
       Q => \^response\(103),
       R => Reset_Comparison
     );
 \response_reg[104]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[104]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(104),
       Q => \^response\(104),
       R => Reset_Comparison
     );
 \response_reg[105]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[105]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(105),
       Q => \^response\(105),
       R => Reset_Comparison
     );
 \response_reg[106]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[106]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(106),
       Q => \^response\(106),
       R => Reset_Comparison
     );
 \response_reg[107]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[107]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(107),
       Q => \^response\(107),
       R => Reset_Comparison
     );
 \response_reg[108]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[108]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(108),
       Q => \^response\(108),
       R => Reset_Comparison
     );
 \response_reg[109]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[109]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(109),
       Q => \^response\(109),
       R => Reset_Comparison
     );
 \response_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[10]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(10),
       Q => \^response\(10),
       R => Reset_Comparison
     );
 \response_reg[110]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[110]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(110),
       Q => \^response\(110),
       R => Reset_Comparison
     );
 \response_reg[111]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[111]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(111),
       Q => \^response\(111),
       R => Reset_Comparison
     );
 \response_reg[112]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[112]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(112),
       Q => \^response\(112),
       R => Reset_Comparison
     );
 \response_reg[113]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[113]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(113),
       Q => \^response\(113),
       R => Reset_Comparison
     );
 \response_reg[114]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[114]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(114),
       Q => \^response\(114),
       R => Reset_Comparison
     );
 \response_reg[115]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[115]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(115),
       Q => \^response\(115),
       R => Reset_Comparison
     );
 \response_reg[116]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[116]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(116),
       Q => \^response\(116),
       R => Reset_Comparison
     );
 \response_reg[117]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[117]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(117),
       Q => \^response\(117),
       R => Reset_Comparison
     );
 \response_reg[118]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[118]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(118),
       Q => \^response\(118),
       R => Reset_Comparison
     );
 \response_reg[119]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[119]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(119),
       Q => \^response\(119),
       R => Reset_Comparison
     );
 \response_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[11]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(11),
       Q => \^response\(11),
       R => Reset_Comparison
     );
 \response_reg[120]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[120]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(120),
       Q => \^response\(120),
       R => Reset_Comparison
     );
 \response_reg[121]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[121]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(121),
       Q => \^response\(121),
       R => Reset_Comparison
     );
 \response_reg[122]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[122]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(122),
       Q => \^response\(122),
       R => Reset_Comparison
     );
 \response_reg[123]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[123]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(123),
       Q => \^response\(123),
       R => Reset_Comparison
     );
 \response_reg[124]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[124]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(124),
       Q => \^response\(124),
       R => Reset_Comparison
     );
 \response_reg[125]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[125]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(125),
       Q => \^response\(125),
       R => Reset_Comparison
     );
 \response_reg[126]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[126]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(126),
       Q => \^response\(126),
       R => Reset_Comparison
     );
 \response_reg[127]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[127]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(127),
       Q => \^response\(127),
       R => Reset_Comparison
     );
 \response_reg[128]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[128]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(128),
       Q => \^response\(128),
       R => Reset_Comparison
     );
 \response_reg[129]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[129]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(129),
       Q => \^response\(129),
       R => Reset_Comparison
     );
 \response_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[12]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(12),
       Q => \^response\(12),
       R => Reset_Comparison
     );
 \response_reg[130]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[130]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(130),
       Q => \^response\(130),
       R => Reset_Comparison
     );
 \response_reg[131]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[131]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(131),
       Q => \^response\(131),
       R => Reset_Comparison
     );
 \response_reg[132]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[132]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(132),
       Q => \^response\(132),
       R => Reset_Comparison
     );
 \response_reg[133]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[133]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(133),
       Q => \^response\(133),
       R => Reset_Comparison
     );
 \response_reg[134]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[134]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(134),
       Q => \^response\(134),
       R => Reset_Comparison
     );
 \response_reg[135]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[135]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(135),
       Q => \^response\(135),
       R => Reset_Comparison
     );
 \response_reg[136]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[136]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(136),
       Q => \^response\(136),
       R => Reset_Comparison
     );
 \response_reg[137]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[137]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(137),
       Q => \^response\(137),
       R => Reset_Comparison
     );
 \response_reg[138]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[138]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(138),
       Q => \^response\(138),
       R => Reset_Comparison
     );
 \response_reg[139]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[139]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(139),
       Q => \^response\(139),
       R => Reset_Comparison
     );
 \response_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[13]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(13),
       Q => \^response\(13),
       R => Reset_Comparison
     );
 \response_reg[140]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[140]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(140),
       Q => \^response\(140),
       R => Reset_Comparison
     );
 \response_reg[141]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[141]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(141),
       Q => \^response\(141),
       R => Reset_Comparison
     );
 \response_reg[142]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[142]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(142),
       Q => \^response\(142),
       R => Reset_Comparison
     );
 \response_reg[143]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[143]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(143),
       Q => \^response\(143),
       R => Reset_Comparison
     );
 \response_reg[144]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[144]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(144),
       Q => \^response\(144),
       R => Reset_Comparison
     );
 \response_reg[145]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[145]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(145),
       Q => \^response\(145),
       R => Reset_Comparison
     );
 \response_reg[146]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[146]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(146),
       Q => \^response\(146),
       R => Reset_Comparison
     );
 \response_reg[147]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[147]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(147),
       Q => \^response\(147),
       R => Reset_Comparison
     );
 \response_reg[148]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[148]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(148),
       Q => \^response\(148),
       R => Reset_Comparison
     );
 \response_reg[149]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[149]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(149),
       Q => \^response\(149),
       R => Reset_Comparison
     );
 \response_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[14]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(14),
       Q => \^response\(14),
       R => Reset_Comparison
     );
 \response_reg[150]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[150]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(150),
       Q => \^response\(150),
       R => Reset_Comparison
     );
 \response_reg[151]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[151]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(151),
       Q => \^response\(151),
       R => Reset_Comparison
     );
 \response_reg[152]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[152]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(152),
       Q => \^response\(152),
       R => Reset_Comparison
     );
 \response_reg[153]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[153]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(153),
       Q => \^response\(153),
       R => Reset_Comparison
     );
 \response_reg[154]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[154]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(154),
       Q => \^response\(154),
       R => Reset_Comparison
     );
 \response_reg[155]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[155]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(155),
       Q => \^response\(155),
       R => Reset_Comparison
     );
 \response_reg[156]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[156]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(156),
       Q => \^response\(156),
       R => Reset_Comparison
     );
 \response_reg[157]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[157]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(157),
       Q => \^response\(157),
       R => Reset_Comparison
     );
 \response_reg[158]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[158]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(158),
       Q => \^response\(158),
       R => Reset_Comparison
     );
 \response_reg[159]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[159]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(159),
       Q => \^response\(159),
       R => Reset_Comparison
     );
 \response_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[15]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(15),
       Q => \^response\(15),
       R => Reset_Comparison
     );
 \response_reg[160]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[160]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(160),
       Q => \^response\(160),
       R => Reset_Comparison
     );
 \response_reg[161]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[161]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(161),
       Q => \^response\(161),
       R => Reset_Comparison
     );
 \response_reg[162]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[162]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(162),
       Q => \^response\(162),
       R => Reset_Comparison
     );
 \response_reg[163]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[163]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(163),
       Q => \^response\(163),
       R => Reset_Comparison
     );
 \response_reg[164]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[164]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(164),
       Q => \^response\(164),
       R => Reset_Comparison
     );
 \response_reg[165]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[165]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(165),
       Q => \^response\(165),
       R => Reset_Comparison
     );
 \response_reg[166]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[166]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(166),
       Q => \^response\(166),
       R => Reset_Comparison
     );
 \response_reg[167]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[167]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(167),
       Q => \^response\(167),
       R => Reset_Comparison
     );
 \response_reg[168]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[168]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(168),
       Q => \^response\(168),
       R => Reset_Comparison
     );
 \response_reg[169]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[169]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(169),
       Q => \^response\(169),
       R => Reset_Comparison
     );
 \response_reg[16]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[16]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(16),
       Q => \^response\(16),
       R => Reset_Comparison
     );
 \response_reg[170]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[170]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(170),
       Q => \^response\(170),
       R => Reset_Comparison
     );
 \response_reg[171]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[171]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(171),
       Q => \^response\(171),
       R => Reset_Comparison
     );
 \response_reg[172]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[172]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(172),
       Q => \^response\(172),
       R => Reset_Comparison
     );
 \response_reg[173]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[173]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(173),
       Q => \^response\(173),
       R => Reset_Comparison
     );
 \response_reg[174]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[174]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(174),
       Q => \^response\(174),
       R => Reset_Comparison
     );
 \response_reg[175]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[175]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(175),
       Q => \^response\(175),
       R => Reset_Comparison
     );
 \response_reg[176]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[176]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(176),
       Q => \^response\(176),
       R => Reset_Comparison
     );
 \response_reg[177]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[177]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(177),
       Q => \^response\(177),
       R => Reset_Comparison
     );
 \response_reg[178]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[178]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(178),
       Q => \^response\(178),
       R => Reset_Comparison
     );
 \response_reg[179]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[179]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(179),
       Q => \^response\(179),
       R => Reset_Comparison
     );
 \response_reg[17]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[17]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(17),
       Q => \^response\(17),
       R => Reset_Comparison
     );
 \response_reg[180]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[180]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(180),
       Q => \^response\(180),
       R => Reset_Comparison
     );
 \response_reg[181]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[181]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(181),
       Q => \^response\(181),
       R => Reset_Comparison
     );
 \response_reg[182]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[182]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(182),
       Q => \^response\(182),
       R => Reset_Comparison
     );
 \response_reg[183]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[183]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(183),
       Q => \^response\(183),
       R => Reset_Comparison
     );
 \response_reg[184]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[184]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(184),
       Q => \^response\(184),
       R => Reset_Comparison
     );
 \response_reg[185]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[185]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(185),
       Q => \^response\(185),
       R => Reset_Comparison
     );
 \response_reg[186]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[186]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(186),
       Q => \^response\(186),
       R => Reset_Comparison
     );
 \response_reg[187]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[187]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(187),
       Q => \^response\(187),
       R => Reset_Comparison
     );
 \response_reg[188]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[188]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(188),
       Q => \^response\(188),
       R => Reset_Comparison
     );
 \response_reg[189]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[189]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(189),
       Q => \^response\(189),
       R => Reset_Comparison
     );
 \response_reg[18]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[18]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(18),
       Q => \^response\(18),
       R => Reset_Comparison
     );
 \response_reg[190]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[190]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(190),
       Q => \^response\(190),
       R => Reset_Comparison
     );
 \response_reg[191]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[191]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(191),
       Q => \^response\(191),
       R => Reset_Comparison
     );
 \response_reg[192]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[192]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(192),
       Q => \^response\(192),
       R => Reset_Comparison
     );
 \response_reg[193]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[193]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(193),
       Q => \^response\(193),
       R => Reset_Comparison
     );
 \response_reg[194]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[194]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(194),
       Q => \^response\(194),
       R => Reset_Comparison
     );
 \response_reg[195]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[195]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(195),
       Q => \^response\(195),
       R => Reset_Comparison
     );
 \response_reg[196]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[196]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(196),
       Q => \^response\(196),
       R => Reset_Comparison
     );
 \response_reg[197]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[197]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(197),
       Q => \^response\(197),
       R => Reset_Comparison
     );
 \response_reg[198]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[198]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(198),
       Q => \^response\(198),
       R => Reset_Comparison
     );
 \response_reg[199]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[199]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(199),
       Q => \^response\(199),
       R => Reset_Comparison
     );
 \response_reg[19]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[19]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(19),
       Q => \^response\(19),
       R => Reset_Comparison
     );
 \response_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[1]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(1),
       Q => \^response\(1),
       R => Reset_Comparison
     );
 \response_reg[200]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[200]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(200),
       Q => \^response\(200),
       R => Reset_Comparison
     );
 \response_reg[201]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[201]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(201),
       Q => \^response\(201),
       R => Reset_Comparison
     );
 \response_reg[202]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[202]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(202),
       Q => \^response\(202),
       R => Reset_Comparison
     );
 \response_reg[203]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[203]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(203),
       Q => \^response\(203),
       R => Reset_Comparison
     );
 \response_reg[204]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[204]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(204),
       Q => \^response\(204),
       R => Reset_Comparison
     );
 \response_reg[205]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[205]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(205),
       Q => \^response\(205),
       R => Reset_Comparison
     );
 \response_reg[206]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[206]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(206),
       Q => \^response\(206),
       R => Reset_Comparison
     );
 \response_reg[207]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[207]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(207),
       Q => \^response\(207),
       R => Reset_Comparison
     );
 \response_reg[208]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[208]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(208),
       Q => \^response\(208),
       R => Reset_Comparison
     );
 \response_reg[209]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[209]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(209),
       Q => \^response\(209),
       R => Reset_Comparison
     );
 \response_reg[20]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[20]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(20),
       Q => \^response\(20),
       R => Reset_Comparison
     );
 \response_reg[210]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[210]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(210),
       Q => \^response\(210),
       R => Reset_Comparison
     );
 \response_reg[211]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[211]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(211),
       Q => \^response\(211),
       R => Reset_Comparison
     );
 \response_reg[212]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[212]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(212),
       Q => \^response\(212),
       R => Reset_Comparison
     );
 \response_reg[213]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[213]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(213),
       Q => \^response\(213),
       R => Reset_Comparison
     );
 \response_reg[214]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[214]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(214),
       Q => \^response\(214),
       R => Reset_Comparison
     );
 \response_reg[215]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[215]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(215),
       Q => \^response\(215),
       R => Reset_Comparison
     );
 \response_reg[216]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[216]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(216),
       Q => \^response\(216),
       R => Reset_Comparison
     );
 \response_reg[217]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[217]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(217),
       Q => \^response\(217),
       R => Reset_Comparison
     );
 \response_reg[218]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[218]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(218),
       Q => \^response\(218),
       R => Reset_Comparison
     );
 \response_reg[219]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[219]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(219),
       Q => \^response\(219),
       R => Reset_Comparison
     );
 \response_reg[21]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[21]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(21),
       Q => \^response\(21),
       R => Reset_Comparison
     );
 \response_reg[220]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[220]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(220),
       Q => \^response\(220),
       R => Reset_Comparison
     );
 \response_reg[221]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[221]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(221),
       Q => \^response\(221),
       R => Reset_Comparison
     );
 \response_reg[222]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[222]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(222),
       Q => \^response\(222),
       R => Reset_Comparison
     );
 \response_reg[223]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[223]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(223),
       Q => \^response\(223),
       R => Reset_Comparison
     );
 \response_reg[224]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[224]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(224),
       Q => \^response\(224),
       R => Reset_Comparison
     );
 \response_reg[225]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[225]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(225),
       Q => \^response\(225),
       R => Reset_Comparison
     );
 \response_reg[226]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[226]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(226),
       Q => \^response\(226),
       R => Reset_Comparison
     );
 \response_reg[227]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[227]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(227),
       Q => \^response\(227),
       R => Reset_Comparison
     );
 \response_reg[228]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[228]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(228),
       Q => \^response\(228),
       R => Reset_Comparison
     );
 \response_reg[229]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[229]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(229),
       Q => \^response\(229),
       R => Reset_Comparison
     );
 \response_reg[22]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[22]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(22),
       Q => \^response\(22),
       R => Reset_Comparison
     );
 \response_reg[230]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[230]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(230),
       Q => \^response\(230),
       R => Reset_Comparison
     );
 \response_reg[231]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[231]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(231),
       Q => \^response\(231),
       R => Reset_Comparison
     );
 \response_reg[232]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[232]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(232),
       Q => \^response\(232),
       R => Reset_Comparison
     );
 \response_reg[233]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[233]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(233),
       Q => \^response\(233),
       R => Reset_Comparison
     );
 \response_reg[234]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[234]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(234),
       Q => \^response\(234),
       R => Reset_Comparison
     );
 \response_reg[235]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[235]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(235),
       Q => \^response\(235),
       R => Reset_Comparison
     );
 \response_reg[236]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[236]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(236),
       Q => \^response\(236),
       R => Reset_Comparison
     );
 \response_reg[237]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[237]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(237),
       Q => \^response\(237),
       R => Reset_Comparison
     );
 \response_reg[238]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[238]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(238),
       Q => \^response\(238),
       R => Reset_Comparison
     );
 \response_reg[239]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[239]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(239),
       Q => \^response\(239),
       R => Reset_Comparison
     );
 \response_reg[23]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[23]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(23),
       Q => \^response\(23),
       R => Reset_Comparison
     );
 \response_reg[240]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[240]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(240),
       Q => \^response\(240),
       R => Reset_Comparison
     );
 \response_reg[241]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[241]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(241),
       Q => \^response\(241),
       R => Reset_Comparison
     );
 \response_reg[242]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[242]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(242),
       Q => \^response\(242),
       R => Reset_Comparison
     );
 \response_reg[243]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[243]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(243),
       Q => \^response\(243),
       R => Reset_Comparison
     );
 \response_reg[244]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[244]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(244),
       Q => \^response\(244),
       R => Reset_Comparison
     );
 \response_reg[245]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[245]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(245),
       Q => \^response\(245),
       R => Reset_Comparison
     );
 \response_reg[246]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[246]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(246),
       Q => \^response\(246),
       R => Reset_Comparison
     );
 \response_reg[247]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[247]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(247),
       Q => \^response\(247),
       R => Reset_Comparison
     );
 \response_reg[248]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[248]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(248),
       Q => \^response\(248),
       R => Reset_Comparison
     );
 \response_reg[249]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[249]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(249),
       Q => \^response\(249),
       R => Reset_Comparison
     );
 \response_reg[24]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[24]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(24),
       Q => \^response\(24),
       R => Reset_Comparison
     );
 \response_reg[250]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[250]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(250),
       Q => \^response\(250),
       R => Reset_Comparison
     );
 \response_reg[251]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[251]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(251),
       Q => \^response\(251),
       R => Reset_Comparison
     );
 \response_reg[252]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[252]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(252),
       Q => \^response\(252),
       R => Reset_Comparison
     );
 \response_reg[253]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[253]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(253),
       Q => \^response\(253),
       R => Reset_Comparison
     );
 \response_reg[254]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[254]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(254),
       Q => \^response\(254),
       R => Reset_Comparison
     );
 \response_reg[255]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[255]_i_2_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(255),
       Q => \^response\(255),
       R => Reset_Comparison
     );
-\response_reg[255]_i_3\: unisim.vcomponents.CARRY8
+\response_reg[255]_i_2\: unisim.vcomponents.CARRY8
      port map (
       CI => response1,
       CI_TOP => '0',
-      CO(7 downto 0) => \NLW_response_reg[255]_i_3_CO_UNCONNECTED\(7 downto 0),
+      CO(7 downto 0) => \NLW_response_reg[255]_i_2_CO_UNCONNECTED\(7 downto 0),
       DI(7 downto 0) => B"00000000",
-      O(7 downto 1) => \NLW_response_reg[255]_i_3_O_UNCONNECTED\(7 downto 1),
-      O(0) => \response_reg[255]_i_3_n_15\,
+      O(7 downto 1) => \NLW_response_reg[255]_i_2_O_UNCONNECTED\(7 downto 1),
+      O(0) => \response_reg[255]_i_2_n_15\,
       S(7 downto 0) => B"00000001"
     );
-\response_reg[255]_i_6\: unisim.vcomponents.CARRY8
+\response_reg[255]_i_3\: unisim.vcomponents.CARRY8
      port map (
-      CI => \response_reg[255]_i_7_n_0\,
+      CI => \response_reg[255]_i_4_n_0\,
       CI_TOP => '0',
       CO(7) => response1,
-      CO(6) => \response_reg[255]_i_6_n_1\,
-      CO(5) => \response_reg[255]_i_6_n_2\,
-      CO(4) => \response_reg[255]_i_6_n_3\,
-      CO(3) => \response_reg[255]_i_6_n_4\,
-      CO(2) => \response_reg[255]_i_6_n_5\,
-      CO(1) => \response_reg[255]_i_6_n_6\,
-      CO(0) => \response_reg[255]_i_6_n_7\,
-      DI(7) => \response[255]_i_8_n_0\,
-      DI(6) => \response[255]_i_9_n_0\,
-      DI(5) => \response[255]_i_10_n_0\,
-      DI(4) => \response[255]_i_11_n_0\,
-      DI(3) => \response[255]_i_12_n_0\,
-      DI(2) => \response[255]_i_13_n_0\,
-      DI(1) => \response[255]_i_14_n_0\,
-      DI(0) => \response[255]_i_15_n_0\,
-      O(7 downto 0) => \NLW_response_reg[255]_i_6_O_UNCONNECTED\(7 downto 0),
-      S(7) => \response[255]_i_16_n_0\,
-      S(6) => \response[255]_i_17_n_0\,
-      S(5) => \response[255]_i_18_n_0\,
-      S(4) => \response[255]_i_19_n_0\,
-      S(3) => \response[255]_i_20_n_0\,
-      S(2) => \response[255]_i_21_n_0\,
-      S(1) => \response[255]_i_22_n_0\,
-      S(0) => \response[255]_i_23_n_0\
+      CO(6) => \response_reg[255]_i_3_n_1\,
+      CO(5) => \response_reg[255]_i_3_n_2\,
+      CO(4) => \response_reg[255]_i_3_n_3\,
+      CO(3) => \response_reg[255]_i_3_n_4\,
+      CO(2) => \response_reg[255]_i_3_n_5\,
+      CO(1) => \response_reg[255]_i_3_n_6\,
+      CO(0) => \response_reg[255]_i_3_n_7\,
+      DI(7) => \response[255]_i_5_n_0\,
+      DI(6) => \response[255]_i_6_n_0\,
+      DI(5) => \response[255]_i_7_n_0\,
+      DI(4) => \response[255]_i_8_n_0\,
+      DI(3) => \response[255]_i_9_n_0\,
+      DI(2) => \response[255]_i_10_n_0\,
+      DI(1) => \response[255]_i_11_n_0\,
+      DI(0) => \response[255]_i_12_n_0\,
+      O(7 downto 0) => \NLW_response_reg[255]_i_3_O_UNCONNECTED\(7 downto 0),
+      S(7) => \response[255]_i_13_n_0\,
+      S(6) => \response[255]_i_14_n_0\,
+      S(5) => \response[255]_i_15_n_0\,
+      S(4) => \response[255]_i_16_n_0\,
+      S(3) => \response[255]_i_17_n_0\,
+      S(2) => \response[255]_i_18_n_0\,
+      S(1) => \response[255]_i_19_n_0\,
+      S(0) => \response[255]_i_20_n_0\
     );
-\response_reg[255]_i_7\: unisim.vcomponents.CARRY8
+\response_reg[255]_i_4\: unisim.vcomponents.CARRY8
      port map (
       CI => '0',
       CI_TOP => '0',
-      CO(7) => \response_reg[255]_i_7_n_0\,
-      CO(6) => \response_reg[255]_i_7_n_1\,
-      CO(5) => \response_reg[255]_i_7_n_2\,
-      CO(4) => \response_reg[255]_i_7_n_3\,
-      CO(3) => \response_reg[255]_i_7_n_4\,
-      CO(2) => \response_reg[255]_i_7_n_5\,
-      CO(1) => \response_reg[255]_i_7_n_6\,
-      CO(0) => \response_reg[255]_i_7_n_7\,
-      DI(7) => \response[255]_i_24_n_0\,
-      DI(6) => \response[255]_i_25_n_0\,
-      DI(5) => \response[255]_i_26_n_0\,
-      DI(4) => \response[255]_i_27_n_0\,
-      DI(3) => \response[255]_i_28_n_0\,
-      DI(2) => \response[255]_i_29_n_0\,
-      DI(1) => \response[255]_i_30_n_0\,
-      DI(0) => \response[255]_i_31_n_0\,
-      O(7 downto 0) => \NLW_response_reg[255]_i_7_O_UNCONNECTED\(7 downto 0),
-      S(7) => \response[255]_i_32_n_0\,
-      S(6) => \response[255]_i_33_n_0\,
-      S(5) => \response[255]_i_34_n_0\,
-      S(4) => \response[255]_i_35_n_0\,
-      S(3) => \response[255]_i_36_n_0\,
-      S(2) => \response[255]_i_37_n_0\,
-      S(1) => \response[255]_i_38_n_0\,
-      S(0) => \response[255]_i_39_n_0\
+      CO(7) => \response_reg[255]_i_4_n_0\,
+      CO(6) => \response_reg[255]_i_4_n_1\,
+      CO(5) => \response_reg[255]_i_4_n_2\,
+      CO(4) => \response_reg[255]_i_4_n_3\,
+      CO(3) => \response_reg[255]_i_4_n_4\,
+      CO(2) => \response_reg[255]_i_4_n_5\,
+      CO(1) => \response_reg[255]_i_4_n_6\,
+      CO(0) => \response_reg[255]_i_4_n_7\,
+      DI(7) => \response[255]_i_21_n_0\,
+      DI(6) => \response[255]_i_22_n_0\,
+      DI(5) => \response[255]_i_23_n_0\,
+      DI(4) => \response[255]_i_24_n_0\,
+      DI(3) => \response[255]_i_25_n_0\,
+      DI(2) => \response[255]_i_26_n_0\,
+      DI(1) => \response[255]_i_27_n_0\,
+      DI(0) => \response[255]_i_28_n_0\,
+      O(7 downto 0) => \NLW_response_reg[255]_i_4_O_UNCONNECTED\(7 downto 0),
+      S(7) => \response[255]_i_29_n_0\,
+      S(6) => \response[255]_i_30_n_0\,
+      S(5) => \response[255]_i_31_n_0\,
+      S(4) => \response[255]_i_32_n_0\,
+      S(3) => \response[255]_i_33_n_0\,
+      S(2) => \response[255]_i_34_n_0\,
+      S(1) => \response[255]_i_35_n_0\,
+      S(0) => \response[255]_i_36_n_0\
     );
 \response_reg[25]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[25]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(25),
       Q => \^response\(25),
       R => Reset_Comparison
     );
 \response_reg[26]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[26]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(26),
       Q => \^response\(26),
       R => Reset_Comparison
     );
 \response_reg[27]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[27]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(27),
       Q => \^response\(27),
       R => Reset_Comparison
     );
 \response_reg[28]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[28]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(28),
       Q => \^response\(28),
       R => Reset_Comparison
     );
 \response_reg[29]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[29]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(29),
       Q => \^response\(29),
       R => Reset_Comparison
     );
 \response_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[2]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(2),
       Q => \^response\(2),
       R => Reset_Comparison
     );
 \response_reg[30]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[30]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(30),
       Q => \^response\(30),
       R => Reset_Comparison
     );
 \response_reg[31]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[31]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(31),
       Q => \^response\(31),
       R => Reset_Comparison
     );
 \response_reg[32]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[32]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(32),
       Q => \^response\(32),
       R => Reset_Comparison
     );
 \response_reg[33]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[33]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(33),
       Q => \^response\(33),
       R => Reset_Comparison
     );
 \response_reg[34]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[34]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(34),
       Q => \^response\(34),
       R => Reset_Comparison
     );
 \response_reg[35]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[35]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(35),
       Q => \^response\(35),
       R => Reset_Comparison
     );
 \response_reg[36]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[36]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(36),
       Q => \^response\(36),
       R => Reset_Comparison
     );
 \response_reg[37]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[37]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(37),
       Q => \^response\(37),
       R => Reset_Comparison
     );
 \response_reg[38]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[38]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(38),
       Q => \^response\(38),
       R => Reset_Comparison
     );
 \response_reg[39]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[39]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(39),
       Q => \^response\(39),
       R => Reset_Comparison
     );
 \response_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[3]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(3),
       Q => \^response\(3),
       R => Reset_Comparison
     );
 \response_reg[40]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[40]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(40),
       Q => \^response\(40),
       R => Reset_Comparison
     );
 \response_reg[41]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[41]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(41),
       Q => \^response\(41),
       R => Reset_Comparison
     );
 \response_reg[42]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[42]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(42),
       Q => \^response\(42),
       R => Reset_Comparison
     );
 \response_reg[43]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[43]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(43),
       Q => \^response\(43),
       R => Reset_Comparison
     );
 \response_reg[44]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[44]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(44),
       Q => \^response\(44),
       R => Reset_Comparison
     );
 \response_reg[45]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[45]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(45),
       Q => \^response\(45),
       R => Reset_Comparison
     );
 \response_reg[46]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[46]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(46),
       Q => \^response\(46),
       R => Reset_Comparison
     );
 \response_reg[47]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[47]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(47),
       Q => \^response\(47),
       R => Reset_Comparison
     );
 \response_reg[48]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[48]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(48),
       Q => \^response\(48),
       R => Reset_Comparison
     );
 \response_reg[49]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[49]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(49),
       Q => \^response\(49),
       R => Reset_Comparison
     );
 \response_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[4]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(4),
       Q => \^response\(4),
       R => Reset_Comparison
     );
 \response_reg[50]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[50]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(50),
       Q => \^response\(50),
       R => Reset_Comparison
     );
 \response_reg[51]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[51]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(51),
       Q => \^response\(51),
       R => Reset_Comparison
     );
 \response_reg[52]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[52]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(52),
       Q => \^response\(52),
       R => Reset_Comparison
     );
 \response_reg[53]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[53]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(53),
       Q => \^response\(53),
       R => Reset_Comparison
     );
 \response_reg[54]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[54]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(54),
       Q => \^response\(54),
       R => Reset_Comparison
     );
 \response_reg[55]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[55]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(55),
       Q => \^response\(55),
       R => Reset_Comparison
     );
 \response_reg[56]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[56]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(56),
       Q => \^response\(56),
       R => Reset_Comparison
     );
 \response_reg[57]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[57]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(57),
       Q => \^response\(57),
       R => Reset_Comparison
     );
 \response_reg[58]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[58]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(58),
       Q => \^response\(58),
       R => Reset_Comparison
     );
 \response_reg[59]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[59]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(59),
       Q => \^response\(59),
       R => Reset_Comparison
     );
 \response_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[5]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(5),
       Q => \^response\(5),
       R => Reset_Comparison
     );
 \response_reg[60]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[60]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(60),
       Q => \^response\(60),
       R => Reset_Comparison
     );
 \response_reg[61]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[61]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(61),
       Q => \^response\(61),
       R => Reset_Comparison
     );
 \response_reg[62]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[62]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(62),
       Q => \^response\(62),
       R => Reset_Comparison
     );
 \response_reg[63]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[63]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(63),
       Q => \^response\(63),
       R => Reset_Comparison
     );
 \response_reg[64]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[64]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(64),
       Q => \^response\(64),
       R => Reset_Comparison
     );
 \response_reg[65]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[65]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(65),
       Q => \^response\(65),
       R => Reset_Comparison
     );
 \response_reg[66]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[66]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(66),
       Q => \^response\(66),
       R => Reset_Comparison
     );
 \response_reg[67]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[67]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(67),
       Q => \^response\(67),
       R => Reset_Comparison
     );
 \response_reg[68]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[68]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(68),
       Q => \^response\(68),
       R => Reset_Comparison
     );
 \response_reg[69]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[69]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(69),
       Q => \^response\(69),
       R => Reset_Comparison
     );
 \response_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[6]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(6),
       Q => \^response\(6),
       R => Reset_Comparison
     );
 \response_reg[70]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[70]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(70),
       Q => \^response\(70),
       R => Reset_Comparison
     );
 \response_reg[71]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[71]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(71),
       Q => \^response\(71),
       R => Reset_Comparison
     );
 \response_reg[72]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[72]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(72),
       Q => \^response\(72),
       R => Reset_Comparison
     );
 \response_reg[73]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[73]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(73),
       Q => \^response\(73),
       R => Reset_Comparison
     );
 \response_reg[74]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[74]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(74),
       Q => \^response\(74),
       R => Reset_Comparison
     );
 \response_reg[75]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[75]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(75),
       Q => \^response\(75),
       R => Reset_Comparison
     );
 \response_reg[76]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[76]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(76),
       Q => \^response\(76),
       R => Reset_Comparison
     );
 \response_reg[77]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[77]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(77),
       Q => \^response\(77),
       R => Reset_Comparison
     );
 \response_reg[78]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[78]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(78),
       Q => \^response\(78),
       R => Reset_Comparison
     );
 \response_reg[79]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[79]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(79),
       Q => \^response\(79),
       R => Reset_Comparison
     );
 \response_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[7]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(7),
       Q => \^response\(7),
       R => Reset_Comparison
     );
 \response_reg[80]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[80]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(80),
       Q => \^response\(80),
       R => Reset_Comparison
     );
 \response_reg[81]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[81]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(81),
       Q => \^response\(81),
       R => Reset_Comparison
     );
 \response_reg[82]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[82]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(82),
       Q => \^response\(82),
       R => Reset_Comparison
     );
 \response_reg[83]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[83]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(83),
       Q => \^response\(83),
       R => Reset_Comparison
     );
 \response_reg[84]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[84]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(84),
       Q => \^response\(84),
       R => Reset_Comparison
     );
 \response_reg[85]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[85]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(85),
       Q => \^response\(85),
       R => Reset_Comparison
     );
 \response_reg[86]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[86]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(86),
       Q => \^response\(86),
       R => Reset_Comparison
     );
 \response_reg[87]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[87]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(87),
       Q => \^response\(87),
       R => Reset_Comparison
     );
 \response_reg[88]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[88]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(88),
       Q => \^response\(88),
       R => Reset_Comparison
     );
 \response_reg[89]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[89]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(89),
       Q => \^response\(89),
       R => Reset_Comparison
     );
 \response_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[8]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(8),
       Q => \^response\(8),
       R => Reset_Comparison
     );
 \response_reg[90]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[90]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(90),
       Q => \^response\(90),
       R => Reset_Comparison
     );
 \response_reg[91]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[91]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(91),
       Q => \^response\(91),
       R => Reset_Comparison
     );
 \response_reg[92]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[92]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(92),
       Q => \^response\(92),
       R => Reset_Comparison
     );
 \response_reg[93]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[93]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(93),
       Q => \^response\(93),
       R => Reset_Comparison
     );
 \response_reg[94]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[94]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(94),
       Q => \^response\(94),
       R => Reset_Comparison
     );
 \response_reg[95]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[95]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(95),
       Q => \^response\(95),
       R => Reset_Comparison
     );
 \response_reg[96]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[96]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(96),
       Q => \^response\(96),
       R => Reset_Comparison
     );
 \response_reg[97]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[97]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(97),
       Q => \^response\(97),
       R => Reset_Comparison
     );
 \response_reg[98]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[98]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(98),
       Q => \^response\(98),
       R => Reset_Comparison
     );
 \response_reg[99]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[99]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(99),
       Q => \^response\(99),
       R => Reset_Comparison
     );
 \response_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \response[9]_i_1_n_0\,
+      CE => Enable_Comparison,
+      D => p_2_in(9),
       Q => \^response\(9),
       R => Reset_Comparison
     );
-\state[0]_i_1\: unisim.vcomponents.LUT3
+\state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"04"
+      INIT => X"88880080AAAAAAAA"
     )
         port map (
-      I0 => \state_reg_n_0_[0]\,
-      I1 => enable,
-      I2 => p_1_in,
-      O => \state[0]_i_1_n_0\
+      I0 => enable,
+      I1 => state(2),
+      I2 => \internal_challenge[6]_i_3_n_0\,
+      I3 => \state[0]_i_2_n_0\,
+      I4 => state(1),
+      I5 => state(0),
+      O => \state__0\(0)
+    );
+\state[0]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => internal_challenge(5),
+      I1 => internal_challenge(4),
+      I2 => internal_challenge(7),
+      I3 => internal_challenge(6),
+      O => \state[0]_i_2_n_0\
     );
 \state[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0048"
+      INIT => X"8A20"
     )
         port map (
-      I0 => \state_reg_n_0_[0]\,
-      I1 => enable,
-      I2 => \state_reg_n_0_[1]\,
-      I3 => p_1_in,
-      O => \state[1]_i_1_n_0\
+      I0 => enable,
+      I1 => state(2),
+      I2 => state(1),
+      I3 => state(0),
+      O => \state__0\(1)
     );
-\state[2]_i_1\: unisim.vcomponents.LUT5
+\state[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"A0E0A0A0"
+      INIT => X"B800"
     )
         port map (
-      I0 => p_1_in,
-      I1 => \state_reg_n_0_[1]\,
-      I2 => enable,
-      I3 => neqOp,
-      I4 => \state_reg_n_0_[0]\,
-      O => state(2)
-    );
-\state[2]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => internal_challenge_reg(2),
-      I1 => internal_challenge_reg(3),
-      I2 => internal_challenge_reg(0),
-      I3 => internal_challenge_reg(1),
-      I4 => \state[2]_i_3_n_0\,
-      I5 => \state[2]_i_4_n_0\,
-      O => neqOp
-    );
-\state[2]_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => internal_challenge_reg(7),
-      I1 => internal_challenge_reg(6),
-      O => \state[2]_i_3_n_0\
-    );
-\state[2]_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => internal_challenge_reg(5),
-      I1 => internal_challenge_reg(4),
-      O => \state[2]_i_4_n_0\
+      I0 => state(0),
+      I1 => state(1),
+      I2 => state(2),
+      I3 => enable,
+      O => \state__0\(2)
     );
 \state_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -94484,8 +94452,8 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
         port map (
       C => clk,
       CE => clear,
-      D => \state[0]_i_1_n_0\,
-      Q => \state_reg_n_0_[0]\,
+      D => \state__0\(0),
+      Q => state(0),
       R => '0'
     );
 \state_reg[1]\: unisim.vcomponents.FDRE
@@ -94495,8 +94463,8 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
         port map (
       C => clk,
       CE => clear,
-      D => \state[1]_i_1_n_0\,
-      Q => \state_reg_n_0_[1]\,
+      D => \state__0\(1),
+      Q => state(1),
       R => '0'
     );
 \state_reg[2]\: unisim.vcomponents.FDRE
@@ -94506,8 +94474,8 @@ ready_reg_i_2: unisim.vcomponents.CARRY8
         port map (
       C => clk,
       CE => clear,
-      D => state(2),
-      Q => p_1_in,
+      D => \state__0\(2),
+      Q => state(2),
       R => '0'
     );
 end STRUCTURE;
@@ -94790,8 +94758,8 @@ architecture STRUCTURE of u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI is
   attribute offset_pos : integer;
   attribute offset_pos of TIMA_RO_PUF : label is 20;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \slv_reg0[31]_i_2\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \slv_reg0[31]_i_2\ : label is "soft_lutpair0";
 begin
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
@@ -94805,14 +94773,14 @@ TIMA_RO_PUF: entity work.u96_v2_tima_ropuf2_tima_ro_0_0_top_tima_ro_puf
       counter_config(2 downto 0) => counter_config(2 downto 0),
       enable => \slv_reg0_reg_n_0_[0]\,
       ready => slv_reg2(0),
-      response(255 downto 224) => slv_reg3(31 downto 0),
-      response(223 downto 192) => slv_reg4(31 downto 0),
-      response(191 downto 160) => slv_reg5(31 downto 0),
-      response(159 downto 128) => slv_reg6(31 downto 0),
-      response(127 downto 96) => slv_reg7(31 downto 0),
-      response(95 downto 64) => slv_reg8(31 downto 0),
-      response(63 downto 32) => slv_reg9(31 downto 0),
-      response(31 downto 0) => slv_reg10(31 downto 0)
+      response(255 downto 224) => slv_reg10(31 downto 0),
+      response(223 downto 192) => slv_reg9(31 downto 0),
+      response(191 downto 160) => slv_reg8(31 downto 0),
+      response(159 downto 128) => slv_reg7(31 downto 0),
+      response(127 downto 96) => slv_reg6(31 downto 0),
+      response(95 downto 64) => slv_reg5(31 downto 0),
+      response(63 downto 32) => slv_reg4(31 downto 0),
+      response(31 downto 0) => slv_reg3(31 downto 0)
     );
 aw_en_i_1: unisim.vcomponents.LUT6
     generic map(

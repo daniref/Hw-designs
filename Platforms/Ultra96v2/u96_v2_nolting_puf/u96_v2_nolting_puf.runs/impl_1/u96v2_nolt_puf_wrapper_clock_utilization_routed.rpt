@@ -1,0 +1,378 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date              : Tue Oct  8 14:53:51 2024
+| Host              : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command           : report_clock_utilization -file u96v2_nolt_puf_wrapper_clock_utilization_routed.rpt
+| Design            : u96v2_nolt_puf_wrapper
+| Device            : xczu3eg-sbva484
+| Speed File        : -1  PRODUCTION 1.29 08-03-2020
+| Temperature Grade : I
+| Design State      : Routed
+---------------------------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Global Clock Resources
+3. Global Clock Source Details
+4. Local Clock Details
+5. Clock Regions : Clock Primitives
+6. Clock Regions : Load Primitives
+7. Clock Regions : Global Clock Summary
+8. Clock Regions : Routing Resource Utilization
+9. Device Cell Placement Summary for Global Clock g0
+10. Device Cell Placement Summary for Global Clock g1
+11. Device Cell Placement Summary for Global Clock g2
+12. Clock Region Cell Placement per Global Clock: Region X0Y0
+13. Clock Region Cell Placement per Global Clock: Region X1Y0
+14. Clock Region Cell Placement per Global Clock: Region X0Y1
+15. Clock Region Cell Placement per Global Clock: Region X1Y1
+
+1. Clock Primitive Utilization
+------------------------------
+
++------------+------+-----------+-----+--------------+--------+
+| Type       | Used | Available | LOC | Clock Region | Pblock |
++------------+------+-----------+-----+--------------+--------+
+| BUFGCE     |    2 |        88 |   0 |            0 |      0 |
+| BUFGCE_DIV |    0 |        12 |   0 |            0 |      0 |
+| BUFGCTRL   |    0 |        24 |   0 |            0 |      0 |
+| MMCM       |    0 |         3 |   0 |            0 |      0 |
+| PLL        |    0 |         6 |   0 |            0 |      0 |
++------------+------+-----------+-----+--------------+--------+
+
+
+2. Global Clock Resources
+-------------------------
+
++-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+----------+---------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Root | Clock Delay Group | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock    | Driver Pin                                                                                                    | Net                                                                                                      |
++-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+----------+---------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| g0        | src0      | BUFG_PS/O       | None       | BUFG_PS_X0Y62 | X0Y2         | X0Y0 |                   |                 4 |       13415 |               0 |       10.000 | clk_pl_0 | u96v2_nolt_puf_i/zynq_ultra_ps_e_0/U0/buffer_pl_clk_0.PL_CLK_0_BUFG/O                                         | u96v2_nolt_puf_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                            |
+| g1        | src1      | BUFGCE/O        | None       | BUFGCE_X0Y0   | X1Y0         | X0Y0 |                   |                 1 |          96 |               0 |              |          | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[95]_i_2_n_0_BUFG_inst/O | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[95]_i_2_n_0_BUFGCE |
+| g2        | src2      | BUFGCE/O        | None       | BUFGCE_X0Y2   | X1Y0         | X1Y0 | n/a               |                 4 |           0 |            2712 |          n/a | n/a      | u96v2_nolt_puf_i/rst_ps8_0_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_bufg_place/O                           | u96v2_nolt_puf_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]                                                 |
++-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+----------+---------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+3. Global Clock Source Details
+------------------------------
+
++-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| Source Id | Global Id | Driver Type/Pin | Constraint | Site         | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin                                                                                      | Net                                                                                               |
++-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| src0      | g0        | PS8/PLCLK[0]    | None       | PS8_X0Y0     | X0Y0         |           1 |               0 |              10.000 | clk_pl_0     | u96v2_nolt_puf_i/zynq_ultra_ps_e_0/U0/PS8_i/PLCLK[0]                                            | u96v2_nolt_puf_i/zynq_ultra_ps_e_0/U0/pl_clk_unbuffered[0]                                        |
+| src1      | g1        | LUT2/O          | None       | SLICE_X47Y28 | X1Y0         |           1 |               0 |                     |              | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[95]_i_2/O | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[95]_i_2_n_0 |
+| src2      | g2        | FDRE/Q          | None       | SLICE_X6Y5   | X0Y0         |           1 |               0 |                     |              | u96v2_nolt_puf_i/rst_ps8_0_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q                        | u96v2_nolt_puf_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]_bufg_place                               |
++-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+4. Local Clock Details
+----------------------
+
++----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+| Local Id | Driver Type/Pin | Constraint | Site/BEL         | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                                                           | Net                                                                                                     |
++----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------||
+| 0        | FDRE/Q          | None       | SLICE_X4Y4/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][10]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][10] - Static -
+| 1        | FDRE/Q          | None       | SLICE_X4Y3/AFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][11]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][11] - Static -
+| 2        | FDRE/Q          | None       | SLICE_X4Y3/AFF2  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][12]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][12] - Static -
+| 3        | FDRE/Q          | None       | SLICE_X3Y5/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][13]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][13] - Static -
+| 4        | FDRE/Q          | None       | SLICE_X3Y5/CFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][14]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][14] - Static -
+| 5        | FDRE/Q          | None       | SLICE_X3Y3/EFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][15]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][15] - Static -
+| 6        | FDRE/Q          | None       | SLICE_X1Y4/HFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][16]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][16] - Static -
+| 7        | FDRE/Q          | None       | SLICE_X1Y2/AFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][17]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][17] - Static -
+| 8        | FDRE/Q          | None       | SLICE_X0Y3/AFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][18]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][18] - Static -
+| 9        | FDRE/Q          | None       | SLICE_X0Y3/AFF2  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][19]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][19] - Static -
+| 10       | FDRE/Q          | None       | SLICE_X0Y3/BFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][20]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][20] - Static -
+| 11       | FDRE/Q          | None       | SLICE_X1Y4/GFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][21]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][21] - Static -
+| 12       | FDRE/Q          | None       | SLICE_X0Y4/AFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][22]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][22] - Static -
+| 13       | FDRE/Q          | None       | SLICE_X1Y5/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][23]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][23] - Static -
+| 14       | FDRE/Q          | None       | SLICE_X1Y7/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][24]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][24] - Static -
+| 15       | FDRE/Q          | None       | SLICE_X1Y8/HFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][25]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][25] - Static -
+| 16       | FDRE/Q          | None       | SLICE_X1Y11/DFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][26]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][26] - Static -
+| 17       | FDRE/Q          | None       | SLICE_X1Y19/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][27]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][27] - Static -
+| 18       | FDRE/Q          | None       | SLICE_X1Y20/AFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][28]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][28] - Static -
+| 19       | FDRE/Q          | None       | SLICE_X1Y21/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][29]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][29] - Static -
+| 20       | FDRE/Q          | None       | SLICE_X5Y6/CFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][2]/Q  | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][2]  - Static -
+| 21       | FDRE/Q          | None       | SLICE_X0Y23/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][30]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][30] - Static -
+| 22       | FDRE/Q          | None       | SLICE_X0Y23/CFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][31]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][31] - Static -
+| 23       | FDRE/Q          | None       | SLICE_X1Y24/EFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][32]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][32] - Static -
+| 24       | FDRE/Q          | None       | SLICE_X1Y24/EFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][33]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][33] - Static -
+| 25       | FDRE/Q          | None       | SLICE_X2Y23/HFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][34]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][34] - Static -
+| 26       | FDRE/Q          | None       | SLICE_X2Y24/HFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][35]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][35] - Static -
+| 27       | FDRE/Q          | None       | SLICE_X1Y25/CFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][36]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][36] - Static -
+| 28       | FDRE/Q          | None       | SLICE_X1Y25/HFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][37]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][37] - Static -
+| 29       | FDRE/Q          | None       | SLICE_X0Y26/AFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][38]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][38] - Static -
+| 30       | FDRE/Q          | None       | SLICE_X0Y22/AFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][39]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][39] - Static -
+| 31       | FDRE/Q          | None       | SLICE_X6Y5/EFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][3]/Q  | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][3]  - Static -
+| 32       | FDRE/Q          | None       | SLICE_X1Y22/DFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][40]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][40] - Static -
+| 33       | FDRE/Q          | None       | SLICE_X3Y24/HFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][41]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][41] - Static -
+| 34       | FDRE/Q          | None       | SLICE_X3Y21/AFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][42]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][42] - Static -
+| 35       | FDRE/Q          | None       | SLICE_X3Y21/AFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][43]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][43] - Static -
+| 36       | FDRE/Q          | None       | SLICE_X0Y19/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][44]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][44] - Static -
+| 37       | FDRE/Q          | None       | SLICE_X0Y16/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][45]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][45] - Static -
+| 38       | FDRE/Q          | None       | SLICE_X0Y16/CFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][46]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][46] - Static -
+| 39       | FDRE/Q          | None       | SLICE_X0Y16/BFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][47]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][47] - Static -
+| 40       | FDRE/Q          | None       | SLICE_X1Y15/HFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][48]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][48] - Static -
+| 41       | FDRE/Q          | None       | SLICE_X1Y14/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][49]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][49] - Static -
+| 42       | FDRE/Q          | None       | SLICE_X7Y2/AFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][4]/Q  | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][4]  - Static -
+| 43       | FDRE/Q          | None       | SLICE_X2Y13/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][50]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][50] - Static -
+| 44       | FDRE/Q          | None       | SLICE_X2Y13/CFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][51]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][51] - Static -
+| 45       | FDRE/Q          | None       | SLICE_X2Y13/BFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][52]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][52] - Static -
+| 46       | FDRE/Q          | None       | SLICE_X2Y14/HFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][53]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][53] - Static -
+| 47       | FDRE/Q          | None       | SLICE_X2Y16/HFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][54]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][54] - Static -
+| 48       | FDRE/Q          | None       | SLICE_X2Y16/GFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][55]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][55] - Static -
+| 49       | FDRE/Q          | None       | SLICE_X2Y18/HFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][56]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][56] - Static -
+| 50       | FDRE/Q          | None       | SLICE_X1Y20/AFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][57]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][57] - Static -
+| 51       | FDRE/Q          | None       | SLICE_X2Y20/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][58]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][58] - Static -
+| 52       | FDRE/Q          | None       | SLICE_X2Y21/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][59]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][59] - Static -
+| 53       | FDRE/Q          | None       | SLICE_X6Y2/EFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][5]/Q  | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][5]  - Static -
+| 54       | FDRE/Q          | None       | SLICE_X4Y23/HFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][60]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][60] - Static -
+| 55       | FDRE/Q          | None       | SLICE_X4Y23/GFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][61]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][61] - Static -
+| 56       | FDRE/Q          | None       | SLICE_X6Y23/DFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][62]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][62] - Static -
+| 57       | FDRE/Q          | None       | SLICE_X5Y25/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][63]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][63] - Static -
+| 58       | FDRE/Q          | None       | SLICE_X5Y25/CFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][64]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][64] - Static -
+| 59       | FDRE/Q          | None       | SLICE_X5Y25/BFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][65]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][65] - Static -
+| 60       | FDRE/Q          | None       | SLICE_X5Y25/AFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][66]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][66] - Static -
+| 61       | FDRE/Q          | None       | SLICE_X4Y27/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][67]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][67] - Static -
+| 62       | FDRE/Q          | None       | SLICE_X4Y29/HFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][68]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][68] - Static -
+| 63       | FDRE/Q          | None       | SLICE_X1Y29/EFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][69]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][69] - Static -
+| 64       | FDRE/Q          | None       | SLICE_X5Y2/AFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][6]/Q  | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][6]  - Static -
+| 65       | FDRE/Q          | None       | SLICE_X1Y29/FFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][70]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][70] - Static -
+| 66       | FDRE/Q          | None       | SLICE_X1Y25/GFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][71]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][71] - Static -
+| 67       | FDRE/Q          | None       | SLICE_X1Y25/FFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][72]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][72] - Static -
+| 68       | FDRE/Q          | None       | SLICE_X1Y25/EFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][73]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][73] - Static -
+| 69       | FDRE/Q          | None       | SLICE_X0Y23/BFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][74]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][74] - Static -
+| 70       | FDRE/Q          | None       | SLICE_X0Y23/AFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][75]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][75] - Static -
+| 71       | FDRE/Q          | None       | SLICE_X0Y18/DFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][76]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][76] - Static -
+| 72       | FDRE/Q          | None       | SLICE_X0Y17/AFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][77]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][77] - Static -
+| 73       | FDRE/Q          | None       | SLICE_X1Y14/CFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][78]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][78] - Static -
+| 74       | FDRE/Q          | None       | SLICE_X1Y12/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][79]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][79] - Static -
+| 75       | FDRE/Q          | None       | SLICE_X5Y1/AFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][7]/Q  | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][7]  - Static -
+| 76       | FDRE/Q          | None       | SLICE_X1Y11/CFF2 | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][80]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][80] - Static -
+| 77       | FDRE/Q          | None       | SLICE_X1Y9/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][81]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][81] - Static -
+| 78       | FDRE/Q          | None       | SLICE_X1Y9/CFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][82]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][82] - Static -
+| 79       | FDRE/Q          | None       | SLICE_X0Y8/AFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][83]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][83] - Static -
+| 80       | FDRE/Q          | None       | SLICE_X0Y8/AFF2  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][84]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][84] - Static -
+| 81       | FDRE/Q          | None       | SLICE_X2Y8/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][85]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][85] - Static -
+| 82       | FDRE/Q          | None       | SLICE_X3Y6/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][86]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][86] - Static -
+| 83       | FDRE/Q          | None       | SLICE_X3Y6/CFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][87]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][87] - Static -
+| 84       | FDRE/Q          | None       | SLICE_X3Y6/BFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][88]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][88] - Static -
+| 85       | FDRE/Q          | None       | SLICE_X3Y8/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][89]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][89] - Static -
+| 86       | FDRE/Q          | None       | SLICE_X5Y2/AFF2  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][8]/Q  | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][8]  - Static -
+| 87       | FDRE/Q          | None       | SLICE_X4Y8/HFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][90]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][90] - Static -
+| 88       | FDRE/Q          | None       | SLICE_X3Y9/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][91]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][91] - Static -
+| 89       | FDRE/Q          | None       | SLICE_X3Y9/CFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][92]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][92] - Static -
+| 90       | FDRE/Q          | None       | SLICE_X3Y9/BFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][93]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][93] - Static -
+| 91       | FDRE/Q          | None       | SLICE_X3Y11/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][94]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][94] - Static -
+| 92       | FDRE/Q          | None       | SLICE_X3Y14/DFF  | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][95]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][95] - Static -
+| 93       | FDRE/Q          | None       | SLICE_X3Y17/DFF  | X0Y0         |           1 |               1 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][96]/Q | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][96] - Static -
+| 94       | FDRE/Q          | None       | SLICE_X4Y2/AFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][9]/Q  | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg_n_0_][9]  - Static -
+| 95       | FDRE/Q          | None       | SLICE_X5Y6/DFF   | X0Y0         |           1 |               2 |              |       | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/arbiter_reg[sreg][1]/Q  | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/latch_i                    - Static -
++----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------||
+* Local Clocks in this context represents only clocks driven by non-global buffers
+** Clock Loads column represents the clock pin loads (pin count)
+*** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+5. Clock Regions : Clock Primitives
+-----------------------------------
+
++-------------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+|                   |  Global Clock |     BUFGCE    |   BUFGCE_DIV  |    BUFGCTRL   |    BUFG_GT    |      MMCM     |      PLL      |
++-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+| Clock Region Name | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail |
++-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+| X0Y0              |     3 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |
+| X1Y0              |     2 |    24 |     2 |    28 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X0Y1              |     2 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |
+| X1Y1              |     2 |    24 |     0 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X0Y2              |     0 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |
+| X1Y2              |     0 |    24 |     0 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     1 |     0 |     2 |
++-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+6. Clock Regions : Load Primitives
+----------------------------------
+
++-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+|                   |   Global Clock   |        FF        |      LUTRAM      |  Block RAM (18K) |        DSP       |        GT        |      HARD IP     |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+| Clock Region Name | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+| X0Y0              |      3 |      24 |   8001 |   27840 |    267 |    4800 |      8 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y0              |      2 |      24 |    532 |   19200 |      0 |    4800 |      0 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y1              |      2 |      24 |   4159 |   27840 |     74 |    4800 |      0 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y1              |      2 |      24 |    317 |   19200 |      0 |    4800 |      0 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y2              |      0 |      24 |      0 |   27840 |      0 |    4800 |      0 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y2              |      0 |      24 |      0 |   19200 |      0 |    4800 |      0 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+7. Clock Regions : Global Clock Summary
+---------------------------------------
+
+All Modules
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  0 |  0 |
+| Y1 |  2 |  2 |
+| Y0 |  3 |  3 |
++----+----+----+
+
+
+8. Clock Regions : Routing Resource Utilization
+-----------------------------------------------
+
+All Modules
++-------------------+----------------------+----------------------+----------------------+----------------------+
+|                   |        HROUTES       |        HDISTRS       |        VROUTES       |        VDISTRS       |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+| Clock Region Name | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+| X0Y0              |    2 |    24 |  8.33 |    3 |    24 | 12.50 |    1 |    24 |  4.17 |    2 |    24 |  8.33 |
+| X1Y0              |    2 |    24 |  8.33 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
+| X0Y1              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |
+| X1Y1              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y2              |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |
+| X1Y2              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+
+
+9. Device Cell Placement Summary for Global Clock g0
+----------------------------------------------------
+
++-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                           |
++-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------+
+| g0        | BUFG_PS/O       | X0Y2              | clk_pl_0 |      10.000 | {0.000 5.000} | X0Y0     |       13355 |        0 |              0 |        0 | u96v2_nolt_puf_i/zynq_ultra_ps_e_0/U0/pl_clk0 |
++-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----------+------+-----------------------+
+|    | X0       | X1   | HORIZONTAL PROG DELAY |
++----+----------+------+-----------------------+
+| Y2 |    (D) 0 |    0 |                     0 |
+| Y1 |     4233 |  317 |                     0 |
+| Y0 | (R) 8273 |  532 |                     0 |
++----+----------+------+-----------------------+
+
+
+10. Device Cell Placement Summary for Global Clock g1
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                      |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------------------------------------------+
+| g1        | BUFGCE/O        | X1Y0              |       |             |               | X0Y0     |          96 |        0 |              0 |        0 | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[95]_i_2_n_0_BUFGCE |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+--------+--------+-----------------------+
+|    | X0     | X1     | HORIZONTAL PROG DELAY |
++----+--------+--------+-----------------------+
+| Y2 |      0 |      0 |                     0 |
+| Y1 |      0 |      0 |                     0 |
+| Y0 | (R) 96 |  (D) 0 |                     0 |
++----+--------+--------+-----------------------+
+
+
+11. Device Cell Placement Summary for Global Clock g2
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                      |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------+
+| g2        | BUFGCE/O        | X1Y0              |       |             |               | X1Y0     |        2712 |        0 |              0 |        0 | u96v2_nolt_puf_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-------+-------------+-----------------------+
+|    | X0    | X1          | HORIZONTAL PROG DELAY |
++----+-------+-------------+-----------------------+
+| Y2 |     0 |           0 |                     0 |
+| Y1 |   919 |          96 |                     0 |
+| Y0 |  1515 | (R) (D) 182 |                     0 |
++----+-------+-------------+-----------------------+
+
+
+12. Clock Region Cell Placement per Global Clock: Region X0Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                      |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |        8273 |               0 | 8001 |    267 |    4 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                            |
+| g1        | 0     | BUFGCE/O        | None       |          96 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[95]_i_2_n_0_BUFGCE |
+| g2        | 2     | BUFGCE/O        | None       |           0 |            1515 | 1515 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]                                                 |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+13. Clock Region Cell Placement per Global Clock: Region X1Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                      |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |         532 |               0 | 532 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                            |
+| g1+       | 0     | BUFGCE/O        | None       |           0 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[95]_i_2_n_0_BUFGCE |
+| g2        | 2     | BUFGCE/O        | None       |           0 |             182 | 182 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]                                                 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
+
+
+14. Clock Region Cell Placement per Global Clock: Region X0Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                      |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |        4233 |               0 | 4159 |     74 |    0 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/zynq_ultra_ps_e_0/U0/pl_clk0            |
+| g2        | 2     | BUFGCE/O        | None       |           0 |             919 |  919 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+15. Clock Region Cell Placement per Global Clock: Region X1Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                      |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |         317 |               0 | 317 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/zynq_ultra_ps_e_0/U0/pl_clk0            |
+| g2        | 2     | BUFGCE/O        | None       |           0 |              96 |  96 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96v2_nolt_puf_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+

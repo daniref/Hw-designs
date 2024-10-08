@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date              : Sat Sep 28 19:30:14 2024
+| Date              : Fri Oct  4 14:07:39 2024
 | Host              : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 | Command           : report_clock_utilization -file u96_v2_tima_ropuf2_wrapper_clock_utilization_routed.rpt
 | Design            : u96_v2_tima_ropuf2_wrapper
@@ -51,10 +51,10 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+----------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Root | Clock Delay Group | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock    | Driver Pin                                                                                                      | Net                                                                                                        |
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+----------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG_PS/O       | None       | BUFG_PS_X0Y64 | X0Y2         | X0Y0 |                   |                 4 |       13534 |               0 |       10.000 | clk_pl_0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/buffer_pl_clk_0.PL_CLK_0_BUFG/O                                       | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                          |
-| g1        | src1      | BUFGCE/O        | None       | BUFGCE_X0Y49  | X1Y2         | X0Y1 |                   |                 1 |          32 |               0 |              |          | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_BUFG_inst/O | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_BUFGCE |
-| g2        | src2      | BUFGCE/O        | None       | BUFGCE_X0Y50  | X1Y2         | X0Y1 |                   |                 1 |          32 |               0 |              |          | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_BUFG_inst/O | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_BUFGCE |
-| g3        | src3      | BUFGCE/O        | None       | BUFGCE_X0Y56  | X1Y2         | X1Y2 | n/a               |                 4 |           0 |            2714 |          n/a | n/a      | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_bufg_place/O                         | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]                                               |
+| g0        | src0      | BUFG_PS/O       | None       | BUFG_PS_X0Y64 | X0Y2         | X0Y0 |                   |                 4 |       13533 |               0 |       10.000 | clk_pl_0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/buffer_pl_clk_0.PL_CLK_0_BUFG/O                                       | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                          |
+| g1        | src1      | BUFGCE/O        | None       | BUFGCE_X0Y0   | X1Y0         | X0Y0 |                   |                 1 |          32 |               0 |              |          | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_BUFG_inst/O | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_BUFGCE |
+| g2        | src2      | BUFGCE/O        | None       | BUFGCE_X0Y1   | X1Y0         | X0Y0 |                   |                 1 |          32 |               0 |              |          | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_BUFG_inst/O | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_BUFGCE |
+| g3        | src3      | BUFGCE/O        | None       | BUFGCE_X0Y2   | X1Y0         | X1Y0 | n/a               |                 3 |           0 |            2714 |          n/a | n/a      | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_bufg_place/O                         | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]                                               |
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+----------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -67,9 +67,9 @@ Table of Contents
 | Source Id | Global Id | Driver Type/Pin | Constraint | Site         | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin                                                                                                | Net                                                                                                 |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
 | src0      | g0        | PS8/PLCLK[0]    | None       | PS8_X0Y0     | X0Y0         |           1 |               0 |              10.000 | clk_pl_0     | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/PS8_i/PLCLK[0]                                                  | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk_unbuffered[0]                                      |
-| src1      | g1        | LDCE/Q          | None       | SLICE_X6Y130 | X0Y2         |           1 |               0 |                     |              | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_reg/Q | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro |
-| src2      | g2        | LDCE/Q          | None       | SLICE_X6Y139 | X0Y2         |           1 |               0 |                     |              | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_reg/Q | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro |
-| src3      | g3        | FDRE/Q          | None       | SLICE_X1Y93  | X0Y1         |           1 |               0 |                     |              | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q                              | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]_bufg_place                             |
+| src1      | g1        | LDCE/Q          | None       | SLICE_X7Y119 | X0Y1         |           1 |               0 |                     |              | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_reg/Q | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro |
+| src2      | g2        | LDCE/Q          | None       | SLICE_X7Y139 | X0Y2         |           1 |               0 |                     |              | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_reg/Q | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro |
+| src3      | g3        | FDRE/Q          | None       | SLICE_X4Y1   | X0Y0         |           1 |               0 |                     |              | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q                              | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]_bufg_place                             |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -83,12 +83,12 @@ Table of Contents
 +-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
 | Clock Region Name | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail |
 +-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| X0Y0              |     2 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |
-| X1Y0              |     2 |    24 |     0 |    28 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     1 |     0 |     2 |
-| X0Y1              |     4 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |
+| X0Y0              |     4 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |
+| X1Y0              |     2 |    24 |     3 |    28 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X0Y1              |     2 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |
 | X1Y1              |     2 |    24 |     0 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     1 |     0 |     2 |
 | X0Y2              |     0 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |
-| X1Y2              |     0 |    24 |     3 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X1Y2              |     0 |    24 |     0 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     1 |     0 |     2 |
 +-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -101,10 +101,10 @@ Table of Contents
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
 | Clock Region Name | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   |
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
-| X0Y0              |      2 |      24 |   9306 |   27840 |    279 |    4800 |      8 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
-| X1Y0              |      2 |      24 |    196 |   19200 |      0 |    4800 |      0 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
-| X0Y1              |      4 |      24 |   3674 |   27840 |     62 |    4800 |      0 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
-| X1Y1              |      2 |      24 |     16 |   19200 |      0 |    4800 |      0 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y0              |      4 |      24 |   9864 |   27840 |    255 |    4800 |      8 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y0              |      2 |      24 |   1254 |   19200 |     16 |    4800 |      0 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y1              |      2 |      24 |   1999 |   27840 |     70 |    4800 |      0 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y1              |      2 |      24 |     74 |   19200 |      0 |    4800 |      0 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
 | X0Y2              |      0 |      24 |      0 |   27840 |      0 |    4800 |      0 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
 | X1Y2              |      0 |      24 |      0 |   19200 |      0 |    4800 |      0 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
@@ -119,8 +119,8 @@ All Modules
 |    | X0 | X1 |
 +----+----+----+
 | Y2 |  0 |  0 |
-| Y1 |  4 |  2 |
-| Y0 |  2 |  2 |
+| Y1 |  2 |  2 |
+| Y0 |  4 |  4 |
 +----+----+----+
 
 
@@ -133,12 +133,12 @@ All Modules
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
 | Clock Region Name | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% |
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
-| X0Y0              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    1 |    24 |  4.17 |    1 |    24 |  4.17 |
-| X1Y0              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
-| X0Y1              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    3 |    24 | 12.50 |    2 |    24 |  8.33 |
-| X1Y1              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
-| X0Y2              |    6 |    24 | 25.00 |    0 |    24 |  0.00 |    3 |    24 | 12.50 |    0 |    24 |  0.00 |
-| X1Y2              |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
+| X0Y0              |    4 |    24 | 16.67 |    4 |    24 | 16.67 |    1 |    24 |  4.17 |    3 |    24 | 12.50 |
+| X1Y0              |    4 |    24 | 16.67 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
+| X0Y1              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |
+| X1Y1              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y2              |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |
+| X1Y2              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
 
 
@@ -148,7 +148,7 @@ All Modules
 +-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                               |
 +-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------+
-| g0        | BUFG_PS/O       | X0Y2              | clk_pl_0 |      10.000 | {0.000 5.000} | X0Y0     |       13474 |        0 |              0 |        0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0 |
+| g0        | BUFG_PS/O       | X0Y2              | clk_pl_0 |      10.000 | {0.000 5.000} | X0Y0     |       13473 |        0 |              0 |        0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0 |
 +-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -156,13 +156,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----------+------+-----------------------+
-|    | X0       | X1   | HORIZONTAL PROG DELAY |
-+----+----------+------+-----------------------+
-| Y2 |    (D) 0 |    0 |                     0 |
-| Y1 |     3672 |   16 |                     0 |
-| Y0 | (R) 9590 |  196 |                     0 |
-+----+----------+------+-----------------------+
++----+-----------+-------+-----------------------+
+|    | X0        | X1    | HORIZONTAL PROG DELAY |
++----+-----------+-------+-----------------------+
+| Y2 |     (D) 0 |     0 |                     0 |
+| Y1 |      2069 |    74 |                     0 |
+| Y0 | (R) 10060 |  1270 |                     0 |
++----+-----------+-------+-----------------------+
 
 
 9. Device Cell Placement Summary for Global Clock g1
@@ -171,7 +171,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                        |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------+
-| g1        | BUFGCE/O        | X1Y2              |       |             |               | X0Y1     |          32 |        0 |              0 |        0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_BUFGCE |
+| g1        | BUFGCE/O        | X1Y0              |       |             |               | X0Y0     |          32 |        0 |              0 |        0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_BUFGCE |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -182,9 +182,9 @@ All Modules
 +----+--------+--------+-----------------------+
 |    | X0     | X1     | HORIZONTAL PROG DELAY |
 +----+--------+--------+-----------------------+
-| Y2 |      0 |  (D) 0 |                     0 |
-| Y1 | (R) 32 |      0 |                     0 |
-| Y0 |      0 |      0 |                     0 |
+| Y2 |      0 |      0 |                     0 |
+| Y1 |      0 |      0 |                     0 |
+| Y0 | (R) 32 |  (D) 0 |                     0 |
 +----+--------+--------+-----------------------+
 
 
@@ -194,7 +194,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                        |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------+
-| g2        | BUFGCE/O        | X1Y2              |       |             |               | X0Y1     |          32 |        0 |              0 |        0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_BUFGCE |
+| g2        | BUFGCE/O        | X1Y0              |       |             |               | X0Y0     |          32 |        0 |              0 |        0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_BUFGCE |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -205,9 +205,9 @@ All Modules
 +----+--------+--------+-----------------------+
 |    | X0     | X1     | HORIZONTAL PROG DELAY |
 +----+--------+--------+-----------------------+
-| Y2 |      0 |  (D) 0 |                     0 |
-| Y1 | (R) 32 |      0 |                     0 |
-| Y0 |      0 |      0 |                     0 |
+| Y2 |      0 |      0 |                     0 |
+| Y1 |      0 |      0 |                     0 |
+| Y0 | (R) 32 |  (D) 0 |                     0 |
 +----+--------+--------+-----------------------+
 
 
@@ -217,7 +217,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                          |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------------+
-| g3        | BUFGCE/O        | X1Y2              |       |             |               | X1Y2     |        2714 |        0 |              0 |        0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
+| g3        | BUFGCE/O        | X1Y0              |       |             |               | X1Y0     |        2714 |        0 |              0 |        0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -225,24 +225,26 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-------+-----------+-----------------------+
-|    | X0    | X1        | HORIZONTAL PROG DELAY |
-+----+-------+-----------+-----------------------+
-| Y2 |     0 | (R) (D) 0 |                     0 |
-| Y1 |   893 |         2 |                     0 |
-| Y0 |  1776 |        43 |                     0 |
-+----+-------+-----------+-----------------------+
++----+-------+-------------+-----------------------+
+|    | X0    | X1          | HORIZONTAL PROG DELAY |
++----+-------+-------------+-----------------------+
+| Y2 |     0 |           0 |                     0 |
+| Y1 |   196 |           0 |                     0 |
+| Y0 |  2151 | (R) (D) 367 |                     0 |
++----+-------+-------------+-----------------------+
 
 
 12. Clock Region Cell Placement per Global Clock: Region X0Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                          |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
-| g0        | 16    | BUFG_PS/O       | None       |        9590 |               0 | 9306 |    279 |    4 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0            |
-| g3        | 8     | BUFGCE/O        | None       |           0 |            1776 | 1776 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                        |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
+| g0        | 16    | BUFG_PS/O       | None       |       10060 |               0 | 9800 |    255 |    4 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                          |
+| g1        | 0     | BUFGCE/O        | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_BUFGCE |
+| g2        | 1     | BUFGCE/O        | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_BUFGCE |
+| g3        | 2     | BUFGCE/O        | None       |           0 |            2151 | 2151 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]                                               |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -251,28 +253,29 @@ All Modules
 13. Clock Region Cell Placement per Global Clock: Region X1Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                          |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
-| g0        | 16    | BUFG_PS/O       | None       |         196 |               0 | 196 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0            |
-| g3        | 8     | BUFGCE/O        | None       |           0 |              43 |  43 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                        |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
+| g0        | 16    | BUFG_PS/O       | None       |        1270 |               0 | 1254 |     16 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                          |
+| g1+       | 0     | BUFGCE/O        | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_BUFGCE |
+| g2+       | 1     | BUFGCE/O        | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_BUFGCE |
+| g3        | 2     | BUFGCE/O        | None       |           0 |             367 |  367 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]                                               |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 
 14. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                        |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
-| g0        | 16    | BUFG_PS/O       | None       |        3672 |               0 | 3610 |     62 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                          |
-| g1        | 1     | BUFGCE/O        | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_1/output_ro_BUFGCE |
-| g2        | 2     | BUFGCE/O        | None       |          32 |               0 |   32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/tima_ro_0/U0/tima_ro_v2_0_PUF_AXI_inst/TIMA_RO_PUF/RO_PUF/RO_BLOCK_2/output_ro_BUFGCE |
-| g3        | 8     | BUFGCE/O        | None       |           0 |             893 |  893 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]                                               |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                          |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
+| g0        | 16    | BUFG_PS/O       | None       |        2069 |               0 | 1999 |     70 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0            |
+| g3        | 2     | BUFGCE/O        | None       |           0 |             196 |  196 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -284,11 +287,12 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                          |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
-| g0        | 16    | BUFG_PS/O       | None       |          16 |               0 | 16 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0            |
-| g3        | 8     | BUFGCE/O        | None       |           0 |               2 |  2 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
+| g0        | 16    | BUFG_PS/O       | None       |          74 |               0 | 74 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/zynq_ultra_ps_e_0/U0/pl_clk0            |
+| g3+       | 2     | BUFGCE/O        | None       |           0 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u96_v2_tima_ropuf2_i/rst_ps8_0_100M/U0/peripheral_aresetn[0] |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 

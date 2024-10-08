@@ -1,0 +1,1552 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Tue Oct  8 14:53:32 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_methodology -file u96v2_nolt_puf_wrapper_methodology_drc_routed.rpt -pb u96v2_nolt_puf_wrapper_methodology_drc_routed.pb -rpx u96v2_nolt_puf_wrapper_methodology_drc_routed.rpx
+| Design       : u96v2_nolt_puf_wrapper
+| Device       : xczu3eg-sbva484-1-i
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 231
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert  | 24         |
+| TIMING-18 | Warning  | Missing input or output delay | 13         |
+| TIMING-20 | Warning  | Non-clocked latch             | 194        |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR
+ (the first 15 of 20 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 44 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 33 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#14 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 31 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#15 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#16 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#17 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#18 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.curr_fwft_state_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_reg/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i_reg/PRE,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]/CLR,
+u96v2_nolt_puf_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on ls_mezz_int[0] relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on ls_mezz_int[1] relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on ls_mezz_uart0_rx relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on ls_mezz_uart1_rx relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on bt_en_led_tri_o[0] relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on fan_pwm_tri_o[0] relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on ls_mezz_pwm0[0] relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on ls_mezz_pwm1[0] relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on ls_mezz_rst[0] relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on ls_mezz_rst[1] relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on ls_mezz_uart0_tx relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on ls_mezz_uart1_tx relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on wifi_en_led_tri_o[0] relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[0].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[0].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[10].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[10].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[11].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[11].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[12].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[12].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[13].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[13].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[14].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[14].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[15].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[15].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[16].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[16].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[17].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[17].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[18].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[18].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[19].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[19].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[1].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[1].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[20].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[20].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[21].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[21].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[22].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[22].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[23].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[23].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[24].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[24].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[25].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[25].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[26].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[26].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[27].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[27].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[28].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[28].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[29].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[29].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[2].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[2].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[30].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[30].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[31].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[31].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[32].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[32].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[33].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[33].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[34].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[34].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[35].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[35].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[36].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[36].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[37].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[37].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[38].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[38].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[39].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[39].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[3].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[3].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[40].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[40].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[41].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[41].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[42].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[42].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[43].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[43].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[44].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[44].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[45].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[45].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[46].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[46].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[47].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[47].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[48].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[48].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[49].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[49].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[4].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[4].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[50].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[50].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[51].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[51].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[52].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[52].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[53].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[53].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[54].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[54].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[55].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[55].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[56].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[56].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#53 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[57].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[57].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#54 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[58].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[58].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#55 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[59].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[59].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#56 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[5].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[5].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#57 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[60].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[60].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#58 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[61].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[61].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#59 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[62].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[62].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#60 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[63].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[63].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#61 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[64].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[64].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#62 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[65].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[65].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#63 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[66].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[66].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#64 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[67].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[67].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#65 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[68].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[68].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#66 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[69].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[69].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#67 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[6].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[6].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#68 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[70].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[70].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#69 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[71].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[71].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#70 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[72].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[72].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#71 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[73].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[73].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#72 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[74].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[74].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#73 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[75].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[75].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#74 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[76].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[76].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#75 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[77].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[77].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#76 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[78].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[78].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#77 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[79].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[79].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#78 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[7].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[7].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#79 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[80].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[80].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#80 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[81].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[81].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#81 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[82].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[82].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#82 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[83].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[83].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#83 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[84].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[84].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#84 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[85].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[85].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#85 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[86].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[86].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#86 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[87].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[87].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#87 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[88].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[88].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#88 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[89].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[89].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#89 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[8].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[8].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#90 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[90].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[90].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#91 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[91].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[91].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#92 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[92].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[92].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#93 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[93].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[93].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#94 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[94].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[94].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#95 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[95].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[95].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#96 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[9].fpga_puf_cell_inst_i/osc_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF/fpga_puf_cell_inst[9].fpga_puf_cell_inst_i/osc_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#97 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/ready_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/ready_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#98 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[0] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#99 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[10] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#100 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[11] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#101 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[12] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#102 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[13] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#103 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[14] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#104 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[15] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#105 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[16] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#106 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[17] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#107 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[18] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#108 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[19] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#109 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[1] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#110 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[20] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#111 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[21] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#112 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[22] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#113 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[23] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#114 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[24] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#115 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[25] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#116 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[26] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#117 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[27] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#118 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[28] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#119 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[29] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#120 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[2] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#121 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[30] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#122 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[31] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#123 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[32] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[32]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#124 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[33] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[33]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#125 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[34] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[34]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#126 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[35] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[35]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#127 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[36] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[36]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#128 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[37] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[37]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#129 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[38] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[38]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#130 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[39] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[39]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#131 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[3] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#132 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[40] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[40]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#133 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[41] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[41]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#134 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[42] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[42]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#135 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[43] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[43]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#136 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[44] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[44]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#137 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[45] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[45]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#138 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[46] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[46]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#139 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[47] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[47]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#140 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[48] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[48]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#141 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[49] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[49]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#142 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[4] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#143 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[50] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[50]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#144 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[51] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[51]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#145 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[52] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[52]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#146 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[53] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[53]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#147 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[54] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[54]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#148 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[55] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[55]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#149 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[56] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[56]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#150 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[57] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[57]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#151 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[58] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[58]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#152 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[59] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[59]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#153 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[5] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#154 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[60] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[60]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#155 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[61] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[61]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#156 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[62] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[62]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#157 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[63] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[63]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#158 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[64] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[64]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#159 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[65] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[65]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#160 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[66] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[66]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#161 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[67] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[67]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#162 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[68] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[68]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#163 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[69] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[69]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#164 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[6] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#165 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[70] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[70]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#166 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[71] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[71]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#167 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[72] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[72]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#168 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[73] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[73]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#169 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[74] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[74]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#170 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[75] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[75]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#171 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[76] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[76]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#172 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[77] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[77]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#173 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[78] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[78]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#174 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[79] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[79]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#175 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[7] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#176 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[80] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[80]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#177 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[81] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[81]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#178 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[82] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[82]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#179 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[83] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[83]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#180 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[84] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[84]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#181 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[85] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[85]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#182 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[86] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[86]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#183 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[87] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[87]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#184 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[88] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[88]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#185 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[89] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[89]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#186 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[8] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#187 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[90] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[90]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#188 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[91] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[91]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#189 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[92] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[92]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#190 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[93] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[93]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#191 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[94] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[94]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#192 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[95] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[95]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#193 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[9] cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/response_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#194 Warning
+Non-clocked latch  
+The latch u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/trig_sig_reg cannot be properly analyzed as its control pin u96v2_nolt_puf_i/Nolting_PUF_0/U0/Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/trig_sig_reg/G is not reached by a timing clock
+Related violations: <none>
+
+

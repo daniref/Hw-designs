@@ -1,0 +1,466 @@
+
+*** Running vivado
+    with args -log Nolting_PUF_v1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nolting_PUF_v1_0.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source Nolting_PUF_v1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/puftester/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top Nolting_PUF_v1_0 -part xczu3eg-sbva484-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4007
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2332.031 ; gain = 0.000 ; free physical = 117 ; free virtual = 21919
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Nolting_PUF_v1_0' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/hdl/Nolting_PUF_v1_0.vhd:50]
+	Parameter resp_size bound to: 96 - type: integer 
+	Parameter C_PUF_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_PUF_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter resp_size bound to: 96 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'Nolting_PUF_v1_0_PUF_AXI' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/hdl/Nolting_PUF_v1_0_PUF_AXI.vhd:5' bound to instance 'Nolting_PUF_v1_0_PUF_AXI_inst' of component 'Nolting_PUF_v1_0_PUF_AXI' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/hdl/Nolting_PUF_v1_0.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'Nolting_PUF_v1_0_PUF_AXI' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/hdl/Nolting_PUF_v1_0_PUF_AXI.vhd:86]
+	Parameter resp_size bound to: 96 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter resp_size bound to: 96 - type: integer 
+INFO: [Synth 8-3491] module 'top_puf' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:25' bound to instance 'PUF_INST' of component 'top_puf' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/hdl/Nolting_PUF_v1_0_PUF_AXI.vhd:426]
+INFO: [Synth 8-638] synthesizing module 'top_puf' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:40]
+	Parameter resp_size bound to: 96 - type: integer 
+	Parameter ID_SIZE bound to: 96 - type: integer 
+INFO: [Synth 8-3491] module 'fpga_puf' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:51' bound to instance 'PUF' of component 'fpga_puf' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'fpga_puf' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:64]
+	Parameter ID_SIZE bound to: 96 - type: integer 
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'fpga_puf_cell' (1#1) [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:203]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-3491] module 'fpga_puf_cell' declared at '/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:193' bound to instance 'fpga_puf_cell_inst_i' of component 'fpga_puf_cell' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'fpga_puf' (2#1) [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:64]
+WARNING: [Synth 8-614] signal 'internal_ready' is read in the process but is not in the sensitivity list [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:80]
+WARNING: [Synth 8-614] signal 'response_sig' is read in the process but is not in the sensitivity list [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'top_puf' (3#1) [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Nolting_PUF_v1_0_PUF_AXI' (4#1) [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/hdl/Nolting_PUF_v1_0_PUF_AXI.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'Nolting_PUF_v1_0' (5#1) [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/hdl/Nolting_PUF_v1_0.vhd:50]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2332.031 ; gain = 0.000 ; free physical = 903 ; free virtual = 22707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2332.031 ; gain = 0.000 ; free physical = 900 ; free virtual = 22704
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2339.926 ; gain = 7.895 ; free physical = 899 ; free virtual = 22703
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'arbiter_reg[state]' in module 'fpga_puf'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top_puf'
+WARNING: [Synth 8-327] inferring latch for variable 'osc_reg' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/fpga_puf.vhd:214]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                              001 |                               00
+                   s_run |                              010 |                               01
+                s_sample |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'arbiter_reg[state]' using encoding 'one-hot' in module 'fpga_puf'
+WARNING: [Synth 8-327] inferring latch for variable 'ready_reg' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:86]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 reset_s |                               00 |                               00
+              pulse_up_s |                               01 |                               01
+            pulse_down_s |                               10 |                               10
+                 ready_s |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'top_puf'
+WARNING: [Synth 8-327] inferring latch for variable 'response_reg' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:87]
+WARNING: [Synth 8-327] inferring latch for variable 'trig_sig_reg' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:75]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2339.926 ; gain = 7.895 ; free physical = 845 ; free virtual = 22667
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               97 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 102   
++---Muxes : 
+	   4 Input   96 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 6     
+	   7 Input   32 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 4     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 288 ; free virtual = 22055
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 288 ; free virtual = 22054
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 287 ; free virtual = 22054
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 272 ; free virtual = 22053
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 272 ; free virtual = 22053
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ready with 1st driver pin 'Nolting_PUF_v1_0_PUF_AXI_inst/slv_reg2_reg[0]/Q' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/hdl/Nolting_PUF_v1_0_PUF_AXI.vhd:233]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ready with 2nd driver pin 'Nolting_PUF_v1_0_PUF_AXI_inst/PUF_INST/ready_reg/Q' [/home/puftester/PhD/repo/Hw-designs/IPs/Nolting_PUF_1.0/src/top_puf.vhd:86]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 272 ; free virtual = 22053
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 272 ; free virtual = 22053
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 272 ; free virtual = 22053
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 272 ; free virtual = 22053
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     2|
+|2     |LUT1 |    99|
+|3     |LUT2 |   100|
+|4     |LUT3 |     2|
+|5     |LUT4 |     7|
+|6     |LUT5 |    25|
+|7     |LUT6 |    66|
+|8     |FDCE |     2|
+|9     |FDRE |   427|
+|10    |FDSE |     5|
+|11    |LD   |    98|
+|12    |LDC  |    96|
+|13    |IBUF |    49|
+|14    |OBUF |    41|
++------+-----+------+
+
+Report Instance Areas: 
++------+------------------------------------------------------+-------------------------+------+
+|      |Instance                                              |Module                   |Cells |
++------+------------------------------------------------------+-------------------------+------+
+|1     |top                                                   |                         |  1019|
+|2     |  Nolting_PUF_v1_0_PUF_AXI_inst                       |Nolting_PUF_v1_0_PUF_AXI |   928|
+|3     |    PUF_INST                                          |top_puf                  |   595|
+|4     |      PUF                                             |fpga_puf                 |   490|
+|5     |        \fpga_puf_cell_inst[0].fpga_puf_cell_inst_i   |fpga_puf_cell            |     4|
+|6     |        \fpga_puf_cell_inst[10].fpga_puf_cell_inst_i  |fpga_puf_cell_0          |     4|
+|7     |        \fpga_puf_cell_inst[11].fpga_puf_cell_inst_i  |fpga_puf_cell_1          |     4|
+|8     |        \fpga_puf_cell_inst[12].fpga_puf_cell_inst_i  |fpga_puf_cell_2          |     4|
+|9     |        \fpga_puf_cell_inst[13].fpga_puf_cell_inst_i  |fpga_puf_cell_3          |     4|
+|10    |        \fpga_puf_cell_inst[14].fpga_puf_cell_inst_i  |fpga_puf_cell_4          |     4|
+|11    |        \fpga_puf_cell_inst[15].fpga_puf_cell_inst_i  |fpga_puf_cell_5          |     4|
+|12    |        \fpga_puf_cell_inst[16].fpga_puf_cell_inst_i  |fpga_puf_cell_6          |     4|
+|13    |        \fpga_puf_cell_inst[17].fpga_puf_cell_inst_i  |fpga_puf_cell_7          |     4|
+|14    |        \fpga_puf_cell_inst[18].fpga_puf_cell_inst_i  |fpga_puf_cell_8          |     4|
+|15    |        \fpga_puf_cell_inst[19].fpga_puf_cell_inst_i  |fpga_puf_cell_9          |     4|
+|16    |        \fpga_puf_cell_inst[1].fpga_puf_cell_inst_i   |fpga_puf_cell_10         |     4|
+|17    |        \fpga_puf_cell_inst[20].fpga_puf_cell_inst_i  |fpga_puf_cell_11         |     4|
+|18    |        \fpga_puf_cell_inst[21].fpga_puf_cell_inst_i  |fpga_puf_cell_12         |     4|
+|19    |        \fpga_puf_cell_inst[22].fpga_puf_cell_inst_i  |fpga_puf_cell_13         |     4|
+|20    |        \fpga_puf_cell_inst[23].fpga_puf_cell_inst_i  |fpga_puf_cell_14         |     4|
+|21    |        \fpga_puf_cell_inst[24].fpga_puf_cell_inst_i  |fpga_puf_cell_15         |     4|
+|22    |        \fpga_puf_cell_inst[25].fpga_puf_cell_inst_i  |fpga_puf_cell_16         |     4|
+|23    |        \fpga_puf_cell_inst[26].fpga_puf_cell_inst_i  |fpga_puf_cell_17         |     4|
+|24    |        \fpga_puf_cell_inst[27].fpga_puf_cell_inst_i  |fpga_puf_cell_18         |     4|
+|25    |        \fpga_puf_cell_inst[28].fpga_puf_cell_inst_i  |fpga_puf_cell_19         |     4|
+|26    |        \fpga_puf_cell_inst[29].fpga_puf_cell_inst_i  |fpga_puf_cell_20         |     4|
+|27    |        \fpga_puf_cell_inst[2].fpga_puf_cell_inst_i   |fpga_puf_cell_21         |     4|
+|28    |        \fpga_puf_cell_inst[30].fpga_puf_cell_inst_i  |fpga_puf_cell_22         |     4|
+|29    |        \fpga_puf_cell_inst[31].fpga_puf_cell_inst_i  |fpga_puf_cell_23         |     4|
+|30    |        \fpga_puf_cell_inst[32].fpga_puf_cell_inst_i  |fpga_puf_cell_24         |     4|
+|31    |        \fpga_puf_cell_inst[33].fpga_puf_cell_inst_i  |fpga_puf_cell_25         |     4|
+|32    |        \fpga_puf_cell_inst[34].fpga_puf_cell_inst_i  |fpga_puf_cell_26         |     4|
+|33    |        \fpga_puf_cell_inst[35].fpga_puf_cell_inst_i  |fpga_puf_cell_27         |     4|
+|34    |        \fpga_puf_cell_inst[36].fpga_puf_cell_inst_i  |fpga_puf_cell_28         |     4|
+|35    |        \fpga_puf_cell_inst[37].fpga_puf_cell_inst_i  |fpga_puf_cell_29         |     4|
+|36    |        \fpga_puf_cell_inst[38].fpga_puf_cell_inst_i  |fpga_puf_cell_30         |     4|
+|37    |        \fpga_puf_cell_inst[39].fpga_puf_cell_inst_i  |fpga_puf_cell_31         |     4|
+|38    |        \fpga_puf_cell_inst[3].fpga_puf_cell_inst_i   |fpga_puf_cell_32         |     4|
+|39    |        \fpga_puf_cell_inst[40].fpga_puf_cell_inst_i  |fpga_puf_cell_33         |     4|
+|40    |        \fpga_puf_cell_inst[41].fpga_puf_cell_inst_i  |fpga_puf_cell_34         |     4|
+|41    |        \fpga_puf_cell_inst[42].fpga_puf_cell_inst_i  |fpga_puf_cell_35         |     4|
+|42    |        \fpga_puf_cell_inst[43].fpga_puf_cell_inst_i  |fpga_puf_cell_36         |     4|
+|43    |        \fpga_puf_cell_inst[44].fpga_puf_cell_inst_i  |fpga_puf_cell_37         |     4|
+|44    |        \fpga_puf_cell_inst[45].fpga_puf_cell_inst_i  |fpga_puf_cell_38         |     4|
+|45    |        \fpga_puf_cell_inst[46].fpga_puf_cell_inst_i  |fpga_puf_cell_39         |     4|
+|46    |        \fpga_puf_cell_inst[47].fpga_puf_cell_inst_i  |fpga_puf_cell_40         |     4|
+|47    |        \fpga_puf_cell_inst[48].fpga_puf_cell_inst_i  |fpga_puf_cell_41         |     4|
+|48    |        \fpga_puf_cell_inst[49].fpga_puf_cell_inst_i  |fpga_puf_cell_42         |     4|
+|49    |        \fpga_puf_cell_inst[4].fpga_puf_cell_inst_i   |fpga_puf_cell_43         |     4|
+|50    |        \fpga_puf_cell_inst[50].fpga_puf_cell_inst_i  |fpga_puf_cell_44         |     4|
+|51    |        \fpga_puf_cell_inst[51].fpga_puf_cell_inst_i  |fpga_puf_cell_45         |     4|
+|52    |        \fpga_puf_cell_inst[52].fpga_puf_cell_inst_i  |fpga_puf_cell_46         |     4|
+|53    |        \fpga_puf_cell_inst[53].fpga_puf_cell_inst_i  |fpga_puf_cell_47         |     4|
+|54    |        \fpga_puf_cell_inst[54].fpga_puf_cell_inst_i  |fpga_puf_cell_48         |     4|
+|55    |        \fpga_puf_cell_inst[55].fpga_puf_cell_inst_i  |fpga_puf_cell_49         |     4|
+|56    |        \fpga_puf_cell_inst[56].fpga_puf_cell_inst_i  |fpga_puf_cell_50         |     4|
+|57    |        \fpga_puf_cell_inst[57].fpga_puf_cell_inst_i  |fpga_puf_cell_51         |     4|
+|58    |        \fpga_puf_cell_inst[58].fpga_puf_cell_inst_i  |fpga_puf_cell_52         |     4|
+|59    |        \fpga_puf_cell_inst[59].fpga_puf_cell_inst_i  |fpga_puf_cell_53         |     4|
+|60    |        \fpga_puf_cell_inst[5].fpga_puf_cell_inst_i   |fpga_puf_cell_54         |     4|
+|61    |        \fpga_puf_cell_inst[60].fpga_puf_cell_inst_i  |fpga_puf_cell_55         |     4|
+|62    |        \fpga_puf_cell_inst[61].fpga_puf_cell_inst_i  |fpga_puf_cell_56         |     4|
+|63    |        \fpga_puf_cell_inst[62].fpga_puf_cell_inst_i  |fpga_puf_cell_57         |     4|
+|64    |        \fpga_puf_cell_inst[63].fpga_puf_cell_inst_i  |fpga_puf_cell_58         |     4|
+|65    |        \fpga_puf_cell_inst[64].fpga_puf_cell_inst_i  |fpga_puf_cell_59         |     4|
+|66    |        \fpga_puf_cell_inst[65].fpga_puf_cell_inst_i  |fpga_puf_cell_60         |     4|
+|67    |        \fpga_puf_cell_inst[66].fpga_puf_cell_inst_i  |fpga_puf_cell_61         |     4|
+|68    |        \fpga_puf_cell_inst[67].fpga_puf_cell_inst_i  |fpga_puf_cell_62         |     4|
+|69    |        \fpga_puf_cell_inst[68].fpga_puf_cell_inst_i  |fpga_puf_cell_63         |     4|
+|70    |        \fpga_puf_cell_inst[69].fpga_puf_cell_inst_i  |fpga_puf_cell_64         |     4|
+|71    |        \fpga_puf_cell_inst[6].fpga_puf_cell_inst_i   |fpga_puf_cell_65         |     4|
+|72    |        \fpga_puf_cell_inst[70].fpga_puf_cell_inst_i  |fpga_puf_cell_66         |     4|
+|73    |        \fpga_puf_cell_inst[71].fpga_puf_cell_inst_i  |fpga_puf_cell_67         |     4|
+|74    |        \fpga_puf_cell_inst[72].fpga_puf_cell_inst_i  |fpga_puf_cell_68         |     4|
+|75    |        \fpga_puf_cell_inst[73].fpga_puf_cell_inst_i  |fpga_puf_cell_69         |     4|
+|76    |        \fpga_puf_cell_inst[74].fpga_puf_cell_inst_i  |fpga_puf_cell_70         |     4|
+|77    |        \fpga_puf_cell_inst[75].fpga_puf_cell_inst_i  |fpga_puf_cell_71         |     4|
+|78    |        \fpga_puf_cell_inst[76].fpga_puf_cell_inst_i  |fpga_puf_cell_72         |     4|
+|79    |        \fpga_puf_cell_inst[77].fpga_puf_cell_inst_i  |fpga_puf_cell_73         |     4|
+|80    |        \fpga_puf_cell_inst[78].fpga_puf_cell_inst_i  |fpga_puf_cell_74         |     4|
+|81    |        \fpga_puf_cell_inst[79].fpga_puf_cell_inst_i  |fpga_puf_cell_75         |     4|
+|82    |        \fpga_puf_cell_inst[7].fpga_puf_cell_inst_i   |fpga_puf_cell_76         |     4|
+|83    |        \fpga_puf_cell_inst[80].fpga_puf_cell_inst_i  |fpga_puf_cell_77         |     4|
+|84    |        \fpga_puf_cell_inst[81].fpga_puf_cell_inst_i  |fpga_puf_cell_78         |     4|
+|85    |        \fpga_puf_cell_inst[82].fpga_puf_cell_inst_i  |fpga_puf_cell_79         |     4|
+|86    |        \fpga_puf_cell_inst[83].fpga_puf_cell_inst_i  |fpga_puf_cell_80         |     4|
+|87    |        \fpga_puf_cell_inst[84].fpga_puf_cell_inst_i  |fpga_puf_cell_81         |     4|
+|88    |        \fpga_puf_cell_inst[85].fpga_puf_cell_inst_i  |fpga_puf_cell_82         |     4|
+|89    |        \fpga_puf_cell_inst[86].fpga_puf_cell_inst_i  |fpga_puf_cell_83         |     4|
+|90    |        \fpga_puf_cell_inst[87].fpga_puf_cell_inst_i  |fpga_puf_cell_84         |     4|
+|91    |        \fpga_puf_cell_inst[88].fpga_puf_cell_inst_i  |fpga_puf_cell_85         |     4|
+|92    |        \fpga_puf_cell_inst[89].fpga_puf_cell_inst_i  |fpga_puf_cell_86         |     4|
+|93    |        \fpga_puf_cell_inst[8].fpga_puf_cell_inst_i   |fpga_puf_cell_87         |     4|
+|94    |        \fpga_puf_cell_inst[90].fpga_puf_cell_inst_i  |fpga_puf_cell_88         |     4|
+|95    |        \fpga_puf_cell_inst[91].fpga_puf_cell_inst_i  |fpga_puf_cell_89         |     4|
+|96    |        \fpga_puf_cell_inst[92].fpga_puf_cell_inst_i  |fpga_puf_cell_90         |     4|
+|97    |        \fpga_puf_cell_inst[93].fpga_puf_cell_inst_i  |fpga_puf_cell_91         |     4|
+|98    |        \fpga_puf_cell_inst[94].fpga_puf_cell_inst_i  |fpga_puf_cell_92         |     4|
+|99    |        \fpga_puf_cell_inst[95].fpga_puf_cell_inst_i  |fpga_puf_cell_93         |     4|
+|100   |        \fpga_puf_cell_inst[9].fpga_puf_cell_inst_i   |fpga_puf_cell_94         |     4|
++------+------------------------------------------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 272 ; free virtual = 22053
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2769.324 ; gain = 437.293 ; free physical = 273 ; free virtual = 22055
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2769.332 ; gain = 437.293 ; free physical = 273 ; free virtual = 22055
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2769.332 ; gain = 0.000 ; free physical = 356 ; free virtual = 22140
+INFO: [Netlist 29-17] Analyzing 245 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2793.336 ; gain = 0.000 ; free physical = 281 ; free virtual = 22069
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 245 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 49 instances
+  LD => LDCE: 98 instances
+  LDC => LDCE: 96 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+131 Infos, 8 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2793.336 ; gain = 461.414 ; free physical = 425 ; free virtual = 22214
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/puftester/PhD/repo/Hw-designs/IPs/edit_Nolting_PUF_v1_0.runs/synth_1/Nolting_PUF_v1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Nolting_PUF_v1_0_utilization_synth.rpt -pb Nolting_PUF_v1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 13:15:57 2024...

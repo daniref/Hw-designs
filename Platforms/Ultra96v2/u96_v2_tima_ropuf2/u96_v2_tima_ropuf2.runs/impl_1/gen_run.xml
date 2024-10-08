@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu3eg-sbva484-1-i" LaunchTime="1727542901">
+<GenRun Id="impl_1" LaunchPart="xczu3eg-sbva484-1-i" LaunchTime="1728043068">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="u96_v2_tima_ropuf2_wrapper.vdi"/>
   <File Type="BG-DRC" Name="u96_v2_tima_ropuf2_wrapper.drc"/>
@@ -29,52 +29,52 @@
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="u96_v2_tima_ropuf2_wrapper_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="u96_v2_tima_ropuf2_wrapper_postroute_physopt.dcp"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="u96_v2_tima_ropuf2_wrapper_bus_skew_routed.rpx"/>
-  <File Type="INIT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_init.rpt"/>
-  <File Type="OPT-DCP" Name="u96_v2_tima_ropuf2_wrapper_opt.dcp"/>
-  <File Type="OPT-DRC" Name="u96_v2_tima_ropuf2_wrapper_drc_opted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="u96_v2_tima_ropuf2_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="PLACE-UTIL" Name="u96_v2_tima_ropuf2_wrapper_utilization_placed.rpt"/>
-  <File Type="OPT-HWDEF" Name="u96_v2_tima_ropuf2_wrapper.hwdef"/>
-  <File Type="PHYSOPT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="PA-TCL" Name="u96_v2_tima_ropuf2_wrapper.tcl"/>
-  <File Type="OPT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="u96_v2_tima_ropuf2_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="u96_v2_tima_ropuf2_wrapper_drc_pwropted.rpt"/>
-  <File Type="REPORTS-TCL" Name="u96_v2_tima_ropuf2_wrapper_reports.tcl"/>
-  <File Type="PWROPT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="u96_v2_tima_ropuf2_wrapper_placed.dcp"/>
-  <File Type="PLACE-IO" Name="u96_v2_tima_ropuf2_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="u96_v2_tima_ropuf2_wrapper_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="u96_v2_tima_ropuf2_wrapper_utilization_placed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="u96_v2_tima_ropuf2_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="PLACE-CTRL" Name="u96_v2_tima_ropuf2_wrapper_control_sets_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="u96_v2_tima_ropuf2_wrapper_methodology_drc_routed.pb"/>
-  <File Type="PLACE-SIMILARITY" Name="u96_v2_tima_ropuf2_wrapper_incremental_reuse_placed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="u96_v2_tima_ropuf2_wrapper_drc_routed.rpx"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="u96_v2_tima_ropuf2_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="u96_v2_tima_ropuf2_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="PLACE-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="u96_v2_tima_ropuf2_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="u96_v2_tima_ropuf2_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="u96_v2_tima_ropuf2_wrapper_drc_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="u96_v2_tima_ropuf2_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="u96_v2_tima_ropuf2_wrapper_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="u96_v2_tima_ropuf2_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="u96_v2_tima_ropuf2_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="u96_v2_tima_ropuf2_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="u96_v2_tima_ropuf2_wrapper_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="u96_v2_tima_ropuf2_wrapper_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="u96_v2_tima_ropuf2_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="u96_v2_tima_ropuf2_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="u96_v2_tima_ropuf2_wrapper_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="u96_v2_tima_ropuf2_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="u96_v2_tima_ropuf2_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="u96_v2_tima_ropuf2_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="u96_v2_tima_ropuf2_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="u96_v2_tima_ropuf2_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="u96_v2_tima_ropuf2_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="u96_v2_tima_ropuf2_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="u96_v2_tima_ropuf2_wrapper_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="u96_v2_tima_ropuf2_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="u96_v2_tima_ropuf2_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="u96_v2_tima_ropuf2_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="u96_v2_tima_ropuf2_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="u96_v2_tima_ropuf2_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="u96_v2_tima_ropuf2_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="u96_v2_tima_ropuf2_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="u96_v2_tima_ropuf2_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="u96_v2_tima_ropuf2_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="u96_v2_tima_ropuf2_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="u96_v2_tima_ropuf2_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="u96_v2_tima_ropuf2_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="u96_v2_tima_ropuf2_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="u96_v2_tima_ropuf2_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="u96_v2_tima_ropuf2_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="u96_v2_tima_ropuf2_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="u96_v2_tima_ropuf2_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="u96_v2_tima_ropuf2_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="u96_v2_tima_ropuf2_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="u96_v2_tima_ropuf2_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="u96_v2_tima_ropuf2_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="u96_v2_tima_ropuf2_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="u96_v2_tima_ropuf2_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="u96_v2_tima_ropuf2_wrapper_placed.dcp"/>
+  <File Type="PWROPT-DRC" Name="u96_v2_tima_ropuf2_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="u96_v2_tima_ropuf2_wrapper_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="u96_v2_tima_ropuf2_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="u96_v2_tima_ropuf2_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="u96_v2_tima_ropuf2_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="u96_v2_tima_ropuf2_wrapper_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_init.rpt"/>
+  <File Type="PWROPT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="REPORTS-TCL" Name="u96_v2_tima_ropuf2_wrapper_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="u96_v2_tima_ropuf2_wrapper_timing_summary_opted.rpt"/>
+  <File Type="PA-TCL" Name="u96_v2_tima_ropuf2_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/u96_v2_tima_ropuf2/u96_v2_tima_ropuf2.bd">
@@ -136,41 +136,25 @@
       <Option Id="BinFile">1</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_ds_6"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_ds_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_pc_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_pc_5"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_ds_7"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_pc_7"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_uart16550_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_ds_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_uart16550_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_pc_6"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_rst_ps8_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_pc_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_ds_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_pc_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_pc_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_ds_5"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_bram_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_5_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_ds_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_PWM_w_Int_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_gpio_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_bram_ctrl_0_bram_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_PWM_w_Int_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_gpio_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_6_0"/>
   <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_tima_ro_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_auto_ds_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_uart16550_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_uart16550_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_bram_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_bram_ctrl_0_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_6_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_rst_ps8_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_PWM_w_Int_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_proc_sys_reset_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_tima_ropuf2_PWM_w_Int_1_0"/>
 </GenRun>

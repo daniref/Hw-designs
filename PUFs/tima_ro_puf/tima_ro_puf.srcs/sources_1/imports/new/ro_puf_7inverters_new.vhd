@@ -65,7 +65,7 @@ signal Counter_Timer      : std_logic_vector(2 downto 0);
 signal Timer_size         : integer := 0;
 
 
-type t_state is (RESET_state,ENABLE_state,DISABLE_state,READY_state);
+type t_state is (RESET_state,ENABLE_state,DISABLE_state,COMPARE_state,READY_state);
 signal state : t_state := RESET_state; -- inizializzo la FSM a RESET_state
 
 
@@ -178,12 +178,12 @@ begin
                     Enable_RO_sel <= '1' ;
                     Enable_Counter <= '0'; 
                     if PUF_start = '1' then 
-                        state <= READY_state;
+                        state <= COMPARE_state;
                     else
                         state <= RESET_state;
                     end if;
-                    
-                when READY_state => -- Enable Comparazione => ready = 1
+
+                when COMPARE_state => -- Enable Comparazione => ready = 1
                     Enable_Comparison <= '1';
                     Reset_Counter<= '0'; 
                     MUX_1_challenge <=  challenge(7 downto 0) ;
@@ -194,7 +194,22 @@ begin
                         state <= READY_state;
                     else
                         state <= RESET_state;
-                    end if;              
+                    end if; 
+
+                when READY_state => -- Enable Comparazione => ready = 1
+                    Enable_Comparison <= '0';
+                    Reset_Counter<= '0'; 
+                    MUX_1_challenge <=  challenge(7 downto 0) ;
+                    MUX_2_challenge  <= challenge(7 downto 0);
+                    Enable_RO_sel <= '0' ;  
+                    Enable_Counter <= '0';     
+                    if PUF_start = '1' then 
+                        state <= READY_state;
+                    else
+                        state <= RESET_state;
+                    end if;        
+
+        
                     
             end case;
     end if;

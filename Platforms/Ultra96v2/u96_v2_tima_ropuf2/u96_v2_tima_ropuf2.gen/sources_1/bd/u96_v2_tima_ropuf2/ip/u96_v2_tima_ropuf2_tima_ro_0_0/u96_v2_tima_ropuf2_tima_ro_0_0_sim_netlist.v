@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Sat Sep 28 19:16:06 2024
+// Date        : Fri Oct  4 13:56:58 2024
 // Host        : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_tima_ropuf2/u96_v2_tima_ropuf2.gen/sources_1/bd/u96_v2_tima_ropuf2/ip/u96_v2_tima_ropuf2_tima_ro_0_0/u96_v2_tima_ropuf2_tima_ro_0_0_sim_netlist.v
@@ -62796,16 +62796,14 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
   input enable;
   input [2:0]counter_config;
   input challenge;
-  output [255:0]response;
+  (* keep = "true" *) output [255:0]response;
   output ready;
 
-  wire Enable_Comparison;
+  (* DONT_TOUCH *) wire Enable_Comparison;
   wire Enable_Comparison_i_1_n_0;
-  wire Enable_Comparison_reg_rep_n_0;
-  wire Enable_Comparison_rep_i_1_n_0;
-  wire Enable_Counter;
+  (* DONT_TOUCH *) wire Enable_Counter;
   wire Enable_Counter_i_1_n_0;
-  wire Enable_RO_sel;
+  (* DONT_TOUCH *) wire Enable_RO_sel;
   wire Enable_RO_sel_i_1_n_0;
   wire \MUX_1_Counter[0]_i_2_n_0 ;
   wire [31:0]MUX_1_Counter_reg;
@@ -62946,8 +62944,8 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
   wire \MUX_2_Counter_reg[8]_i_1_n_8 ;
   wire \MUX_2_Counter_reg[8]_i_1_n_9 ;
   wire MUX_2_OUT;
-  wire Reset_Comparison;
-  wire Reset_Counter;
+  (* DONT_TOUCH *) wire Reset_Comparison;
+  (* DONT_TOUCH *) wire Reset_Counter;
   wire Reset_Counter_i_1_n_0;
   wire clear;
   wire clk;
@@ -63012,21 +63010,21 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
   wire \compteur_cycles_reg[8]_i_1_n_9 ;
   wire [2:0]counter_config;
   wire enable;
-  wire \internal_challenge[0]_i_1_n_0 ;
-  wire \internal_challenge[2]_i_1_n_0 ;
+  (* DONT_TOUCH *) wire [7:0]internal_challenge;
+  wire \internal_challenge[3]_i_2_n_0 ;
   wire \internal_challenge[6]_i_2_n_0 ;
-  wire \internal_challenge[7]_i_1_n_0 ;
-  wire \internal_challenge[7]_i_4_n_0 ;
-  wire [7:0]internal_challenge_reg;
-  wire neqOp;
+  wire \internal_challenge[6]_i_3_n_0 ;
+  wire \internal_challenge[7]_i_2_n_0 ;
+  wire \internal_challenge[7]_i_3_n_0 ;
   wire output_ro;
-  wire p_1_in;
-  wire [7:1]plusOp;
+  wire [7:0]p_1_in;
+  wire [255:0]p_2_in;
   wire ready;
   wire ready_i_10_n_0;
   wire ready_i_11_n_0;
   wire ready_i_12_n_0;
-  wire ready_i_3_n_0;
+  wire ready_i_13_n_0;
+  wire ready_i_2_n_0;
   wire ready_i_4_n_0;
   wire ready_i_5_n_0;
   wire ready_i_6_n_0;
@@ -63034,212 +63032,40 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
   wire ready_i_8_n_0;
   wire ready_i_9_n_0;
   wire ready_reg_i_1_n_7;
-  wire ready_reg_i_2_n_0;
-  wire ready_reg_i_2_n_1;
-  wire ready_reg_i_2_n_2;
-  wire ready_reg_i_2_n_3;
-  wire ready_reg_i_2_n_4;
-  wire ready_reg_i_2_n_5;
-  wire ready_reg_i_2_n_6;
-  wire ready_reg_i_2_n_7;
-  wire [255:0]response;
+  wire ready_reg_i_3_n_0;
+  wire ready_reg_i_3_n_1;
+  wire ready_reg_i_3_n_2;
+  wire ready_reg_i_3_n_3;
+  wire ready_reg_i_3_n_4;
+  wire ready_reg_i_3_n_5;
+  wire ready_reg_i_3_n_6;
+  wire ready_reg_i_3_n_7;
+  (* RTL_KEEP = "true" *) wire [255:0]response;
   wire response1;
-  wire \response[0]_i_1_n_0 ;
-  wire \response[100]_i_1_n_0 ;
-  wire \response[101]_i_1_n_0 ;
-  wire \response[102]_i_1_n_0 ;
-  wire \response[103]_i_1_n_0 ;
-  wire \response[104]_i_1_n_0 ;
-  wire \response[105]_i_1_n_0 ;
-  wire \response[106]_i_1_n_0 ;
-  wire \response[107]_i_1_n_0 ;
-  wire \response[108]_i_1_n_0 ;
-  wire \response[109]_i_1_n_0 ;
-  wire \response[10]_i_1_n_0 ;
-  wire \response[110]_i_1_n_0 ;
-  wire \response[111]_i_1_n_0 ;
   wire \response[111]_i_2_n_0 ;
-  wire \response[112]_i_1_n_0 ;
-  wire \response[113]_i_1_n_0 ;
-  wire \response[114]_i_1_n_0 ;
-  wire \response[115]_i_1_n_0 ;
-  wire \response[116]_i_1_n_0 ;
-  wire \response[117]_i_1_n_0 ;
-  wire \response[118]_i_1_n_0 ;
-  wire \response[119]_i_1_n_0 ;
-  wire \response[11]_i_1_n_0 ;
-  wire \response[120]_i_1_n_0 ;
-  wire \response[121]_i_1_n_0 ;
-  wire \response[122]_i_1_n_0 ;
-  wire \response[123]_i_1_n_0 ;
-  wire \response[124]_i_1_n_0 ;
-  wire \response[125]_i_1_n_0 ;
-  wire \response[126]_i_1_n_0 ;
-  wire \response[127]_i_1_n_0 ;
   wire \response[127]_i_2_n_0 ;
-  wire \response[128]_i_1_n_0 ;
-  wire \response[129]_i_1_n_0 ;
-  wire \response[12]_i_1_n_0 ;
-  wire \response[130]_i_1_n_0 ;
-  wire \response[131]_i_1_n_0 ;
-  wire \response[132]_i_1_n_0 ;
-  wire \response[133]_i_1_n_0 ;
-  wire \response[134]_i_1_n_0 ;
-  wire \response[135]_i_1_n_0 ;
-  wire \response[136]_i_1_n_0 ;
-  wire \response[137]_i_1_n_0 ;
-  wire \response[138]_i_1_n_0 ;
-  wire \response[139]_i_1_n_0 ;
-  wire \response[13]_i_1_n_0 ;
-  wire \response[140]_i_1_n_0 ;
-  wire \response[141]_i_1_n_0 ;
-  wire \response[142]_i_1_n_0 ;
-  wire \response[143]_i_1_n_0 ;
   wire \response[143]_i_2_n_0 ;
-  wire \response[144]_i_1_n_0 ;
-  wire \response[145]_i_1_n_0 ;
-  wire \response[146]_i_1_n_0 ;
-  wire \response[147]_i_1_n_0 ;
-  wire \response[148]_i_1_n_0 ;
-  wire \response[149]_i_1_n_0 ;
-  wire \response[14]_i_1_n_0 ;
-  wire \response[150]_i_1_n_0 ;
-  wire \response[151]_i_1_n_0 ;
-  wire \response[152]_i_1_n_0 ;
-  wire \response[153]_i_1_n_0 ;
-  wire \response[154]_i_1_n_0 ;
-  wire \response[155]_i_1_n_0 ;
-  wire \response[156]_i_1_n_0 ;
-  wire \response[157]_i_1_n_0 ;
-  wire \response[158]_i_1_n_0 ;
-  wire \response[159]_i_1_n_0 ;
   wire \response[159]_i_2_n_0 ;
-  wire \response[15]_i_1_n_0 ;
   wire \response[15]_i_2_n_0 ;
-  wire \response[160]_i_1_n_0 ;
-  wire \response[161]_i_1_n_0 ;
-  wire \response[162]_i_1_n_0 ;
-  wire \response[163]_i_1_n_0 ;
-  wire \response[164]_i_1_n_0 ;
-  wire \response[165]_i_1_n_0 ;
-  wire \response[166]_i_1_n_0 ;
-  wire \response[167]_i_1_n_0 ;
-  wire \response[168]_i_1_n_0 ;
-  wire \response[169]_i_1_n_0 ;
-  wire \response[16]_i_1_n_0 ;
-  wire \response[170]_i_1_n_0 ;
-  wire \response[171]_i_1_n_0 ;
-  wire \response[172]_i_1_n_0 ;
-  wire \response[173]_i_1_n_0 ;
-  wire \response[174]_i_1_n_0 ;
-  wire \response[175]_i_1_n_0 ;
   wire \response[175]_i_2_n_0 ;
-  wire \response[176]_i_1_n_0 ;
-  wire \response[177]_i_1_n_0 ;
-  wire \response[178]_i_1_n_0 ;
-  wire \response[179]_i_1_n_0 ;
-  wire \response[17]_i_1_n_0 ;
-  wire \response[180]_i_1_n_0 ;
-  wire \response[181]_i_1_n_0 ;
-  wire \response[182]_i_1_n_0 ;
-  wire \response[183]_i_1_n_0 ;
-  wire \response[184]_i_1_n_0 ;
-  wire \response[185]_i_1_n_0 ;
-  wire \response[186]_i_1_n_0 ;
-  wire \response[187]_i_1_n_0 ;
-  wire \response[188]_i_1_n_0 ;
-  wire \response[189]_i_1_n_0 ;
-  wire \response[18]_i_1_n_0 ;
-  wire \response[190]_i_1_n_0 ;
-  wire \response[191]_i_1_n_0 ;
   wire \response[191]_i_2_n_0 ;
-  wire \response[192]_i_1_n_0 ;
-  wire \response[193]_i_1_n_0 ;
-  wire \response[194]_i_1_n_0 ;
-  wire \response[195]_i_1_n_0 ;
-  wire \response[196]_i_1_n_0 ;
-  wire \response[197]_i_1_n_0 ;
-  wire \response[198]_i_1_n_0 ;
-  wire \response[199]_i_1_n_0 ;
-  wire \response[19]_i_1_n_0 ;
-  wire \response[1]_i_1_n_0 ;
-  wire \response[200]_i_1_n_0 ;
-  wire \response[201]_i_1_n_0 ;
-  wire \response[202]_i_1_n_0 ;
-  wire \response[203]_i_1_n_0 ;
-  wire \response[204]_i_1_n_0 ;
-  wire \response[205]_i_1_n_0 ;
-  wire \response[206]_i_1_n_0 ;
-  wire \response[207]_i_1_n_0 ;
   wire \response[207]_i_2_n_0 ;
-  wire \response[208]_i_1_n_0 ;
-  wire \response[209]_i_1_n_0 ;
-  wire \response[20]_i_1_n_0 ;
-  wire \response[210]_i_1_n_0 ;
-  wire \response[211]_i_1_n_0 ;
-  wire \response[212]_i_1_n_0 ;
-  wire \response[213]_i_1_n_0 ;
-  wire \response[214]_i_1_n_0 ;
-  wire \response[215]_i_1_n_0 ;
-  wire \response[216]_i_1_n_0 ;
-  wire \response[217]_i_1_n_0 ;
-  wire \response[218]_i_1_n_0 ;
-  wire \response[219]_i_1_n_0 ;
-  wire \response[21]_i_1_n_0 ;
-  wire \response[220]_i_1_n_0 ;
-  wire \response[221]_i_1_n_0 ;
-  wire \response[222]_i_1_n_0 ;
-  wire \response[223]_i_1_n_0 ;
   wire \response[223]_i_2_n_0 ;
-  wire \response[224]_i_1_n_0 ;
-  wire \response[225]_i_1_n_0 ;
-  wire \response[226]_i_1_n_0 ;
-  wire \response[227]_i_1_n_0 ;
-  wire \response[228]_i_1_n_0 ;
-  wire \response[229]_i_1_n_0 ;
-  wire \response[22]_i_1_n_0 ;
-  wire \response[230]_i_1_n_0 ;
-  wire \response[231]_i_1_n_0 ;
-  wire \response[232]_i_1_n_0 ;
-  wire \response[233]_i_1_n_0 ;
-  wire \response[234]_i_1_n_0 ;
-  wire \response[235]_i_1_n_0 ;
-  wire \response[236]_i_1_n_0 ;
-  wire \response[237]_i_1_n_0 ;
-  wire \response[238]_i_1_n_0 ;
-  wire \response[239]_i_1_n_0 ;
   wire \response[239]_i_2_n_0 ;
-  wire \response[23]_i_1_n_0 ;
-  wire \response[240]_i_1_n_0 ;
   wire \response[240]_i_2_n_0 ;
-  wire \response[241]_i_1_n_0 ;
   wire \response[241]_i_2_n_0 ;
-  wire \response[242]_i_1_n_0 ;
   wire \response[242]_i_2_n_0 ;
-  wire \response[243]_i_1_n_0 ;
   wire \response[243]_i_2_n_0 ;
-  wire \response[244]_i_1_n_0 ;
   wire \response[244]_i_2_n_0 ;
-  wire \response[245]_i_1_n_0 ;
   wire \response[245]_i_2_n_0 ;
-  wire \response[246]_i_1_n_0 ;
   wire \response[246]_i_2_n_0 ;
-  wire \response[247]_i_1_n_0 ;
   wire \response[247]_i_2_n_0 ;
-  wire \response[248]_i_1_n_0 ;
   wire \response[248]_i_2_n_0 ;
-  wire \response[249]_i_1_n_0 ;
   wire \response[249]_i_2_n_0 ;
-  wire \response[24]_i_1_n_0 ;
-  wire \response[250]_i_1_n_0 ;
   wire \response[250]_i_2_n_0 ;
-  wire \response[251]_i_1_n_0 ;
   wire \response[251]_i_2_n_0 ;
-  wire \response[252]_i_1_n_0 ;
   wire \response[252]_i_2_n_0 ;
-  wire \response[253]_i_1_n_0 ;
   wire \response[253]_i_2_n_0 ;
-  wire \response[254]_i_1_n_0 ;
   wire \response[254]_i_2_n_0 ;
   wire \response[255]_i_10_n_0 ;
   wire \response[255]_i_11_n_0 ;
@@ -63261,7 +63087,6 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
   wire \response[255]_i_27_n_0 ;
   wire \response[255]_i_28_n_0 ;
   wire \response[255]_i_29_n_0 ;
-  wire \response[255]_i_2_n_0 ;
   wire \response[255]_i_30_n_0 ;
   wire \response[255]_i_31_n_0 ;
   wire \response[255]_i_32_n_0 ;
@@ -63269,146 +63094,57 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
   wire \response[255]_i_34_n_0 ;
   wire \response[255]_i_35_n_0 ;
   wire \response[255]_i_36_n_0 ;
-  wire \response[255]_i_37_n_0 ;
-  wire \response[255]_i_38_n_0 ;
-  wire \response[255]_i_39_n_0 ;
-  wire \response[255]_i_4_n_0 ;
   wire \response[255]_i_5_n_0 ;
+  wire \response[255]_i_6_n_0 ;
+  wire \response[255]_i_7_n_0 ;
   wire \response[255]_i_8_n_0 ;
   wire \response[255]_i_9_n_0 ;
-  wire \response[25]_i_1_n_0 ;
-  wire \response[26]_i_1_n_0 ;
-  wire \response[27]_i_1_n_0 ;
-  wire \response[28]_i_1_n_0 ;
-  wire \response[29]_i_1_n_0 ;
-  wire \response[2]_i_1_n_0 ;
-  wire \response[30]_i_1_n_0 ;
-  wire \response[31]_i_1_n_0 ;
   wire \response[31]_i_2_n_0 ;
-  wire \response[32]_i_1_n_0 ;
-  wire \response[33]_i_1_n_0 ;
-  wire \response[34]_i_1_n_0 ;
-  wire \response[35]_i_1_n_0 ;
-  wire \response[36]_i_1_n_0 ;
-  wire \response[37]_i_1_n_0 ;
-  wire \response[38]_i_1_n_0 ;
-  wire \response[39]_i_1_n_0 ;
-  wire \response[3]_i_1_n_0 ;
-  wire \response[40]_i_1_n_0 ;
-  wire \response[41]_i_1_n_0 ;
-  wire \response[42]_i_1_n_0 ;
-  wire \response[43]_i_1_n_0 ;
-  wire \response[44]_i_1_n_0 ;
-  wire \response[45]_i_1_n_0 ;
-  wire \response[46]_i_1_n_0 ;
-  wire \response[47]_i_1_n_0 ;
   wire \response[47]_i_2_n_0 ;
-  wire \response[48]_i_1_n_0 ;
-  wire \response[49]_i_1_n_0 ;
-  wire \response[4]_i_1_n_0 ;
-  wire \response[50]_i_1_n_0 ;
-  wire \response[51]_i_1_n_0 ;
-  wire \response[52]_i_1_n_0 ;
-  wire \response[53]_i_1_n_0 ;
-  wire \response[54]_i_1_n_0 ;
-  wire \response[55]_i_1_n_0 ;
-  wire \response[56]_i_1_n_0 ;
-  wire \response[57]_i_1_n_0 ;
-  wire \response[58]_i_1_n_0 ;
-  wire \response[59]_i_1_n_0 ;
-  wire \response[5]_i_1_n_0 ;
-  wire \response[60]_i_1_n_0 ;
-  wire \response[61]_i_1_n_0 ;
-  wire \response[62]_i_1_n_0 ;
-  wire \response[63]_i_1_n_0 ;
   wire \response[63]_i_2_n_0 ;
-  wire \response[64]_i_1_n_0 ;
-  wire \response[65]_i_1_n_0 ;
-  wire \response[66]_i_1_n_0 ;
-  wire \response[67]_i_1_n_0 ;
-  wire \response[68]_i_1_n_0 ;
-  wire \response[69]_i_1_n_0 ;
-  wire \response[6]_i_1_n_0 ;
-  wire \response[70]_i_1_n_0 ;
-  wire \response[71]_i_1_n_0 ;
-  wire \response[72]_i_1_n_0 ;
-  wire \response[73]_i_1_n_0 ;
-  wire \response[74]_i_1_n_0 ;
-  wire \response[75]_i_1_n_0 ;
-  wire \response[76]_i_1_n_0 ;
-  wire \response[77]_i_1_n_0 ;
-  wire \response[78]_i_1_n_0 ;
-  wire \response[79]_i_1_n_0 ;
   wire \response[79]_i_2_n_0 ;
-  wire \response[7]_i_1_n_0 ;
-  wire \response[80]_i_1_n_0 ;
-  wire \response[81]_i_1_n_0 ;
-  wire \response[82]_i_1_n_0 ;
-  wire \response[83]_i_1_n_0 ;
-  wire \response[84]_i_1_n_0 ;
-  wire \response[85]_i_1_n_0 ;
-  wire \response[86]_i_1_n_0 ;
-  wire \response[87]_i_1_n_0 ;
-  wire \response[88]_i_1_n_0 ;
-  wire \response[89]_i_1_n_0 ;
-  wire \response[8]_i_1_n_0 ;
-  wire \response[90]_i_1_n_0 ;
-  wire \response[91]_i_1_n_0 ;
-  wire \response[92]_i_1_n_0 ;
-  wire \response[93]_i_1_n_0 ;
-  wire \response[94]_i_1_n_0 ;
-  wire \response[95]_i_1_n_0 ;
   wire \response[95]_i_2_n_0 ;
-  wire \response[96]_i_1_n_0 ;
-  wire \response[97]_i_1_n_0 ;
-  wire \response[98]_i_1_n_0 ;
-  wire \response[99]_i_1_n_0 ;
-  wire \response[9]_i_1_n_0 ;
-  wire \response_reg[255]_i_3_n_15 ;
-  wire \response_reg[255]_i_6_n_1 ;
-  wire \response_reg[255]_i_6_n_2 ;
-  wire \response_reg[255]_i_6_n_3 ;
-  wire \response_reg[255]_i_6_n_4 ;
-  wire \response_reg[255]_i_6_n_5 ;
-  wire \response_reg[255]_i_6_n_6 ;
-  wire \response_reg[255]_i_6_n_7 ;
-  wire \response_reg[255]_i_7_n_0 ;
-  wire \response_reg[255]_i_7_n_1 ;
-  wire \response_reg[255]_i_7_n_2 ;
-  wire \response_reg[255]_i_7_n_3 ;
-  wire \response_reg[255]_i_7_n_4 ;
-  wire \response_reg[255]_i_7_n_5 ;
-  wire \response_reg[255]_i_7_n_6 ;
-  wire \response_reg[255]_i_7_n_7 ;
-  wire sel;
-  wire [2:2]state;
-  wire \state[0]_i_1_n_0 ;
-  wire \state[1]_i_1_n_0 ;
-  wire \state[2]_i_3_n_0 ;
-  wire \state[2]_i_4_n_0 ;
-  wire \state_reg_n_0_[0] ;
-  wire \state_reg_n_0_[1] ;
+  wire \response_reg[255]_i_2_n_15 ;
+  wire \response_reg[255]_i_3_n_1 ;
+  wire \response_reg[255]_i_3_n_2 ;
+  wire \response_reg[255]_i_3_n_3 ;
+  wire \response_reg[255]_i_3_n_4 ;
+  wire \response_reg[255]_i_3_n_5 ;
+  wire \response_reg[255]_i_3_n_6 ;
+  wire \response_reg[255]_i_3_n_7 ;
+  wire \response_reg[255]_i_4_n_0 ;
+  wire \response_reg[255]_i_4_n_1 ;
+  wire \response_reg[255]_i_4_n_2 ;
+  wire \response_reg[255]_i_4_n_3 ;
+  wire \response_reg[255]_i_4_n_4 ;
+  wire \response_reg[255]_i_4_n_5 ;
+  wire \response_reg[255]_i_4_n_6 ;
+  wire \response_reg[255]_i_4_n_7 ;
+  (* DONT_TOUCH *) (* RTL_KEEP = "true" *) wire [2:0]state;
+  wire \state[0]_i_2_n_0 ;
+  wire [2:0]state__0;
   wire [7:7]\NLW_MUX_1_Counter_reg[24]_i_1_CO_UNCONNECTED ;
   wire [7:7]\NLW_MUX_2_Counter_reg[24]_i_1_CO_UNCONNECTED ;
   wire [7:4]\NLW_compteur_cycles_reg[24]_i_1_CO_UNCONNECTED ;
   wire [7:5]\NLW_compteur_cycles_reg[24]_i_1_O_UNCONNECTED ;
   wire [7:2]NLW_ready_reg_i_1_CO_UNCONNECTED;
   wire [7:0]NLW_ready_reg_i_1_O_UNCONNECTED;
-  wire [7:0]NLW_ready_reg_i_2_O_UNCONNECTED;
-  wire [7:0]\NLW_response_reg[255]_i_3_CO_UNCONNECTED ;
-  wire [7:1]\NLW_response_reg[255]_i_3_O_UNCONNECTED ;
-  wire [7:0]\NLW_response_reg[255]_i_6_O_UNCONNECTED ;
-  wire [7:0]\NLW_response_reg[255]_i_7_O_UNCONNECTED ;
+  wire [7:0]NLW_ready_reg_i_3_O_UNCONNECTED;
+  wire [7:0]\NLW_response_reg[255]_i_2_CO_UNCONNECTED ;
+  wire [7:1]\NLW_response_reg[255]_i_2_O_UNCONNECTED ;
+  wire [7:0]\NLW_response_reg[255]_i_3_O_UNCONNECTED ;
+  wire [7:0]\NLW_response_reg[255]_i_4_O_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
-    .INIT(8'hEA)) 
+    .INIT(8'h04)) 
     Enable_Comparison_i_1
-       (.I0(p_1_in),
-        .I1(\state_reg_n_0_[0] ),
-        .I2(\state_reg_n_0_[1] ),
+       (.I0(state[0]),
+        .I1(state[2]),
+        .I2(state[1]),
         .O(Enable_Comparison_i_1_n_0));
-  (* ORIG_CELL_NAME = "Enable_Comparison_reg" *) 
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     Enable_Comparison_reg
@@ -63417,29 +63153,16 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
         .D(Enable_Comparison_i_1_n_0),
         .Q(Enable_Comparison),
         .R(1'b0));
-  (* ORIG_CELL_NAME = "Enable_Comparison_reg" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    Enable_Comparison_reg_rep
-       (.C(clk),
-        .CE(clear),
-        .D(Enable_Comparison_rep_i_1_n_0),
-        .Q(Enable_Comparison_reg_rep_n_0),
-        .R(1'b0));
   LUT3 #(
-    .INIT(8'hEA)) 
-    Enable_Comparison_rep_i_1
-       (.I0(p_1_in),
-        .I1(\state_reg_n_0_[0] ),
-        .I2(\state_reg_n_0_[1] ),
-        .O(Enable_Comparison_rep_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(8'h04)) 
     Enable_Counter_i_1
-       (.I0(\state_reg_n_0_[0] ),
-        .I1(\state_reg_n_0_[1] ),
+       (.I0(state[2]),
+        .I1(state[1]),
+        .I2(state[0]),
         .O(Enable_Counter_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     Enable_Counter_reg
@@ -63449,11 +63172,14 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
         .Q(Enable_Counter),
         .R(1'b0));
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'h2)) 
     Enable_RO_sel_i_1
-       (.I0(\state_reg_n_0_[1] ),
-        .I1(\state_reg_n_0_[0] ),
+       (.I0(state[1]),
+        .I1(state[2]),
         .O(Enable_RO_sel_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     Enable_RO_sel_reg
@@ -63760,7 +63486,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
     \MUX_1_challenge_reg[0] 
        (.C(clk),
         .CE(clear),
-        .D(internal_challenge_reg[0]),
+        .D(internal_challenge[0]),
         .Q(\MUX_1_challenge_reg_n_0_[0] ),
         .R(1'b0));
   FDRE #(
@@ -63768,7 +63494,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
     \MUX_1_challenge_reg[1] 
        (.C(clk),
         .CE(clear),
-        .D(internal_challenge_reg[1]),
+        .D(internal_challenge[1]),
         .Q(\MUX_1_challenge_reg_n_0_[1] ),
         .R(1'b0));
   FDRE #(
@@ -63776,7 +63502,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
     \MUX_1_challenge_reg[2] 
        (.C(clk),
         .CE(clear),
-        .D(internal_challenge_reg[2]),
+        .D(internal_challenge[2]),
         .Q(\MUX_1_challenge_reg_n_0_[2] ),
         .R(1'b0));
   FDRE #(
@@ -63784,7 +63510,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
     \MUX_1_challenge_reg[3] 
        (.C(clk),
         .CE(clear),
-        .D(internal_challenge_reg[3]),
+        .D(internal_challenge[3]),
         .Q(\MUX_1_challenge_reg_n_0_[3] ),
         .R(1'b0));
   FDRE #(
@@ -63792,7 +63518,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
     \MUX_1_challenge_reg[4] 
        (.C(clk),
         .CE(clear),
-        .D(internal_challenge_reg[4]),
+        .D(internal_challenge[4]),
         .Q(\MUX_1_challenge_reg_n_0_[4] ),
         .R(1'b0));
   FDRE #(
@@ -63800,7 +63526,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
     \MUX_1_challenge_reg[5] 
        (.C(clk),
         .CE(clear),
-        .D(internal_challenge_reg[5]),
+        .D(internal_challenge[5]),
         .Q(\MUX_1_challenge_reg_n_0_[5] ),
         .R(1'b0));
   FDRE #(
@@ -63808,7 +63534,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
     \MUX_1_challenge_reg[6] 
        (.C(clk),
         .CE(clear),
-        .D(internal_challenge_reg[6]),
+        .D(internal_challenge[6]),
         .Q(\MUX_1_challenge_reg_n_0_[6] ),
         .R(1'b0));
   FDRE #(
@@ -63816,7 +63542,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
     \MUX_1_challenge_reg[7] 
        (.C(clk),
         .CE(clear),
-        .D(internal_challenge_reg[7]),
+        .D(internal_challenge[7]),
         .Q(\MUX_1_challenge_reg_n_0_[7] ),
         .R(1'b0));
   LUT1 #(
@@ -64128,14 +63854,20 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
        (.challenge({\MUX_1_challenge_reg_n_0_[7] ,\MUX_1_challenge_reg_n_0_[6] ,\MUX_1_challenge_reg_n_0_[5] ,\MUX_1_challenge_reg_n_0_[4] ,\MUX_1_challenge_reg_n_0_[3] ,\MUX_1_challenge_reg_n_0_[2] ,\MUX_1_challenge_reg_n_0_[1] ,\MUX_1_challenge_reg_n_0_[0] }),
         .en_ro_selector(Enable_RO_sel),
         .output_ro(MUX_2_OUT));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    Reset_Comparison_inferred_i_1
+       (.I0(enable),
+        .O(Reset_Comparison));
+  LUT2 #(
+    .INIT(4'h1)) 
     Reset_Counter_i_1
-       (.I0(p_1_in),
-        .I1(\state_reg_n_0_[0] ),
-        .I2(\state_reg_n_0_[1] ),
+       (.I0(state[1]),
+        .I1(state[2]),
         .O(Reset_Counter_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     Reset_Counter_reg
@@ -64413,4768 +64145,5005 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_puf
         .D(\compteur_cycles_reg[8]_i_1_n_14 ),
         .Q(compteur_cycles_reg[9]),
         .R(clear));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
-    \internal_challenge[0]_i_1 
-       (.I0(internal_challenge_reg[0]),
-        .O(\internal_challenge[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \internal_challenge[1]_i_1 
-       (.I0(internal_challenge_reg[0]),
-        .I1(internal_challenge_reg[1]),
-        .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
-    \internal_challenge[2]_i_1 
-       (.I0(internal_challenge_reg[1]),
-        .I1(internal_challenge_reg[0]),
-        .I2(internal_challenge_reg[2]),
-        .O(\internal_challenge[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
-    .INIT(16'h7F80)) 
-    \internal_challenge[3]_i_1 
-       (.I0(internal_challenge_reg[0]),
-        .I1(internal_challenge_reg[1]),
-        .I2(internal_challenge_reg[2]),
-        .I3(internal_challenge_reg[3]),
-        .O(plusOp[3]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+    .INIT(16'hBE40)) 
+    \internal_challenge[0]_i_1 
+       (.I0(state[0]),
+        .I1(state[2]),
+        .I2(state[1]),
+        .I3(internal_challenge[0]),
+        .O(p_1_in[0]));
   LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \internal_challenge[4]_i_1 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[1]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[3]),
-        .I4(internal_challenge_reg[4]),
-        .O(plusOp[4]));
+    .INIT(32'hBE40FE00)) 
+    \internal_challenge[1]_i_1 
+       (.I0(state[0]),
+        .I1(state[2]),
+        .I2(state[1]),
+        .I3(internal_challenge[1]),
+        .I4(internal_challenge[0]),
+        .O(p_1_in[1]));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \internal_challenge[5]_i_1 
-       (.I0(internal_challenge_reg[3]),
-        .I1(internal_challenge_reg[0]),
-        .I2(internal_challenge_reg[1]),
-        .I3(internal_challenge_reg[2]),
-        .I4(internal_challenge_reg[4]),
-        .I5(internal_challenge_reg[5]),
-        .O(plusOp[5]));
+    .INIT(64'hBEFEFEFE40000000)) 
+    \internal_challenge[2]_i_1 
+       (.I0(state[0]),
+        .I1(state[2]),
+        .I2(state[1]),
+        .I3(internal_challenge[0]),
+        .I4(internal_challenge[1]),
+        .I5(internal_challenge[2]),
+        .O(p_1_in[2]));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \internal_challenge[6]_i_1 
-       (.I0(internal_challenge_reg[4]),
-        .I1(internal_challenge_reg[2]),
-        .I2(\internal_challenge[6]_i_2_n_0 ),
-        .I3(internal_challenge_reg[3]),
-        .I4(internal_challenge_reg[5]),
-        .I5(internal_challenge_reg[6]),
-        .O(plusOp[6]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+    .INIT(64'hBEFEFEFE40000000)) 
+    \internal_challenge[3]_i_1 
+       (.I0(state[0]),
+        .I1(state[2]),
+        .I2(state[1]),
+        .I3(internal_challenge[2]),
+        .I4(\internal_challenge[3]_i_2_n_0 ),
+        .I5(internal_challenge[3]),
+        .O(p_1_in[3]));
   LUT2 #(
     .INIT(4'h8)) 
-    \internal_challenge[6]_i_2 
-       (.I0(internal_challenge_reg[1]),
-        .I1(internal_challenge_reg[0]),
-        .O(\internal_challenge[6]_i_2_n_0 ));
+    \internal_challenge[3]_i_2 
+       (.I0(internal_challenge[0]),
+        .I1(internal_challenge[1]),
+        .O(\internal_challenge[3]_i_2_n_0 ));
   LUT5 #(
-    .INIT(32'h00008000)) 
-    \internal_challenge[7]_i_1 
-       (.I0(\state_reg_n_0_[1] ),
-        .I1(enable),
-        .I2(\state_reg_n_0_[0] ),
-        .I3(clear),
-        .I4(neqOp),
-        .O(\internal_challenge[7]_i_1_n_0 ));
+    .INIT(32'hFF7C0080)) 
+    \internal_challenge[4]_i_1 
+       (.I0(\internal_challenge[6]_i_3_n_0 ),
+        .I1(state[1]),
+        .I2(state[2]),
+        .I3(state[0]),
+        .I4(internal_challenge[4]),
+        .O(p_1_in[4]));
+  LUT6 #(
+    .INIT(64'hF6FE0800FEFE0000)) 
+    \internal_challenge[5]_i_1 
+       (.I0(state[2]),
+        .I1(state[1]),
+        .I2(state[0]),
+        .I3(\internal_challenge[6]_i_3_n_0 ),
+        .I4(internal_challenge[5]),
+        .I5(internal_challenge[4]),
+        .O(p_1_in[5]));
+  LUT6 #(
+    .INIT(64'hAAAAAAAA9AAAAA00)) 
+    \internal_challenge[6]_i_1 
+       (.I0(internal_challenge[6]),
+        .I1(\internal_challenge[6]_i_2_n_0 ),
+        .I2(\internal_challenge[6]_i_3_n_0 ),
+        .I3(state[1]),
+        .I4(state[2]),
+        .I5(state[0]),
+        .O(p_1_in[6]));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \internal_challenge[6]_i_2 
+       (.I0(internal_challenge[4]),
+        .I1(internal_challenge[5]),
+        .O(\internal_challenge[6]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'h8000)) 
-    \internal_challenge[7]_i_2 
-       (.I0(clear),
-        .I1(\state_reg_n_0_[0] ),
-        .I2(enable),
-        .I3(\state_reg_n_0_[1] ),
-        .O(sel));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
-    \internal_challenge[7]_i_3 
-       (.I0(\internal_challenge[7]_i_4_n_0 ),
-        .I1(internal_challenge_reg[6]),
-        .I2(internal_challenge_reg[7]),
-        .O(plusOp[7]));
+    \internal_challenge[6]_i_3 
+       (.I0(internal_challenge[1]),
+        .I1(internal_challenge[0]),
+        .I2(internal_challenge[3]),
+        .I3(internal_challenge[2]),
+        .O(\internal_challenge[6]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h8000000000000000)) 
-    \internal_challenge[7]_i_4 
-       (.I0(internal_challenge_reg[5]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
-        .I4(internal_challenge_reg[2]),
-        .I5(internal_challenge_reg[4]),
-        .O(\internal_challenge[7]_i_4_n_0 ));
+    .INIT(64'h0000000078F0F0F0)) 
+    \internal_challenge[7]_i_1 
+       (.I0(\internal_challenge[7]_i_2_n_0 ),
+        .I1(internal_challenge[6]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[4]),
+        .I4(internal_challenge[5]),
+        .I5(\internal_challenge[7]_i_3_n_0 ),
+        .O(p_1_in[7]));
+  LUT4 #(
+    .INIT(16'h0082)) 
+    \internal_challenge[7]_i_2 
+       (.I0(\internal_challenge[6]_i_3_n_0 ),
+        .I1(state[1]),
+        .I2(state[2]),
+        .I3(state[0]),
+        .O(\internal_challenge[7]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'h01)) 
+    \internal_challenge[7]_i_3 
+       (.I0(state[2]),
+        .I1(state[1]),
+        .I2(state[0]),
+        .O(\internal_challenge[7]_i_3_n_0 ));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \internal_challenge_reg[0] 
        (.C(clk),
-        .CE(sel),
-        .D(\internal_challenge[0]_i_1_n_0 ),
-        .Q(internal_challenge_reg[0]),
-        .R(\internal_challenge[7]_i_1_n_0 ));
+        .CE(clear),
+        .D(p_1_in[0]),
+        .Q(internal_challenge[0]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \internal_challenge_reg[1] 
        (.C(clk),
-        .CE(sel),
-        .D(plusOp[1]),
-        .Q(internal_challenge_reg[1]),
-        .R(\internal_challenge[7]_i_1_n_0 ));
+        .CE(clear),
+        .D(p_1_in[1]),
+        .Q(internal_challenge[1]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \internal_challenge_reg[2] 
        (.C(clk),
-        .CE(sel),
-        .D(\internal_challenge[2]_i_1_n_0 ),
-        .Q(internal_challenge_reg[2]),
-        .R(\internal_challenge[7]_i_1_n_0 ));
+        .CE(clear),
+        .D(p_1_in[2]),
+        .Q(internal_challenge[2]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \internal_challenge_reg[3] 
        (.C(clk),
-        .CE(sel),
-        .D(plusOp[3]),
-        .Q(internal_challenge_reg[3]),
-        .R(\internal_challenge[7]_i_1_n_0 ));
+        .CE(clear),
+        .D(p_1_in[3]),
+        .Q(internal_challenge[3]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \internal_challenge_reg[4] 
        (.C(clk),
-        .CE(sel),
-        .D(plusOp[4]),
-        .Q(internal_challenge_reg[4]),
-        .R(\internal_challenge[7]_i_1_n_0 ));
+        .CE(clear),
+        .D(p_1_in[4]),
+        .Q(internal_challenge[4]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \internal_challenge_reg[5] 
        (.C(clk),
-        .CE(sel),
-        .D(plusOp[5]),
-        .Q(internal_challenge_reg[5]),
-        .R(\internal_challenge[7]_i_1_n_0 ));
+        .CE(clear),
+        .D(p_1_in[5]),
+        .Q(internal_challenge[5]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \internal_challenge_reg[6] 
        (.C(clk),
-        .CE(sel),
-        .D(plusOp[6]),
-        .Q(internal_challenge_reg[6]),
-        .R(\internal_challenge[7]_i_1_n_0 ));
+        .CE(clear),
+        .D(p_1_in[6]),
+        .Q(internal_challenge[6]),
+        .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \internal_challenge_reg[7] 
        (.C(clk),
-        .CE(sel),
-        .D(plusOp[7]),
-        .Q(internal_challenge_reg[7]),
-        .R(\internal_challenge[7]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000001451410800)) 
-    ready_i_10
-       (.I0(compteur_cycles_reg[6]),
-        .I1(counter_config[1]),
-        .I2(counter_config[2]),
-        .I3(counter_config[0]),
-        .I4(compteur_cycles_reg[8]),
-        .I5(compteur_cycles_reg[7]),
-        .O(ready_i_10_n_0));
-  LUT6 #(
-    .INIT(64'h0000000000E1100E)) 
-    ready_i_11
-       (.I0(counter_config[1]),
-        .I1(counter_config[0]),
-        .I2(counter_config[2]),
-        .I3(compteur_cycles_reg[5]),
-        .I4(compteur_cycles_reg[4]),
-        .I5(compteur_cycles_reg[3]),
-        .O(ready_i_11_n_0));
-  LUT3 #(
-    .INIT(8'h01)) 
-    ready_i_12
-       (.I0(compteur_cycles_reg[2]),
-        .I1(compteur_cycles_reg[1]),
-        .I2(compteur_cycles_reg[0]),
-        .O(ready_i_12_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    ready_i_3
-       (.I0(compteur_cycles_reg[27]),
-        .I1(compteur_cycles_reg[28]),
-        .O(ready_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h0000020011111011)) 
-    ready_i_4
-       (.I0(compteur_cycles_reg[24]),
-        .I1(compteur_cycles_reg[25]),
-        .I2(counter_config[1]),
-        .I3(counter_config[0]),
-        .I4(counter_config[2]),
-        .I5(compteur_cycles_reg[26]),
-        .O(ready_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h0020000001005445)) 
-    ready_i_5
-       (.I0(compteur_cycles_reg[21]),
-        .I1(counter_config[2]),
-        .I2(counter_config[0]),
-        .I3(counter_config[1]),
-        .I4(compteur_cycles_reg[23]),
-        .I5(compteur_cycles_reg[22]),
-        .O(ready_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h0100200000204445)) 
-    ready_i_6
-       (.I0(compteur_cycles_reg[18]),
-        .I1(counter_config[2]),
-        .I2(counter_config[0]),
-        .I3(counter_config[1]),
-        .I4(compteur_cycles_reg[20]),
-        .I5(compteur_cycles_reg[19]),
-        .O(ready_i_6_n_0));
-  LUT6 #(
-    .INIT(64'h1000002800004641)) 
-    ready_i_7
-       (.I0(compteur_cycles_reg[15]),
-        .I1(counter_config[2]),
-        .I2(counter_config[0]),
-        .I3(counter_config[1]),
-        .I4(compteur_cycles_reg[17]),
-        .I5(compteur_cycles_reg[16]),
-        .O(ready_i_7_n_0));
-  LUT6 #(
-    .INIT(64'h0044104110020004)) 
-    ready_i_8
-       (.I0(compteur_cycles_reg[12]),
-        .I1(counter_config[2]),
-        .I2(counter_config[0]),
-        .I3(compteur_cycles_reg[14]),
-        .I4(counter_config[1]),
-        .I5(compteur_cycles_reg[13]),
-        .O(ready_i_8_n_0));
+        .CE(clear),
+        .D(p_1_in[7]),
+        .Q(internal_challenge[7]),
+        .R(1'b0));
   LUT6 #(
     .INIT(64'h0A000A0A00090000)) 
-    ready_i_9
+    ready_i_10
        (.I0(compteur_cycles_reg[9]),
         .I1(counter_config[1]),
         .I2(compteur_cycles_reg[11]),
         .I3(counter_config[2]),
         .I4(counter_config[0]),
         .I5(compteur_cycles_reg[10]),
+        .O(ready_i_10_n_0));
+  LUT6 #(
+    .INIT(64'h0000001451410800)) 
+    ready_i_11
+       (.I0(compteur_cycles_reg[6]),
+        .I1(counter_config[1]),
+        .I2(counter_config[2]),
+        .I3(counter_config[0]),
+        .I4(compteur_cycles_reg[8]),
+        .I5(compteur_cycles_reg[7]),
+        .O(ready_i_11_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000E1100E)) 
+    ready_i_12
+       (.I0(counter_config[1]),
+        .I1(counter_config[0]),
+        .I2(counter_config[2]),
+        .I3(compteur_cycles_reg[5]),
+        .I4(compteur_cycles_reg[4]),
+        .I5(compteur_cycles_reg[3]),
+        .O(ready_i_12_n_0));
+  LUT3 #(
+    .INIT(8'h01)) 
+    ready_i_13
+       (.I0(compteur_cycles_reg[2]),
+        .I1(compteur_cycles_reg[1]),
+        .I2(compteur_cycles_reg[0]),
+        .O(ready_i_13_n_0));
+  LUT4 #(
+    .INIT(16'h8000)) 
+    ready_i_2
+       (.I0(state[2]),
+        .I1(enable),
+        .I2(state[0]),
+        .I3(state[1]),
+        .O(ready_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    ready_i_4
+       (.I0(compteur_cycles_reg[27]),
+        .I1(compteur_cycles_reg[28]),
+        .O(ready_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h0000020011111011)) 
+    ready_i_5
+       (.I0(compteur_cycles_reg[24]),
+        .I1(compteur_cycles_reg[25]),
+        .I2(counter_config[1]),
+        .I3(counter_config[0]),
+        .I4(counter_config[2]),
+        .I5(compteur_cycles_reg[26]),
+        .O(ready_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h0020000001005445)) 
+    ready_i_6
+       (.I0(compteur_cycles_reg[21]),
+        .I1(counter_config[2]),
+        .I2(counter_config[0]),
+        .I3(counter_config[1]),
+        .I4(compteur_cycles_reg[23]),
+        .I5(compteur_cycles_reg[22]),
+        .O(ready_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h0100200000204445)) 
+    ready_i_7
+       (.I0(compteur_cycles_reg[18]),
+        .I1(counter_config[2]),
+        .I2(counter_config[0]),
+        .I3(counter_config[1]),
+        .I4(compteur_cycles_reg[20]),
+        .I5(compteur_cycles_reg[19]),
+        .O(ready_i_7_n_0));
+  LUT6 #(
+    .INIT(64'h1000002800004641)) 
+    ready_i_8
+       (.I0(compteur_cycles_reg[15]),
+        .I1(counter_config[2]),
+        .I2(counter_config[0]),
+        .I3(counter_config[1]),
+        .I4(compteur_cycles_reg[17]),
+        .I5(compteur_cycles_reg[16]),
+        .O(ready_i_8_n_0));
+  LUT6 #(
+    .INIT(64'h0044104110020004)) 
+    ready_i_9
+       (.I0(compteur_cycles_reg[12]),
+        .I1(counter_config[2]),
+        .I2(counter_config[0]),
+        .I3(compteur_cycles_reg[14]),
+        .I4(counter_config[1]),
+        .I5(compteur_cycles_reg[13]),
         .O(ready_i_9_n_0));
   FDRE ready_reg
        (.C(clk),
         .CE(clear),
-        .D(p_1_in),
+        .D(ready_i_2_n_0),
         .Q(ready),
         .R(1'b0));
   CARRY8 ready_reg_i_1
-       (.CI(ready_reg_i_2_n_0),
+       (.CI(ready_reg_i_3_n_0),
         .CI_TOP(1'b0),
         .CO({NLW_ready_reg_i_1_CO_UNCONNECTED[7:2],clear,ready_reg_i_1_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .O(NLW_ready_reg_i_1_O_UNCONNECTED[7:0]),
-        .S({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,ready_i_3_n_0,ready_i_4_n_0}));
-  CARRY8 ready_reg_i_2
+        .S({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,ready_i_4_n_0,ready_i_5_n_0}));
+  CARRY8 ready_reg_i_3
        (.CI(1'b1),
         .CI_TOP(1'b0),
-        .CO({ready_reg_i_2_n_0,ready_reg_i_2_n_1,ready_reg_i_2_n_2,ready_reg_i_2_n_3,ready_reg_i_2_n_4,ready_reg_i_2_n_5,ready_reg_i_2_n_6,ready_reg_i_2_n_7}),
+        .CO({ready_reg_i_3_n_0,ready_reg_i_3_n_1,ready_reg_i_3_n_2,ready_reg_i_3_n_3,ready_reg_i_3_n_4,ready_reg_i_3_n_5,ready_reg_i_3_n_6,ready_reg_i_3_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(NLW_ready_reg_i_2_O_UNCONNECTED[7:0]),
-        .S({ready_i_5_n_0,ready_i_6_n_0,ready_i_7_n_0,ready_i_8_n_0,ready_i_9_n_0,ready_i_10_n_0,ready_i_11_n_0,ready_i_12_n_0}));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+        .O(NLW_ready_reg_i_3_O_UNCONNECTED[7:0]),
+        .S({ready_i_6_n_0,ready_i_7_n_0,ready_i_8_n_0,ready_i_9_n_0,ready_i_10_n_0,ready_i_11_n_0,ready_i_12_n_0,ready_i_13_n_0}));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[0]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[0]),
-        .O(\response[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[0]),
+        .O(p_2_in[0]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[100]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[100]),
-        .O(\response[100]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[100]),
+        .O(p_2_in[100]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[101]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[101]),
-        .O(\response[101]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[101]),
+        .O(p_2_in[101]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[102]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[102]),
-        .O(\response[102]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[102]),
+        .O(p_2_in[102]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[103]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[103]),
-        .O(\response[103]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[103]),
+        .O(p_2_in[103]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[104]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[104]),
-        .O(\response[104]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[104]),
+        .O(p_2_in[104]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[105]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[105]),
-        .O(\response[105]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[105]),
+        .O(p_2_in[105]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[106]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[106]),
-        .O(\response[106]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[106]),
+        .O(p_2_in[106]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[107]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[107]),
-        .O(\response[107]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[107]),
+        .O(p_2_in[107]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[108]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[108]),
-        .O(\response[108]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[108]),
+        .O(p_2_in[108]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[109]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[109]),
-        .O(\response[109]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[109]),
+        .O(p_2_in[109]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[10]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[10]),
-        .O(\response[10]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[10]),
+        .O(p_2_in[10]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[110]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[110]),
-        .O(\response[110]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[110]),
+        .O(p_2_in[110]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[111]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[111]),
-        .O(\response[111]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[111]),
+        .O(p_2_in[111]));
   LUT4 #(
-    .INIT(16'hFBFF)) 
+    .INIT(16'hFFDF)) 
     \response[111]_i_2 
-       (.I0(internal_challenge_reg[7]),
-        .I1(internal_challenge_reg[6]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[6]),
+        .I3(internal_challenge[7]),
         .O(\response[111]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[112]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[112]),
-        .O(\response[112]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[112]),
+        .O(p_2_in[112]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[113]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[113]),
-        .O(\response[113]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[113]),
+        .O(p_2_in[113]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[114]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[114]),
-        .O(\response[114]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[114]),
+        .O(p_2_in[114]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[115]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[115]),
-        .O(\response[115]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[115]),
+        .O(p_2_in[115]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[116]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[116]),
-        .O(\response[116]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[116]),
+        .O(p_2_in[116]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[117]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[117]),
-        .O(\response[117]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[117]),
+        .O(p_2_in[117]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[118]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[118]),
-        .O(\response[118]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[118]),
+        .O(p_2_in[118]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[119]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[119]),
-        .O(\response[119]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[119]),
+        .O(p_2_in[119]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[11]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[11]),
-        .O(\response[11]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[11]),
+        .O(p_2_in[11]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[120]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[120]),
-        .O(\response[120]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[120]),
+        .O(p_2_in[120]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[121]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[121]),
-        .O(\response[121]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[121]),
+        .O(p_2_in[121]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[122]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[122]),
-        .O(\response[122]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[122]),
+        .O(p_2_in[122]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[123]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[123]),
-        .O(\response[123]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[123]),
+        .O(p_2_in[123]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[124]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[124]),
-        .O(\response[124]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[124]),
+        .O(p_2_in[124]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[125]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[125]),
-        .O(\response[125]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[125]),
+        .O(p_2_in[125]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[126]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[126]),
-        .O(\response[126]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[126]),
+        .O(p_2_in[126]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[127]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[127]_i_2_n_0 ),
-        .I4(response[127]),
-        .O(\response[127]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[127]_i_2_n_0 ),
+        .I3(response[127]),
+        .O(p_2_in[127]));
   LUT4 #(
-    .INIT(16'hBFFF)) 
+    .INIT(16'hFF7F)) 
     \response[127]_i_2 
-       (.I0(internal_challenge_reg[7]),
-        .I1(internal_challenge_reg[6]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[6]),
+        .I3(internal_challenge[7]),
         .O(\response[127]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[128]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[128]),
-        .O(\response[128]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[128]),
+        .O(p_2_in[128]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[129]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[129]),
-        .O(\response[129]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[129]),
+        .O(p_2_in[129]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[12]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[12]),
-        .O(\response[12]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[12]),
+        .O(p_2_in[12]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[130]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[130]),
-        .O(\response[130]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[130]),
+        .O(p_2_in[130]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[131]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[131]),
-        .O(\response[131]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[131]),
+        .O(p_2_in[131]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[132]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[132]),
-        .O(\response[132]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[132]),
+        .O(p_2_in[132]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[133]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[133]),
-        .O(\response[133]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[133]),
+        .O(p_2_in[133]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[134]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[134]),
-        .O(\response[134]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[134]),
+        .O(p_2_in[134]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[135]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[135]),
-        .O(\response[135]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[135]),
+        .O(p_2_in[135]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[136]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[136]),
-        .O(\response[136]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[136]),
+        .O(p_2_in[136]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[137]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[137]),
-        .O(\response[137]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[137]),
+        .O(p_2_in[137]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[138]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[138]),
-        .O(\response[138]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[138]),
+        .O(p_2_in[138]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[139]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[139]),
-        .O(\response[139]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[139]),
+        .O(p_2_in[139]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[13]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[13]),
-        .O(\response[13]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[13]),
+        .O(p_2_in[13]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[140]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[140]),
-        .O(\response[140]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[140]),
+        .O(p_2_in[140]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[141]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[141]),
-        .O(\response[141]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[141]),
+        .O(p_2_in[141]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[142]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[142]),
-        .O(\response[142]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[142]),
+        .O(p_2_in[142]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[143]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[143]_i_2_n_0 ),
-        .I4(response[143]),
-        .O(\response[143]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[143]_i_2_n_0 ),
+        .I3(response[143]),
+        .O(p_2_in[143]));
   LUT4 #(
-    .INIT(16'hFFFB)) 
+    .INIT(16'hFFEF)) 
     \response[143]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[6]),
         .O(\response[143]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[144]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[144]),
-        .O(\response[144]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[145]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[145]),
-        .O(\response[145]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[146]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[146]),
-        .O(\response[146]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[147]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[147]),
-        .O(\response[147]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[148]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[148]),
-        .O(\response[148]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[149]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[149]),
-        .O(\response[149]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[14]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[14]),
-        .O(\response[14]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[150]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[150]),
-        .O(\response[150]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[151]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[151]),
-        .O(\response[151]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[152]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[152]),
-        .O(\response[152]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[153]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[153]),
-        .O(\response[153]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[154]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[154]),
-        .O(\response[154]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[155]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[155]),
-        .O(\response[155]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[156]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[156]),
-        .O(\response[156]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[157]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[157]),
-        .O(\response[157]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[158]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[158]),
-        .O(\response[158]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[159]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[159]_i_2_n_0 ),
-        .I4(response[159]),
-        .O(\response[159]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
-    .INIT(16'hFBFF)) 
+    .INIT(16'hFB08)) 
+    \response[144]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[144]),
+        .O(p_2_in[144]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[145]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[145]),
+        .O(p_2_in[145]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[146]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[146]),
+        .O(p_2_in[146]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[147]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[147]),
+        .O(p_2_in[147]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[148]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[148]),
+        .O(p_2_in[148]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[149]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[149]),
+        .O(p_2_in[149]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[14]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[14]),
+        .O(p_2_in[14]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[150]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[150]),
+        .O(p_2_in[150]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[151]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[151]),
+        .O(p_2_in[151]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[152]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[152]),
+        .O(p_2_in[152]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[153]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[153]),
+        .O(p_2_in[153]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[154]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[154]),
+        .O(p_2_in[154]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[155]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[155]),
+        .O(p_2_in[155]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[156]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[156]),
+        .O(p_2_in[156]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[157]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[157]),
+        .O(p_2_in[157]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[158]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[158]),
+        .O(p_2_in[158]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[159]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[159]_i_2_n_0 ),
+        .I3(response[159]),
+        .O(p_2_in[159]));
+  LUT4 #(
+    .INIT(16'hFFDF)) 
     \response[159]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[5]),
-        .I3(internal_challenge_reg[4]),
+       (.I0(internal_challenge[4]),
+        .I1(internal_challenge[5]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[6]),
         .O(\response[159]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[15]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[15]),
-        .O(\response[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[15]),
+        .O(p_2_in[15]));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \response[15]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[6]),
         .O(\response[15]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[160]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[160]),
-        .O(\response[160]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[160]),
+        .O(p_2_in[160]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[161]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[161]),
-        .O(\response[161]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[161]),
+        .O(p_2_in[161]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[162]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[162]),
-        .O(\response[162]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[162]),
+        .O(p_2_in[162]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[163]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[163]),
-        .O(\response[163]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[163]),
+        .O(p_2_in[163]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[164]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[164]),
-        .O(\response[164]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[164]),
+        .O(p_2_in[164]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[165]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[165]),
-        .O(\response[165]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[165]),
+        .O(p_2_in[165]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[166]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[166]),
-        .O(\response[166]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[166]),
+        .O(p_2_in[166]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[167]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[167]),
-        .O(\response[167]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[167]),
+        .O(p_2_in[167]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[168]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[168]),
-        .O(\response[168]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[168]),
+        .O(p_2_in[168]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[169]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[169]),
-        .O(\response[169]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[169]),
+        .O(p_2_in[169]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[16]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[16]),
-        .O(\response[16]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[16]),
+        .O(p_2_in[16]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[170]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[170]),
-        .O(\response[170]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[170]),
+        .O(p_2_in[170]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[171]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[171]),
-        .O(\response[171]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[171]),
+        .O(p_2_in[171]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[172]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[172]),
-        .O(\response[172]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[172]),
+        .O(p_2_in[172]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[173]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[173]),
-        .O(\response[173]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[173]),
+        .O(p_2_in[173]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[174]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[174]),
-        .O(\response[174]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[174]),
+        .O(p_2_in[174]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[175]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[175]_i_2_n_0 ),
-        .I4(response[175]),
-        .O(\response[175]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[175]_i_2_n_0 ),
+        .I3(response[175]),
+        .O(p_2_in[175]));
   LUT4 #(
-    .INIT(16'hFBFF)) 
+    .INIT(16'hFFDF)) 
     \response[175]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[6]),
         .O(\response[175]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[176]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[176]),
-        .O(\response[176]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[177]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[177]),
-        .O(\response[177]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[178]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[178]),
-        .O(\response[178]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[179]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[179]),
-        .O(\response[179]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[17]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[17]),
-        .O(\response[17]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[180]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[180]),
-        .O(\response[180]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[181]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[181]),
-        .O(\response[181]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[182]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[182]),
-        .O(\response[182]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[183]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[183]),
-        .O(\response[183]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[184]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[184]),
-        .O(\response[184]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[185]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[185]),
-        .O(\response[185]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[186]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[186]),
-        .O(\response[186]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[187]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[187]),
-        .O(\response[187]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[188]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[188]),
-        .O(\response[188]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[189]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[189]),
-        .O(\response[189]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[18]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[18]),
-        .O(\response[18]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[190]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[190]),
-        .O(\response[190]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[191]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[191]_i_2_n_0 ),
-        .I4(response[191]),
-        .O(\response[191]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
-    .INIT(16'hBFFF)) 
+    .INIT(16'hFB08)) 
+    \response[176]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[176]),
+        .O(p_2_in[176]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[177]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[177]),
+        .O(p_2_in[177]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[178]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[178]),
+        .O(p_2_in[178]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[179]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[179]),
+        .O(p_2_in[179]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[17]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[17]),
+        .O(p_2_in[17]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[180]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[180]),
+        .O(p_2_in[180]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[181]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[181]),
+        .O(p_2_in[181]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[182]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[182]),
+        .O(p_2_in[182]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[183]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[183]),
+        .O(p_2_in[183]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[184]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[184]),
+        .O(p_2_in[184]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[185]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[185]),
+        .O(p_2_in[185]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[186]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[186]),
+        .O(p_2_in[186]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[187]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[187]),
+        .O(p_2_in[187]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[188]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[188]),
+        .O(p_2_in[188]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[189]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[189]),
+        .O(p_2_in[189]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[18]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[18]),
+        .O(p_2_in[18]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[190]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[190]),
+        .O(p_2_in[190]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[191]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[191]_i_2_n_0 ),
+        .I3(response[191]),
+        .O(p_2_in[191]));
+  LUT4 #(
+    .INIT(16'hFF7F)) 
     \response[191]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[6]),
         .O(\response[191]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[192]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[192]),
-        .O(\response[192]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[192]),
+        .O(p_2_in[192]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[193]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[193]),
-        .O(\response[193]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[193]),
+        .O(p_2_in[193]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[194]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[194]),
-        .O(\response[194]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[194]),
+        .O(p_2_in[194]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[195]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[195]),
-        .O(\response[195]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[195]),
+        .O(p_2_in[195]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[196]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[196]),
-        .O(\response[196]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[196]),
+        .O(p_2_in[196]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[197]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[197]),
-        .O(\response[197]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[197]),
+        .O(p_2_in[197]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[198]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[198]),
-        .O(\response[198]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[198]),
+        .O(p_2_in[198]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[199]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[199]),
-        .O(\response[199]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[199]),
+        .O(p_2_in[199]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[19]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[19]),
-        .O(\response[19]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[19]),
+        .O(p_2_in[19]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[1]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[1]),
-        .O(\response[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[1]),
+        .O(p_2_in[1]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[200]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[200]),
-        .O(\response[200]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[200]),
+        .O(p_2_in[200]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[201]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[201]),
-        .O(\response[201]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[201]),
+        .O(p_2_in[201]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[202]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[202]),
-        .O(\response[202]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[202]),
+        .O(p_2_in[202]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[203]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[203]),
-        .O(\response[203]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[203]),
+        .O(p_2_in[203]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[204]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[204]),
-        .O(\response[204]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[204]),
+        .O(p_2_in[204]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[205]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[205]),
-        .O(\response[205]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[205]),
+        .O(p_2_in[205]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[206]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[206]),
-        .O(\response[206]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[206]),
+        .O(p_2_in[206]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[207]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[207]_i_2_n_0 ),
-        .I4(response[207]),
-        .O(\response[207]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[207]_i_2_n_0 ),
+        .I3(response[207]),
+        .O(p_2_in[207]));
   LUT4 #(
     .INIT(16'hFFF7)) 
     \response[207]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[7]),
+        .I1(internal_challenge[6]),
+        .I2(internal_challenge[5]),
+        .I3(internal_challenge[4]),
         .O(\response[207]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[208]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[208]),
-        .O(\response[208]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[208]),
+        .O(p_2_in[208]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[209]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[209]),
-        .O(\response[209]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[209]),
+        .O(p_2_in[209]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[20]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[20]),
-        .O(\response[20]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[20]),
+        .O(p_2_in[20]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[210]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[210]),
-        .O(\response[210]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[210]),
+        .O(p_2_in[210]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[211]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[211]),
-        .O(\response[211]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[211]),
+        .O(p_2_in[211]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[212]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[212]),
-        .O(\response[212]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[212]),
+        .O(p_2_in[212]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[213]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[213]),
-        .O(\response[213]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[213]),
+        .O(p_2_in[213]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[214]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[214]),
-        .O(\response[214]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[214]),
+        .O(p_2_in[214]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[215]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[215]),
-        .O(\response[215]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[215]),
+        .O(p_2_in[215]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[216]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[216]),
-        .O(\response[216]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[216]),
+        .O(p_2_in[216]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[217]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[217]),
-        .O(\response[217]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[217]),
+        .O(p_2_in[217]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[218]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[218]),
-        .O(\response[218]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[218]),
+        .O(p_2_in[218]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[219]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[219]),
-        .O(\response[219]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[219]),
+        .O(p_2_in[219]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[21]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[21]),
-        .O(\response[21]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[21]),
+        .O(p_2_in[21]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[220]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[220]),
-        .O(\response[220]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[220]),
+        .O(p_2_in[220]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[221]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[221]),
-        .O(\response[221]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[221]),
+        .O(p_2_in[221]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[222]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[222]),
-        .O(\response[222]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[222]),
+        .O(p_2_in[222]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[223]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[223]_i_2_n_0 ),
-        .I4(response[223]),
-        .O(\response[223]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[223]_i_2_n_0 ),
+        .I3(response[223]),
+        .O(p_2_in[223]));
   LUT4 #(
-    .INIT(16'hF7FF)) 
+    .INIT(16'hFF7F)) 
     \response[223]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[5]),
-        .I3(internal_challenge_reg[4]),
+       (.I0(internal_challenge[7]),
+        .I1(internal_challenge[6]),
+        .I2(internal_challenge[4]),
+        .I3(internal_challenge[5]),
         .O(\response[223]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[224]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[224]),
-        .O(\response[224]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[224]),
+        .O(p_2_in[224]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[225]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[225]),
-        .O(\response[225]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[225]),
+        .O(p_2_in[225]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[226]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[226]),
-        .O(\response[226]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[226]),
+        .O(p_2_in[226]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[227]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[227]),
-        .O(\response[227]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[227]),
+        .O(p_2_in[227]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[228]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[228]),
-        .O(\response[228]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[228]),
+        .O(p_2_in[228]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[229]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[229]),
-        .O(\response[229]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[229]),
+        .O(p_2_in[229]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[22]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[22]),
-        .O(\response[22]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[22]),
+        .O(p_2_in[22]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[230]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[230]),
-        .O(\response[230]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[230]),
+        .O(p_2_in[230]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[231]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[231]),
-        .O(\response[231]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[231]),
+        .O(p_2_in[231]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[232]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[232]),
-        .O(\response[232]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[232]),
+        .O(p_2_in[232]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[233]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[233]),
-        .O(\response[233]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[233]),
+        .O(p_2_in[233]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[234]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[234]),
-        .O(\response[234]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[234]),
+        .O(p_2_in[234]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[235]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[235]),
-        .O(\response[235]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[235]),
+        .O(p_2_in[235]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[236]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[236]),
-        .O(\response[236]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[236]),
+        .O(p_2_in[236]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[237]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[237]),
-        .O(\response[237]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[237]),
+        .O(p_2_in[237]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[238]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[238]),
-        .O(\response[238]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[238]),
+        .O(p_2_in[238]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[239]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[239]_i_2_n_0 ),
-        .I4(response[239]),
-        .O(\response[239]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[239]_i_2_n_0 ),
+        .I3(response[239]),
+        .O(p_2_in[239]));
   LUT4 #(
-    .INIT(16'hF7FF)) 
+    .INIT(16'hFF7F)) 
     \response[239]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[7]),
+        .I1(internal_challenge[6]),
+        .I2(internal_challenge[5]),
+        .I3(internal_challenge[4]),
         .O(\response[239]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[23]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[23]),
-        .O(\response[23]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[23]),
+        .O(p_2_in[23]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[240]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[240]),
-        .O(\response[240]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[240]),
+        .O(p_2_in[240]));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'h0001)) 
     \response[240]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[1]),
+        .I1(internal_challenge[0]),
+        .I2(internal_challenge[3]),
+        .I3(internal_challenge[2]),
         .O(\response[240]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[241]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[241]),
-        .O(\response[241]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[241]),
+        .O(p_2_in[241]));
   LUT4 #(
-    .INIT(16'hFEFF)) 
+    .INIT(16'h0002)) 
     \response[241]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[1]),
-        .I3(internal_challenge_reg[0]),
+       (.I0(internal_challenge[0]),
+        .I1(internal_challenge[1]),
+        .I2(internal_challenge[3]),
+        .I3(internal_challenge[2]),
         .O(\response[241]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[242]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[242]),
-        .O(\response[242]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[242]),
+        .O(p_2_in[242]));
   LUT4 #(
-    .INIT(16'hFEFF)) 
+    .INIT(16'h0002)) 
     \response[242]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[1]),
+        .I1(internal_challenge[0]),
+        .I2(internal_challenge[3]),
+        .I3(internal_challenge[2]),
         .O(\response[242]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[243]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[243]),
-        .O(\response[243]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[243]),
+        .O(p_2_in[243]));
   LUT4 #(
-    .INIT(16'hEFFF)) 
+    .INIT(16'h0008)) 
     \response[243]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[1]),
+        .I1(internal_challenge[0]),
+        .I2(internal_challenge[3]),
+        .I3(internal_challenge[2]),
         .O(\response[243]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[244]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[244]),
-        .O(\response[244]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[244]),
+        .O(p_2_in[244]));
   LUT4 #(
-    .INIT(16'hFFFB)) 
+    .INIT(16'h0002)) 
     \response[244]_i_2 
-       (.I0(internal_challenge_reg[3]),
-        .I1(internal_challenge_reg[2]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[2]),
+        .I1(internal_challenge[3]),
+        .I2(internal_challenge[1]),
+        .I3(internal_challenge[0]),
         .O(\response[244]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[245]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[245]),
-        .O(\response[245]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[245]),
+        .O(p_2_in[245]));
   LUT4 #(
-    .INIT(16'hFBFF)) 
+    .INIT(16'h0020)) 
     \response[245]_i_2 
-       (.I0(internal_challenge_reg[3]),
-        .I1(internal_challenge_reg[2]),
-        .I2(internal_challenge_reg[1]),
-        .I3(internal_challenge_reg[0]),
+       (.I0(internal_challenge[2]),
+        .I1(internal_challenge[3]),
+        .I2(internal_challenge[0]),
+        .I3(internal_challenge[1]),
         .O(\response[245]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[246]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[246]),
-        .O(\response[246]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[246]),
+        .O(p_2_in[246]));
   LUT4 #(
-    .INIT(16'hFBFF)) 
+    .INIT(16'h0020)) 
     \response[246]_i_2 
-       (.I0(internal_challenge_reg[3]),
-        .I1(internal_challenge_reg[2]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[2]),
+        .I1(internal_challenge[3]),
+        .I2(internal_challenge[1]),
+        .I3(internal_challenge[0]),
         .O(\response[246]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[247]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[247]),
-        .O(\response[247]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[247]),
+        .O(p_2_in[247]));
   LUT4 #(
-    .INIT(16'hBFFF)) 
+    .INIT(16'h0080)) 
     \response[247]_i_2 
-       (.I0(internal_challenge_reg[3]),
-        .I1(internal_challenge_reg[2]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[1]),
+        .I1(internal_challenge[0]),
+        .I2(internal_challenge[2]),
+        .I3(internal_challenge[3]),
         .O(\response[247]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[248]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[248]),
-        .O(\response[248]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[248]),
+        .O(p_2_in[248]));
   LUT4 #(
-    .INIT(16'hFFFB)) 
+    .INIT(16'h0002)) 
     \response[248]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[3]),
+        .I1(internal_challenge[2]),
+        .I2(internal_challenge[1]),
+        .I3(internal_challenge[0]),
         .O(\response[248]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[249]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[249]),
-        .O(\response[249]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[249]),
+        .O(p_2_in[249]));
   LUT4 #(
-    .INIT(16'hFBFF)) 
+    .INIT(16'h0020)) 
     \response[249]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[1]),
-        .I3(internal_challenge_reg[0]),
+       (.I0(internal_challenge[3]),
+        .I1(internal_challenge[2]),
+        .I2(internal_challenge[0]),
+        .I3(internal_challenge[1]),
         .O(\response[249]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[24]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[24]),
-        .O(\response[24]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[24]),
+        .O(p_2_in[24]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[250]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[250]),
-        .O(\response[250]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[250]),
+        .O(p_2_in[250]));
   LUT4 #(
-    .INIT(16'hFBFF)) 
+    .INIT(16'h0020)) 
     \response[250]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[3]),
+        .I1(internal_challenge[2]),
+        .I2(internal_challenge[1]),
+        .I3(internal_challenge[0]),
         .O(\response[250]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[251]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[251]),
-        .O(\response[251]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[251]),
+        .O(p_2_in[251]));
   LUT4 #(
-    .INIT(16'hBFFF)) 
+    .INIT(16'h0080)) 
     \response[251]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[1]),
+        .I1(internal_challenge[0]),
+        .I2(internal_challenge[3]),
+        .I3(internal_challenge[2]),
         .O(\response[251]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[252]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[252]),
-        .O(\response[252]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[252]),
+        .O(p_2_in[252]));
   LUT4 #(
-    .INIT(16'hFFF7)) 
+    .INIT(16'h0008)) 
     \response[252]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[3]),
+        .I1(internal_challenge[2]),
+        .I2(internal_challenge[1]),
+        .I3(internal_challenge[0]),
         .O(\response[252]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[253]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[253]),
-        .O(\response[253]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[253]),
+        .O(p_2_in[253]));
   LUT4 #(
-    .INIT(16'hF7FF)) 
+    .INIT(16'h0080)) 
     \response[253]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[1]),
-        .I3(internal_challenge_reg[0]),
+       (.I0(internal_challenge[3]),
+        .I1(internal_challenge[2]),
+        .I2(internal_challenge[0]),
+        .I3(internal_challenge[1]),
         .O(\response[253]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[254]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[254]),
-        .O(\response[254]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[254]),
+        .O(p_2_in[254]));
   LUT4 #(
-    .INIT(16'hF7FF)) 
+    .INIT(16'h0080)) 
     \response[254]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
+       (.I0(internal_challenge[3]),
+        .I1(internal_challenge[2]),
+        .I2(internal_challenge[1]),
+        .I3(internal_challenge[0]),
         .O(\response[254]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \response[255]_i_1 
-       (.I0(enable),
-        .O(Reset_Comparison));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'hFB08)) 
+    \response[255]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\state[0]_i_2_n_0 ),
+        .I3(response[255]),
+        .O(p_2_in[255]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
     \response[255]_i_10 
-       (.I0(MUX_2_Counter_reg[26]),
-        .I1(MUX_1_Counter_reg[26]),
-        .I2(MUX_1_Counter_reg[27]),
-        .I3(MUX_2_Counter_reg[27]),
+       (.I0(MUX_2_Counter_reg[21]),
+        .I1(MUX_1_Counter_reg[21]),
+        .I2(MUX_2_Counter_reg[20]),
+        .I3(MUX_1_Counter_reg[20]),
         .O(\response[255]_i_10_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_11 
-       (.I0(MUX_2_Counter_reg[24]),
-        .I1(MUX_1_Counter_reg[24]),
-        .I2(MUX_1_Counter_reg[25]),
-        .I3(MUX_2_Counter_reg[25]),
+       (.I0(MUX_2_Counter_reg[19]),
+        .I1(MUX_1_Counter_reg[19]),
+        .I2(MUX_2_Counter_reg[18]),
+        .I3(MUX_1_Counter_reg[18]),
         .O(\response[255]_i_11_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_12 
-       (.I0(MUX_2_Counter_reg[22]),
-        .I1(MUX_1_Counter_reg[22]),
-        .I2(MUX_1_Counter_reg[23]),
-        .I3(MUX_2_Counter_reg[23]),
+       (.I0(MUX_2_Counter_reg[17]),
+        .I1(MUX_1_Counter_reg[17]),
+        .I2(MUX_2_Counter_reg[16]),
+        .I3(MUX_1_Counter_reg[16]),
         .O(\response[255]_i_12_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h9009)) 
     \response[255]_i_13 
-       (.I0(MUX_2_Counter_reg[20]),
-        .I1(MUX_1_Counter_reg[20]),
-        .I2(MUX_1_Counter_reg[21]),
-        .I3(MUX_2_Counter_reg[21]),
+       (.I0(MUX_1_Counter_reg[31]),
+        .I1(MUX_2_Counter_reg[31]),
+        .I2(MUX_1_Counter_reg[30]),
+        .I3(MUX_2_Counter_reg[30]),
         .O(\response[255]_i_13_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h9009)) 
     \response[255]_i_14 
-       (.I0(MUX_2_Counter_reg[18]),
-        .I1(MUX_1_Counter_reg[18]),
-        .I2(MUX_1_Counter_reg[19]),
-        .I3(MUX_2_Counter_reg[19]),
+       (.I0(MUX_1_Counter_reg[29]),
+        .I1(MUX_2_Counter_reg[29]),
+        .I2(MUX_1_Counter_reg[28]),
+        .I3(MUX_2_Counter_reg[28]),
         .O(\response[255]_i_14_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h9009)) 
     \response[255]_i_15 
-       (.I0(MUX_2_Counter_reg[16]),
-        .I1(MUX_1_Counter_reg[16]),
-        .I2(MUX_1_Counter_reg[17]),
-        .I3(MUX_2_Counter_reg[17]),
+       (.I0(MUX_1_Counter_reg[27]),
+        .I1(MUX_2_Counter_reg[27]),
+        .I2(MUX_1_Counter_reg[26]),
+        .I3(MUX_2_Counter_reg[26]),
         .O(\response[255]_i_15_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_16 
-       (.I0(MUX_2_Counter_reg[30]),
-        .I1(MUX_1_Counter_reg[30]),
-        .I2(MUX_2_Counter_reg[31]),
-        .I3(MUX_1_Counter_reg[31]),
+       (.I0(MUX_1_Counter_reg[25]),
+        .I1(MUX_2_Counter_reg[25]),
+        .I2(MUX_1_Counter_reg[24]),
+        .I3(MUX_2_Counter_reg[24]),
         .O(\response[255]_i_16_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_17 
-       (.I0(MUX_2_Counter_reg[28]),
-        .I1(MUX_1_Counter_reg[28]),
-        .I2(MUX_2_Counter_reg[29]),
-        .I3(MUX_1_Counter_reg[29]),
+       (.I0(MUX_1_Counter_reg[23]),
+        .I1(MUX_2_Counter_reg[23]),
+        .I2(MUX_1_Counter_reg[22]),
+        .I3(MUX_2_Counter_reg[22]),
         .O(\response[255]_i_17_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_18 
-       (.I0(MUX_2_Counter_reg[26]),
-        .I1(MUX_1_Counter_reg[26]),
-        .I2(MUX_2_Counter_reg[27]),
-        .I3(MUX_1_Counter_reg[27]),
+       (.I0(MUX_1_Counter_reg[21]),
+        .I1(MUX_2_Counter_reg[21]),
+        .I2(MUX_1_Counter_reg[20]),
+        .I3(MUX_2_Counter_reg[20]),
         .O(\response[255]_i_18_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_19 
-       (.I0(MUX_2_Counter_reg[24]),
-        .I1(MUX_1_Counter_reg[24]),
-        .I2(MUX_2_Counter_reg[25]),
-        .I3(MUX_1_Counter_reg[25]),
+       (.I0(MUX_1_Counter_reg[19]),
+        .I1(MUX_2_Counter_reg[19]),
+        .I2(MUX_1_Counter_reg[18]),
+        .I3(MUX_2_Counter_reg[18]),
         .O(\response[255]_i_19_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[255]_i_2 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[255]_i_5_n_0 ),
-        .I4(response[255]),
-        .O(\response[255]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_20 
-       (.I0(MUX_2_Counter_reg[22]),
-        .I1(MUX_1_Counter_reg[22]),
-        .I2(MUX_2_Counter_reg[23]),
-        .I3(MUX_1_Counter_reg[23]),
+       (.I0(MUX_1_Counter_reg[17]),
+        .I1(MUX_2_Counter_reg[17]),
+        .I2(MUX_1_Counter_reg[16]),
+        .I3(MUX_2_Counter_reg[16]),
         .O(\response[255]_i_20_n_0 ));
   LUT4 #(
-    .INIT(16'h9009)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_21 
-       (.I0(MUX_2_Counter_reg[20]),
-        .I1(MUX_1_Counter_reg[20]),
-        .I2(MUX_2_Counter_reg[21]),
-        .I3(MUX_1_Counter_reg[21]),
+       (.I0(MUX_2_Counter_reg[15]),
+        .I1(MUX_1_Counter_reg[15]),
+        .I2(MUX_2_Counter_reg[14]),
+        .I3(MUX_1_Counter_reg[14]),
         .O(\response[255]_i_21_n_0 ));
   LUT4 #(
-    .INIT(16'h9009)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_22 
-       (.I0(MUX_2_Counter_reg[18]),
-        .I1(MUX_1_Counter_reg[18]),
-        .I2(MUX_2_Counter_reg[19]),
-        .I3(MUX_1_Counter_reg[19]),
+       (.I0(MUX_2_Counter_reg[13]),
+        .I1(MUX_1_Counter_reg[13]),
+        .I2(MUX_2_Counter_reg[12]),
+        .I3(MUX_1_Counter_reg[12]),
         .O(\response[255]_i_22_n_0 ));
   LUT4 #(
-    .INIT(16'h9009)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_23 
-       (.I0(MUX_2_Counter_reg[16]),
-        .I1(MUX_1_Counter_reg[16]),
-        .I2(MUX_2_Counter_reg[17]),
-        .I3(MUX_1_Counter_reg[17]),
+       (.I0(MUX_2_Counter_reg[11]),
+        .I1(MUX_1_Counter_reg[11]),
+        .I2(MUX_2_Counter_reg[10]),
+        .I3(MUX_1_Counter_reg[10]),
         .O(\response[255]_i_23_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_24 
-       (.I0(MUX_2_Counter_reg[14]),
-        .I1(MUX_1_Counter_reg[14]),
-        .I2(MUX_1_Counter_reg[15]),
-        .I3(MUX_2_Counter_reg[15]),
+       (.I0(MUX_2_Counter_reg[9]),
+        .I1(MUX_1_Counter_reg[9]),
+        .I2(MUX_2_Counter_reg[8]),
+        .I3(MUX_1_Counter_reg[8]),
         .O(\response[255]_i_24_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_25 
-       (.I0(MUX_2_Counter_reg[12]),
-        .I1(MUX_1_Counter_reg[12]),
-        .I2(MUX_1_Counter_reg[13]),
-        .I3(MUX_2_Counter_reg[13]),
+       (.I0(MUX_2_Counter_reg[7]),
+        .I1(MUX_1_Counter_reg[7]),
+        .I2(MUX_2_Counter_reg[6]),
+        .I3(MUX_1_Counter_reg[6]),
         .O(\response[255]_i_25_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_26 
-       (.I0(MUX_2_Counter_reg[10]),
-        .I1(MUX_1_Counter_reg[10]),
-        .I2(MUX_1_Counter_reg[11]),
-        .I3(MUX_2_Counter_reg[11]),
+       (.I0(MUX_2_Counter_reg[5]),
+        .I1(MUX_1_Counter_reg[5]),
+        .I2(MUX_2_Counter_reg[4]),
+        .I3(MUX_1_Counter_reg[4]),
         .O(\response[255]_i_26_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_27 
-       (.I0(MUX_2_Counter_reg[8]),
-        .I1(MUX_1_Counter_reg[8]),
-        .I2(MUX_1_Counter_reg[9]),
-        .I3(MUX_2_Counter_reg[9]),
+       (.I0(MUX_2_Counter_reg[3]),
+        .I1(MUX_1_Counter_reg[3]),
+        .I2(MUX_2_Counter_reg[2]),
+        .I3(MUX_1_Counter_reg[2]),
         .O(\response[255]_i_27_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_28 
-       (.I0(MUX_2_Counter_reg[6]),
-        .I1(MUX_1_Counter_reg[6]),
-        .I2(MUX_1_Counter_reg[7]),
-        .I3(MUX_2_Counter_reg[7]),
+       (.I0(MUX_2_Counter_reg[1]),
+        .I1(MUX_1_Counter_reg[1]),
+        .I2(MUX_2_Counter_reg[0]),
+        .I3(MUX_1_Counter_reg[0]),
         .O(\response[255]_i_28_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h9009)) 
     \response[255]_i_29 
-       (.I0(MUX_2_Counter_reg[4]),
-        .I1(MUX_1_Counter_reg[4]),
-        .I2(MUX_1_Counter_reg[5]),
-        .I3(MUX_2_Counter_reg[5]),
+       (.I0(MUX_1_Counter_reg[15]),
+        .I1(MUX_2_Counter_reg[15]),
+        .I2(MUX_1_Counter_reg[14]),
+        .I3(MUX_2_Counter_reg[14]),
         .O(\response[255]_i_29_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h9009)) 
     \response[255]_i_30 
-       (.I0(MUX_2_Counter_reg[2]),
-        .I1(MUX_1_Counter_reg[2]),
-        .I2(MUX_1_Counter_reg[3]),
-        .I3(MUX_2_Counter_reg[3]),
+       (.I0(MUX_1_Counter_reg[13]),
+        .I1(MUX_2_Counter_reg[13]),
+        .I2(MUX_1_Counter_reg[12]),
+        .I3(MUX_2_Counter_reg[12]),
         .O(\response[255]_i_30_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h9009)) 
     \response[255]_i_31 
-       (.I0(MUX_2_Counter_reg[0]),
-        .I1(MUX_1_Counter_reg[0]),
-        .I2(MUX_1_Counter_reg[1]),
-        .I3(MUX_2_Counter_reg[1]),
+       (.I0(MUX_1_Counter_reg[11]),
+        .I1(MUX_2_Counter_reg[11]),
+        .I2(MUX_1_Counter_reg[10]),
+        .I3(MUX_2_Counter_reg[10]),
         .O(\response[255]_i_31_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_32 
-       (.I0(MUX_2_Counter_reg[14]),
-        .I1(MUX_1_Counter_reg[14]),
-        .I2(MUX_2_Counter_reg[15]),
-        .I3(MUX_1_Counter_reg[15]),
+       (.I0(MUX_1_Counter_reg[9]),
+        .I1(MUX_2_Counter_reg[9]),
+        .I2(MUX_1_Counter_reg[8]),
+        .I3(MUX_2_Counter_reg[8]),
         .O(\response[255]_i_32_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_33 
-       (.I0(MUX_2_Counter_reg[12]),
-        .I1(MUX_1_Counter_reg[12]),
-        .I2(MUX_2_Counter_reg[13]),
-        .I3(MUX_1_Counter_reg[13]),
+       (.I0(MUX_1_Counter_reg[7]),
+        .I1(MUX_2_Counter_reg[7]),
+        .I2(MUX_1_Counter_reg[6]),
+        .I3(MUX_2_Counter_reg[6]),
         .O(\response[255]_i_33_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_34 
-       (.I0(MUX_2_Counter_reg[10]),
-        .I1(MUX_1_Counter_reg[10]),
-        .I2(MUX_2_Counter_reg[11]),
-        .I3(MUX_1_Counter_reg[11]),
+       (.I0(MUX_1_Counter_reg[5]),
+        .I1(MUX_2_Counter_reg[5]),
+        .I2(MUX_1_Counter_reg[4]),
+        .I3(MUX_2_Counter_reg[4]),
         .O(\response[255]_i_34_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_35 
-       (.I0(MUX_2_Counter_reg[8]),
-        .I1(MUX_1_Counter_reg[8]),
-        .I2(MUX_2_Counter_reg[9]),
-        .I3(MUX_1_Counter_reg[9]),
+       (.I0(MUX_1_Counter_reg[3]),
+        .I1(MUX_2_Counter_reg[3]),
+        .I2(MUX_1_Counter_reg[2]),
+        .I3(MUX_2_Counter_reg[2]),
         .O(\response[255]_i_35_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
     \response[255]_i_36 
-       (.I0(MUX_2_Counter_reg[6]),
-        .I1(MUX_1_Counter_reg[6]),
-        .I2(MUX_2_Counter_reg[7]),
-        .I3(MUX_1_Counter_reg[7]),
+       (.I0(MUX_1_Counter_reg[1]),
+        .I1(MUX_2_Counter_reg[1]),
+        .I2(MUX_1_Counter_reg[0]),
+        .I3(MUX_2_Counter_reg[0]),
         .O(\response[255]_i_36_n_0 ));
   LUT4 #(
-    .INIT(16'h9009)) 
-    \response[255]_i_37 
-       (.I0(MUX_2_Counter_reg[4]),
-        .I1(MUX_1_Counter_reg[4]),
-        .I2(MUX_2_Counter_reg[5]),
-        .I3(MUX_1_Counter_reg[5]),
-        .O(\response[255]_i_37_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \response[255]_i_38 
-       (.I0(MUX_2_Counter_reg[2]),
-        .I1(MUX_1_Counter_reg[2]),
-        .I2(MUX_2_Counter_reg[3]),
-        .I3(MUX_1_Counter_reg[3]),
-        .O(\response[255]_i_38_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \response[255]_i_39 
-       (.I0(MUX_2_Counter_reg[0]),
-        .I1(MUX_1_Counter_reg[0]),
-        .I2(MUX_2_Counter_reg[1]),
-        .I3(MUX_1_Counter_reg[1]),
-        .O(\response[255]_i_39_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \response[255]_i_4 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
-        .O(\response[255]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_5 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(MUX_2_Counter_reg[31]),
+        .I1(MUX_1_Counter_reg[31]),
+        .I2(MUX_2_Counter_reg[30]),
+        .I3(MUX_1_Counter_reg[30]),
         .O(\response[255]_i_5_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
+    \response[255]_i_6 
+       (.I0(MUX_2_Counter_reg[29]),
+        .I1(MUX_1_Counter_reg[29]),
+        .I2(MUX_2_Counter_reg[28]),
+        .I3(MUX_1_Counter_reg[28]),
+        .O(\response[255]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    \response[255]_i_7 
+       (.I0(MUX_2_Counter_reg[27]),
+        .I1(MUX_1_Counter_reg[27]),
+        .I2(MUX_2_Counter_reg[26]),
+        .I3(MUX_1_Counter_reg[26]),
+        .O(\response[255]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'h22B2)) 
     \response[255]_i_8 
-       (.I0(MUX_2_Counter_reg[30]),
-        .I1(MUX_1_Counter_reg[30]),
-        .I2(MUX_1_Counter_reg[31]),
-        .I3(MUX_2_Counter_reg[31]),
+       (.I0(MUX_2_Counter_reg[25]),
+        .I1(MUX_1_Counter_reg[25]),
+        .I2(MUX_2_Counter_reg[24]),
+        .I3(MUX_1_Counter_reg[24]),
         .O(\response[255]_i_8_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     \response[255]_i_9 
-       (.I0(MUX_2_Counter_reg[28]),
-        .I1(MUX_1_Counter_reg[28]),
-        .I2(MUX_1_Counter_reg[29]),
-        .I3(MUX_2_Counter_reg[29]),
+       (.I0(MUX_2_Counter_reg[23]),
+        .I1(MUX_1_Counter_reg[23]),
+        .I2(MUX_2_Counter_reg[22]),
+        .I3(MUX_1_Counter_reg[22]),
         .O(\response[255]_i_9_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[25]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[25]),
-        .O(\response[25]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[25]),
+        .O(p_2_in[25]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[26]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[26]),
-        .O(\response[26]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[26]),
+        .O(p_2_in[26]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[27]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[27]),
-        .O(\response[27]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[27]),
+        .O(p_2_in[27]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[28]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[28]),
-        .O(\response[28]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[28]),
+        .O(p_2_in[28]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[29]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[29]),
-        .O(\response[29]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[29]),
+        .O(p_2_in[29]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[2]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[2]),
-        .O(\response[2]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[2]),
+        .O(p_2_in[2]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[30]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[30]),
-        .O(\response[30]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[30]),
+        .O(p_2_in[30]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[31]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[31]_i_2_n_0 ),
-        .I4(response[31]),
-        .O(\response[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[31]_i_2_n_0 ),
+        .I3(response[31]),
+        .O(p_2_in[31]));
   LUT4 #(
-    .INIT(16'hFEFF)) 
+    .INIT(16'hFFFD)) 
     \response[31]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[5]),
-        .I3(internal_challenge_reg[4]),
+       (.I0(internal_challenge[4]),
+        .I1(internal_challenge[5]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[6]),
         .O(\response[31]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[32]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[32]),
-        .O(\response[32]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[32]),
+        .O(p_2_in[32]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[33]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[33]),
-        .O(\response[33]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[33]),
+        .O(p_2_in[33]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[34]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[34]),
-        .O(\response[34]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[34]),
+        .O(p_2_in[34]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[35]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[35]),
-        .O(\response[35]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[35]),
+        .O(p_2_in[35]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[36]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[36]),
-        .O(\response[36]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[36]),
+        .O(p_2_in[36]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[37]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[37]),
-        .O(\response[37]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[37]),
+        .O(p_2_in[37]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[38]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[38]),
-        .O(\response[38]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[38]),
+        .O(p_2_in[38]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[39]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[39]),
-        .O(\response[39]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[39]),
+        .O(p_2_in[39]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[3]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[3]),
-        .O(\response[3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[3]),
+        .O(p_2_in[3]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[40]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[40]),
-        .O(\response[40]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[40]),
+        .O(p_2_in[40]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[41]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[41]),
-        .O(\response[41]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[41]),
+        .O(p_2_in[41]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[42]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[42]),
-        .O(\response[42]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[42]),
+        .O(p_2_in[42]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[43]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[43]),
-        .O(\response[43]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[43]),
+        .O(p_2_in[43]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[44]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[44]),
-        .O(\response[44]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[44]),
+        .O(p_2_in[44]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[45]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[45]),
-        .O(\response[45]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[45]),
+        .O(p_2_in[45]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[46]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[46]),
-        .O(\response[46]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[46]),
+        .O(p_2_in[46]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[47]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[47]_i_2_n_0 ),
-        .I4(response[47]),
-        .O(\response[47]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[47]_i_2_n_0 ),
+        .I3(response[47]),
+        .O(p_2_in[47]));
   LUT4 #(
-    .INIT(16'hFEFF)) 
+    .INIT(16'hFFFD)) 
     \response[47]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[6]),
         .O(\response[47]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[48]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[48]),
-        .O(\response[48]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[48]),
+        .O(p_2_in[48]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[49]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[49]),
-        .O(\response[49]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[49]),
+        .O(p_2_in[49]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[4]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[4]),
-        .O(\response[4]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[4]),
+        .O(p_2_in[4]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[50]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[50]),
-        .O(\response[50]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[50]),
+        .O(p_2_in[50]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[51]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[51]),
-        .O(\response[51]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[51]),
+        .O(p_2_in[51]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[52]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[52]),
-        .O(\response[52]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[52]),
+        .O(p_2_in[52]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[53]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[53]),
-        .O(\response[53]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[53]),
+        .O(p_2_in[53]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[54]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[54]),
-        .O(\response[54]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[54]),
+        .O(p_2_in[54]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[55]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[55]),
-        .O(\response[55]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[55]),
+        .O(p_2_in[55]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[56]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[56]),
-        .O(\response[56]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[56]),
+        .O(p_2_in[56]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[57]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[57]),
-        .O(\response[57]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[57]),
+        .O(p_2_in[57]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[58]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[58]),
-        .O(\response[58]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[58]),
+        .O(p_2_in[58]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[59]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[59]),
-        .O(\response[59]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[59]),
+        .O(p_2_in[59]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[5]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[5]),
-        .O(\response[5]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[5]),
+        .O(p_2_in[5]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[60]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[60]),
-        .O(\response[60]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[60]),
+        .O(p_2_in[60]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[61]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[61]),
-        .O(\response[61]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[61]),
+        .O(p_2_in[61]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[62]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[62]),
-        .O(\response[62]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[62]),
+        .O(p_2_in[62]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[63]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[63]_i_2_n_0 ),
-        .I4(response[63]),
-        .O(\response[63]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[63]_i_2_n_0 ),
+        .I3(response[63]),
+        .O(p_2_in[63]));
   LUT4 #(
-    .INIT(16'hEFFF)) 
+    .INIT(16'hFFF7)) 
     \response[63]_i_2 
-       (.I0(internal_challenge_reg[6]),
-        .I1(internal_challenge_reg[7]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[6]),
         .O(\response[63]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[64]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[64]),
-        .O(\response[64]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[64]),
+        .O(p_2_in[64]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[65]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[65]),
-        .O(\response[65]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[65]),
+        .O(p_2_in[65]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[66]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[66]),
-        .O(\response[66]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[66]),
+        .O(p_2_in[66]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[67]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[67]),
-        .O(\response[67]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[67]),
+        .O(p_2_in[67]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[68]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[68]),
-        .O(\response[68]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[68]),
+        .O(p_2_in[68]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[69]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[69]),
-        .O(\response[69]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[69]),
+        .O(p_2_in[69]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[6]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[6]),
-        .O(\response[6]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[6]),
+        .O(p_2_in[6]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[70]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[70]),
-        .O(\response[70]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[70]),
+        .O(p_2_in[70]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[71]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[71]),
-        .O(\response[71]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[71]),
+        .O(p_2_in[71]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[72]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[72]),
-        .O(\response[72]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[72]),
+        .O(p_2_in[72]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[73]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[73]),
-        .O(\response[73]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[73]),
+        .O(p_2_in[73]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[74]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[74]),
-        .O(\response[74]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[74]),
+        .O(p_2_in[74]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[75]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[75]),
-        .O(\response[75]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[75]),
+        .O(p_2_in[75]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[76]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[76]),
-        .O(\response[76]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[76]),
+        .O(p_2_in[76]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[77]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[77]),
-        .O(\response[77]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[77]),
+        .O(p_2_in[77]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[78]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[78]),
-        .O(\response[78]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[78]),
+        .O(p_2_in[78]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[79]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[79]_i_2_n_0 ),
-        .I4(response[79]),
-        .O(\response[79]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[79]_i_2_n_0 ),
+        .I3(response[79]),
+        .O(p_2_in[79]));
   LUT4 #(
-    .INIT(16'hFFFB)) 
+    .INIT(16'hFFEF)) 
     \response[79]_i_2 
-       (.I0(internal_challenge_reg[7]),
-        .I1(internal_challenge_reg[6]),
-        .I2(internal_challenge_reg[4]),
-        .I3(internal_challenge_reg[5]),
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[6]),
+        .I3(internal_challenge[7]),
         .O(\response[79]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[7]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[7]),
-        .O(\response[7]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[80]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[80]),
-        .O(\response[80]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[81]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[81]),
-        .O(\response[81]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[82]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[82]),
-        .O(\response[82]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[83]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[83]),
-        .O(\response[83]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[84]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[244]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[84]),
-        .O(\response[84]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[85]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[245]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[85]),
-        .O(\response[85]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[86]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[246]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[86]),
-        .O(\response[86]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[87]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[247]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[87]),
-        .O(\response[87]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[88]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[88]),
-        .O(\response[88]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[89]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[89]),
-        .O(\response[89]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[8]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[248]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[8]),
-        .O(\response[8]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[90]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[250]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[90]),
-        .O(\response[90]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[91]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[251]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[91]),
-        .O(\response[91]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[92]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[252]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[92]),
-        .O(\response[92]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[93]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[253]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[93]),
-        .O(\response[93]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[94]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[254]_i_2_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[94]),
-        .O(\response[94]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \response[95]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison_reg_rep_n_0),
-        .I2(\response[255]_i_4_n_0 ),
-        .I3(\response[95]_i_2_n_0 ),
-        .I4(response[95]),
-        .O(\response[95]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
-    .INIT(16'hFBFF)) 
+    .INIT(16'hFB08)) 
+    \response[7]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[7]),
+        .O(p_2_in[7]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[80]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[80]),
+        .O(p_2_in[80]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[81]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[81]),
+        .O(p_2_in[81]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[82]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[82]),
+        .O(p_2_in[82]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[83]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[83]),
+        .O(p_2_in[83]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[84]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[244]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[84]),
+        .O(p_2_in[84]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[85]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[245]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[85]),
+        .O(p_2_in[85]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[86]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[246]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[86]),
+        .O(p_2_in[86]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[87]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[247]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[87]),
+        .O(p_2_in[87]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[88]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[88]),
+        .O(p_2_in[88]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[89]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[89]),
+        .O(p_2_in[89]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[8]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[248]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[8]),
+        .O(p_2_in[8]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[90]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[250]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[90]),
+        .O(p_2_in[90]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[91]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[251]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[91]),
+        .O(p_2_in[91]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[92]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[252]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[92]),
+        .O(p_2_in[92]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[93]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[253]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[93]),
+        .O(p_2_in[93]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[94]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[254]_i_2_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[94]),
+        .O(p_2_in[94]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \response[95]_i_1 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\internal_challenge[6]_i_3_n_0 ),
+        .I2(\response[95]_i_2_n_0 ),
+        .I3(response[95]),
+        .O(p_2_in[95]));
+  LUT4 #(
+    .INIT(16'hFFDF)) 
     \response[95]_i_2 
-       (.I0(internal_challenge_reg[7]),
-        .I1(internal_challenge_reg[6]),
-        .I2(internal_challenge_reg[5]),
-        .I3(internal_challenge_reg[4]),
+       (.I0(internal_challenge[4]),
+        .I1(internal_challenge[5]),
+        .I2(internal_challenge[6]),
+        .I3(internal_challenge[7]),
         .O(\response[95]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[96]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[240]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[96]),
-        .O(\response[96]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[240]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[96]),
+        .O(p_2_in[96]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[97]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[241]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[97]),
-        .O(\response[97]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[241]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[97]),
+        .O(p_2_in[97]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[98]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[242]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[98]),
-        .O(\response[98]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[242]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[98]),
+        .O(p_2_in[98]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[99]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[243]_i_2_n_0 ),
-        .I3(\response[111]_i_2_n_0 ),
-        .I4(response[99]),
-        .O(\response[99]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[243]_i_2_n_0 ),
+        .I2(\response[111]_i_2_n_0 ),
+        .I3(response[99]),
+        .O(p_2_in[99]));
+  LUT4 #(
+    .INIT(16'hFB08)) 
     \response[9]_i_1 
-       (.I0(\response_reg[255]_i_3_n_15 ),
-        .I1(Enable_Comparison),
-        .I2(\response[249]_i_2_n_0 ),
-        .I3(\response[15]_i_2_n_0 ),
-        .I4(response[9]),
-        .O(\response[9]_i_1_n_0 ));
+       (.I0(\response_reg[255]_i_2_n_15 ),
+        .I1(\response[249]_i_2_n_0 ),
+        .I2(\response[15]_i_2_n_0 ),
+        .I3(response[9]),
+        .O(p_2_in[9]));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[0] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[0]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[0]),
         .Q(response[0]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[100] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[100]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[100]),
         .Q(response[100]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[101] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[101]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[101]),
         .Q(response[101]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[102] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[102]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[102]),
         .Q(response[102]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[103] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[103]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[103]),
         .Q(response[103]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[104] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[104]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[104]),
         .Q(response[104]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[105] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[105]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[105]),
         .Q(response[105]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[106] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[106]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[106]),
         .Q(response[106]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[107] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[107]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[107]),
         .Q(response[107]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[108] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[108]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[108]),
         .Q(response[108]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[109] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[109]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[109]),
         .Q(response[109]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[10] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[10]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[10]),
         .Q(response[10]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[110] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[110]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[110]),
         .Q(response[110]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[111] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[111]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[111]),
         .Q(response[111]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[112] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[112]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[112]),
         .Q(response[112]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[113] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[113]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[113]),
         .Q(response[113]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[114] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[114]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[114]),
         .Q(response[114]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[115] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[115]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[115]),
         .Q(response[115]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[116] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[116]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[116]),
         .Q(response[116]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[117] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[117]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[117]),
         .Q(response[117]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[118] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[118]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[118]),
         .Q(response[118]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[119] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[119]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[119]),
         .Q(response[119]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[11] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[11]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[11]),
         .Q(response[11]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[120] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[120]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[120]),
         .Q(response[120]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[121] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[121]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[121]),
         .Q(response[121]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[122] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[122]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[122]),
         .Q(response[122]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[123] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[123]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[123]),
         .Q(response[123]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[124] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[124]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[124]),
         .Q(response[124]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[125] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[125]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[125]),
         .Q(response[125]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[126] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[126]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[126]),
         .Q(response[126]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[127] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[127]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[127]),
         .Q(response[127]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[128] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[128]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[128]),
         .Q(response[128]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[129] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[129]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[129]),
         .Q(response[129]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[12] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[12]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[12]),
         .Q(response[12]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[130] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[130]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[130]),
         .Q(response[130]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[131] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[131]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[131]),
         .Q(response[131]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[132] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[132]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[132]),
         .Q(response[132]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[133] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[133]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[133]),
         .Q(response[133]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[134] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[134]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[134]),
         .Q(response[134]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[135] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[135]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[135]),
         .Q(response[135]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[136] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[136]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[136]),
         .Q(response[136]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[137] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[137]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[137]),
         .Q(response[137]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[138] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[138]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[138]),
         .Q(response[138]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[139] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[139]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[139]),
         .Q(response[139]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[13] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[13]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[13]),
         .Q(response[13]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[140] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[140]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[140]),
         .Q(response[140]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[141] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[141]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[141]),
         .Q(response[141]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[142] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[142]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[142]),
         .Q(response[142]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[143] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[143]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[143]),
         .Q(response[143]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[144] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[144]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[144]),
         .Q(response[144]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[145] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[145]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[145]),
         .Q(response[145]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[146] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[146]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[146]),
         .Q(response[146]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[147] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[147]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[147]),
         .Q(response[147]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[148] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[148]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[148]),
         .Q(response[148]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[149] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[149]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[149]),
         .Q(response[149]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[14] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[14]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[14]),
         .Q(response[14]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[150] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[150]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[150]),
         .Q(response[150]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[151] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[151]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[151]),
         .Q(response[151]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[152] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[152]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[152]),
         .Q(response[152]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[153] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[153]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[153]),
         .Q(response[153]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[154] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[154]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[154]),
         .Q(response[154]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[155] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[155]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[155]),
         .Q(response[155]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[156] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[156]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[156]),
         .Q(response[156]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[157] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[157]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[157]),
         .Q(response[157]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[158] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[158]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[158]),
         .Q(response[158]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[159] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[159]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[159]),
         .Q(response[159]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[15] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[15]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[15]),
         .Q(response[15]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[160] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[160]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[160]),
         .Q(response[160]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[161] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[161]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[161]),
         .Q(response[161]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[162] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[162]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[162]),
         .Q(response[162]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[163] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[163]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[163]),
         .Q(response[163]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[164] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[164]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[164]),
         .Q(response[164]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[165] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[165]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[165]),
         .Q(response[165]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[166] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[166]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[166]),
         .Q(response[166]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[167] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[167]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[167]),
         .Q(response[167]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[168] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[168]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[168]),
         .Q(response[168]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[169] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[169]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[169]),
         .Q(response[169]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[16] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[16]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[16]),
         .Q(response[16]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[170] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[170]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[170]),
         .Q(response[170]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[171] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[171]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[171]),
         .Q(response[171]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[172] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[172]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[172]),
         .Q(response[172]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[173] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[173]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[173]),
         .Q(response[173]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[174] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[174]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[174]),
         .Q(response[174]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[175] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[175]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[175]),
         .Q(response[175]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[176] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[176]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[176]),
         .Q(response[176]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[177] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[177]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[177]),
         .Q(response[177]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[178] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[178]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[178]),
         .Q(response[178]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[179] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[179]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[179]),
         .Q(response[179]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[17] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[17]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[17]),
         .Q(response[17]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[180] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[180]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[180]),
         .Q(response[180]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[181] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[181]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[181]),
         .Q(response[181]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[182] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[182]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[182]),
         .Q(response[182]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[183] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[183]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[183]),
         .Q(response[183]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[184] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[184]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[184]),
         .Q(response[184]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[185] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[185]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[185]),
         .Q(response[185]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[186] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[186]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[186]),
         .Q(response[186]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[187] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[187]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[187]),
         .Q(response[187]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[188] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[188]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[188]),
         .Q(response[188]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[189] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[189]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[189]),
         .Q(response[189]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[18] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[18]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[18]),
         .Q(response[18]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[190] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[190]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[190]),
         .Q(response[190]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[191] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[191]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[191]),
         .Q(response[191]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[192] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[192]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[192]),
         .Q(response[192]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[193] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[193]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[193]),
         .Q(response[193]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[194] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[194]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[194]),
         .Q(response[194]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[195] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[195]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[195]),
         .Q(response[195]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[196] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[196]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[196]),
         .Q(response[196]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[197] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[197]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[197]),
         .Q(response[197]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[198] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[198]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[198]),
         .Q(response[198]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[199] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[199]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[199]),
         .Q(response[199]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[19] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[19]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[19]),
         .Q(response[19]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[1] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[1]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[1]),
         .Q(response[1]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[200] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[200]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[200]),
         .Q(response[200]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[201] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[201]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[201]),
         .Q(response[201]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[202] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[202]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[202]),
         .Q(response[202]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[203] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[203]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[203]),
         .Q(response[203]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[204] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[204]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[204]),
         .Q(response[204]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[205] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[205]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[205]),
         .Q(response[205]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[206] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[206]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[206]),
         .Q(response[206]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[207] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[207]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[207]),
         .Q(response[207]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[208] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[208]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[208]),
         .Q(response[208]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[209] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[209]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[209]),
         .Q(response[209]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[20] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[20]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[20]),
         .Q(response[20]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[210] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[210]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[210]),
         .Q(response[210]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[211] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[211]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[211]),
         .Q(response[211]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[212] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[212]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[212]),
         .Q(response[212]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[213] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[213]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[213]),
         .Q(response[213]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[214] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[214]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[214]),
         .Q(response[214]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[215] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[215]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[215]),
         .Q(response[215]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[216] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[216]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[216]),
         .Q(response[216]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[217] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[217]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[217]),
         .Q(response[217]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[218] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[218]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[218]),
         .Q(response[218]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[219] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[219]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[219]),
         .Q(response[219]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[21] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[21]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[21]),
         .Q(response[21]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[220] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[220]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[220]),
         .Q(response[220]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[221] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[221]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[221]),
         .Q(response[221]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[222] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[222]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[222]),
         .Q(response[222]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[223] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[223]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[223]),
         .Q(response[223]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[224] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[224]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[224]),
         .Q(response[224]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[225] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[225]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[225]),
         .Q(response[225]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[226] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[226]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[226]),
         .Q(response[226]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[227] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[227]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[227]),
         .Q(response[227]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[228] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[228]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[228]),
         .Q(response[228]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[229] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[229]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[229]),
         .Q(response[229]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[22] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[22]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[22]),
         .Q(response[22]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[230] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[230]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[230]),
         .Q(response[230]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[231] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[231]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[231]),
         .Q(response[231]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[232] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[232]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[232]),
         .Q(response[232]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[233] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[233]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[233]),
         .Q(response[233]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[234] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[234]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[234]),
         .Q(response[234]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[235] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[235]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[235]),
         .Q(response[235]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[236] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[236]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[236]),
         .Q(response[236]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[237] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[237]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[237]),
         .Q(response[237]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[238] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[238]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[238]),
         .Q(response[238]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[239] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[239]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[239]),
         .Q(response[239]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[23] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[23]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[23]),
         .Q(response[23]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[240] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[240]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[240]),
         .Q(response[240]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[241] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[241]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[241]),
         .Q(response[241]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[242] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[242]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[242]),
         .Q(response[242]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[243] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[243]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[243]),
         .Q(response[243]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[244] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[244]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[244]),
         .Q(response[244]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[245] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[245]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[245]),
         .Q(response[245]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[246] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[246]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[246]),
         .Q(response[246]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[247] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[247]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[247]),
         .Q(response[247]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[248] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[248]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[248]),
         .Q(response[248]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[249] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[249]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[249]),
         .Q(response[249]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[24] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[24]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[24]),
         .Q(response[24]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[250] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[250]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[250]),
         .Q(response[250]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[251] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[251]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[251]),
         .Q(response[251]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[252] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[252]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[252]),
         .Q(response[252]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[253] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[253]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[253]),
         .Q(response[253]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[254] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[254]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[254]),
         .Q(response[254]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[255] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[255]_i_2_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[255]),
         .Q(response[255]),
         .R(Reset_Comparison));
-  CARRY8 \response_reg[255]_i_3 
+  CARRY8 \response_reg[255]_i_2 
        (.CI(response1),
         .CI_TOP(1'b0),
-        .CO(\NLW_response_reg[255]_i_3_CO_UNCONNECTED [7:0]),
+        .CO(\NLW_response_reg[255]_i_2_CO_UNCONNECTED [7:0]),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_response_reg[255]_i_3_O_UNCONNECTED [7:1],\response_reg[255]_i_3_n_15 }),
+        .O({\NLW_response_reg[255]_i_2_O_UNCONNECTED [7:1],\response_reg[255]_i_2_n_15 }),
         .S({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1}));
-  CARRY8 \response_reg[255]_i_6 
-       (.CI(\response_reg[255]_i_7_n_0 ),
+  CARRY8 \response_reg[255]_i_3 
+       (.CI(\response_reg[255]_i_4_n_0 ),
         .CI_TOP(1'b0),
-        .CO({response1,\response_reg[255]_i_6_n_1 ,\response_reg[255]_i_6_n_2 ,\response_reg[255]_i_6_n_3 ,\response_reg[255]_i_6_n_4 ,\response_reg[255]_i_6_n_5 ,\response_reg[255]_i_6_n_6 ,\response_reg[255]_i_6_n_7 }),
-        .DI({\response[255]_i_8_n_0 ,\response[255]_i_9_n_0 ,\response[255]_i_10_n_0 ,\response[255]_i_11_n_0 ,\response[255]_i_12_n_0 ,\response[255]_i_13_n_0 ,\response[255]_i_14_n_0 ,\response[255]_i_15_n_0 }),
-        .O(\NLW_response_reg[255]_i_6_O_UNCONNECTED [7:0]),
-        .S({\response[255]_i_16_n_0 ,\response[255]_i_17_n_0 ,\response[255]_i_18_n_0 ,\response[255]_i_19_n_0 ,\response[255]_i_20_n_0 ,\response[255]_i_21_n_0 ,\response[255]_i_22_n_0 ,\response[255]_i_23_n_0 }));
-  CARRY8 \response_reg[255]_i_7 
+        .CO({response1,\response_reg[255]_i_3_n_1 ,\response_reg[255]_i_3_n_2 ,\response_reg[255]_i_3_n_3 ,\response_reg[255]_i_3_n_4 ,\response_reg[255]_i_3_n_5 ,\response_reg[255]_i_3_n_6 ,\response_reg[255]_i_3_n_7 }),
+        .DI({\response[255]_i_5_n_0 ,\response[255]_i_6_n_0 ,\response[255]_i_7_n_0 ,\response[255]_i_8_n_0 ,\response[255]_i_9_n_0 ,\response[255]_i_10_n_0 ,\response[255]_i_11_n_0 ,\response[255]_i_12_n_0 }),
+        .O(\NLW_response_reg[255]_i_3_O_UNCONNECTED [7:0]),
+        .S({\response[255]_i_13_n_0 ,\response[255]_i_14_n_0 ,\response[255]_i_15_n_0 ,\response[255]_i_16_n_0 ,\response[255]_i_17_n_0 ,\response[255]_i_18_n_0 ,\response[255]_i_19_n_0 ,\response[255]_i_20_n_0 }));
+  CARRY8 \response_reg[255]_i_4 
        (.CI(1'b0),
         .CI_TOP(1'b0),
-        .CO({\response_reg[255]_i_7_n_0 ,\response_reg[255]_i_7_n_1 ,\response_reg[255]_i_7_n_2 ,\response_reg[255]_i_7_n_3 ,\response_reg[255]_i_7_n_4 ,\response_reg[255]_i_7_n_5 ,\response_reg[255]_i_7_n_6 ,\response_reg[255]_i_7_n_7 }),
-        .DI({\response[255]_i_24_n_0 ,\response[255]_i_25_n_0 ,\response[255]_i_26_n_0 ,\response[255]_i_27_n_0 ,\response[255]_i_28_n_0 ,\response[255]_i_29_n_0 ,\response[255]_i_30_n_0 ,\response[255]_i_31_n_0 }),
-        .O(\NLW_response_reg[255]_i_7_O_UNCONNECTED [7:0]),
-        .S({\response[255]_i_32_n_0 ,\response[255]_i_33_n_0 ,\response[255]_i_34_n_0 ,\response[255]_i_35_n_0 ,\response[255]_i_36_n_0 ,\response[255]_i_37_n_0 ,\response[255]_i_38_n_0 ,\response[255]_i_39_n_0 }));
+        .CO({\response_reg[255]_i_4_n_0 ,\response_reg[255]_i_4_n_1 ,\response_reg[255]_i_4_n_2 ,\response_reg[255]_i_4_n_3 ,\response_reg[255]_i_4_n_4 ,\response_reg[255]_i_4_n_5 ,\response_reg[255]_i_4_n_6 ,\response_reg[255]_i_4_n_7 }),
+        .DI({\response[255]_i_21_n_0 ,\response[255]_i_22_n_0 ,\response[255]_i_23_n_0 ,\response[255]_i_24_n_0 ,\response[255]_i_25_n_0 ,\response[255]_i_26_n_0 ,\response[255]_i_27_n_0 ,\response[255]_i_28_n_0 }),
+        .O(\NLW_response_reg[255]_i_4_O_UNCONNECTED [7:0]),
+        .S({\response[255]_i_29_n_0 ,\response[255]_i_30_n_0 ,\response[255]_i_31_n_0 ,\response[255]_i_32_n_0 ,\response[255]_i_33_n_0 ,\response[255]_i_34_n_0 ,\response[255]_i_35_n_0 ,\response[255]_i_36_n_0 }));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[25] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[25]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[25]),
         .Q(response[25]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[26] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[26]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[26]),
         .Q(response[26]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[27] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[27]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[27]),
         .Q(response[27]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[28] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[28]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[28]),
         .Q(response[28]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[29] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[29]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[29]),
         .Q(response[29]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[2] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[2]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[2]),
         .Q(response[2]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[30] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[30]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[30]),
         .Q(response[30]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[31] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[31]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[31]),
         .Q(response[31]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[32] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[32]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[32]),
         .Q(response[32]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[33] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[33]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[33]),
         .Q(response[33]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[34] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[34]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[34]),
         .Q(response[34]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[35] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[35]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[35]),
         .Q(response[35]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[36] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[36]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[36]),
         .Q(response[36]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[37] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[37]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[37]),
         .Q(response[37]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[38] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[38]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[38]),
         .Q(response[38]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[39] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[39]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[39]),
         .Q(response[39]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[3] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[3]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[3]),
         .Q(response[3]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[40] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[40]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[40]),
         .Q(response[40]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[41] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[41]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[41]),
         .Q(response[41]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[42] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[42]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[42]),
         .Q(response[42]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[43] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[43]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[43]),
         .Q(response[43]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[44] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[44]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[44]),
         .Q(response[44]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[45] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[45]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[45]),
         .Q(response[45]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[46] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[46]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[46]),
         .Q(response[46]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[47] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[47]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[47]),
         .Q(response[47]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[48] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[48]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[48]),
         .Q(response[48]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[49] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[49]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[49]),
         .Q(response[49]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[4] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[4]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[4]),
         .Q(response[4]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[50] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[50]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[50]),
         .Q(response[50]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[51] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[51]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[51]),
         .Q(response[51]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[52] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[52]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[52]),
         .Q(response[52]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[53] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[53]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[53]),
         .Q(response[53]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[54] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[54]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[54]),
         .Q(response[54]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[55] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[55]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[55]),
         .Q(response[55]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[56] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[56]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[56]),
         .Q(response[56]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[57] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[57]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[57]),
         .Q(response[57]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[58] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[58]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[58]),
         .Q(response[58]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[59] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[59]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[59]),
         .Q(response[59]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[5] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[5]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[5]),
         .Q(response[5]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[60] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[60]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[60]),
         .Q(response[60]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[61] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[61]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[61]),
         .Q(response[61]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[62] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[62]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[62]),
         .Q(response[62]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[63] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[63]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[63]),
         .Q(response[63]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[64] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[64]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[64]),
         .Q(response[64]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[65] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[65]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[65]),
         .Q(response[65]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[66] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[66]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[66]),
         .Q(response[66]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[67] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[67]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[67]),
         .Q(response[67]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[68] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[68]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[68]),
         .Q(response[68]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[69] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[69]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[69]),
         .Q(response[69]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[6] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[6]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[6]),
         .Q(response[6]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[70] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[70]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[70]),
         .Q(response[70]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[71] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[71]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[71]),
         .Q(response[71]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[72] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[72]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[72]),
         .Q(response[72]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[73] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[73]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[73]),
         .Q(response[73]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[74] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[74]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[74]),
         .Q(response[74]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[75] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[75]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[75]),
         .Q(response[75]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[76] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[76]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[76]),
         .Q(response[76]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[77] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[77]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[77]),
         .Q(response[77]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[78] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[78]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[78]),
         .Q(response[78]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[79] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[79]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[79]),
         .Q(response[79]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[7] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[7]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[7]),
         .Q(response[7]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[80] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[80]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[80]),
         .Q(response[80]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[81] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[81]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[81]),
         .Q(response[81]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[82] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[82]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[82]),
         .Q(response[82]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[83] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[83]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[83]),
         .Q(response[83]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[84] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[84]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[84]),
         .Q(response[84]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[85] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[85]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[85]),
         .Q(response[85]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[86] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[86]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[86]),
         .Q(response[86]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[87] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[87]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[87]),
         .Q(response[87]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[88] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[88]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[88]),
         .Q(response[88]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[89] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[89]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[89]),
         .Q(response[89]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[8] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[8]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[8]),
         .Q(response[8]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[90] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[90]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[90]),
         .Q(response[90]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[91] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[91]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[91]),
         .Q(response[91]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[92] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[92]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[92]),
         .Q(response[92]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[93] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[93]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[93]),
         .Q(response[93]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[94] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[94]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[94]),
         .Q(response[94]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[95] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[95]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[95]),
         .Q(response[95]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[96] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[96]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[96]),
         .Q(response[96]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[97] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[97]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[97]),
         .Q(response[97]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[98] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[98]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[98]),
         .Q(response[98]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[99] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[99]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[99]),
         .Q(response[99]),
         .R(Reset_Comparison));
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE \response_reg[9] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\response[9]_i_1_n_0 ),
+        .CE(Enable_Comparison),
+        .D(p_2_in[9]),
         .Q(response[9]),
         .R(Reset_Comparison));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT3 #(
-    .INIT(8'h04)) 
-    \state[0]_i_1 
-       (.I0(\state_reg_n_0_[0] ),
-        .I1(enable),
-        .I2(p_1_in),
-        .O(\state[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h0048)) 
-    \state[1]_i_1 
-       (.I0(\state_reg_n_0_[0] ),
-        .I1(enable),
-        .I2(\state_reg_n_0_[1] ),
-        .I3(p_1_in),
-        .O(\state[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'hA0E0A0A0)) 
-    \state[2]_i_1 
-       (.I0(p_1_in),
-        .I1(\state_reg_n_0_[1] ),
-        .I2(enable),
-        .I3(neqOp),
-        .I4(\state_reg_n_0_[0] ),
-        .O(state));
   LUT6 #(
-    .INIT(64'h7FFFFFFFFFFFFFFF)) 
-    \state[2]_i_2 
-       (.I0(internal_challenge_reg[2]),
-        .I1(internal_challenge_reg[3]),
-        .I2(internal_challenge_reg[0]),
-        .I3(internal_challenge_reg[1]),
-        .I4(\state[2]_i_3_n_0 ),
-        .I5(\state[2]_i_4_n_0 ),
-        .O(neqOp));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \state[2]_i_3 
-       (.I0(internal_challenge_reg[7]),
-        .I1(internal_challenge_reg[6]),
-        .O(\state[2]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \state[2]_i_4 
-       (.I0(internal_challenge_reg[5]),
-        .I1(internal_challenge_reg[4]),
-        .O(\state[2]_i_4_n_0 ));
+    .INIT(64'h88880080AAAAAAAA)) 
+    \state[0]_i_1 
+       (.I0(enable),
+        .I1(state[2]),
+        .I2(\internal_challenge[6]_i_3_n_0 ),
+        .I3(\state[0]_i_2_n_0 ),
+        .I4(state[1]),
+        .I5(state[0]),
+        .O(state__0[0]));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    \state[0]_i_2 
+       (.I0(internal_challenge[5]),
+        .I1(internal_challenge[4]),
+        .I2(internal_challenge[7]),
+        .I3(internal_challenge[6]),
+        .O(\state[0]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h8A20)) 
+    \state[1]_i_1 
+       (.I0(enable),
+        .I1(state[2]),
+        .I2(state[1]),
+        .I3(state[0]),
+        .O(state__0[1]));
+  LUT4 #(
+    .INIT(16'hB800)) 
+    \state[2]_i_1 
+       (.I0(state[0]),
+        .I1(state[1]),
+        .I2(state[2]),
+        .I3(enable),
+        .O(state__0[2]));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \state_reg[0] 
        (.C(clk),
         .CE(clear),
-        .D(\state[0]_i_1_n_0 ),
-        .Q(\state_reg_n_0_[0] ),
+        .D(state__0[0]),
+        .Q(state[0]),
         .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \state_reg[1] 
        (.C(clk),
         .CE(clear),
-        .D(\state[1]_i_1_n_0 ),
-        .Q(\state_reg_n_0_[1] ),
+        .D(state__0[1]),
+        .Q(state[1]),
         .R(1'b0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
     \state_reg[2] 
        (.C(clk),
         .CE(clear),
-        .D(state),
-        .Q(p_1_in),
+        .D(state__0[2]),
+        .Q(state[2]),
         .R(1'b0));
 endmodule
 
@@ -69507,7 +69476,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
         .counter_config(counter_config),
         .enable(\slv_reg0_reg_n_0_[0] ),
         .ready(slv_reg2),
-        .response({slv_reg3,slv_reg4,slv_reg5,slv_reg6,slv_reg7,slv_reg8,slv_reg9,slv_reg10}));
+        .response({slv_reg10,slv_reg9,slv_reg8,slv_reg7,slv_reg6,slv_reg5,slv_reg4,slv_reg3}));
   LUT6 #(
     .INIT(64'hBFFFBF00BF00BF00)) 
     aw_en_i_1
@@ -71049,7 +71018,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(puf_axi_rvalid),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     axi_wready_i_1
@@ -71094,7 +71063,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
         .I4(puf_axi_wstrb[3]),
         .I5(p_0_in),
         .O(p_1_in[31]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg0[31]_i_2 

@@ -1,0 +1,16 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Tue Oct  8 14:08:48 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96v2_nolt_puf_Nolting_PUF_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96v2_nolt_puf_Nolting_PUF_0_0 (user.org:user:Nolting_PUF:1.0) from (Rev. 2) to (Rev. 3)
+

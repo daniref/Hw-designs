@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sim_1/new/puf_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_top_DB'

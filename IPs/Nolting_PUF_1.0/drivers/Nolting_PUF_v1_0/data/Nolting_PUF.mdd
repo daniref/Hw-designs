@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER Nolting_PUF
+	OPTION supported_peripherals = (Nolting_PUF);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = Nolting_PUF;
+END DRIVER

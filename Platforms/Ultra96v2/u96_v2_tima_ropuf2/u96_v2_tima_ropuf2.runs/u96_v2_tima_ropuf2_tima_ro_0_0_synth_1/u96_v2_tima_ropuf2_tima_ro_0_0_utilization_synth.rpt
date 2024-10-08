@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Sat Sep 28 19:16:05 2024
+| Date         : Fri Oct  4 13:56:58 2024
 | Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file u96_v2_tima_ropuf2_tima_ro_0_0_utilization_synth.rpt -pb u96_v2_tima_ropuf2_tima_ro_0_0_utilization_synth.pb
 | Design       : u96_v2_tima_ropuf2_tima_ro_0_0
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               | 2656 |  2048 |     70560 |  3.76 |
-|   LUT as Logic          | 2656 |  2048 |     70560 |  3.76 |
+| CLB LUTs*               | 2676 |  2048 |     70560 |  3.79 |
+|   LUT as Logic          | 2676 |  2048 |     70560 |  3.79 |
 |   LUT as Memory         |    0 |     0 |     28800 |  0.00 |
-| CLB Registers           |  488 |     0 |    141120 |  0.35 |
-|   Register as Flip Flop |  484 |     0 |    141120 |  0.34 |
+| CLB Registers           |  487 |     0 |    141120 |  0.35 |
+|   Register as Flip Flop |  483 |     0 |    141120 |  0.34 |
 |   Register as Latch     |    4 |     0 |    141120 | <0.01 |
 | CARRY8                  |   17 |     0 |      8820 |  0.19 |
 | F7 Muxes                |   68 |     0 |     35280 |  0.19 |
@@ -60,7 +60,7 @@ Table of Contents
 | 2     |          Yes |           - |          Set |
 | 66    |          Yes |           - |        Reset |
 | 5     |          Yes |         Set |            - |
-| 415   |          Yes |       Reset |            - |
+| 414   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -147,17 +147,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT1     | 3592 |                 CLB |
-| LUT2     |  520 |                 CLB |
-| FDRE     |  415 |            Register |
-| LUT5     |  322 |                 CLB |
-| LUT6     |  227 |                 CLB |
-| LUT4     |   71 |                 CLB |
+| LUT1     | 3591 |                 CLB |
+| LUT2     |  518 |                 CLB |
+| FDRE     |  414 |            Register |
+| LUT4     |  329 |                 CLB |
+| LUT6     |  229 |                 CLB |
 | MUXF7    |   68 |                 CLB |
+| LUT5     |   65 |                 CLB |
 | FDCE     |   64 |            Register |
 | MUXF8    |   34 |                 CLB |
 | CARRY8   |   17 |                 CLB |
-| LUT3     |   12 |                 CLB |
+| LUT3     |    9 |                 CLB |
 | FDSE     |    5 |            Register |
 | LDPE     |    2 |            Register |
 | LDCE     |    2 |            Register |
