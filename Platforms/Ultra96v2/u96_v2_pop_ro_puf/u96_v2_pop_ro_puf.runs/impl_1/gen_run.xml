@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu3eg-sbva484-1-i" LaunchTime="1728288254">
+<GenRun Id="impl_1" LaunchPart="xczu3eg-sbva484-1-i" LaunchTime="1728568293">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="u96_v2_pop_ropuf_wrapper.vdi"/>
   <File Type="BG-DRC" Name="u96_v2_pop_ropuf_wrapper.drc"/>
@@ -117,7 +117,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -134,6 +136,7 @@
       <Option Id="BinFile">1</Option>
     </Step>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="u96_v2_pop_ropuf_proc_sys_reset_6_0"/>
   <BlockFileSet Type="BlockSrcs" Name="u96_v2_pop_ropuf_proc_sys_reset_5_0"/>
@@ -154,5 +157,4 @@
   <BlockFileSet Type="BlockSrcs" Name="u96_v2_pop_ropuf_PWM_w_Int_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="u96_v2_pop_ropuf_proc_sys_reset_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="u96_v2_pop_ropuf_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0"/>
 </GenRun>

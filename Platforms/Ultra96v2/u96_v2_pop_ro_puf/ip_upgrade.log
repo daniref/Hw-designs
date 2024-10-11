@@ -1,6 +1,174 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Thu Oct 10 09:13:54 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0 (user.org:user:POP_ro_puf_AXI4L:1.0) from (Rev. 25) to (Rev. 26)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Thu Oct 10 02:44:38 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0 (user.org:user:POP_ro_puf_AXI4L:1.0) from (Rev. 24) to (Rev. 25)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Thu Oct 10 02:10:02 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0 (user.org:user:POP_ro_puf_AXI4L:1.0) from (Rev. 23) to (Rev. 24)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Thu Oct 10 00:51:52 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0 (user.org:user:POP_ro_puf_AXI4L:1.0) from (Rev. 22) to (Rev. 23)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Tue Oct  8 23:11:38 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0 (user.org:user:POP_ro_puf_AXI4L:1.0) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Tue Oct  8 18:58:39 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0 (user.org:user:POP_ro_puf_AXI4L:1.0) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Tue Oct  8 18:25:19 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0 (user.org:user:POP_ro_puf_AXI4L:1.0) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Tue Oct  8 16:42:11 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0 (user.org:user:POP_ro_puf_AXI4L:1.0) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 | Date         : Mon Oct  7 09:57:07 2024
 | Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip

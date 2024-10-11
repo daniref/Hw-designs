@@ -66,13 +66,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="8"/>
-    <Option Name="WTModelSimExportSim" Val="8"/>
-    <Option Name="WTQuestaExportSim" Val="8"/>
-    <Option Name="WTIesExportSim" Val="8"/>
-    <Option Name="WTVcsExportSim" Val="8"/>
-    <Option Name="WTRivieraExportSim" Val="8"/>
-    <Option Name="WTActivehdlExportSim" Val="8"/>
+    <Option Name="WTXSimExportSim" Val="9"/>
+    <Option Name="WTModelSimExportSim" Val="9"/>
+    <Option Name="WTQuestaExportSim" Val="9"/>
+    <Option Name="WTIesExportSim" Val="9"/>
+    <Option Name="WTVcsExportSim" Val="9"/>
+    <Option Name="WTRivieraExportSim" Val="9"/>
+    <Option Name="WTActivehdlExportSim" Val="9"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -95,53 +95,35 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_uart16550_1_0/u96_v2_tima_ropuf2_axi_uart16550_1_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_axi_uart16550_1_0"/>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_zynq_ultra_ps_e_0_0/u96_v2_tima_ropuf2_zynq_ultra_ps_e_0_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_zynq_ultra_ps_e_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_uart16550_0_0/u96_v2_tima_ropuf2_axi_uart16550_0_0.xci">
           <Proxy FileSetName="u96_v2_tima_ropuf2_axi_uart16550_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_uart16550_1_0/u96_v2_tima_ropuf2_axi_uart16550_1_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_axi_uart16550_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_bram_ctrl_0_bram_0/u96_v2_tima_ropuf2_axi_bram_ctrl_0_bram_0.xci">
           <Proxy FileSetName="u96_v2_tima_ropuf2_axi_bram_ctrl_0_bram_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_bram_ctrl_0_0/u96_v2_tima_ropuf2_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_rst_ps8_0_100M_0/u96_v2_tima_ropuf2_rst_ps8_0_100M_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_rst_ps8_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_zynq_ultra_ps_e_0_0/u96_v2_tima_ropuf2_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_zynq_ultra_ps_e_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_xbar_0/u96_v2_tima_ropuf2_xbar_0.xci">
           <Proxy FileSetName="u96_v2_tima_ropuf2_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_PWM_w_Int_1_0/u96_v2_tima_ropuf2_PWM_w_Int_1_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_PWM_w_Int_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_PWM_w_Int_0_0/u96_v2_tima_ropuf2_PWM_w_Int_0_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_PWM_w_Int_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_gpio_2_0/u96_v2_tima_ropuf2_axi_gpio_2_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_axi_gpio_2_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_gpio_0_0/u96_v2_tima_ropuf2_axi_gpio_0_0.xci">
           <Proxy FileSetName="u96_v2_tima_ropuf2_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_gpio_1_0/u96_v2_tima_ropuf2_axi_gpio_1_0.xci">
           <Proxy FileSetName="u96_v2_tima_ropuf2_axi_gpio_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_gpio_2_0/u96_v2_tima_ropuf2_axi_gpio_2_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_axi_gpio_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_PWM_w_Int_0_0/u96_v2_tima_ropuf2_PWM_w_Int_0_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_PWM_w_Int_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_PWM_w_Int_1_0/u96_v2_tima_ropuf2_PWM_w_Int_1_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_PWM_w_Int_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_clk_wiz_0_0/u96_v2_tima_ropuf2_clk_wiz_0_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_proc_sys_reset_0_0/u96_v2_tima_ropuf2_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_proc_sys_reset_1_0/u96_v2_tima_ropuf2_proc_sys_reset_1_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_proc_sys_reset_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_proc_sys_reset_2_0/u96_v2_tima_ropuf2_proc_sys_reset_2_0.xci">
-          <Proxy FileSetName="u96_v2_tima_ropuf2_proc_sys_reset_2_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_proc_sys_reset_3_0/u96_v2_tima_ropuf2_proc_sys_reset_3_0.xci">
           <Proxy FileSetName="u96_v2_tima_ropuf2_proc_sys_reset_3_0"/>
@@ -157,6 +139,24 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_tima_ro_0_0/u96_v2_tima_ropuf2_tima_ro_0_0.xci">
           <Proxy FileSetName="u96_v2_tima_ropuf2_tima_ro_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_proc_sys_reset_2_0/u96_v2_tima_ropuf2_proc_sys_reset_2_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_proc_sys_reset_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_proc_sys_reset_1_0/u96_v2_tima_ropuf2_proc_sys_reset_1_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_proc_sys_reset_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_clk_wiz_0_0/u96_v2_tima_ropuf2_clk_wiz_0_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_proc_sys_reset_0_0/u96_v2_tima_ropuf2_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_axi_bram_ctrl_0_0/u96_v2_tima_ropuf2_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_axi_bram_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_tima_ropuf2.bd" FileRelPathName="ip/u96_v2_tima_ropuf2_rst_ps8_0_100M_0/u96_v2_tima_ropuf2_rst_ps8_0_100M_0.xci">
+          <Proxy FileSetName="u96_v2_tima_ropuf2_rst_ps8_0_100M_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/u96_v2_tima_ropuf2/hdl/u96_v2_tima_ropuf2_wrapper.vhd">

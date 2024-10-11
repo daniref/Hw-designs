@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Sun Sep 29 19:10:37 2024
+-- Date        : Sun Sep 29 19:10:34 2024
 -- Host        : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_pop_ro_puf/u96_v2_pop_ro_puf.gen/sources_1/bd/u96_v2_pop_ropuf/ip/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0 -prefix
+--               u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_ u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
 -- Design      : u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1584,8 +1584,6 @@ entity u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_3_zynq_ultra_ps
   attribute C_USE_DIFF_RW_CLK_GP6 of u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_3_zynq_ultra_ps_e : entity is 0;
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_3_zynq_ultra_ps_e : entity is "u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_3_zynq_ultra_ps_e : entity is "zynq_ultra_ps_e_v3_3_3_zynq_ultra_ps_e";
   attribute PSS_IO : string;
   attribute PSS_IO of u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_3_zynq_ultra_ps_e : entity is "Signal Name, DiffPair Type, DiffPair Signal,Direction, Site Type, IO Standard, Drive (mA), Slew Rate, Pull Type, IBIS Model, ODT, OUTPUT_IMPEDANCE " & LF &
  "UART1_TXD, , , OUT, PS_MIO0_500, LVCMOS18, 12, FAST, PULLUP, PS_MIO_LVCMOS18_F_12,,  " & LF &

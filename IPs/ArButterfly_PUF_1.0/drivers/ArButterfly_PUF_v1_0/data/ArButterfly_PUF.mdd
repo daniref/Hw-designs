@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER ArButterfly_PUF
+	OPTION supported_peripherals = (ArButterfly_PUF);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = ArButterfly_PUF;
+END DRIVER

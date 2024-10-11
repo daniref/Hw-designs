@@ -1,7 +1,7 @@
 # Funzioni per generare le stringhe di constraint
 function allow_combinatorial_properties(bank,ro)
     """
-    set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {u96_v2_pop_ropuf_i/POP_ro_puf_AXI4L_0/U0/POP_ro_puf_AXI4L_v1_0_PUF_AXI_inst/POP_RO_PUF/puf0/BANK$bank/RO_gen[$ro].ro/I0}]
+    set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets u96_v2_pop_ropuf_i/POP_ro_puf_AXI4L_0/U0/POP_ro_puf_AXI4L_v1_0_PUF_AXI_inst/POP_RO_PUF/puf0/BANK$bank/RO_gen[$ro].ro/I0]
     """
 end
 

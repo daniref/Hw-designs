@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Mon Oct  7 09:59:47 2024
+-- Date        : Thu Oct 10 09:16:46 2024
 -- Host        : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_pop_ro_puf/u96_v2_pop_ro_puf.gen/sources_1/bd/u96_v2_pop_ropuf/ip/u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0/u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0_stub.vhdl

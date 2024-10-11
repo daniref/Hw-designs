@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Mon Oct  7 10:03:42 2024
+--Date        : Thu Oct 10 09:18:17 2024
 --Host        : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 --Command     : generate_target u96_v2_pop_ropuf.bd
 --Design      : u96_v2_pop_ropuf
@@ -8060,10 +8060,10 @@ entity u96_v2_pop_ropuf is
     ls_mezz_uart1_tx : out STD_LOGIC;
     wifi_en_led_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute core_generation_info : string;
-  attribute core_generation_info of u96_v2_pop_ropuf : entity is "u96_v2_pop_ropuf,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=u96_v2_pop_ropuf,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=61,numReposBlks=48,numNonXlnxBlks=3,numHierBlks=13,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
-  attribute hw_handoff : string;
-  attribute hw_handoff of u96_v2_pop_ropuf : entity is "u96_v2_pop_ropuf.hwdef";
+  attribute CORE_GENERATION_INFO : string;
+  attribute CORE_GENERATION_INFO of u96_v2_pop_ropuf : entity is "u96_v2_pop_ropuf,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=u96_v2_pop_ropuf,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=61,numReposBlks=48,numNonXlnxBlks=3,numHierBlks=13,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute HW_HANDOFF : string;
+  attribute HW_HANDOFF of u96_v2_pop_ropuf : entity is "u96_v2_pop_ropuf.hwdef";
 end u96_v2_pop_ropuf;
 
 architecture STRUCTURE of u96_v2_pop_ropuf is
@@ -9025,10 +9025,10 @@ architecture STRUCTURE of u96_v2_pop_ropuf is
   signal NLW_rst_ps8_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_zynq_ultra_ps_e_0_emio_uart0_dtrn_UNCONNECTED : STD_LOGIC;
   signal NLW_zynq_ultra_ps_e_0_emio_gpio_t_UNCONNECTED : STD_LOGIC_VECTOR ( 29 downto 0 );
-  attribute x_interface_info : string;
-  attribute x_interface_info of bt_en_led_tri_o : signal is "xilinx.com:interface:gpio:1.0 bt_en_led TRI_O";
-  attribute x_interface_info of fan_pwm_tri_o : signal is "xilinx.com:interface:gpio:1.0 fan_pwm TRI_O";
-  attribute x_interface_info of wifi_en_led_tri_o : signal is "xilinx.com:interface:gpio:1.0 wifi_en_led TRI_O";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of bt_en_led_tri_o : signal is "xilinx.com:interface:gpio:1.0 bt_en_led TRI_O";
+  attribute X_INTERFACE_INFO of fan_pwm_tri_o : signal is "xilinx.com:interface:gpio:1.0 fan_pwm TRI_O";
+  attribute X_INTERFACE_INFO of wifi_en_led_tri_o : signal is "xilinx.com:interface:gpio:1.0 wifi_en_led TRI_O";
 begin
   bt_en_led_tri_o(0) <= axi_gpio_2_GPIO2_TRI_O(0);
   bt_rtsn <= zynq_ultra_ps_e_0_emio_uart0_rtsn;

@@ -1,0 +1,84 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Wed Oct  9 22:54:33 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_drc -file u96v2_arbutterfly_wrapper_drc_opted.rpt -pb u96v2_arbutterfly_wrapper_drc_opted.pb -rpx u96v2_arbutterfly_wrapper_drc_opted.rpx
+| Design       : u96v2_arbutterfly_wrapper
+| Device       : xczu3eg-sbva484-1-i
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 8
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 8          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[0].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[0].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[1].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[1].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[2].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[2].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[3].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[3].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[4].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[4].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[5].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[5].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#7 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[6].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[6].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#8 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[7].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[7].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+

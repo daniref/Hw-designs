@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Fri Oct  4 13:56:58 2024
+// Date        : Tue Oct  8 16:00:27 2024
 // Host        : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_tima_ropuf2/u96_v2_tima_ropuf2.gen/sources_1/bd/u96_v2_tima_ropuf2/ip/u96_v2_tima_ropuf2_tima_ro_0_0/u96_v2_tima_ropuf2_tima_ro_0_0_sim_netlist.v
@@ -69388,6 +69388,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   wire puf_axi_wvalid;
   wire [31:0]reg_data_out;
   wire [3:0]sel0;
+  wire [255:0]signal_response;
   wire \slv_reg0_reg_n_0_[0] ;
   wire \slv_reg0_reg_n_0_[10] ;
   wire \slv_reg0_reg_n_0_[11] ;
@@ -69418,7 +69419,6 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   wire \slv_reg0_reg_n_0_[8] ;
   wire \slv_reg0_reg_n_0_[9] ;
   wire [0:0]slv_reg1;
-  wire [31:0]slv_reg10;
   wire \slv_reg1[15]_i_1_n_0 ;
   wire \slv_reg1[23]_i_1_n_0 ;
   wire \slv_reg1[31]_i_1_n_0 ;
@@ -69455,13 +69455,6 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   wire \slv_reg1_reg_n_0_[8] ;
   wire \slv_reg1_reg_n_0_[9] ;
   wire [0:0]slv_reg2;
-  wire [31:0]slv_reg3;
-  wire [31:0]slv_reg4;
-  wire [31:0]slv_reg5;
-  wire [31:0]slv_reg6;
-  wire [31:0]slv_reg7;
-  wire [31:0]slv_reg8;
-  wire [31:0]slv_reg9;
   wire slv_reg_rden;
   wire slv_reg_wren__2;
 
@@ -69476,7 +69469,7 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
         .counter_config(counter_config),
         .enable(\slv_reg0_reg_n_0_[0] ),
         .ready(slv_reg2),
-        .response({slv_reg10,slv_reg9,slv_reg8,slv_reg7,slv_reg6,slv_reg5,slv_reg4,slv_reg3}));
+        .response(signal_response));
   LUT6 #(
     .INIT(64'hBFFFBF00BF00BF00)) 
     aw_en_i_1
@@ -69600,27 +69593,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[0]_i_2 
-       (.I0(slv_reg8[0]),
+       (.I0(signal_response[160]),
         .I1(sel0[0]),
-        .I2(slv_reg9[0]),
+        .I2(signal_response[192]),
         .I3(sel0[1]),
-        .I4(slv_reg10[0]),
+        .I4(signal_response[224]),
         .I5(sel0[2]),
         .O(\axi_rdata[0]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[0]_i_3 
-       (.I0(slv_reg7[0]),
-        .I1(slv_reg6[0]),
+       (.I0(signal_response[128]),
+        .I1(signal_response[96]),
         .I2(sel0[1]),
-        .I3(slv_reg5[0]),
+        .I3(signal_response[64]),
         .I4(sel0[0]),
-        .I5(slv_reg4[0]),
+        .I5(signal_response[32]),
         .O(\axi_rdata[0]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[0]_i_4 
-       (.I0(slv_reg3[0]),
+       (.I0(signal_response[0]),
         .I1(slv_reg2),
         .I2(sel0[1]),
         .I3(slv_reg1),
@@ -69639,27 +69632,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[10]_i_2 
-       (.I0(slv_reg8[10]),
+       (.I0(signal_response[170]),
         .I1(sel0[0]),
-        .I2(slv_reg9[10]),
+        .I2(signal_response[202]),
         .I3(sel0[1]),
-        .I4(slv_reg10[10]),
+        .I4(signal_response[234]),
         .I5(sel0[2]),
         .O(\axi_rdata[10]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[10]_i_3 
-       (.I0(slv_reg7[10]),
-        .I1(slv_reg6[10]),
+       (.I0(signal_response[138]),
+        .I1(signal_response[106]),
         .I2(sel0[1]),
-        .I3(slv_reg5[10]),
+        .I3(signal_response[74]),
         .I4(sel0[0]),
-        .I5(slv_reg4[10]),
+        .I5(signal_response[42]),
         .O(\axi_rdata[10]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[10]_i_4 
-       (.I0(slv_reg3[10]),
+       (.I0(signal_response[10]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[10] ),
         .I3(sel0[0]),
@@ -69677,27 +69670,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[11]_i_2 
-       (.I0(slv_reg8[11]),
+       (.I0(signal_response[171]),
         .I1(sel0[0]),
-        .I2(slv_reg9[11]),
+        .I2(signal_response[203]),
         .I3(sel0[1]),
-        .I4(slv_reg10[11]),
+        .I4(signal_response[235]),
         .I5(sel0[2]),
         .O(\axi_rdata[11]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[11]_i_3 
-       (.I0(slv_reg7[11]),
-        .I1(slv_reg6[11]),
+       (.I0(signal_response[139]),
+        .I1(signal_response[107]),
         .I2(sel0[1]),
-        .I3(slv_reg5[11]),
+        .I3(signal_response[75]),
         .I4(sel0[0]),
-        .I5(slv_reg4[11]),
+        .I5(signal_response[43]),
         .O(\axi_rdata[11]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[11]_i_4 
-       (.I0(slv_reg3[11]),
+       (.I0(signal_response[11]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[11] ),
         .I3(sel0[0]),
@@ -69715,27 +69708,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[12]_i_2 
-       (.I0(slv_reg8[12]),
+       (.I0(signal_response[172]),
         .I1(sel0[0]),
-        .I2(slv_reg9[12]),
+        .I2(signal_response[204]),
         .I3(sel0[1]),
-        .I4(slv_reg10[12]),
+        .I4(signal_response[236]),
         .I5(sel0[2]),
         .O(\axi_rdata[12]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[12]_i_3 
-       (.I0(slv_reg7[12]),
-        .I1(slv_reg6[12]),
+       (.I0(signal_response[140]),
+        .I1(signal_response[108]),
         .I2(sel0[1]),
-        .I3(slv_reg5[12]),
+        .I3(signal_response[76]),
         .I4(sel0[0]),
-        .I5(slv_reg4[12]),
+        .I5(signal_response[44]),
         .O(\axi_rdata[12]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[12]_i_4 
-       (.I0(slv_reg3[12]),
+       (.I0(signal_response[12]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[12] ),
         .I3(sel0[0]),
@@ -69753,27 +69746,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[13]_i_2 
-       (.I0(slv_reg8[13]),
+       (.I0(signal_response[173]),
         .I1(sel0[0]),
-        .I2(slv_reg9[13]),
+        .I2(signal_response[205]),
         .I3(sel0[1]),
-        .I4(slv_reg10[13]),
+        .I4(signal_response[237]),
         .I5(sel0[2]),
         .O(\axi_rdata[13]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[13]_i_3 
-       (.I0(slv_reg7[13]),
-        .I1(slv_reg6[13]),
+       (.I0(signal_response[141]),
+        .I1(signal_response[109]),
         .I2(sel0[1]),
-        .I3(slv_reg5[13]),
+        .I3(signal_response[77]),
         .I4(sel0[0]),
-        .I5(slv_reg4[13]),
+        .I5(signal_response[45]),
         .O(\axi_rdata[13]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[13]_i_4 
-       (.I0(slv_reg3[13]),
+       (.I0(signal_response[13]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[13] ),
         .I3(sel0[0]),
@@ -69791,27 +69784,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[14]_i_2 
-       (.I0(slv_reg8[14]),
+       (.I0(signal_response[174]),
         .I1(sel0[0]),
-        .I2(slv_reg9[14]),
+        .I2(signal_response[206]),
         .I3(sel0[1]),
-        .I4(slv_reg10[14]),
+        .I4(signal_response[238]),
         .I5(sel0[2]),
         .O(\axi_rdata[14]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[14]_i_3 
-       (.I0(slv_reg7[14]),
-        .I1(slv_reg6[14]),
+       (.I0(signal_response[142]),
+        .I1(signal_response[110]),
         .I2(sel0[1]),
-        .I3(slv_reg5[14]),
+        .I3(signal_response[78]),
         .I4(sel0[0]),
-        .I5(slv_reg4[14]),
+        .I5(signal_response[46]),
         .O(\axi_rdata[14]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[14]_i_4 
-       (.I0(slv_reg3[14]),
+       (.I0(signal_response[14]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[14] ),
         .I3(sel0[0]),
@@ -69829,27 +69822,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[15]_i_2 
-       (.I0(slv_reg8[15]),
+       (.I0(signal_response[175]),
         .I1(sel0[0]),
-        .I2(slv_reg9[15]),
+        .I2(signal_response[207]),
         .I3(sel0[1]),
-        .I4(slv_reg10[15]),
+        .I4(signal_response[239]),
         .I5(sel0[2]),
         .O(\axi_rdata[15]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[15]_i_3 
-       (.I0(slv_reg7[15]),
-        .I1(slv_reg6[15]),
+       (.I0(signal_response[143]),
+        .I1(signal_response[111]),
         .I2(sel0[1]),
-        .I3(slv_reg5[15]),
+        .I3(signal_response[79]),
         .I4(sel0[0]),
-        .I5(slv_reg4[15]),
+        .I5(signal_response[47]),
         .O(\axi_rdata[15]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[15]_i_4 
-       (.I0(slv_reg3[15]),
+       (.I0(signal_response[15]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[15] ),
         .I3(sel0[0]),
@@ -69867,27 +69860,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[16]_i_2 
-       (.I0(slv_reg8[16]),
+       (.I0(signal_response[176]),
         .I1(sel0[0]),
-        .I2(slv_reg9[16]),
+        .I2(signal_response[208]),
         .I3(sel0[1]),
-        .I4(slv_reg10[16]),
+        .I4(signal_response[240]),
         .I5(sel0[2]),
         .O(\axi_rdata[16]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[16]_i_3 
-       (.I0(slv_reg7[16]),
-        .I1(slv_reg6[16]),
+       (.I0(signal_response[144]),
+        .I1(signal_response[112]),
         .I2(sel0[1]),
-        .I3(slv_reg5[16]),
+        .I3(signal_response[80]),
         .I4(sel0[0]),
-        .I5(slv_reg4[16]),
+        .I5(signal_response[48]),
         .O(\axi_rdata[16]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[16]_i_4 
-       (.I0(slv_reg3[16]),
+       (.I0(signal_response[16]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[16] ),
         .I3(sel0[0]),
@@ -69905,27 +69898,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[17]_i_2 
-       (.I0(slv_reg8[17]),
+       (.I0(signal_response[177]),
         .I1(sel0[0]),
-        .I2(slv_reg9[17]),
+        .I2(signal_response[209]),
         .I3(sel0[1]),
-        .I4(slv_reg10[17]),
+        .I4(signal_response[241]),
         .I5(sel0[2]),
         .O(\axi_rdata[17]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[17]_i_3 
-       (.I0(slv_reg7[17]),
-        .I1(slv_reg6[17]),
+       (.I0(signal_response[145]),
+        .I1(signal_response[113]),
         .I2(sel0[1]),
-        .I3(slv_reg5[17]),
+        .I3(signal_response[81]),
         .I4(sel0[0]),
-        .I5(slv_reg4[17]),
+        .I5(signal_response[49]),
         .O(\axi_rdata[17]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[17]_i_4 
-       (.I0(slv_reg3[17]),
+       (.I0(signal_response[17]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[17] ),
         .I3(sel0[0]),
@@ -69943,27 +69936,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[18]_i_2 
-       (.I0(slv_reg8[18]),
+       (.I0(signal_response[178]),
         .I1(sel0[0]),
-        .I2(slv_reg9[18]),
+        .I2(signal_response[210]),
         .I3(sel0[1]),
-        .I4(slv_reg10[18]),
+        .I4(signal_response[242]),
         .I5(sel0[2]),
         .O(\axi_rdata[18]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[18]_i_3 
-       (.I0(slv_reg7[18]),
-        .I1(slv_reg6[18]),
+       (.I0(signal_response[146]),
+        .I1(signal_response[114]),
         .I2(sel0[1]),
-        .I3(slv_reg5[18]),
+        .I3(signal_response[82]),
         .I4(sel0[0]),
-        .I5(slv_reg4[18]),
+        .I5(signal_response[50]),
         .O(\axi_rdata[18]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[18]_i_4 
-       (.I0(slv_reg3[18]),
+       (.I0(signal_response[18]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[18] ),
         .I3(sel0[0]),
@@ -69981,27 +69974,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[19]_i_2 
-       (.I0(slv_reg8[19]),
+       (.I0(signal_response[179]),
         .I1(sel0[0]),
-        .I2(slv_reg9[19]),
+        .I2(signal_response[211]),
         .I3(sel0[1]),
-        .I4(slv_reg10[19]),
+        .I4(signal_response[243]),
         .I5(sel0[2]),
         .O(\axi_rdata[19]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[19]_i_3 
-       (.I0(slv_reg7[19]),
-        .I1(slv_reg6[19]),
+       (.I0(signal_response[147]),
+        .I1(signal_response[115]),
         .I2(sel0[1]),
-        .I3(slv_reg5[19]),
+        .I3(signal_response[83]),
         .I4(sel0[0]),
-        .I5(slv_reg4[19]),
+        .I5(signal_response[51]),
         .O(\axi_rdata[19]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[19]_i_4 
-       (.I0(slv_reg3[19]),
+       (.I0(signal_response[19]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[19] ),
         .I3(sel0[0]),
@@ -70019,27 +70012,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[1]_i_2 
-       (.I0(slv_reg8[1]),
+       (.I0(signal_response[161]),
         .I1(sel0[0]),
-        .I2(slv_reg9[1]),
+        .I2(signal_response[193]),
         .I3(sel0[1]),
-        .I4(slv_reg10[1]),
+        .I4(signal_response[225]),
         .I5(sel0[2]),
         .O(\axi_rdata[1]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[1]_i_3 
-       (.I0(slv_reg7[1]),
-        .I1(slv_reg6[1]),
+       (.I0(signal_response[129]),
+        .I1(signal_response[97]),
         .I2(sel0[1]),
-        .I3(slv_reg5[1]),
+        .I3(signal_response[65]),
         .I4(sel0[0]),
-        .I5(slv_reg4[1]),
+        .I5(signal_response[33]),
         .O(\axi_rdata[1]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[1]_i_4 
-       (.I0(slv_reg3[1]),
+       (.I0(signal_response[1]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[1] ),
         .I3(sel0[0]),
@@ -70057,27 +70050,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[20]_i_2 
-       (.I0(slv_reg8[20]),
+       (.I0(signal_response[180]),
         .I1(sel0[0]),
-        .I2(slv_reg9[20]),
+        .I2(signal_response[212]),
         .I3(sel0[1]),
-        .I4(slv_reg10[20]),
+        .I4(signal_response[244]),
         .I5(sel0[2]),
         .O(\axi_rdata[20]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[20]_i_3 
-       (.I0(slv_reg7[20]),
-        .I1(slv_reg6[20]),
+       (.I0(signal_response[148]),
+        .I1(signal_response[116]),
         .I2(sel0[1]),
-        .I3(slv_reg5[20]),
+        .I3(signal_response[84]),
         .I4(sel0[0]),
-        .I5(slv_reg4[20]),
+        .I5(signal_response[52]),
         .O(\axi_rdata[20]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[20]_i_4 
-       (.I0(slv_reg3[20]),
+       (.I0(signal_response[20]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[20] ),
         .I3(sel0[0]),
@@ -70095,27 +70088,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[21]_i_2 
-       (.I0(slv_reg8[21]),
+       (.I0(signal_response[181]),
         .I1(sel0[0]),
-        .I2(slv_reg9[21]),
+        .I2(signal_response[213]),
         .I3(sel0[1]),
-        .I4(slv_reg10[21]),
+        .I4(signal_response[245]),
         .I5(sel0[2]),
         .O(\axi_rdata[21]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[21]_i_3 
-       (.I0(slv_reg7[21]),
-        .I1(slv_reg6[21]),
+       (.I0(signal_response[149]),
+        .I1(signal_response[117]),
         .I2(sel0[1]),
-        .I3(slv_reg5[21]),
+        .I3(signal_response[85]),
         .I4(sel0[0]),
-        .I5(slv_reg4[21]),
+        .I5(signal_response[53]),
         .O(\axi_rdata[21]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[21]_i_4 
-       (.I0(slv_reg3[21]),
+       (.I0(signal_response[21]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[21] ),
         .I3(sel0[0]),
@@ -70133,27 +70126,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[22]_i_2 
-       (.I0(slv_reg8[22]),
+       (.I0(signal_response[182]),
         .I1(sel0[0]),
-        .I2(slv_reg9[22]),
+        .I2(signal_response[214]),
         .I3(sel0[1]),
-        .I4(slv_reg10[22]),
+        .I4(signal_response[246]),
         .I5(sel0[2]),
         .O(\axi_rdata[22]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[22]_i_3 
-       (.I0(slv_reg7[22]),
-        .I1(slv_reg6[22]),
+       (.I0(signal_response[150]),
+        .I1(signal_response[118]),
         .I2(sel0[1]),
-        .I3(slv_reg5[22]),
+        .I3(signal_response[86]),
         .I4(sel0[0]),
-        .I5(slv_reg4[22]),
+        .I5(signal_response[54]),
         .O(\axi_rdata[22]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[22]_i_4 
-       (.I0(slv_reg3[22]),
+       (.I0(signal_response[22]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[22] ),
         .I3(sel0[0]),
@@ -70171,27 +70164,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[23]_i_2 
-       (.I0(slv_reg8[23]),
+       (.I0(signal_response[183]),
         .I1(sel0[0]),
-        .I2(slv_reg9[23]),
+        .I2(signal_response[215]),
         .I3(sel0[1]),
-        .I4(slv_reg10[23]),
+        .I4(signal_response[247]),
         .I5(sel0[2]),
         .O(\axi_rdata[23]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[23]_i_3 
-       (.I0(slv_reg7[23]),
-        .I1(slv_reg6[23]),
+       (.I0(signal_response[151]),
+        .I1(signal_response[119]),
         .I2(sel0[1]),
-        .I3(slv_reg5[23]),
+        .I3(signal_response[87]),
         .I4(sel0[0]),
-        .I5(slv_reg4[23]),
+        .I5(signal_response[55]),
         .O(\axi_rdata[23]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[23]_i_4 
-       (.I0(slv_reg3[23]),
+       (.I0(signal_response[23]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[23] ),
         .I3(sel0[0]),
@@ -70209,27 +70202,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[24]_i_2 
-       (.I0(slv_reg8[24]),
+       (.I0(signal_response[184]),
         .I1(sel0[0]),
-        .I2(slv_reg9[24]),
+        .I2(signal_response[216]),
         .I3(sel0[1]),
-        .I4(slv_reg10[24]),
+        .I4(signal_response[248]),
         .I5(sel0[2]),
         .O(\axi_rdata[24]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[24]_i_3 
-       (.I0(slv_reg7[24]),
-        .I1(slv_reg6[24]),
+       (.I0(signal_response[152]),
+        .I1(signal_response[120]),
         .I2(sel0[1]),
-        .I3(slv_reg5[24]),
+        .I3(signal_response[88]),
         .I4(sel0[0]),
-        .I5(slv_reg4[24]),
+        .I5(signal_response[56]),
         .O(\axi_rdata[24]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[24]_i_4 
-       (.I0(slv_reg3[24]),
+       (.I0(signal_response[24]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[24] ),
         .I3(sel0[0]),
@@ -70247,27 +70240,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[25]_i_2 
-       (.I0(slv_reg8[25]),
+       (.I0(signal_response[185]),
         .I1(sel0[0]),
-        .I2(slv_reg9[25]),
+        .I2(signal_response[217]),
         .I3(sel0[1]),
-        .I4(slv_reg10[25]),
+        .I4(signal_response[249]),
         .I5(sel0[2]),
         .O(\axi_rdata[25]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[25]_i_3 
-       (.I0(slv_reg7[25]),
-        .I1(slv_reg6[25]),
+       (.I0(signal_response[153]),
+        .I1(signal_response[121]),
         .I2(sel0[1]),
-        .I3(slv_reg5[25]),
+        .I3(signal_response[89]),
         .I4(sel0[0]),
-        .I5(slv_reg4[25]),
+        .I5(signal_response[57]),
         .O(\axi_rdata[25]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[25]_i_4 
-       (.I0(slv_reg3[25]),
+       (.I0(signal_response[25]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[25] ),
         .I3(sel0[0]),
@@ -70285,27 +70278,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[26]_i_2 
-       (.I0(slv_reg8[26]),
+       (.I0(signal_response[186]),
         .I1(sel0[0]),
-        .I2(slv_reg9[26]),
+        .I2(signal_response[218]),
         .I3(sel0[1]),
-        .I4(slv_reg10[26]),
+        .I4(signal_response[250]),
         .I5(sel0[2]),
         .O(\axi_rdata[26]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[26]_i_3 
-       (.I0(slv_reg7[26]),
-        .I1(slv_reg6[26]),
+       (.I0(signal_response[154]),
+        .I1(signal_response[122]),
         .I2(sel0[1]),
-        .I3(slv_reg5[26]),
+        .I3(signal_response[90]),
         .I4(sel0[0]),
-        .I5(slv_reg4[26]),
+        .I5(signal_response[58]),
         .O(\axi_rdata[26]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[26]_i_4 
-       (.I0(slv_reg3[26]),
+       (.I0(signal_response[26]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[26] ),
         .I3(sel0[0]),
@@ -70323,27 +70316,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[27]_i_2 
-       (.I0(slv_reg8[27]),
+       (.I0(signal_response[187]),
         .I1(sel0[0]),
-        .I2(slv_reg9[27]),
+        .I2(signal_response[219]),
         .I3(sel0[1]),
-        .I4(slv_reg10[27]),
+        .I4(signal_response[251]),
         .I5(sel0[2]),
         .O(\axi_rdata[27]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[27]_i_3 
-       (.I0(slv_reg7[27]),
-        .I1(slv_reg6[27]),
+       (.I0(signal_response[155]),
+        .I1(signal_response[123]),
         .I2(sel0[1]),
-        .I3(slv_reg5[27]),
+        .I3(signal_response[91]),
         .I4(sel0[0]),
-        .I5(slv_reg4[27]),
+        .I5(signal_response[59]),
         .O(\axi_rdata[27]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[27]_i_4 
-       (.I0(slv_reg3[27]),
+       (.I0(signal_response[27]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[27] ),
         .I3(sel0[0]),
@@ -70361,27 +70354,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[28]_i_2 
-       (.I0(slv_reg8[28]),
+       (.I0(signal_response[188]),
         .I1(sel0[0]),
-        .I2(slv_reg9[28]),
+        .I2(signal_response[220]),
         .I3(sel0[1]),
-        .I4(slv_reg10[28]),
+        .I4(signal_response[252]),
         .I5(sel0[2]),
         .O(\axi_rdata[28]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[28]_i_3 
-       (.I0(slv_reg7[28]),
-        .I1(slv_reg6[28]),
+       (.I0(signal_response[156]),
+        .I1(signal_response[124]),
         .I2(sel0[1]),
-        .I3(slv_reg5[28]),
+        .I3(signal_response[92]),
         .I4(sel0[0]),
-        .I5(slv_reg4[28]),
+        .I5(signal_response[60]),
         .O(\axi_rdata[28]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[28]_i_4 
-       (.I0(slv_reg3[28]),
+       (.I0(signal_response[28]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[28] ),
         .I3(sel0[0]),
@@ -70399,27 +70392,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[29]_i_2 
-       (.I0(slv_reg8[29]),
+       (.I0(signal_response[189]),
         .I1(sel0[0]),
-        .I2(slv_reg9[29]),
+        .I2(signal_response[221]),
         .I3(sel0[1]),
-        .I4(slv_reg10[29]),
+        .I4(signal_response[253]),
         .I5(sel0[2]),
         .O(\axi_rdata[29]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[29]_i_3 
-       (.I0(slv_reg7[29]),
-        .I1(slv_reg6[29]),
+       (.I0(signal_response[157]),
+        .I1(signal_response[125]),
         .I2(sel0[1]),
-        .I3(slv_reg5[29]),
+        .I3(signal_response[93]),
         .I4(sel0[0]),
-        .I5(slv_reg4[29]),
+        .I5(signal_response[61]),
         .O(\axi_rdata[29]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[29]_i_4 
-       (.I0(slv_reg3[29]),
+       (.I0(signal_response[29]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[29] ),
         .I3(sel0[0]),
@@ -70437,27 +70430,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[2]_i_2 
-       (.I0(slv_reg8[2]),
+       (.I0(signal_response[162]),
         .I1(sel0[0]),
-        .I2(slv_reg9[2]),
+        .I2(signal_response[194]),
         .I3(sel0[1]),
-        .I4(slv_reg10[2]),
+        .I4(signal_response[226]),
         .I5(sel0[2]),
         .O(\axi_rdata[2]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[2]_i_3 
-       (.I0(slv_reg7[2]),
-        .I1(slv_reg6[2]),
+       (.I0(signal_response[130]),
+        .I1(signal_response[98]),
         .I2(sel0[1]),
-        .I3(slv_reg5[2]),
+        .I3(signal_response[66]),
         .I4(sel0[0]),
-        .I5(slv_reg4[2]),
+        .I5(signal_response[34]),
         .O(\axi_rdata[2]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[2]_i_4 
-       (.I0(slv_reg3[2]),
+       (.I0(signal_response[2]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[2] ),
         .I3(sel0[0]),
@@ -70475,27 +70468,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[30]_i_2 
-       (.I0(slv_reg8[30]),
+       (.I0(signal_response[190]),
         .I1(sel0[0]),
-        .I2(slv_reg9[30]),
+        .I2(signal_response[222]),
         .I3(sel0[1]),
-        .I4(slv_reg10[30]),
+        .I4(signal_response[254]),
         .I5(sel0[2]),
         .O(\axi_rdata[30]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[30]_i_3 
-       (.I0(slv_reg7[30]),
-        .I1(slv_reg6[30]),
+       (.I0(signal_response[158]),
+        .I1(signal_response[126]),
         .I2(sel0[1]),
-        .I3(slv_reg5[30]),
+        .I3(signal_response[94]),
         .I4(sel0[0]),
-        .I5(slv_reg4[30]),
+        .I5(signal_response[62]),
         .O(\axi_rdata[30]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[30]_i_4 
-       (.I0(slv_reg3[30]),
+       (.I0(signal_response[30]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[30] ),
         .I3(sel0[0]),
@@ -70520,27 +70513,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[31]_i_3 
-       (.I0(slv_reg8[31]),
+       (.I0(signal_response[191]),
         .I1(sel0[0]),
-        .I2(slv_reg9[31]),
+        .I2(signal_response[223]),
         .I3(sel0[1]),
-        .I4(slv_reg10[31]),
+        .I4(signal_response[255]),
         .I5(sel0[2]),
         .O(\axi_rdata[31]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[31]_i_4 
-       (.I0(slv_reg7[31]),
-        .I1(slv_reg6[31]),
+       (.I0(signal_response[159]),
+        .I1(signal_response[127]),
         .I2(sel0[1]),
-        .I3(slv_reg5[31]),
+        .I3(signal_response[95]),
         .I4(sel0[0]),
-        .I5(slv_reg4[31]),
+        .I5(signal_response[63]),
         .O(\axi_rdata[31]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[31]_i_5 
-       (.I0(slv_reg3[31]),
+       (.I0(signal_response[31]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[31] ),
         .I3(sel0[0]),
@@ -70558,27 +70551,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[3]_i_2 
-       (.I0(slv_reg8[3]),
+       (.I0(signal_response[163]),
         .I1(sel0[0]),
-        .I2(slv_reg9[3]),
+        .I2(signal_response[195]),
         .I3(sel0[1]),
-        .I4(slv_reg10[3]),
+        .I4(signal_response[227]),
         .I5(sel0[2]),
         .O(\axi_rdata[3]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[3]_i_3 
-       (.I0(slv_reg7[3]),
-        .I1(slv_reg6[3]),
+       (.I0(signal_response[131]),
+        .I1(signal_response[99]),
         .I2(sel0[1]),
-        .I3(slv_reg5[3]),
+        .I3(signal_response[67]),
         .I4(sel0[0]),
-        .I5(slv_reg4[3]),
+        .I5(signal_response[35]),
         .O(\axi_rdata[3]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[3]_i_4 
-       (.I0(slv_reg3[3]),
+       (.I0(signal_response[3]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[3] ),
         .I3(sel0[0]),
@@ -70596,27 +70589,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[4]_i_2 
-       (.I0(slv_reg8[4]),
+       (.I0(signal_response[164]),
         .I1(sel0[0]),
-        .I2(slv_reg9[4]),
+        .I2(signal_response[196]),
         .I3(sel0[1]),
-        .I4(slv_reg10[4]),
+        .I4(signal_response[228]),
         .I5(sel0[2]),
         .O(\axi_rdata[4]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[4]_i_3 
-       (.I0(slv_reg7[4]),
-        .I1(slv_reg6[4]),
+       (.I0(signal_response[132]),
+        .I1(signal_response[100]),
         .I2(sel0[1]),
-        .I3(slv_reg5[4]),
+        .I3(signal_response[68]),
         .I4(sel0[0]),
-        .I5(slv_reg4[4]),
+        .I5(signal_response[36]),
         .O(\axi_rdata[4]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[4]_i_4 
-       (.I0(slv_reg3[4]),
+       (.I0(signal_response[4]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[4] ),
         .I3(sel0[0]),
@@ -70634,27 +70627,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[5]_i_2 
-       (.I0(slv_reg8[5]),
+       (.I0(signal_response[165]),
         .I1(sel0[0]),
-        .I2(slv_reg9[5]),
+        .I2(signal_response[197]),
         .I3(sel0[1]),
-        .I4(slv_reg10[5]),
+        .I4(signal_response[229]),
         .I5(sel0[2]),
         .O(\axi_rdata[5]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[5]_i_3 
-       (.I0(slv_reg7[5]),
-        .I1(slv_reg6[5]),
+       (.I0(signal_response[133]),
+        .I1(signal_response[101]),
         .I2(sel0[1]),
-        .I3(slv_reg5[5]),
+        .I3(signal_response[69]),
         .I4(sel0[0]),
-        .I5(slv_reg4[5]),
+        .I5(signal_response[37]),
         .O(\axi_rdata[5]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[5]_i_4 
-       (.I0(slv_reg3[5]),
+       (.I0(signal_response[5]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[5] ),
         .I3(sel0[0]),
@@ -70672,27 +70665,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[6]_i_2 
-       (.I0(slv_reg8[6]),
+       (.I0(signal_response[166]),
         .I1(sel0[0]),
-        .I2(slv_reg9[6]),
+        .I2(signal_response[198]),
         .I3(sel0[1]),
-        .I4(slv_reg10[6]),
+        .I4(signal_response[230]),
         .I5(sel0[2]),
         .O(\axi_rdata[6]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[6]_i_3 
-       (.I0(slv_reg7[6]),
-        .I1(slv_reg6[6]),
+       (.I0(signal_response[134]),
+        .I1(signal_response[102]),
         .I2(sel0[1]),
-        .I3(slv_reg5[6]),
+        .I3(signal_response[70]),
         .I4(sel0[0]),
-        .I5(slv_reg4[6]),
+        .I5(signal_response[38]),
         .O(\axi_rdata[6]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[6]_i_4 
-       (.I0(slv_reg3[6]),
+       (.I0(signal_response[6]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[6] ),
         .I3(sel0[0]),
@@ -70710,27 +70703,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[7]_i_2 
-       (.I0(slv_reg8[7]),
+       (.I0(signal_response[167]),
         .I1(sel0[0]),
-        .I2(slv_reg9[7]),
+        .I2(signal_response[199]),
         .I3(sel0[1]),
-        .I4(slv_reg10[7]),
+        .I4(signal_response[231]),
         .I5(sel0[2]),
         .O(\axi_rdata[7]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[7]_i_3 
-       (.I0(slv_reg7[7]),
-        .I1(slv_reg6[7]),
+       (.I0(signal_response[135]),
+        .I1(signal_response[103]),
         .I2(sel0[1]),
-        .I3(slv_reg5[7]),
+        .I3(signal_response[71]),
         .I4(sel0[0]),
-        .I5(slv_reg4[7]),
+        .I5(signal_response[39]),
         .O(\axi_rdata[7]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[7]_i_4 
-       (.I0(slv_reg3[7]),
+       (.I0(signal_response[7]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[7] ),
         .I3(sel0[0]),
@@ -70748,27 +70741,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[8]_i_2 
-       (.I0(slv_reg8[8]),
+       (.I0(signal_response[168]),
         .I1(sel0[0]),
-        .I2(slv_reg9[8]),
+        .I2(signal_response[200]),
         .I3(sel0[1]),
-        .I4(slv_reg10[8]),
+        .I4(signal_response[232]),
         .I5(sel0[2]),
         .O(\axi_rdata[8]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[8]_i_3 
-       (.I0(slv_reg7[8]),
-        .I1(slv_reg6[8]),
+       (.I0(signal_response[136]),
+        .I1(signal_response[104]),
         .I2(sel0[1]),
-        .I3(slv_reg5[8]),
+        .I3(signal_response[72]),
         .I4(sel0[0]),
-        .I5(slv_reg4[8]),
+        .I5(signal_response[40]),
         .O(\axi_rdata[8]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[8]_i_4 
-       (.I0(slv_reg3[8]),
+       (.I0(signal_response[8]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[8] ),
         .I3(sel0[0]),
@@ -70786,27 +70779,27 @@ module u96_v2_tima_ropuf2_tima_ro_0_0_tima_ro_v2_0_PUF_AXI
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \axi_rdata[9]_i_2 
-       (.I0(slv_reg8[9]),
+       (.I0(signal_response[169]),
         .I1(sel0[0]),
-        .I2(slv_reg9[9]),
+        .I2(signal_response[201]),
         .I3(sel0[1]),
-        .I4(slv_reg10[9]),
+        .I4(signal_response[233]),
         .I5(sel0[2]),
         .O(\axi_rdata[9]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[9]_i_3 
-       (.I0(slv_reg7[9]),
-        .I1(slv_reg6[9]),
+       (.I0(signal_response[137]),
+        .I1(signal_response[105]),
         .I2(sel0[1]),
-        .I3(slv_reg5[9]),
+        .I3(signal_response[73]),
         .I4(sel0[0]),
-        .I5(slv_reg4[9]),
+        .I5(signal_response[41]),
         .O(\axi_rdata[9]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hB833B800)) 
     \axi_rdata[9]_i_4 
-       (.I0(slv_reg3[9]),
+       (.I0(signal_response[9]),
         .I1(sel0[1]),
         .I2(\slv_reg1_reg_n_0_[9] ),
         .I3(sel0[0]),

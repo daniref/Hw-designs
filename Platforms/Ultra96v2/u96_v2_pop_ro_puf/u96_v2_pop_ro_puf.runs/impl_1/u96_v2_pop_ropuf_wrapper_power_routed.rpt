@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date             : Mon Oct  7 10:14:28 2024
+| Date             : Thu Oct 10 16:07:36 2024
 | Host             : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 | Command          : report_power -file u96_v2_pop_ropuf_wrapper_power_routed.rpt -pb u96_v2_pop_ropuf_wrapper_power_summary_routed.pb -rpx u96_v2_pop_ropuf_wrapper_power_routed.rpx
 | Design           : u96_v2_pop_ropuf_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.161        |
+| Total On-Chip Power (W)  | 2.160        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.844        |
@@ -53,23 +53,23 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.032 |        4 |       --- |             --- |
-| CLB Logic                |     0.021 |    34453 |       --- |             --- |
-|   LUT as Logic           |     0.017 |    16245 |     70560 |           23.02 |
+| CLB Logic                |     0.021 |    34295 |       --- |             --- |
+|   LUT as Logic           |     0.017 |    16140 |     70560 |           22.87 |
 |   LUT as Shift Register  |     0.002 |      341 |     28800 |            1.18 |
-|   Register               |     0.001 |    13000 |    141120 |            9.21 |
+|   Register               |     0.001 |    12997 |    141120 |            9.21 |
 |   LUT as Distributed RAM |     0.001 |      448 |     28800 |            1.56 |
 |   CARRY8                 |    <0.001 |       17 |      8820 |            0.19 |
 |   Others                 |     0.000 |      684 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |      104 |     70560 |            0.15 |
 |   BUFG                   |     0.000 |        1 |        24 |            4.17 |
-| Signals                  |     0.022 |    27461 |       --- |             --- |
+| Signals                  |     0.022 |    27453 |       --- |             --- |
 | Block RAM                |     0.003 |        4 |       216 |            1.85 |
 | I/O                      |     0.014 |       45 |        82 |           54.88 |
 | PS8                      |     1.753 |        1 |       --- |             --- |
 | Static Power             |     0.316 |          |           |                 |
 |   PS Static              |     0.100 |          |           |                 |
 |   PL Static              |     0.216 |          |           |                 |
-| Total                    |     2.161 |          |           |                 |
+| Total                    |     2.160 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.850 |     0.146 |       0.091 |      0.055 |       NA    | Unspecified | NA         |
+| Vccint          |       0.850 |     0.145 |       0.091 |      0.055 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.028 |       0.000 |      0.027 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.048 |       0.000 |      0.048 |       NA    | Unspecified | NA         |
@@ -151,7 +151,7 @@ Table of Contents
 | Clock    | Domain                                                       | Constraint (ns) |
 +----------+--------------------------------------------------------------+-----------------+
 | clk_pl_0 | u96_v2_pop_ropuf_i/zynq_ultra_ps_e_0/U0/pl_clk_unbuffered[0] |            10.0 |
-| clk_pl_1 | u96_v2_pop_ropuf_i/zynq_ultra_ps_e_0/U0/pl_clk_unbuffered[1] |          1000.0 |
+| clk_pl_1 | u96_v2_pop_ropuf_i/zynq_ultra_ps_e_0/U0/pl_clk_unbuffered[1] |          2000.0 |
 +----------+--------------------------------------------------------------+-----------------+
 
 

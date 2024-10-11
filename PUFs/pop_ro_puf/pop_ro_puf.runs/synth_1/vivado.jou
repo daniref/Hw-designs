@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Sep 29 18:06:14 2024
-# Process ID: 2084
+# Start of session at: Thu Oct 10 00:22:02 2024
+# Process ID: 1780
 # Current directory: /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.runs/synth_1
 # Command line: vivado -log top_DB.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_DB.tcl
 # Log file: /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.runs/synth_1/top_DB.vds

@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sources_1/imports/source/RO_bank.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RO_bank'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sources_1/imports/source/puf.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'puf'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sources_1/imports/source/top_DB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_DB'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sim_1/new/sim_puf.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_top_DB'

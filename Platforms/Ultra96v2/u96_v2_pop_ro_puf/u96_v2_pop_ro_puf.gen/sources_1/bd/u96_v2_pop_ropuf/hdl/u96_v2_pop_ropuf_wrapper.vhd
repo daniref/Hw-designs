@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Mon Oct  7 10:03:42 2024
+--Date        : Thu Oct 10 09:18:17 2024
 --Host        : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 --Command     : generate_target u96_v2_pop_ropuf_wrapper.bd
 --Design      : u96_v2_pop_ropuf_wrapper
@@ -62,8 +62,8 @@ architecture STRUCTURE of u96_v2_pop_ropuf_wrapper is
     hs_mezz_dsi_d : out STD_LOGIC_VECTOR ( 7 downto 0 );
     hs_mezz_hsic_str : out STD_LOGIC_VECTOR ( 0 to 0 );
     hs_mezz_hsic_d : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wifi_en_led_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     fan_pwm_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    wifi_en_led_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     bt_en_led_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component u96_v2_pop_ropuf;

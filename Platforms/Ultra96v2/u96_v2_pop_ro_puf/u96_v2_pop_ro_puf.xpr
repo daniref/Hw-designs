@@ -66,13 +66,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="17"/>
-    <Option Name="WTModelSimExportSim" Val="17"/>
-    <Option Name="WTQuestaExportSim" Val="17"/>
-    <Option Name="WTIesExportSim" Val="17"/>
-    <Option Name="WTVcsExportSim" Val="17"/>
-    <Option Name="WTRivieraExportSim" Val="17"/>
-    <Option Name="WTActivehdlExportSim" Val="17"/>
+    <Option Name="WTXSimExportSim" Val="25"/>
+    <Option Name="WTModelSimExportSim" Val="25"/>
+    <Option Name="WTQuestaExportSim" Val="25"/>
+    <Option Name="WTIesExportSim" Val="25"/>
+    <Option Name="WTVcsExportSim" Val="25"/>
+    <Option Name="WTRivieraExportSim" Val="25"/>
+    <Option Name="WTActivehdlExportSim" Val="25"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -95,47 +95,38 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_proc_sys_reset_3_0/u96_v2_pop_ropuf_proc_sys_reset_3_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_proc_sys_reset_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_proc_sys_reset_4_0/u96_v2_pop_ropuf_proc_sys_reset_4_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_proc_sys_reset_4_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_proc_sys_reset_5_0/u96_v2_pop_ropuf_proc_sys_reset_5_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_proc_sys_reset_5_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_proc_sys_reset_6_0/u96_v2_pop_ropuf_proc_sys_reset_6_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_proc_sys_reset_6_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0/u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_rst_ps8_0_100M_0/u96_v2_pop_ropuf_rst_ps8_0_100M_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_rst_ps8_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_bram_ctrl_0_0/u96_v2_pop_ropuf_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_bram_ctrl_0_bram_0/u96_v2_pop_ropuf_axi_bram_ctrl_0_bram_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_axi_bram_ctrl_0_bram_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_uart16550_0_0/u96_v2_pop_ropuf_axi_uart16550_0_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_axi_uart16550_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_uart16550_1_0/u96_v2_pop_ropuf_axi_uart16550_1_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_axi_uart16550_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_gpio_0_0/u96_v2_pop_ropuf_axi_gpio_0_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_gpio_1_0/u96_v2_pop_ropuf_axi_gpio_1_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_axi_gpio_1_0"/>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_PWM_w_Int_0_0/u96_v2_pop_ropuf_PWM_w_Int_0_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_PWM_w_Int_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_gpio_2_0/u96_v2_pop_ropuf_axi_gpio_2_0.xci">
           <Proxy FileSetName="u96_v2_pop_ropuf_axi_gpio_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_PWM_w_Int_0_0/u96_v2_pop_ropuf_PWM_w_Int_0_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_PWM_w_Int_0_0"/>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_gpio_1_0/u96_v2_pop_ropuf_axi_gpio_1_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_gpio_0_0/u96_v2_pop_ropuf_axi_gpio_0_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_uart16550_1_0/u96_v2_pop_ropuf_axi_uart16550_1_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_axi_uart16550_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_uart16550_0_0/u96_v2_pop_ropuf_axi_uart16550_0_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_axi_uart16550_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_bram_ctrl_0_bram_0/u96_v2_pop_ropuf_axi_bram_ctrl_0_bram_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_axi_bram_ctrl_0_bram_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_axi_bram_ctrl_0_0/u96_v2_pop_ropuf_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_axi_bram_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_rst_ps8_0_100M_0/u96_v2_pop_ropuf_rst_ps8_0_100M_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_rst_ps8_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_xbar_0/u96_v2_pop_ropuf_xbar_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_PWM_w_Int_1_0/u96_v2_pop_ropuf_PWM_w_Int_1_0.xci">
           <Proxy FileSetName="u96_v2_pop_ropuf_PWM_w_Int_1_0"/>
@@ -152,11 +143,20 @@
         <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_proc_sys_reset_2_0/u96_v2_pop_ropuf_proc_sys_reset_2_0.xci">
           <Proxy FileSetName="u96_v2_pop_ropuf_proc_sys_reset_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_xbar_0/u96_v2_pop_ropuf_xbar_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_proc_sys_reset_3_0/u96_v2_pop_ropuf_proc_sys_reset_3_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_proc_sys_reset_3_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0"/>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_proc_sys_reset_4_0/u96_v2_pop_ropuf_proc_sys_reset_4_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_proc_sys_reset_4_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_proc_sys_reset_5_0/u96_v2_pop_ropuf_proc_sys_reset_5_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_proc_sys_reset_5_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_proc_sys_reset_6_0/u96_v2_pop_ropuf_proc_sys_reset_6_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_proc_sys_reset_6_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96_v2_pop_ropuf.bd" FileRelPathName="ip/u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0/u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0.xci">
+          <Proxy FileSetName="u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/u96_v2_pop_ropuf/hdl/u96_v2_pop_ropuf_wrapper.vhd">
@@ -206,12 +206,6 @@
       <Filter Type="Utils"/>
       <Config>
         <Option Name="TopAutoSet" Val="TRUE"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" RelGenDir="$PGENDIR/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0">
-      <Config>
-        <Option Name="TopModule" Val="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="u96_v2_pop_ropuf_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96_v2_pop_ropuf_xbar_0" RelGenDir="$PGENDIR/u96_v2_pop_ropuf_xbar_0">
@@ -334,6 +328,12 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" RelGenDir="$PGENDIR/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0">
+      <Config>
+        <Option Name="TopModule" Val="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -362,17 +362,9 @@
   <Runs Version="1" Minor="15">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../../../training/Projects/bsp_build_tests/test_tag/u96v2_sbc_base/hdl/projects/u96v2_sbc_base_2020_2/u96v2_sbc_base.srcs/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_synth_1" Type="Ft3:Synth" SrcSet="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -582,9 +574,23 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_synth_1" Type="Ft3:Synth" SrcSet="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../training/Projects/bsp_build_tests/test_tag/u96v2_sbc_base/hdl/projects/u96v2_sbc_base_2020_2/u96v2_sbc_base.srcs/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -602,23 +608,6 @@
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -947,6 +936,25 @@
       <RQSFiles/>
     </Run>
     <Run Id="u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96_v2_pop_ropuf_zynq_ultra_ps_e_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>

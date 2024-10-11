@@ -1,0 +1,146 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Wed Oct  9 23:03:31 2024
+| Host         : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_drc -file u96v2_arbutterfly_wrapper_drc_routed.rpt -pb u96v2_arbutterfly_wrapper_drc_routed.pb -rpx u96v2_arbutterfly_wrapper_drc_routed.rpx
+| Design       : u96v2_arbutterfly_wrapper
+| Device       : xczu3eg-sbva484-1-i
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 17
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 8          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 8          |
+| RTSTAT-10   | Warning  | No routable loads                                           | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[0].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1 is a gated clock net sourced by a combinational pin u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[0].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0/O, cell u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[0].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[1].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1 is a gated clock net sourced by a combinational pin u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[1].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0/O, cell u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[1].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[2].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1 is a gated clock net sourced by a combinational pin u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[2].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0/O, cell u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[2].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[3].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1 is a gated clock net sourced by a combinational pin u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[3].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0/O, cell u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[3].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[4].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1 is a gated clock net sourced by a combinational pin u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[4].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0/O, cell u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[4].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[5].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1 is a gated clock net sourced by a combinational pin u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[5].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0/O, cell u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[5].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[6].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1 is a gated clock net sourced by a combinational pin u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[6].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0/O, cell u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[6].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[7].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1 is a gated clock net sourced by a combinational pin u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[7].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0/O, cell u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[7].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[0].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[0].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[1].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[1].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[2].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[2].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[3].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[3].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[4].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[4].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[5].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[5].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#7 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[6].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[6].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#8 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[7].Chain_Gen[30].Middle_arbiters.MidArbsL2_inst/out1_INST_0 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+u96v2_arbutterfly_i/ArButterfly_PUF_0/U0/ArButterfly_PUF_v1_0_PUF_AXI_inst/PUF_INST/PUF_INST/Puf_Gen[7].Chain_Gen[31].Last_Stage.DFF_inst/Q_reg
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+264 net(s) have no routable loads. The problem bus(es) and/or net(s) are u96v2_arbutterfly_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m07_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+u96v2_arbutterfly_i/ps8_0_axi_periph/m08_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i
+ (the first 15 of 168 listed).
+Related violations: <none>
+
+

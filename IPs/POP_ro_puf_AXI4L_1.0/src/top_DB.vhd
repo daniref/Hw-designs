@@ -46,15 +46,48 @@ ARCHITECTURE rtl OF top_DB IS
     SIGNAL response_from_PUF            : STD_LOGIC := '0';
     SIGNAL challenge_block1			    : STD_LOGIC_VECTOR(6 DOWNTO 0);
     SIGNAL challenge_block2			    : STD_LOGIC_VECTOR(6 DOWNTO 0) := (others=>'0');
-    
-    type t_state is (RESET_state,START_state,RUN_state,COMPARE_state,INCREASE_state,READY_state);
+    signal shift_register_out           : std_logic_vector(127 downto 0);
+    type t_state is (RESET_state,RUN_state,READY_state);
     signal state : t_state := RESET_state; -- inizializzo la FSM a RESET_state
+
+component shift_register IS
+
+  GENERIC (
+    width : INTEGER := 128);
+
+  PORT (
+    clk      : IN  STD_LOGIC;
+    rst_n    : IN  STD_LOGIC;
+    data_in  : IN  STD_LOGIC;
+    ena      : IN  STD_LOGIC;
+    data_out : OUT STD_LOGIC_VECTOR(width-1 DOWNTO 0)
+    );
+END component shift_register;
+
+component puf IS
+    GENERIC(
+        IMPL_TYPE               : STRING := "XIL"
+    );
+    PORT(
+        clk				      	: IN	STD_LOGIC;
+        rst				      	: IN	STD_LOGIC;
+        SELECT1					: IN    STD_LOGIC_VECTOR(6 DOWNTO 0);
+        SELECT2					: IN    STD_LOGIC_VECTOR(6 DOWNTO 0);
+        data_rdy			    : OUT   STD_LOGIC;
+        puf_out	       			: OUT   STD_LOGIC;
+        
+        osc1                    : OUT   STD_LOGIC;
+        osc2                    : OUT   STD_LOGIC
+    );
+END component;
+
     
 BEGIN  -- ARCHITECTURE rtl
     PUF_start <= enable;
     challenge_block1 <= challenge;
+    response <= shift_register_out;
         
-    puf0 : ENTITY work.puf
+    puf0 : puf
         PORT MAP(
             clk	              => clk,
             rst               => enable_PUF,
@@ -62,6 +95,18 @@ BEGIN  -- ARCHITECTURE rtl
             puf_out	          => response_from_PUF,
             SELECT1           => challenge_block1,
             SELECT2           => challenge_block2
+        );
+    
+    SHIFT_REG : shift_register
+        GENERIC MAP(
+            width => 128
+        )
+        PORT MAP(
+            clk      => clk,
+            rst_n    => enable,
+            data_in  => response_from_PUF,
+            ena      => data_ready_PUF,
+            data_out => shift_register_out
         );
 
     FSM: process(clk)
@@ -74,16 +119,6 @@ BEGIN  -- ARCHITECTURE rtl
                     ready <= '0';
                     enable_PUF <= '0';   
                     challenge_block2 <= (others=>'0');
-                    response <= (others=>'0');
-                    if PUF_start = '1' then 
-                        state <= START_state;
-                    else
-                        state <= RESET_state;
-                    end if;
-
-                when START_state => 
-                    ready <= '0';
-                    enable_PUF <= '0';  
                     if PUF_start = '1' then 
                         state <= RUN_state;
                     else
@@ -94,38 +129,18 @@ BEGIN  -- ARCHITECTURE rtl
                     ready <= '0';
                     enable_PUF <= '1';       
                     if PUF_start = '1' then 
-                        if data_ready_PUF = '0' then
-                            state <= RUN_state;
+                        if data_ready_PUF = '1' then
+                            if challenge_block2 /= "1111111" then
+                                challenge_block2 <= challenge_block2 + 1;     
+                            else
+                                state <= READY_state;
+                            end if;                            
                         else
-                            response(to_integer(unsigned(challenge_block2))) <= response_from_PUF;
-                            state <= COMPARE_state;
+                            state <= RUN_state;
                         end if;
                     else
                         state <= RESET_state;
                     end if;          
-
-                when COMPARE_state => 
-                    ready <= '0';
-                    enable_PUF <= '0';  
-                    if PUF_start = '1' then 
-                        if challenge_block2 /= "1111111" then
-                            state <= INCREASE_state;
-                        else
-                            state <= READY_state;
-                        end if;
-                    else
-                        state <= RESET_state;
-                    end if;    
-                    
-                when INCREASE_state => -- Disable del Counter
-                    ready <= '0';
-                    enable_PUF <= '0';  
-                    challenge_block2 <= challenge_block2 + 1;     
-                    if PUF_start = '1' then 
-                        state <= START_state;
-                    else
-                        state <= RESET_state;
-                    end if;
                     
                 when READY_state => -- Enable Comparazione => ready = 1
                     ready <= '1';   

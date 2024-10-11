@@ -1,0 +1,19 @@
+
+*** Running vivado
+    with args -log u96v2_arbutterfly_axi_uart16550_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source u96v2_arbutterfly_axi_uart16550_1_0.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source u96v2_arbutterfly_axi_uart16550_1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2315.078 ; gain = 2.016 ; free physical = 668 ; free virtual = 13208
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/hdl/ip/PWM_w_Int'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/puftester/PhD/repo/Hw-designs/IPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/puftester/tools/Xilinx/Vivado/2020.2/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2315.078 ; gain = 0.000 ; free physical = 110 ; free virtual = 13147
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP u96v2_arbutterfly_axi_uart16550_1_0, cache-ID = 956d4804ffe54155.
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 15:24:16 2024...

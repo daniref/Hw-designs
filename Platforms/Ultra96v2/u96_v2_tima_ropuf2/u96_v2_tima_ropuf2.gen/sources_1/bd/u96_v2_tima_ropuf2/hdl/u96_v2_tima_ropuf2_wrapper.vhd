@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Fri Oct  4 13:54:29 2024
+--Date        : Tue Oct  8 15:57:47 2024
 --Host        : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 --Command     : generate_target u96_v2_tima_ropuf2_wrapper.bd
 --Design      : u96_v2_tima_ropuf2_wrapper

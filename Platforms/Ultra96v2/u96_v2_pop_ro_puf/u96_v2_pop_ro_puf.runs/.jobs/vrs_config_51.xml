@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0_synth_1" LaunchDir="/home/puftester/PhD/repo/Hw-designs/Platforms/Ultra96v2/u96_v2_pop_ro_puf/u96_v2_pop_ro_puf.runs/u96_v2_pop_ropuf_POP_ro_puf_AXI4L_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

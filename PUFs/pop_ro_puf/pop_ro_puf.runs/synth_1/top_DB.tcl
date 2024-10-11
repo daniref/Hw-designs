@@ -70,6 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param power.enableLutRouteBelPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param chipscope.maxJobs 1
+set_param power.BramSDPPropagationFix 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu3eg-sbva484-1-e
 
@@ -79,8 +84,13 @@ set_param synth.vivado.isSynthRun true
 set_property webtalk.parent_dir /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.cache/wt [current_project]
 set_property parent.project_path /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language Verilog [current_project]
+set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:ultra96v2:part0:1.0 [current_project]
+set_property ip_repo_paths {
+  /home/puftester/PhD/repo/Hw-designs/IPs/POP_ro_puf_AXI4L_1.0
+  /home/puftester/PhD/repo/Hw-designs/IPs/POP_ro_puf_AXI4L_1.0
+} [current_project]
+update_ip_catalog
 set_property ip_output_repo /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -89,6 +99,7 @@ read_vhdl -library xil_defaultlib {
   /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sources_1/imports/source/RO_bank.vhd
   /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sources_1/imports/source/RO_core.vhd
   /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sources_1/imports/source/puf.vhd
+  /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sources_1/imports/source/shift_register.vhd
   /home/puftester/PhD/repo/Hw-designs/PUFs/pop_ro_puf/pop_ro_puf.srcs/sources_1/imports/source/top_DB.vhd
 }
 OPTRACE "Adding files" END { }

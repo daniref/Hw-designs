@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date              : Fri Oct  4 14:07:39 2024
+| Date              : Tue Oct  8 16:14:22 2024
 | Host              : puftester-Latitude-E7240 running 64-bit Ubuntu 18.04.6 LTS
 | Command           : report_clock_utilization -file u96_v2_tima_ropuf2_wrapper_clock_utilization_routed.rpt
 | Design            : u96_v2_tima_ropuf2_wrapper
