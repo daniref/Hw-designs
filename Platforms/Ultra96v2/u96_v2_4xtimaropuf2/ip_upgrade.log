@@ -1,0 +1,163 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Mon Nov 11 21:56:00 2024
+| Host         : daniele-ThinkCentre-M75q-Gen-2 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_4tima_ropuf2_tima_ro_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_4tima_ropuf2_tima_ro_3_0 (user.org:user:tima_ro:2.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Mon Nov 11 21:55:59 2024
+| Host         : daniele-ThinkCentre-M75q-Gen-2 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_4tima_ropuf2_tima_ro_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_4tima_ropuf2_tima_ro_2_0 (user.org:user:tima_ro:2.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Mon Nov 11 21:55:59 2024
+| Host         : daniele-ThinkCentre-M75q-Gen-2 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_4tima_ropuf2_tima_ro_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_4tima_ropuf2_tima_ro_1_0 (user.org:user:tima_ro:2.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Mon Nov 11 21:55:59 2024
+| Host         : daniele-ThinkCentre-M75q-Gen-2 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_4tima_ropuf2_tima_ro_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_4tima_ropuf2_tima_ro_0_0 (user.org:user:tima_ro:2.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Mon Nov 11 18:44:45 2024
+| Host         : daniele-ThinkCentre-M75q-Gen-2 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_4tima_ropuf2_tima_ro_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_4tima_ropuf2_tima_ro_3_0 (user.org:user:tima_ro:2.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Mon Nov 11 18:44:45 2024
+| Host         : daniele-ThinkCentre-M75q-Gen-2 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_4tima_ropuf2_tima_ro_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_4tima_ropuf2_tima_ro_2_0 (user.org:user:tima_ro:2.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Mon Nov 11 18:44:45 2024
+| Host         : daniele-ThinkCentre-M75q-Gen-2 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_4tima_ropuf2_tima_ro_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_4tima_ropuf2_tima_ro_1_0 (user.org:user:tima_ro:2.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Mon Nov 11 18:44:45 2024
+| Host         : daniele-ThinkCentre-M75q-Gen-2 running 64-bit Ubuntu 18.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'u96_v2_4tima_ropuf2_tima_ro_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of u96_v2_4tima_ropuf2_tima_ro_0_0 (user.org:user:tima_ro:2.0) from (Rev. 10) to (Rev. 11)
+

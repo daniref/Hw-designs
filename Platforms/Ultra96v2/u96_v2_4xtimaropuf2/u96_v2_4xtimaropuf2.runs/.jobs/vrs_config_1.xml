@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_9_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_xbar_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_rst_ps8_0_100M_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_rst_ps8_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_axi_bram_ctrl_0_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_axi_bram_ctrl_0_bram_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_bram_ctrl_0_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_axi_uart16550_0_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_uart16550_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_axi_uart16550_1_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_uart16550_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_axi_uart16550_0_0_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_axi_gpio_0_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_axi_gpio_1_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_axi_gpio_2_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_gpio_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_PWM_w_Int_0_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_PWM_w_Int_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_PWM_w_Int_1_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_PWM_w_Int_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_PWM_w_Int_0_0_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_clk_wiz_0_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_proc_sys_reset_0_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_proc_sys_reset_1_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_proc_sys_reset_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_proc_sys_reset_2_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_proc_sys_reset_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_proc_sys_reset_3_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_proc_sys_reset_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_rst_ps8_0_100M_0_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_proc_sys_reset_4_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_proc_sys_reset_4_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_proc_sys_reset_5_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_proc_sys_reset_5_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_proc_sys_reset_6_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_proc_sys_reset_6_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_tima_ro_0_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_tima_ro_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_tima_ro_1_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_tima_ro_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_tima_ro_2_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_tima_ro_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_tima_ro_3_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_tima_ro_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_9_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_9_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_10_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_10_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_10_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_10_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_1_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_2_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_2_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_3_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_3_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_4_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_4_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_5_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_5_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_6_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_6_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_7_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_7_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_8_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_1_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="u96_v2_4tima_ropuf2_auto_pc_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_1_synth_1"/>
+	</Run>
+	<Run Id="u96_v2_4tima_ropuf2_auto_ds_0_synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_auto_ds_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_1_synth_1"/>
+	</Run>
+	<Run Id="synth_1" LaunchDir="/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_9_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_8_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_xbar_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_rst_ps8_0_100M_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_axi_bram_ctrl_0_bram_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_axi_uart16550_0_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_axi_uart16550_1_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_axi_gpio_0_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_axi_gpio_1_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_axi_gpio_2_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_PWM_w_Int_0_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_PWM_w_Int_1_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_clk_wiz_0_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_proc_sys_reset_1_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_proc_sys_reset_2_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_proc_sys_reset_3_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_proc_sys_reset_4_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_proc_sys_reset_5_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_proc_sys_reset_6_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_tima_ro_0_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_tima_ro_1_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_tima_ro_2_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_tima_ro_3_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_9_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_10_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_10_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_1_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_2_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_2_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_3_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_3_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_4_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_4_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_5_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_5_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_6_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_6_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_7_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_7_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_8_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_1_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_pc_0_synth_1"/>
+		<Parent Id="u96_v2_4tima_ropuf2_auto_ds_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

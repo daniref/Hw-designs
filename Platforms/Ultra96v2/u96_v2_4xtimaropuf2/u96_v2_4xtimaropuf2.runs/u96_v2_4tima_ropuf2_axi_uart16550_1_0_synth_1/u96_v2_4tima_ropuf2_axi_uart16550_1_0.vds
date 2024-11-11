@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Nov 11 17:46:34 2024
+# Process ID: 19810
+# Current directory: /home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_uart16550_1_0_synth_1
+# Command line: vivado -log u96_v2_4tima_ropuf2_axi_uart16550_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source u96_v2_4tima_ropuf2_axi_uart16550_1_0.tcl
+# Log file: /home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_uart16550_1_0_synth_1/u96_v2_4tima_ropuf2_axi_uart16550_1_0.vds
+# Journal file: /home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_axi_uart16550_1_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source u96_v2_4tima_ropuf2_axi_uart16550_1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/daniele/Repo/Hw-designs/IPs'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/daniele/Repo/hdl'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP u96_v2_4tima_ropuf2_axi_uart16550_1_0, cache-ID = 956d4804ffe54155.
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 11 17:46:55 2024...

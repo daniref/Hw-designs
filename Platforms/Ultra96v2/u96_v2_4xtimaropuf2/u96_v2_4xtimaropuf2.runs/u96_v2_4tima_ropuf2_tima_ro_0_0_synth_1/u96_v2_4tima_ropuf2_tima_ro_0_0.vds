@@ -1,0 +1,664 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Nov 11 21:57:38 2024
+# Process ID: 22315
+# Current directory: /home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_tima_ro_0_0_synth_1
+# Command line: vivado -log u96_v2_4tima_ropuf2_tima_ro_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source u96_v2_4tima_ropuf2_tima_ro_0_0.tcl
+# Log file: /home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_tima_ro_0_0_synth_1/u96_v2_4tima_ropuf2_tima_ro_0_0.vds
+# Journal file: /home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_tima_ro_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source u96_v2_4tima_ropuf2_tima_ro_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/daniele/Repo/Hw-designs/IPs'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/daniele/Repo/hdl'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top u96_v2_4tima_ropuf2_tima_ro_0_0 -part xczu3eg-sbva484-1-i -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22518
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2546.410 ; gain = 30.902 ; free physical = 117 ; free virtual = 11702
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'u96_v2_4tima_ropuf2_tima_ro_0_0' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ip/u96_v2_4tima_ropuf2_tima_ro_0_0/synth/u96_v2_4tima_ropuf2_tima_ro_0_0.vhd:82]
+	Parameter C_PUF_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_PUF_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y0 - type: string 
+	Parameter offset_pos bound to: 90 - type: integer 
+INFO: [Synth 8-3491] module 'tima_ro_v2_0' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/hdl/tima_ro_v2_0.vhd:5' bound to instance 'U0' of component 'tima_ro_v2_0' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ip/u96_v2_4tima_ropuf2_tima_ro_0_0/synth/u96_v2_4tima_ropuf2_tima_ro_0_0.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'tima_ro_v2_0' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/hdl/tima_ro_v2_0.vhd:51]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y0 - type: string 
+	Parameter offset_pos bound to: 90 - type: integer 
+	Parameter C_PUF_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_PUF_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter inverters_number bound to: 7 - type: integer 
+	Parameter absolute_position bound to: X0Y0 - type: string 
+	Parameter offset_position bound to: 90 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'tima_ro_v2_0_PUF_AXI' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/hdl/tima_ro_v2_0_PUF_AXI.vhd:5' bound to instance 'tima_ro_v2_0_PUF_AXI_inst' of component 'tima_ro_v2_0_PUF_AXI' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/hdl/tima_ro_v2_0.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'tima_ro_v2_0_PUF_AXI' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/hdl/tima_ro_v2_0_PUF_AXI.vhd:88]
+	Parameter inverters_number bound to: 7 - type: integer 
+	Parameter absolute_position bound to: X0Y0 - type: string 
+	Parameter offset_position bound to: 90 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y0 - type: string 
+	Parameter offset_pos bound to: 90 - type: integer 
+INFO: [Synth 8-3491] module 'top_tima_ro_puf' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/top_tima_ro_puf.vhd:34' bound to instance 'TIMA_RO_PUF' of component 'top_tima_ro_puf' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/hdl/tima_ro_v2_0_PUF_AXI.vhd:407]
+INFO: [Synth 8-638] synthesizing module 'top_tima_ro_puf' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/top_tima_ro_puf.vhd:60]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y0 - type: string 
+	Parameter offset_pos bound to: 90 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y0 - type: string 
+	Parameter offset_pos bound to: 90 - type: integer 
+INFO: [Synth 8-3491] module 'tima_ro_puf' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ro_puf_7inverters_new.vhd:8' bound to instance 'RO_PUF' of component 'tima_ro_puf' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/top_tima_ro_puf.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'tima_ro_puf' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ro_puf_7inverters_new.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter abs_pos bound to: X0Y0 - type: string 
+	Parameter offset_pos bound to: 90 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'RO_selection' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:6' bound to instance 'RO_BLOCK_1' of component 'RO_selection' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ro_puf_7inverters_new.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'RO_selection' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:16]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:34]
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter INIT bound to: 4'b0111 
+INFO: [Synth 8-113] binding component instance 'NAND_IN' to cell 'LUT2' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:72]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER_0' to cell 'LUT1' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:82]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:101]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-113] binding component instance 'INVERTER' to cell 'LUT1' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:101]
+INFO: [Synth 8-256] done synthesizing module 'ROs' (1#1) [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:34]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'ROs' declared at '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ROs.vhd:11' bound to instance 'RO_INST' of component 'ROs' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:35]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+	Parameter num_inverters bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RO_selection' (2#1) [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:16]
+	Parameter num_inverters bound to: 7 - type: integer 
+WARNING: [Synth 8-614] signal 'compteur_cycles' is read in the process but is not in the sensitivity list [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ro_puf_7inverters_new.vhd:148]
+WARNING: [Synth 8-614] signal 'Timer_size' is read in the process but is not in the sensitivity list [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ro_puf_7inverters_new.vhd:148]
+WARNING: [Synth 8-614] signal 'MUX_1_OUT' is read in the process but is not in the sensitivity list [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ro_puf_7inverters_new.vhd:283]
+INFO: [Synth 8-256] done synthesizing module 'tima_ro_puf' (3#1) [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/ro_puf_7inverters_new.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'top_tima_ro_puf' (4#1) [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/top_tima_ro_puf.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'tima_ro_v2_0_PUF_AXI' (5#1) [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/hdl/tima_ro_v2_0_PUF_AXI.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'tima_ro_v2_0' (6#1) [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/hdl/tima_ro_v2_0.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'u96_v2_4tima_ropuf2_tima_ro_0_0' (7#1) [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ip/u96_v2_4tima_ropuf2_tima_ro_0_0/synth/u96_v2_4tima_ropuf2_tima_ro_0_0.vhd:82]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 2632.379 ; gain = 116.871 ; free physical = 3107 ; free virtual = 11732
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 2650.191 ; gain = 134.684 ; free physical = 3023 ; free virtual = 11657
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 2650.191 ; gain = 134.684 ; free physical = 3023 ; free virtual = 11657
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.44 . Memory (MB): peak = 2664.129 ; gain = 0.000 ; free physical = 2920 ; free virtual = 11566
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2753.066 ; gain = 0.000 ; free physical = 2351 ; free virtual = 11032
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2774.879 ; gain = 21.812 ; free physical = 2507 ; free virtual = 11189
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 2774.879 ; gain = 259.371 ; free physical = 2762 ; free virtual = 11471
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 2774.879 ; gain = 259.371 ; free physical = 2761 ; free virtual = 11470
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 2774.879 ; gain = 259.371 ; free physical = 2757 ; free virtual = 11469
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'output_ro_reg' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'found_match_reg' [/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.gen/sources_1/bd/u96_v2_4tima_ropuf2/ipshared/06b7/src/RO_selection.vhd:48]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 2774.879 ; gain = 259.371 ; free physical = 2760 ; free virtual = 11482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	              256 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input  256 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 6     
+	   5 Input   28 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 7     
+	 255 Input    1 Bit        Muxes := 2     
+	   8 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 2774.879 ; gain = 259.371 ; free physical = 2557 ; free virtual = 11325
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 3169.254 ; gain = 653.746 ; free physical = 160 ; free virtual = 9018
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:07 . Memory (MB): peak = 3171.254 ; gain = 655.746 ; free physical = 153 ; free virtual = 9012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:19 . Memory (MB): peak = 3199.301 ; gain = 683.793 ; free physical = 159 ; free virtual = 9022
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:24 . Memory (MB): peak = 3199.301 ; gain = 683.793 ; free physical = 201 ; free virtual = 9112
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:24 . Memory (MB): peak = 3199.301 ; gain = 683.793 ; free physical = 232 ; free virtual = 9144
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:25 . Memory (MB): peak = 3199.301 ; gain = 683.793 ; free physical = 233 ; free virtual = 9145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:25 . Memory (MB): peak = 3199.301 ; gain = 683.793 ; free physical = 233 ; free virtual = 9145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:25 . Memory (MB): peak = 3199.301 ; gain = 683.793 ; free physical = 227 ; free virtual = 9152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:25 . Memory (MB): peak = 3199.301 ; gain = 683.793 ; free physical = 233 ; free virtual = 9158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    17|
+|2     |LUT1   |  3591|
+|3     |LUT2   |   518|
+|4     |LUT3   |     9|
+|5     |LUT4   |   329|
+|6     |LUT5   |    65|
+|7     |LUT6   |   229|
+|8     |MUXF7  |    68|
+|9     |MUXF8  |    34|
+|10    |FDCE   |    64|
+|11    |FDRE   |   414|
+|12    |FDSE   |     5|
+|13    |LDC    |     2|
+|14    |LDP    |     2|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:25 . Memory (MB): peak = 3199.301 ; gain = 683.793 ; free physical = 238 ; free virtual = 9162
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 3199.301 ; gain = 559.105 ; free physical = 267 ; free virtual = 9204
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:25 . Memory (MB): peak = 3199.309 ; gain = 683.793 ; free physical = 267 ; free virtual = 9204
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3199.309 ; gain = 0.000 ; free physical = 509 ; free virtual = 9460
+INFO: [Netlist 29-17] Analyzing 123 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3380.066 ; gain = 0.000 ; free physical = 390 ; free virtual = 9238
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LDC => LDCE: 2 instances
+  LDP => LDPE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+142 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:47 . Memory (MB): peak = 3380.066 ; gain = 1058.062 ; free physical = 645 ; free virtual = 9514
+INFO: [Common 17-1381] The checkpoint '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_tima_ro_0_0_synth_1/u96_v2_4tima_ropuf2_tima_ro_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP u96_v2_4tima_ropuf2_tima_ro_0_0, cache-ID = 6d9b4cc7ad2fcf91
+INFO: [Coretcl 2-1174] Renamed 518 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/daniele/Repo/Hw-designs/Platforms/Ultra96v2/u96_v2_4xtimaropuf2/u96_v2_4xtimaropuf2.runs/u96_v2_4tima_ropuf2_tima_ro_0_0_synth_1/u96_v2_4tima_ropuf2_tima_ro_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file u96_v2_4tima_ropuf2_tima_ro_0_0_utilization_synth.rpt -pb u96_v2_4tima_ropuf2_tima_ro_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 11 21:59:50 2024...
